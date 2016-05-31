@@ -31,5 +31,8 @@
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.1.4"
   }
 }

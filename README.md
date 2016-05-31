@@ -1,3 +1,8 @@
+####################
+# Corners2016 Docs #
+####################
+Corners2016 is a front-end theme that has been built for The Students' Union at UWE. It utilises open source components, from FireShell and Bootstrap 4, running on the Terminal/command-line for it's workflow.  See the FireShell docs below.
+
 # FireShell
 
 Fiercely quick front-end boilerplate and workflows.
@@ -62,11 +67,14 @@ Here are some of the main features of FireShell:
 │   ├── js
 │   │   └── scripts.js
 │   └── scss
-│       ├── mixins
-│       ├── modules
-│       ├── partials
-│       ├── vendor
-│       └── style.scss
+│       ├── bootstrap4
+│		│	└── 
+│       ├── corners2016
+│       │   ├── variables.scss
+│ 	    │   ├──header.scss
+│       │
+│       ├── corners2016.scss
+│       └── styles.scss
 ├── docs
 ├── grunt-build.command
 ├── grunt-build.bat

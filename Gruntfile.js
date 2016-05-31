@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       app: 'app',
       assets: '<%= project.app %>/assets',
       css: [
-        '<%= project.src %>/scss/style.scss'
+        '<%= project.src %>/scss/styles.scss'
       ],
       js: [
         '<%= project.src %>/js/*.js'
@@ -273,7 +273,7 @@ module.exports = function(grunt) {
         tasks: ['concat:dev', 'jshint']
       },
       sass: {
-        files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
+        files: '<%= project.src %>/scss/**/*.scss',
         tasks: ['sass:dev', 'cssmin:dev', 'autoprefixer:dev']
       },
       livereload: {
