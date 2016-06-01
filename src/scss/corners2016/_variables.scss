@@ -4,14 +4,11 @@
 * 
 */
 
-
-
 /*
 * The Students' Union Colour Variables
 */
 
 $u-red: #e84253 ;
-$u-black: #000 ;
 
 $u-yellow: #ffe44d ;
 $u-orange: #f58d17 ;
@@ -20,6 +17,13 @@ $u-green: #009a5b ;
 $u-grey: #40373f ;
 $u-sky: #a0d9e0 ;
 
+$u-red-darker: darken( $u-red, 10% ) ;
+ 
 /*
 * Social Colour Variables
 */
+$facebook: #3b5998 ;
+$twitter: #4099FF ;
+$instagram: #125688 ;
+$youtube: #bb0000 ;
+$snapchat: #fffc00 ;

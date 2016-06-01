@@ -1,0 +1,226 @@
+/*
+*
+* Header
+* 
+*/
+.logo {
+	width: 200px;
+	padding: 10px;
+	display: inline-block;
+	position: absolute;
+	z-index: 999999999;
+}
+nav.nav {
+	display: inline-block;
+	padding-left: 250px;
+	width: 100%;
+	height: 60px;
+
+	.nav-item {
+		line-height: 60px;
+	}
+	.nav-inline {
+		display: inline-block;
+	}
+}
+
+/* Search */
+.search-wrap {
+	display: inline-block;
+	float: right;
+	position: relative;
+	z-index: 10;
+
+	input#header-search[type=search] {
+		background: #fdfdfd     url(http://www.thestudentsunion.co.uk/assets/site_resources/search.svg) no-repeat 16px 16px;
+		background-size: 25px;
+		padding: 16px;
+		width: 55px;
+		border: none;
+		color: transparent;
+		height: 60px;
+		transition: all .5s;
+		position: absolute;
+		right:0px;
+		
+
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
+		&:hover {
+			background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+			background-size: 25px;
+			cursor: pointer;
+			height: 60px;
+		}
+		&:focus {
+			background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+			border: 1px solid $u-grey;
+			width: 300px;
+			padding-left: 40px;
+			outline: none;
+			background-size: 20px;
+			color: #fff;
+			background-color: $u-red;
+			border: none;
+			height: 60px;
+			right: 91px;
+
+			& + input#header-search-submit {
+				display: inline;
+				background: $u-red-darker;
+				border: none;
+				height: 60px;
+				margin-left: -4px;
+				padding: 0px 20px;
+				transition: all .35s ease;
+				color: #fff;
+
+				&:hover {
+					background: $u-red;
+				}
+			}
+		}
+	}
+	input#header-search-submit {
+		display: none;
+	}
+}
+
+/* Social Navigation */
+.social-nav {
+	padding: 6px 0px;
+	position: absolute;
+	top: 0;
+	right: 230px;
+
+	svg, img {
+		width: 24px;
+		position: relative;
+		margin-left: 20px;
+		margin-top: 12px;
+	}
+	svg {
+		&* {
+			transition: all .15s ease;
+		}
+		&#facebook-logo:hover .st0 {
+			fill: $facebook;
+		}
+		&#twitter-logo:hover .st0 {
+			fill: $twitter;
+		}
+		&#insta-logo:hover .st0 {
+			fill: $instagram;
+		}
+		&#yt-logo:hover .st0 {
+			fill: $youtube;
+		}
+		&#snapchat-logo:hover .st0 {
+			fill: $snapchat;
+		}
+	}
+}
+
+/* Sidebar */
+#sidebar-wrapper {
+	z-index: 1000;
+    position: fixed;
+   	right: 0;
+    width: 0;
+    height: 100%;
+    overflow-y: auto;
+    background: $u-grey ;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &.toggled {
+    	width:250px;
+    }  
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width:100%;
+
+        & > .sidebar-brand a {
+                color: #999999;
+            
+            &:hover {
+		        color: #fff;
+		        background: none;
+			}
+        }
+
+        li {
+            text-indent: 20px;
+            line-height: 40px;
+
+	            a {
+	                display: block;
+	                text-decoration: none;
+	                color: $gray-light;
+
+                    &:hover {
+            	        text-decoration: none;
+            	        color: #fff;
+            	        background: rgba(255,255,255,0.2);
+                	}
+                	&:active, &:focus {
+                		 text-decoration: none;	
+                	}
+              	}
+
+              	&.seperator {
+              		display: block;
+              		height: 20px;
+              	}       
+	     }
+
+	}        
+}
+
+/* Sidebar toggle */
+.sidebar-toggle {
+	height: 60px;
+	position: relative;
+	display: inline-block;
+	float: right;
+	padding: 14px 10px;
+	z-index: 99999;
+
+	&:hover > .slide-menu-toggle-label:after {
+		content:'test';
+	}
+
+	&.toggled {
+		& .toggle-bar {
+			transition: all .5s ease;
+			background: #fff;
+
+			&:nth-child(1) {
+				transform: translateY(12px) rotate(45deg);
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				transform: translateY(4px) rotate(-45deg);
+			}
+		}
+	}
+	span.toggle-bar {
+		z-index: 99999;
+		background: $u-grey;
+		height: 3px;
+		position: relative;
+		width: 30px;
+		display: block;
+		margin: 5px;
+	}
+}

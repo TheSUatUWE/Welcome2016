@@ -1,0 +1,29 @@
+/*
+*
+* Utility
+* 
+*/
+
+.v-align-wrapper {
+	position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: table;
+	    margin: 0 auto;
+
+	    .v-align {
+	        text-align: center;
+	        display: table-cell;
+	        vertical-align: middle;
+	        margin: 0 auto;
+	    }
+
+	    &.home-slider {
+	    	height:300px;
+	    }
+}
+

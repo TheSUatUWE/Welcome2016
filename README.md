@@ -71,7 +71,7 @@ Here are some of the main features of FireShell:
 │		│	└── 
 │       ├── corners2016
 │       │   ├── variables.scss
-│ 	    │   ├──header.scss
+│ 	 	│   ├──header.scss
 │       │
 │       ├── corners2016.scss
 │       └── styles.scss

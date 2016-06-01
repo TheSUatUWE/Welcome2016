@@ -1,0 +1,25 @@
+/*
+*
+* Owl
+* 
+*/
+
+.slider {
+	display:block;
+	position: relative;	
+	width:100%;
+	height:300px;
+	background: $gray-lightest;
+	
+	.owl-slide {
+		height:300px;
+		width:100%;
+
+		&#slide1 {
+			background: $u-yellow ;
+		}
+		&#slide2 {
+			background: $u-lime ;
+		}
+	}
+}
