@@ -1,0 +1,118 @@
+/*
+*
+* Typography
+* 
+*/
+
+/* Import News Gothic*/
+@font-face {
+    font-family: 'News Gothic';
+    src: url('../fonts/2EA350_0_0.eot');
+    src: url('../fonts/2EA350_0_0?#iefix') format('embedded-opentype'),
+         url('../fonts/2EA350_0_0.woff') format('woff'),
+         url('../fonts/2EA350_0_0.ttf') format('truetype');
+  
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Import Alt Gothic */
+@font-face {
+    font-family: 'Alternate Gothic';
+    src: url('../fonts/2EA350_E_0.eot');
+    src: url('../fonts/2EA350_E_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2EA350_E_0.woff') format('woff'),
+         url('../fonts/2EA350_E_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Selection Highlight Color */
+::selection {
+    color:#fff;
+  background: $u-red; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    color:#fff;
+  background: $u-red; /* Gecko Browsers */
+}
+
+/* Body Font */
+body {
+    font-family: 'News Gothic';
+    color:$u-grey;
+}
+
+/* Heading Fonts */
+h1, h2, h3, h4, h5 {
+    font-family: 'Alternate Gothic';
+    text-transform: uppercase;
+}
+
+/* Links */
+
+a {
+    color:$u-red-d20;
+    transition: all .25s ease ;
+
+    &:hover, &:active, &:focus {
+        color:$u-red-d10;
+    }
+}
+
+/* Alternative text styles */
+
+/* Quotes */
+q {
+    &::after {
+    font-family:'Alternate Gothic';    
+    content: close-quote;
+    font-size:110%;
+    color:$u-red;
+    }
+    &::before {
+    font-family:'Alternate Gothic';    
+    content: open-quote;
+    font-size:110%;
+    color:$u-red;
+}
+
+}
+
+/* Code */
+code {
+    background:$u-grey;
+    color:$u-orange;
+}
+/* Hightlighting */
+mark, .mark {
+    background: $u-red-l30;
+    color: #000;
+    padding: .2em .6em;
+    transition: all .25s ease ;
+}
+
+/* 
+* Flow Text
+* Credit: https://github.com/Dogfalo/materialize/blob/master/LICENSE
+*/
+$range : 1200px - 361px !default;
+$intervals: 20 !default;
+$interval-size: $range / $intervals !default;
+
+.flow-text{
+  font-weight: 300;
+  $i: 0;
+  @while $i <= $intervals {
+    @media only screen and (min-width : 360 + ($i * $interval-size)) {
+      font-size: 1.2rem * (1 + (.02 * $i));
+    }
+    $i: $i + 1;
+  }
+
+  // Handle below 360px screen
+  @media only screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+}

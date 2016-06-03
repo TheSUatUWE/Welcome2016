@@ -17,11 +17,59 @@ $u-green: #009a5b ;
 $u-grey: #40373f ;
 $u-sky: #a0d9e0 ;
 
-$u-red-darker: darken( $u-red, 10% ) ;
+/* Red Variations */
+
+$u-red-d10: darken( $u-red, 10% ) ;
+$u-red-d20: darken( $u-red, 20% ) ;
+$u-red-d30: darken( $u-red, 30% ) ;
+$u-red-d40: darken( $u-red, 40% ) ;
+$u-red-d50: darken( $u-red, 50% ) ;
+
+$u-red-l10: lighten( $u-red, 10% ) ;
+$u-red-l20: lighten( $u-red, 20% ) ;
+$u-red-l30: lighten( $u-red, 30% ) ;
+$u-red-l40: lighten( $u-red, 40% ) ;
+$u-red-l50: lighten( $u-red, 50% ) ;
+
+/* Grey Variations */
+
+$u-grey-l10 : lighten( $u-grey, 10% ) ;
+$u-grey-l20 : lighten( $u-grey, 20% ) ;
+$u-grey-l30 : lighten( $u-grey, 30% ) ;
+$u-grey-l40 : lighten( $u-grey, 40% ) ;
+$u-grey-l50 : lighten( $u-grey, 50% ) ;
+
+/* Gradients */
+
+%g-sky-green {
+    background: #a0d9e0; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%g-yellow-orange {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
+	background-image: #ffe44d; /* Old browsers */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -moz-linear-gradient(45deg,  #ffe44d 0%, #f58d17 100%); /* FF3.6-15 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -webkit-linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%g-red-grey {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,e84253+100 */
+	background-image: #40373f; /* Old browsers */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -moz-linear-gradient(45deg,  #40373f 0%, #e84253 100%); /* FF3.6-15 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -webkit-linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
  
-/*
-* Social Colour Variables
-*/
+/* Social Colour Variables */
 $facebook: #3b5998 ;
 $twitter: #4099FF ;
 $instagram: #125688 ;
