@@ -7,24 +7,46 @@
 	width: 200px;
 	padding: 10px;
 	display: inline-block;
-	position: absolute;
-	z-index: 999999999;
+	float:left;
+	z-index: 99999;
+
 }
 nav.nav {
 	display: inline-block;
-	padding-left: 250px;
+	position: fixed;
+	top:0;
+	background:#fff;
 	width: 100%;
 	height: 60px;
-
+	z-index: 2;
+	
+	& > * {
+		transition:all .5s ease;
+	}
 	.nav-item {
+		font-size:1em;
 		line-height: 60px;
+		border-left: 1px solid $gray-lighter;
+		padding-left: 15px;
+
+		&:last-of-type {
+			border-right:1px solid $gray-lighter;
+			padding-right:15px;
+		}
 	}
 	.nav-inline {
 		display: inline-block;
+		padding-left:50px;
 	}
 	.nav-secondary {
 		display: inline-block;
 		float:right;
+	}
+
+	&.scrolled {
+		.logo {
+			width:120px;
+		}
 	}
 }
 
@@ -70,7 +92,7 @@ nav.nav {
 			background-color: $u-red;
 			border: none;
 			height: 60px;
-			right: 88px;
+			right: 86px;
 
 
 			& + input#header-search-submit {
@@ -103,6 +125,10 @@ nav.nav {
 	float: right;
     padding-right: 60px;
     display: inline-block;
+
+    & > * {
+    	transition: all .5s ease;
+    }
 
 	svg, img {
 		width: 24px;
@@ -139,6 +165,7 @@ nav.nav {
 	z-index: 1000;
     position: fixed;
    	right: 0;
+   	top: 0;
     width: 0;
     height: 100%;
     overflow-y: auto;
@@ -155,7 +182,7 @@ nav.nav {
     .sidebar-nav {
         position: absolute;
         top: 0;
-        margin: 0;
+        margin: 100px 0 0 0 ;
         padding: 0;
         list-style: none;
         width:100%;
@@ -199,7 +226,7 @@ nav.nav {
 }
 
 /* Sidebar toggle */
-.sidebar-toggle {
+.sidebar-toggle, .sidebar-toggle-top {
 	height: 60px;
 	position: relative;
 	display: inline-block;
@@ -274,5 +301,39 @@ nav.nav {
 		text-align:center;
 		line-height:100px;
 		color:$u-red;
+	}
+}
+@media screen and (max-width: 1230px){
+	nav.nav {
+		li.nav-item {
+		    font-size: 0.9em;
+		}
+	}
+}
+@media screen and (max-width: 1270px){
+	nav.nav {
+		li.nav-item {
+		    font-size: 0.9em;
+		}
+	}
+}
+@media screen and (max-width: 1502px) {
+	nav.nav {
+		.logo {
+			width:120px;
+		}
+		.nav-inline {
+		    display: inline-block;
+		    padding-left: 20px;
+		}
+	}
+	.nav-inline .nav-item + .nav-item, .nav-inline .nav-link + .nav-link {
+	    margin-left: .5rem;
+	}
+	.social-nav svg, .social-nav img {
+	    width: 16px;
+	    position: relative;
+	    margin-left: 13px;
+	    margin-top: 15px;
 	}
 }
