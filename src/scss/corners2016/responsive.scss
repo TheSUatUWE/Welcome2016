@@ -1,0 +1,31 @@
+/*
+*
+*  @media queries
+* 
+*/
+
+@include media-breakpoint-down(xs) { 
+	.home-header-slider-wrap {
+		.slider-content {
+			width:100%;
+			padding: 0 15px;
+		}
+	}
+}
+@include media-breakpoint-down(sm) { 
+	.home-header-slider-wrap {
+		.slider-content {
+			width:100%;
+			padding: 0 15px;
+		}
+	}
+}
+@include media-breakpoint-down(md) { 
+	
+}
+@include media-breakpoint-down(lg) { 
+	
+}
+@include media-breakpoint-down(xl) { 
+	
+}

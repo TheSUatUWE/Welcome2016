@@ -8,17 +8,26 @@
   	$(document).ready(function() {
   		$('.sidebar-toggle').click(function(e) {
 	        e.preventDefault();
-	        $('#sidebar-wrapper').toggleClass('toggled');
-	        $('.sidebar-toggle-top').toggleClass('toggled');
+	        $('#sidebar-wrapper, .sidebar-toggle-top').toggleClass('toggled');
           $(this).toggleClass('toggled');
+
 	    });
       $('.sidebar-toggle-top').click(function(e) {
           e.preventDefault();
-          $('#sidebar-wrapper').toggleClass('toggled');
-          $('.sidebar-toggle').toggleClass('toggled');
+          $('#sidebar-wrapper, .sidebar-toggle').toggleClass('toggled');
           $(this).toggleClass('toggled');
       });
   	});
+
+        // Mobile Menu Toggle
+    $(document).ready(function() {
+      $('.mobile-menu-toggle').click(function(e) {
+          e.preventDefault();
+          $('#sidebar-wrapper, .sidebar-toggle-top').toggleClass('toggled');
+          $(this).toggleClass('toggled');
+          
+      });
+    });
 
     // Add scrolled class to header 
     $( document ).ready(function() {
