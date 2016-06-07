@@ -16,15 +16,17 @@
           e.preventDefault();
           $('#sidebar-wrapper, .sidebar-toggle').toggleClass('toggled');
           $(this).toggleClass('toggled');
+          $('.mobile-menu-toggle').toggleClass('toggled');
       });
   	});
 
-        // Mobile Menu Toggle
+    // Mobile Menu Toggle
     $(document).ready(function() {
       $('.mobile-menu-toggle').click(function(e) {
           e.preventDefault();
-          $('#sidebar-wrapper, .sidebar-toggle-top').toggleClass('toggled');
+          $('ul.nav.nav-inline').toggleClass('mobile-active');
           $(this).toggleClass('toggled');
+
           
       });
     });
