@@ -10,13 +10,22 @@
 	        e.preventDefault();
 	        $('#sidebar-wrapper, .sidebar-toggle-top').toggleClass('toggled');
           $(this).toggleClass('toggled');
-
 	    });
+
       $('.sidebar-toggle-top').click(function(e) {
           e.preventDefault();
-          $('#sidebar-wrapper, .sidebar-toggle').toggleClass('toggled');
-          $(this).toggleClass('toggled');
-          $('.mobile-menu-toggle').toggleClass('toggled');
+          if ( $('.mobile-menu-toggle').hasClass('toggled') ) {
+            console.log( 'mobile menu is active ');
+            $('#sidebar-wrapper, .sidebar-toggle').toggleClass('toggled');
+            $(this).toggleClass('toggled');
+            
+          } else {
+            console.log( 'mobile menu is not active');
+            $('#sidebar-wrapper').toggleClass('toggled');
+            $(this).toggleClass('toggled');
+            $('.mobile-menu-toggle, .sidebar-toggle').toggleClass('toggled'); 
+          }
+          
       });
   	});
 
