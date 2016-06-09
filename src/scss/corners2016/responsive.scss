@@ -14,7 +14,10 @@
 }
 @include media-breakpoint-down(md) { 
 
-
+	.sidebar-toggle-top {
+		display:none;
+	}
+	
 	.home-header-slider-wrap {
 		.slider-content {
 			width:100%;
@@ -26,10 +29,61 @@
 		}
 	}
 
+	
+	
 	nav.nav {
+
+		& > .mobile-menu-circle {
+				display: block;
+				opacity:1;
+			    background: #a0d9e0;
+			    background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+			    background: -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+			    background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%);
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 );
+			    position: fixed;
+			    top: 27px;
+			    right: 30px;
+			    width: 0px;
+			    height: 0px;
+			    border-radius: 50%;
+			    z-index:-25;
+			   	-webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	   -moz-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	     -o-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	        transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+			   	-webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	   -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	     -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+			   	        transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+
+			    &.toggled {
+			    		opacity:1;
+			    		top: -300px;
+			    		right: -500px;
+			    		width: 1200px;
+			    		height: 1200px;
+			    	}
+			    }
+		
 
 		.mobile-menu-toggle {
 			display:block;
+		}
+
+		&.toggled {
+			& > .logo {				
+    					& > a > svg > {
+    						& .tri {
+    							transform:scale(0.6);
+    						}
+    						& g {
+    						transform: translateX(-600px);
+    						}
+    					}	
+    				}
 		}
 		
 		& > .logo {
@@ -47,63 +101,104 @@
 		}
 
 		.nav-secondary {
-			display:none;
+			width: 100%;
+			display: block;
+			opacity: 0;
+			margin-right: -100px;
+			position:fixed;
+			bottom:0;
+			z-index: 999999;
+
+			.sidebar-toggle {
+				float:left;
+			}
+
+			.search-wrap {
+				right:0;
+				z-index: 999999;
+
+				input#header-search-submit {
+					margin-left:0;
+				}
+				input#header-search[type=search]:focus {
+					width:calc(100vw - 82px);
+				}
+			}
+
 		}
 
 		.mobile-menu-toggle.toggled {
 			+ .nav-secondary {
 				display:block;
 				width:100%;
+				opacity: 1;
+				margin-right: 0px;
 			}
 		}
+		
 
 		ul.nav.nav-inline {
-				visibility:hidden;
+				visibility:visible;
 				opacity:0;
 			    position: fixed;
-			    height:0;
-			    top: 0;
-			    left: 0;
-			    right: 0;
+			    height: 0;
+			    width: 0;
+			    top: 75px;
+			    left: auto;
+			    right: -1000px;
 			    padding-top: 0;
 			    bottom: 0;
-			    background: #a0d9e0; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-			    background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-			    background: -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-			    background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-			    z-index: -1;
+			    background: transparent;
+			    z-index: 999;
+				
+				transition: all .5s ease;
 
 			    li.nav-item {
 			        display: block;
 			        width: 100%;
 			        text-align: right;
+
+			        .dropdown-menu {
+			            width: 100%;
+			            border: 0;
+			            border-radius: 0;
+			            margin-left: 0px;
+
+
+			            .dropdown-item {
+			            	color:$u-grey;
+			            }
+			        }
 			    }
 
 			    a.nav-link {
 			        font-size: 2em;
-			    }
-
-			    .nav-secondary.hidden-sm-down {
-			        display: block;
 			        width: 100%;
-			        height: 100%;
 			    }
 
-			    .nav-secondary.hidden-sm-down {
-			        display: block!important;
-			    }
-		}	
-	
-		ul.nav.nav-inline.mobile-active {
-				visibility:visible;
-				opacity:1;
-				height:100%;
-				padding-top:135px;	   
+			    &.mobile-active {
+    				visibility:visible;
+    				opacity:1;
+    				height:calc(100% - 150px);
+    				margin-top:75px;	   
+    				padding-left: 0;
+    				overflow-y:auto;
+    				border-radius: 0px;
+    				width:100%;
+    				right: 0;
+    				top:0;
+
+    				transition: all .5s ease;
+
+    				& > li.nav-item {
+    					opacity: 1;
+    				}
+    			}
 		}
 
 		&.scrolled {
 			background:rgba(255,255,255,0.70);
+			transition:all 1s ease;
 
 			& > .logo {				
 				& > a > svg > {
@@ -115,6 +210,78 @@
 					}
 				}	
 			}
+
+			.nav-item {
+				border-left: none;
+
+				a {
+					color:#fff;
+				}
+
+				&:last-of-type {
+				border-right:none;
+				}
+
+				}
+				.logo {
+					width:120px;
+				}
+				.nav-inline {
+					padding-left:20px;
+				}
+				input#header-search[type=search] {
+					background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+					background-size: 25px;
+					padding: 16px;
+					width: 55px;
+					border: none;
+					color: transparent;
+					height: 60px;
+					transition: all .5s;
+					position: absolute;
+					right:0px;
+					z-index: 1;
+
+					&:hover {
+						background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+						background-size: 25px;
+						cursor: pointer;
+						height: 60px;
+					}
+
+					&:focus {
+						background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+						border: 1px solid $u-grey;
+						width: 350px;
+						padding-left: 40px;
+						outline: none;
+						background-size: 20px;
+						color: #fff;
+						background-color: $u-red;
+						border: none;
+						height: 60px;
+						right: 86px;
+
+
+						& + input#header-search-submit {
+							width:100%;
+							opacity:1;
+
+							&:hover {
+								background: $u-red;
+							}
+						}
+					}
+			}
+
+			.mobile-menu-toggle {
+				&.toggled {
+					& > .toggle-bar, + .nav-secondary > .sidebar-toggle > .toggle-bar {
+						background: #fff;
+					}		
+				}
+			}
+
 		}
 	}	
 }

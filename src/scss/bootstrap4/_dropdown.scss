@@ -44,15 +44,15 @@
   float: left;
   min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  margin: x 0 0; // override default ul
   font-size: $font-size-base;
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($border-radius);
+  border:  1px solid $gray-lighter;
+  border-radius: 0 0 0.25em 0.25em;
   @include box-shadow(0 6px 12px rgba(0,0,0,.175));
 }
 

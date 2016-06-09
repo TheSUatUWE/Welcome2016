@@ -17,7 +17,7 @@
 		width:100%;
 
 		& > g {
-			transition:all .5s ease;
+			transition:all .5s ;
 		}
 	}
 }
@@ -30,11 +30,13 @@ nav.nav {
 	height: 60px;
 	z-index: 2;
 
-	transition:all .5s ease;
+	transition:all .25s ease ;
 	
 	& > * {
-		transition:all .5s ease;
+		transition:all .25s ease ;
+
 	}
+	
 	.nav-item {
 		font-size:1em;
 		line-height: 60px;
@@ -44,13 +46,15 @@ nav.nav {
 		padding-right: 0px;
 		margin:0;
 		padding:0 10px;
+
 		a {
 			color:#fff;
 	
 		}
 
-		&:hover {
+		&:hover, &.open {
 			background:$u-red;
+			color:#fff;
 
 			a {
 				color:#fff;
@@ -60,10 +64,18 @@ nav.nav {
 		&:last-of-type {
 			border-right:1px solid rgba(255, 255, 255, 0);
 		}
+
+		a.dropdown-item {
+			color:$u-grey;
+		}
 	}
+
 	.nav-inline {
+
 		display: inline-block;
 		padding-left:50px;
+		
+	
 
 		.nav-item + .nav-item, .nav-link + .nav-link {
 			margin:0;
@@ -83,18 +95,26 @@ nav.nav {
 		.nav-item {
 			border-left: 1px solid $gray-lighter;
 
+			&.open {
+			 	a.nav-link {
+			 		color:#fff;
+			 	}
+			}
+
 			a {
 				color:$u-grey;
-				&:hover {
+
+				&:hover,  { 
 					color:#fff;
 				}	
 			}
-
+		
 			&:last-of-type {
 			border-right:1px solid $gray-lighter;
 			}
-
-			}
+			
+			
+		}
 			.logo {
 				width:120px;
 			}
@@ -146,7 +166,11 @@ nav.nav {
 				}
 		}
 
-		.sidebar-toggle .toggle-bar, .sidebar-toggle-top .toggle-bar, .mobile-menu-toggle .toggle-bar {
+		.sidebar-toggle svg {
+			fill:#fff;
+		}
+
+		.sidebar-toggle-top .toggle-bar, .mobile-menu-toggle .toggle-bar {
 			background: $u-grey;
 		}
 	}
@@ -158,7 +182,7 @@ nav.nav {
 	float: right;
 	position: absolute;
 	z-index: 10;
-	right: 55px;
+	right: 40px;
 
 	input#header-search[type=search] {
 		background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
@@ -291,6 +315,8 @@ nav.nav {
         padding: 0;
         list-style: none;
         width:100%;
+        min-width: 250px;
+        overflow: hidden;
 
         & > .sidebar-brand a {
                 color: #999999;
@@ -331,7 +357,7 @@ nav.nav {
 }
 
 /* Sidebar toggle */
-.sidebar-toggle, .sidebar-toggle-top, .mobile-menu-toggle {
+.sidebar-toggle, .sidebar-toggle-top {
 	height: 60px;
 	position: relative;
 	display: inline-block;
@@ -339,20 +365,17 @@ nav.nav {
 	padding: 14px 10px;
 	z-index: 99999;
 	transition: all .25s ease;
-
+	
+	& svg {
+		width:30px;
+		height:auto;
+		fill:#fff;
+		transition:all .5s ease;
+	}
 
 	&:hover  {
-		margin-top:-2px;
 		cursor:pointer;	
 
-		.toggle-bar {
-				&:nth-of-type(1) {
-					margin-bottom:7px;
-				}
-				&:nth-of-type(3) {
-					margin-top:7px;
-				}
-		}
 	}
 
 	.toggle-bar {
@@ -364,6 +387,19 @@ nav.nav {
 			width: 30px;
 			display: block;
 			margin: 5px 5px;
+
+			.toggle-bar {
+					&:nth-child(1) {
+						transform: translateY(10px) rotate(45deg);
+					}
+					&:nth-child(2) {
+						opacity:0;
+					}
+					&:nth-child(3) {
+						transform: translateY(-6px) rotate(-45deg);
+					}	
+			}
+
 	}
 
 	&.toggled {
@@ -371,12 +407,82 @@ nav.nav {
 			margin-top:0px;
 
 			.toggle-bar {
-					&:nth-of-type(1) {
-						margin-bottom:0px;
+					&:nth-child(1) {
+						transform: translateY(10px) rotate(45deg);
 					}
-					&:nth-of-type(3) {
-						margin-top:0px;
+					&:nth-child(2) {
+						opacity:0;
 					}
+					&:nth-child(3) {
+						transform: translateY(-6px) rotate(-45deg);
+					}	
+			}
+		}
+
+		& .toggle-bar {
+			transition: all .1s ease;
+			background: #fff;
+
+			&:nth-child(1) {
+				transform: translateY(10px) rotate(45deg);
+			}
+			&:nth-child(2) {
+				opacity:0;
+			}
+			&:nth-child(3) {
+				transform: translateY(-6px) rotate(-45deg);
+			}	
+		}
+	}
+}
+
+.mobile-menu-toggle {
+	height: 60px;
+	position: relative;
+	display: inline-block;
+	float: right;
+	padding: 14px 10px;
+	z-index: 99999;
+	transition: all .25s ease;
+	
+	& svg {
+		width:30px;
+		height:auto;
+		fill:#fff;
+		transition:all .5s ease;
+	}
+
+	&:hover  {
+		cursor:pointer;	
+
+	}
+
+	.toggle-bar {
+			transition: all .25s ease;
+			z-index: 99999;
+			background: #fff;
+			height: 3px;
+			position: relative;
+			width: 30px;
+			display: block;
+			margin: 5px 5px;
+			
+				}
+
+	&.toggled {
+		&:hover  {
+			margin-top:0px;
+
+			.toggle-bar {
+					&:nth-child(1) {
+						transform: translateY(10px) rotate(45deg);
+					}
+					&:nth-child(2) {
+						opacity:0;
+					}
+					&:nth-child(3) {
+						transform: translateY(-6px) rotate(-45deg);
+					}	
 			}
 		}
 
