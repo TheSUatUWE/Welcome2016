@@ -43,27 +43,27 @@ $u-grey-l50 : lighten( $u-grey, 50% ) ;
 
 %g-sky-green {
     background: #a0d9e0; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-    background: url('http://www.thestudentsunion.co.uk/pageassets/community/green-team/22594178172_c4df1a1ebd_o(2).jpg'), linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 %g-yellow-orange {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
 	background-image: #ffe44d; /* Old browsers */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -moz-linear-gradient(45deg,  #ffe44d 0%, #f58d17 100%); /* FF3.6-15 */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -webkit-linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* Chrome10-25,Safari5.1-6 */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-image: -moz-linear-gradient(45deg,  #ffe44d 0%, #f58d17 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 %g-red-grey {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,e84253+100 */
 	background-image: #40373f; /* Old browsers */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -moz-linear-gradient(45deg,  #40373f 0%, #e84253 100%); /* FF3.6-15 */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -webkit-linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* Chrome10-25,Safari5.1-6 */
-	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-image: -moz-linear-gradient(45deg,  #40373f 0%, #e84253 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -75,3 +75,32 @@ $twitter: #4099FF ;
 $instagram: #125688 ;
 $youtube: #bb0000 ;
 $snapchat: #fffc00 ;
+
+
+/* Slider Bgs */
+
+%slider-1-bg {
+    background: #a0d9e0; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: url('http://www.thestudentsunion.co.uk/pageassets/bars/RED-Nivo-1.jpg'), -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: url('http://www.thestudentsunion.co.uk/pageassets/bars/RED-Nivo-1.jpg'), -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+    background: url('http://www.thestudentsunion.co.uk/pageassets/bars/RED-Nivo-1.jpg'), linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%slider-2-bg {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
+	background-image: #ffe44d; /* Old browsers */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -moz-linear-gradient(45deg,  #ffe44d 0%, #f58d17 100%); /* FF3.6-15 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), -webkit-linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/community/welcome-1920x800.jpg'), linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%slider-3-bg {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,e84253+100 */
+	background-image: #40373f; /* Old browsers */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -moz-linear-gradient(45deg,  #40373f 0%, #e84253 100%); /* FF3.6-15 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), -webkit-linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

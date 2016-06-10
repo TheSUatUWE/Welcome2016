@@ -279,7 +279,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          livereload: true
+          livereload: LIVERELOAD_PORT
         },
         files: [
           '<%= project.app %>/{,*/}*.html',

@@ -62,9 +62,9 @@
 			    &.toggled {
 			    		opacity:1;
 			    		top: -300px;
-			    		right: -500px;
-			    		width: 1200px;
-			    		height: 1200px;
+		    		    right: -300px;
+		    		    width: 1500px;
+		    		    height: 1501px;
 			    	}
 			    }
 		
@@ -157,6 +157,8 @@
 			        display: block;
 			        width: 100%;
 			        text-align: right;
+			        font-size: 0.6em;
+			        line-height: 40px;
 
 			        .dropdown-menu {
 			            width: 100%;
@@ -164,9 +166,13 @@
 			            border-radius: 0;
 			            margin-left: 0px;
 
+			            &.shadow-5 {
+			            	box-shadow:none;
+			            }
 
-			            .dropdown-item {
-			            	color:$u-grey;
+
+			            & .dropdown-item {
+			            	color:$u-grey
 			            }
 			        }
 			    }
@@ -179,7 +185,7 @@
 			    &.mobile-active {
     				visibility:visible;
     				opacity:1;
-    				height:calc(100% - 150px);
+    				height:calc(100% - 135px);
     				margin-top:75px;	   
     				padding-left: 0;
     				overflow-y:auto;
@@ -194,6 +200,12 @@
     					opacity: 1;
     				}
     			}
+		}
+
+		.mobile-menu-toggle.toggled {
+			& + .nav-secondary > .sidebar-toggle svg {
+				fill:#fff;
+			}
 		}
 
 		&.scrolled {

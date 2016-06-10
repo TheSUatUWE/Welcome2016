@@ -39,9 +39,7 @@ nav.nav {
 	
 	.nav-item {
 		font-size:1em;
-		line-height: 60px;
-		border-left: 1px solid rgba(255, 255, 255, 0);
-		
+		line-height: 60px;		
 		padding-left: 0px;
 		padding-right: 0px;
 		margin:0;
@@ -167,8 +165,10 @@ nav.nav {
 		}
 
 		.sidebar-toggle svg {
-			fill:#fff;
+			fill:$u-grey;
 		}
+
+		
 
 		.sidebar-toggle-top .toggle-bar, .mobile-menu-toggle .toggle-bar {
 			background: $u-grey;

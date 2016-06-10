@@ -122,7 +122,7 @@
 						background-size: cover;
 						background-position: center center;
 						background-repeat: no-repeat;
-						@extend %g-sky-green;
+						@extend %slider-1-bg;
 					}
 				}
 
@@ -137,7 +137,7 @@
 						background-size: cover;
 						background-position: center center;
 						background-repeat: no-repeat;
-						@extend %g-yellow-orange;
+						@extend %slider-2-bg;
 					}						
 				}
 
@@ -152,7 +152,7 @@
 						background-size: cover;
 						background-position: center center;
 						background-repeat: no-repeat;
-						@extend %g-red-grey;
+						@extend %slider-3-bg;
 					}
 				}	
 		}
