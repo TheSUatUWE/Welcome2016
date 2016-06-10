@@ -8,6 +8,7 @@
   	$(document).ready(function() {
   		$('.sidebar-toggle').click(function(e) {
 	        e.preventDefault();
+          $(this).toggleClass('toggled');
 	        $('#sidebar-wrapper').toggleClass('toggled');
 	    });
 

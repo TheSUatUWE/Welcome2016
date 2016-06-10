@@ -68,12 +68,16 @@ nav.nav {
 		}
 	}
 
+	.sidebar-toggle.toggled {
+		svg {
+			fill:$u-grey;
+		}
+	}	
+
 	.nav-inline {
 
 		display: inline-block;
 		padding-left:50px;
-		
-	
 
 		.nav-item + .nav-item, .nav-link + .nav-link {
 			margin:0;
@@ -164,8 +168,10 @@ nav.nav {
 				}
 		}
 
-		.sidebar-toggle svg {
+		.sidebar-toggle {
+			svg {
 			fill:$u-grey;
+			}	
 		}
 
 		

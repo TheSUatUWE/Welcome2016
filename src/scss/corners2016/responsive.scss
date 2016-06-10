@@ -203,8 +203,15 @@
 		}
 
 		.mobile-menu-toggle.toggled {
+
 			& + .nav-secondary > .sidebar-toggle svg {
 				fill:#fff;
+			}
+		}
+		
+		.sidebar-toggle.toggled {
+			svg {
+				fill:$u-grey!important;
 			}
 		}
 
