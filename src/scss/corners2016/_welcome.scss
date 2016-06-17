@@ -1,0 +1,179 @@
+/*
+*
+* Welcome
+* 
+*/
+
+body.welcome-page {
+
+	/* Section: Landing*/
+
+	section#landing {
+		height: 90vh;
+		position: relative;
+		@extend %g-sky-green ;
+		
+		.featured-image {
+			background-image: url('../img/white-tees.jpg');
+			position: absolute;
+			width:50%;
+			height: 100%;
+			right: 0;
+			mix-blend-mode: multiply;
+		}		
+
+		.row {
+			padding-top:200px;
+		}
+
+		.featured-item {
+			color:#fff;
+
+			span.title {
+				display: block;
+				border-bottom:1px solid #fff;
+				padding-bottom: 10px;
+				margin-bottom: 40px;
+			}
+
+			.meta {
+
+				text-transform:uppercase;
+				margin-bottom: 20px;
+
+				& > div {
+					display: inline-block;
+
+					&:first-of-type {
+						margin-right:20px;
+					}
+				}
+
+				object.icon {
+					width:20px;
+				}
+			}
+		}
+
+	}
+
+	/* Section: Platinum */
+
+	section#platinum {
+		@extend %g-platinum;
+		height:200px;
+	}
+
+	/* Section: Events */
+
+	section#events {
+		@extend %g-sky-green ;
+	}
+
+
+
+ 	/* MSL Markup: General Events */
+
+ 	.msl_eventlist > div:first-of-type  {
+ 	    max-width: 1200px;
+ 	    margin: auto;
+ 	   	display:flex;
+ 	   	flex-wrap:wrap;
+ 	}
+
+ 	.event_item {
+	    width: 46%;
+	    display: inline-block;
+	    position: relative;
+	    margin: 4% 2% 0;
+	    flex: 1 wrap;
+	    padding: 2%;
+	    background: #fff;
+
+	    & dl > dd {
+	    	&.msl_event_types {
+	    		        display: none;
+	    		    }
+	    	.msl_event_time {
+	    		text-transform: capitalize;
+	    	}	    
+	    }
+
+	    span.msl_event_image {
+	        position: absolute;
+	        top: 0;
+	        overflow: hidden;
+	        bottom: 0;
+	        left: 0;
+	    }
+			
+		& > dl {
+	   		margin-left: 150px;
+		}
+
+		a.msl_event_name {
+			font-family: 'Alternate Gothic';
+			text-transform: uppercase;
+			font-weight:normal;
+			font-size: 2em;
+			color:$u-grey;
+		}
+
+		.w16-tod {
+
+			&.day {
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 0 75px 75px;
+					border-color: transparent transparent #ffe44d transparent;
+					line-height: 0px;
+					_border-color: #000000 #000000 #ffe44d #000000;
+					_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+
+				}
+			&.night {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 0 75px 75px;
+				border-color: transparent transparent #a0d9e0 transparent;
+				line-height: 0px;
+				_border-color: #000000 #000000 #a0d9e0 #000000;
+				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}	
+		}
+
+		.tod-icon {
+		    position: absolute;
+		    right: 5px;
+		    bottom: 5px;
+		    z-index: 1;
+		    width: 30px;
+		}
+
+		/* Main Events */
+
+		&.msltypew16_main {
+		    width: 100%;
+		}	
+	}
+
+}
+
+@include media-breakpoint-down(md) { 
+
+	body.welcome-page {
+		.event_item {
+			width:100%;
+		}
+	}
+
+}

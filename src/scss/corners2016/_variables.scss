@@ -67,6 +67,14 @@ $u-grey-l50 : lighten( $u-grey, 50% ) ;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+%g-platinum {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#515151+0,7f7f7f+49,515151+100 */
+	background: rgb(81,81,81); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(81,81,81,1) 0%, rgba(127,127,127,1) 49%, rgba(81,81,81,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(81,81,81,1) 0%,rgba(127,127,127,1) 49%,rgba(81,81,81,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(81,81,81,1) 0%,rgba(127,127,127,1) 49%,rgba(81,81,81,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#515151',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
  
 /* Social Colour Variables */

@@ -1,0 +1,50 @@
+/*
+*
+* Content Page
+* 
+*/
+
+body.content-page {
+	nav.nav {
+		background: rgba(0,0,0,0.5);
+
+		&.scrolled {
+			background:#fff;
+		}
+	}
+	.header-banner {
+		height:auto;
+		min-height:100px;
+		padding-top:60px;
+		@extend %g-yellow-orange;
+
+		h1 {
+			color:#fff;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	
+	body.content-page {
+
+		nav.nav {
+			background: transparent;
+
+			&.scrolled {
+				background:#fff;
+			}
+		}
+
+		.header-banner {
+			min-height:60px;
+			height:60px;
+			padding-top:0;
+
+			h1 {
+				line-height: 60px;
+			}
+		}
+	} 
+
+}

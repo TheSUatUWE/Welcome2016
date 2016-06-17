@@ -5,10 +5,25 @@
 */
 
 button {
-	background:$u-grey;
 	border:none;
-	padding:5px 10px;
+	padding:7px 12px;
 	transition:all .5s ease;
+	position: relative;
+
+	&.grey {
+		background:$u-grey;
+		color:#fff;	
+	}
+
+	&.red {
+		background:$u-red;
+		color:#fff;
+
+		&:hover {
+			background:$u-grey;
+			color:#fff;	
+		}	
+	}
 
 	&:hover {
 		background: $u-red;
@@ -16,5 +31,25 @@ button {
 
 	&:focus {
 		outline:none;
+	}
+
+	&.right-arrow {
+		width: 300px;
+		text-align: left;
+		
+		&:after {
+			width: 30px;
+			height: 25px;
+			margin-left: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/right-arrow.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			right: 4px;
+		    top: 5px;
+
+
+		}
 	}
 }

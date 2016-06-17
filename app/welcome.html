@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+  
   <head>
     <meta charset="utf-8">
     <title>The Students' Union: Development</title>
@@ -13,6 +13,9 @@
     <link href="assets/css/style.min.css" rel="stylesheet">
 
     <script src="assets/components/modernizr.js"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.structure.min.css"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.theme.min.css"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.min.css"></script>
 
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
@@ -38,69 +41,102 @@
     <meta name="theme-color" content="#ffffff">
 
   </head>
-  <body>
+  <body class="welcome-page">
 
     <div id="sidebar-wrapper">
+      <div class="sidebar-toggle-top toggled">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <div class="side-menu-toggle-label"></div>
+        </div>
       <ul class="sidebar-nav">
-                    <li class="sidebar-brand">
-                        <a href="#">
-                            Good afternoon Luke
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Profile</a>
-                    </li>
-                    <li>
-                        <a href="#">Memberships</a>
-                    </li>
-                    <li>
-                        <a href="#">Messages</a>
-                    </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">Basket</a>
-                    </li>
-                    <li class="seperator">
-                      
-                    </li>
-                    <li id="logout">
-                        <a href="#">Log Out</a>
-                    </li>
-                    <li class="seperator">
-                      
-                    </li>
-                    <li>
-                        <a href="#">Site Admin</a>
-                    </li>
-                    <li>
-                        <a href="#">Page Admin</a>
-                    </li>
+
+          <li class="sidebar-brand">
+              <a href="#">
+                  Good afternoon Luke
+              </a>
+          </li>
+          <li>
+              <a href="#">Profile</a>
+          </li>
+          <li>
+              <a href="#">Memberships</a>
+          </li>
+          <li>
+              <a href="#">Messages</a>
+          </li>
+          <li>
+              <a href="#">Events</a>
+          </li>
+          <li>
+              <a href="#">Basket</a>
+          </li>
+          <li class="seperator">
+            
+          </li>
+          <li id="logout">
+              <a href="#">Log Out</a>
+          </li>
+          <li class="seperator">
+            
+          </li>
+          <li>
+              <a href="#">Site Admin</a>
+          </li>
+          <li>
+              <a href="#">Page Admin</a>
+          </li>
       </ul>
     </div>
 
     <div id="page-wrapper">
 
       <header class="header" role="banner">
-
+        <nav class="nav navbar-fixed-top" role="navigation">
+        <div class="mobile-menu-bg"></div>
         <div class="logo">
           <a href="/">
-            <img src="assets/img/logo.svg" alt="Logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
+              .tri{fill:#F04E5C;}
+              .text{fill:#FFFFFF;}
+            </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
+            <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
           </a>
         </div>
 
-        <nav class="nav" role="navigation">
+        <div class="mobile-menu-toggle">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </div>
+
+        <div class="nav-secondary">
+          <div class="sidebar-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" x="25" y="25" viewBox="0 0 50 50"><path class="user" d="M34.8 33.8c-1.7-0.7-3.8-1.6-3.8-2.3V27c2.5-1.9 4-4.9 4-8v-6c0-5.5-4.5-10-10-10 -5.5 0-10 4.5-10 10v6c0 3.1 1.5 6.2 4 8v4.5c0 0.6-2.1 1.5-3.8 2.3C11.1 35.5 5 38.1 5 45v1h40v-1C45 38.1 38.9 35.5 34.8 33.8z"/></svg>
+            <div class="side-menu-toggle-label"></div>
+          </div>
+
+          <div class="search-wrap">
+            <input id="header-search" type="search" />
+            <input id="header-search-submit" type="submit" value="Search" >
+          </div>
+
+        </div>
+
+        <div class="mobile-menu-circle shadow-5"></div>
+
+        
           <ul class="nav nav-inline">
             <li class="nav-item">
               <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
+            </li><!--
+            --><li class="nav-item">
               <a class="nav-link" href="#">What's On</a>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Union</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                   <a href="#" class="dropdown-item">Frenchay</a>
                   <a href="#" class="dropdown-item">Glenside</a>
                   <a href="#" class="dropdown-item">Gloucester</a>
@@ -112,10 +148,10 @@
                   <a href="#" class="dropdown-item">Marketing Help</a>
                   <a href="#" class="dropdown-item">Contact Us</a>
             </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Community</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                   <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
                   <a href="#" class="dropdown-item">Jobshop</a>
                   <a href="#" class="dropdown-item">Off the Wall</a>
@@ -127,10 +163,10 @@
                   <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
                   <a href="#" class="dropdown-item">Volunteering</a>
             </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Opportunities</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                 <a href="#" class="dropdown-item">Feel Good February</a>
                 <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
                 <a href="#" class="dropdown-item"></a>
@@ -143,10 +179,10 @@
                 <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
                 <a href="#" class="dropdown-item">Volunteering</a>
             </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Representation</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                 <a href="#" class="dropdown-item">Advice Centre</a>
                 <a href="#" class="dropdown-item">Campaigns</a>
                 <a href="#" class="dropdown-item">National Union of Students' (NUS) Conferences</a>
@@ -159,18 +195,18 @@
                 <a href="#" class="dropdown-item">Committees</a>
                 <a href="#" class="dropdown-item">The Students' Union Meeting (AGM)</a>
             </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bars</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                 <a href="#" class="dropdown-item">Bower Ashton</a>
                 <a href="#" class="dropdown-item">Frenchay Bar and Coffee</a>
                 <a href="#" class="dropdown-item">Glenside Cafe Bar</a>
             </div>
-            </li>
-            <li class="nav-item dropdown">
+            </li><!--
+            --><li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Shops</a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu shadow-5">
                 <a href="#" class="dropdown-item">Bus Tickets</a>
                 <a href="#" class="dropdown-item">Clothing and Accessories</a>
                 <a href="#" class="dropdown-item">Shops</a>
@@ -178,87 +214,295 @@
             </div>
             </li>
           </ul>
-          <div class="nav-secondary">
-            <div class="sidebar-toggle">
-              <span class="toggle-bar"></span>
-              <span class="toggle-bar"></span>
-              <span class="toggle-bar"></span>
-              <div class="side-menu-toggle-label"></div>
-            </div>
-
-            <div class="search-wrap">
-              <input id="header-search" type="search" />
-              <input id="header-search-submit" type="submit" value="Search" >
-            </div>
-
-            <div class="social-nav">      
-              <svg xmlns="http://www.w3.org/2000/svg" id="facebook-logo" viewBox="0 0 50 50"><path class="st0" d="M40 0H10C4.5 0 0 4.5 0 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10V10C50 4.5 45.5 0 40 0zM39 17h-3c-2.1 0-3 0.5-3 2v3h6l-1 6h-5v20h-7V28h-3v-6h3v-3c0-4.7 1.6-8 7-8 2.9 0 6 1 6 1V17z"/></svg> 
-
-              <svg xmlns="http://www.w3.org/2000/svg" id="twitter-logo" viewBox="0 0 50 50"><path class="st0" d="M50.1 10.4c-1.8 0.8-3.8 1.4-5.9 1.6 2.1-1.3 3.8-3.3 4.5-5.7 -2 1.2-4.2 2-6.5 2.5 -1.9-2-4.5-3.2-7.5-3.2 -5.7 0-10.3 4.6-10.3 10.3 0 0.8 0.1 1.6 0.3 2.3C16.1 17.8 8.5 13.7 3.4 7.5c-0.9 1.5-1.4 3.3-1.4 5.2 0 3.6 1.8 6.7 4.6 8.6 -1.7-0.1-3.3-0.5-4.7-1.3 0 0 0 0.1 0 0.1 0 5 3.5 9.1 8.2 10.1 -0.9 0.2-1.8 0.4-2.7 0.4 -0.7 0-1.3-0.1-1.9-0.2 1.3 4.1 5.1 7.1 9.6 7.1 -3.5 2.8-8 4.4-12.8 4.4 -0.8 0-1.6 0-2.5-0.1 4.5 2.9 10 4.6 15.8 4.6 18.9 0 29.3-15.7 29.3-29.3 0-0.4 0-0.9 0-1.3C46.9 14.3 48.7 12.5 50.1 10.4z"/></svg>
-
-              <svg xmlns="http://www.w3.org/2000/svg" id="insta-logo" viewBox="0 0 50 50"><style type="text/css">  .st0{fill:#40373f;}</style><path class="st0" d="M25 10c-8.3 0-15 6.7-15 15 0 8.3 6.7 15 15 15 8.3 0 15-6.7 15-15C40 16.7 33.3 10 25 10zM25 35c-5.5 0-10-4.5-10-10 0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10C35 30.5 30.5 35 25 35z"/><path class="st0" d="M40 0H10C4.5 0 0 4.5 0 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10V10C50 4.5 45.5 0 40 0zM44 39.8C44 42.1 42.1 44 39.8 44H10.2C7.9 44 6 42.1 6 39.8V17h4C12.9 11.7 18.5 8 25 8c6.5 0 12.1 3.7 15 9H44V39.8zM45 10.5c0 0.8-0.7 1.5-1.5 1.5h-3c-0.8 0-1.5-0.7-1.5-1.5v-3C39 6.7 39.7 6 40.5 6h3C44.3 6 45 6.7 45 7.5V10.5z"/></svg>
-
-              <svg xmlns="http://www.w3.org/2000/svg" id="yt-logo" viewBox="0 0 26 26"><style>.a{fill:#40373f;}</style><path class="a" d="M6.3 0h1.5L8.8 3.9h0.1l0.9-3.9h1.5L9.6 5.7v4H8.1v-3.8L6.3 0z" /><path class="a" d="M11.3 4.2c0-0.6 0.2-1 0.5-1.3 0.4-0.3 0.8-0.5 1.4-0.5 0.6 0 1 0.2 1.3 0.5C14.9 3.2 15.1 3.7 15.1 4.2v3.7c0 0.6-0.2 1.1-0.5 1.4 -0.3 0.3-0.8 0.5-1.4 0.5 -0.6 0-1-0.2-1.4-0.5 -0.3-0.4-0.5-0.8-0.5-1.4V4.2zM12.6 8c0 0.2 0 0.3 0.1 0.5 0.1 0.1 0.2 0.2 0.4 0.2 0.2 0 0.3-0.1 0.4-0.2 0.1-0.1 0.2-0.3 0.2-0.4V4.1c0-0.2-0.1-0.3-0.2-0.4 -0.1-0.1-0.2-0.1-0.4-0.1 -0.2 0-0.3 0.1-0.4 0.1 -0.1 0.1-0.2 0.2-0.2 0.4V8z" /><path class="a" d="M20 2.6v7.1h-1.3V8.9c-0.2 0.3-0.5 0.5-0.8 0.7 -0.3 0.2-0.5 0.2-0.8 0.2 -0.3 0-0.5-0.1-0.7-0.3s-0.2-0.5-0.2-1v-6h1.3v5.5c0 0.2 0 0.3 0.1 0.4 0.1 0.1 0.1 0.1 0.3 0.1 0.1 0 0.2 0 0.4-0.1 0.2-0.1 0.3-0.2 0.4-0.4V2.6H20z"/><path class="a" d="M20.2 17.3c-0.2 0-0.3 0-0.3 0.1 0 0.1-0.1 0.2-0.1 0.6v0.6h0.9v-0.6c0-0.3-0.1-0.5-0.1-0.6C20.4 17.3 20.3 17.3 20.2 17.3z" /><path class="a" d="M15.1 17.3c-0.1 0-0.1 0.1-0.2 0.1v4.3c0.1 0.1 0.2 0.1 0.2 0.2 0.1 0 0.2 0.1 0.3 0.1 0.2 0 0.2-0.1 0.2-0.1 0-0.1 0.1-0.2 0.1-0.4v-3.7c0-0.2 0-0.4-0.1-0.5C15.5 17.3 15.3 17.2 15.1 17.3z" /><path class="a red" d="M23.8 14.4c0-1.7-1.4-3.1-3.2-3.1 -2.5-0.1-5-0.1-7.6-0.1 -2.6 0-5.1 0-7.6 0.1 -1.7 0-3.2 1.4-3.2 3.1 -0.1 1.4-0.2 2.7-0.1 4.1 0 1.4 0 2.7 0.1 4.1 0 1.7 1.4 3.1 3.2 3.1 2.5 0.1 5 0.1 7.6 0.1 2.6 0 5.1 0 7.6-0.1 1.7 0 3.2-1.4 3.2-3.1 0.1-1.4 0.2-2.7 0.1-4.1C23.9 17.1 23.9 15.8 23.8 14.4zM7 23.2c0 0.1-0.1 0.2-0.1 0.2H5.3c-0.1 0-0.1-0.1-0.1-0.1v-8.1H3.8c-0.1 0-0.1-0.1-0.1-0.1v-1.4c0-0.1 0.1-0.1 0.2-0.1h4.6c0.1 0 0.2 0.1 0.2 0.2v1.4c0 0.1-0.1 0.2-0.1 0.2H7V23.2zM12.3 23.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V22.8c-0.2 0.2-0.4 0.3-0.5 0.4 -0.3 0.2-0.6 0.2-0.8 0.2 -0.4 0-0.6-0.1-0.8-0.4 -0.2-0.2-0.3-0.6-0.3-1v-6c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v5.5c0 0.2 0 0.3 0.1 0.3 0 0 0 0.1 0.1 0.1 0 0 0.1 0 0.3-0.1 0.1-0.1 0.2-0.2 0.3-0.3v-5.4c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2V23.2zM17.4 21.7c0 0.5-0.1 1-0.3 1.3 -0.2 0.3-0.6 0.5-1 0.5 -0.3 0-0.5-0.1-0.8-0.2 -0.1-0.1-0.2-0.1-0.3-0.2v0.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V13.5c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v2.7c0.1-0.1 0.2-0.2 0.3-0.3 0.2-0.1 0.5-0.2 0.7-0.2 0.5 0 0.8 0.2 1.1 0.5 0.2 0.3 0.4 0.8 0.4 1.4V21.7zM22.3 19.8c0 0.1-0.1 0.2-0.1 0.2h-2.4v1.2c0 0.4 0.1 0.6 0.1 0.7 0 0.1 0.1 0.1 0.3 0.1 0.2 0 0.3 0 0.3-0.1 0 0 0.1-0.2 0.1-0.7v-0.5c0-0.1 0.1-0.1 0.2-0.1h1.4c0.1 0 0.2 0.1 0.2 0.2v0.5c0 0.8-0.2 1.4-0.5 1.8 -0.4 0.4-0.9 0.6-1.6 0.6 -0.6 0-1.1-0.2-1.5-0.6 -0.4-0.4-0.5-1-0.5-1.7v-3.2c0-0.7 0.2-1.2 0.6-1.6 0.4-0.4 0.9-0.6 1.6-0.6 0.6 0 1.2 0.2 1.5 0.6 0.4 0.4 0.5 0.9 0.5 1.7V19.8z" /></svg>
-
-
-              <svg xmlns="http://www.w3.org/2000/svg" id="snapchat-logo" viewBox="-104 106 50 50"><style type="text/css">.st0{fill:#40373f;}</style><path class="st0" d="M-78 109L-78 109c0 0-0.1 0-0.1 0l0 0c0 0-0.8 0-0.8 0 -1.9 0-8.5 0.5-11.6 7.5 -1 2.3-0.8 6.3-0.6 9.5 0 0.4 0 0.8 0.1 1.1 -0.2 0.1-0.5 0.2-0.9 0.2 -0.6 0-1.3-0.2-2.2-0.6 -0.2-0.1-0.5-0.2-0.7-0.2 -1 0-2.1 0.6-2.3 1.6 -0.1 0.7 0.2 1.7 2.3 2.5 0.2 0.1 0.4 0.2 0.7 0.2 0.9 0.3 2.3 0.7 2.6 1.6 0.2 0.4 0.1 1-0.2 1.7 0 0 0 0 0 0 -0.1 0.3-3 6.8-9.4 7.9 -0.5 0.1-0.8 0.5-0.8 1 0 0.1 0 0.3 0.1 0.4 0.5 1.1 2.5 1.9 6.2 2.5 0.1 0.2 0.3 0.8 0.3 1.1 0.1 0.4 0.2 0.7 0.3 1.1 0.1 0.4 0.4 0.8 1.1 0.8 0.3 0 0.7-0.1 1.1-0.1 0.6-0.1 1.4-0.3 2.5-0.3 0.6 0 1.2 0.1 1.8 0.2 1.2 0.2 2.2 0.9 3.4 1.7 1.7 1.2 3.6 2.5 6.4 2.5 0.1 0 0.2 0 0.2 0 0.1 0 0.2 0 0.3 0 2.9 0 4.8-1.3 6.4-2.5 1.2-0.8 2.2-1.5 3.4-1.7 0.6-0.1 1.2-0.2 1.8-0.2 1 0 1.8 0.1 2.5 0.3 0.4 0.1 0.8 0.1 1.1 0.1l0 0h0c0.5 0 0.9-0.3 1.1-0.8 0.1-0.4 0.2-0.7 0.3-1.1 0.1-0.4 0.2-0.9 0.3-1.1 3.7-0.6 5.7-1.4 6.2-2.5 0.1-0.1 0.1-0.3 0.1-0.4 0-0.5-0.3-0.9-0.8-1 -6.4-1.1-9.2-7.6-9.4-7.9 0 0 0 0 0 0 -0.3-0.7-0.4-1.3-0.2-1.7 0.4-0.9 1.7-1.3 2.6-1.6 0.3-0.1 0.5-0.2 0.7-0.2 1.6-0.6 2.4-1.4 2.4-2.3 0-0.7-0.6-1.3-1.4-1.6l0 0c-0.3-0.1-0.6-0.2-1-0.2 -0.2 0-0.6 0-0.9 0.2 -0.8 0.4-1.4 0.5-2 0.6 -0.4 0-0.6-0.1-0.8-0.2 0-0.3 0-0.7 0.1-1l0-0.1c0.2-3.2 0.5-7.1-0.6-9.5C-69.5 109.5-76 109-78 109L-78 109z"/></svg>
-                     
-            </div>
-          </div>
+          
         </nav>
 
-        <div class="home-header-slider-wrap">
-          <div id="header-slider" class="owl-carousel">
-          <a href="#">
-            <div class="owl-slide" id="slide1">
-            <div class="slide-image"></div>
-              <div class="v-align-wrapper home-slider">
-                <div class="v-align">
-                  <div class="slider-content">
-                    <h2>Register to Vote by 7 June</h2>
-                    <p>If you want to vote in the EU referendum on 23 June.</p>
-                    <button class="cta">Register now</button>  
-                  </div>
-                </div>
-              </div>
-            </div>
-           </a> 
-            
-          <a href="#">
-            <div class="owl-slide" id="slide2">
-            <div class="slide-image"></div>
-              <div class="v-align-wrapper home-slider">
-                <div class="v-align">
-                  <div class="slider-content">
-                    <h2>Slide 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt autem, maiores expedita quae adipisci quis assumenda culpa praesentium repellat consequuntur.</p>
-                    <button class="cta">Call to Action</button>
-                  </div>                 
-                </div>
-              </div>
-            </div>
-           </a>
-           <a href="#"> 
-            <div class="owl-slide" id="slide3">
-            <div class="slide-image"></div>
-              <div class="v-align-wrapper home-slider">
-                <div class="v-align">
-                  <div class="slider-content">
-                    <h2>Slide 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia officia, eaque, nemo laboriosam recusandae animi.</p>
-                    <button class="cta">Call to Action</button> 
-                  </div>
-                </div>
-              </div>
-            </div>
-            </a>
-          
-          </div>
-        </div>
+
       </header>
       
       <main class="main" role="main">
-        <div id="scroller-div"></div>
+      <section id="landing">
+        <div class="featured-image"></div> 
+        <div class="landing-welcome">
+          <div class="v-align-wrapper left pad-5">
+            <div class="v-align">
+              <h1 class="super-header">Welcome</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
+
+              <button class="red right-arrow">View the events programme</button>
+            </div>
+          </div>
+
+          <div class="v-align-wrapper right pad-5 featured-item">
+            <div class="v-align">
+              <span class="title">NEXT EVENT:</span>
+              <h2 class="super-header">White T-shirt Party</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo culpa neque deleniti accusamus dolorum aliquid dignissimos, maxime nobis rem vero voluptas soluta, sapiente saepe accusantium veniam repellat, illum facere ipsum.</p>
+              
+              <div class="meta">
+                <div class="location">
+                  <object type="image/svg+xml" data="/assets/icons/location_filled.svg" class="icon"></object>
+                  Frenchay 
+                  
+                </div>
+                <div class="date">
+                  <object type="image/svg+xml" data="/assets/icons/date_from_filled.svg" class="icon"></object>
+                  Sept 21 2016
+                </div>
+              </div>
+
+              <button class="grey right-arrow">Buy tickets</button>
+
+            </div>
+          </div>
+          
+          
+        </div> 
+
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="super-header">Welcome</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
+
+              <button class="grey right-arrow">View the events programme</button>
+            </div>
+            <div class="col-md-6 featured-item">
+              <span class="featured-item-title">NEXT EVENT:</span>
+              <h2>White T-shirt Party</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo culpa neque deleniti accusamus dolorum aliquid dignissimos, maxime nobis rem vero voluptas soluta, sapiente saepe accusantium veniam repellat, illum facere ipsum.</p>
+                             
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <section id="platinum"></section>
+      <section id="events">
+        <div class="search">
+        <input type="search" placeholder="search here" required="">
+        </div>
+
+        <!-- <div class="container events-wrapper">
+          <div class="col-md-6 events-item">
+            <div class="card">
+              <img class="card-img-left" data-src="..." alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+              <div class="card-block">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 events-item">
+            
+          </div>
+        </div> -->
+
+        <div class="mslwidget">
+        <div class="msl_eventlist">
+
+            
+            
+
+            
+                    
+                    <div>
+           
+
+                        
+
+                        
+
+                                <div class="event_item item1 itemOdd msltypefrenchay msltypenight msltypew16" data-msl-organisation-id="6013">
+
+                              <dl>
+                                <dt>
+                                            
+                                                <a href="/ents/event/5374/">
+                                                    <span class="msl_event_image">
+                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
+                                                    </span>
+                                                </a>
+                                            
+
+                                            
+                                            <a href="/ents/event/5374/" class="msl_event_name">Freshers' Fortnight Launch</a>
+                                        </dt>
+                
+                                        <dd class="msl_event_time">5th September 9pm - midnight</dd>
+                
+                                        <dd class="msl_event_location">Frenchay Bar</dd>
+
+                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aliquam.</dd>
+
+                                
+
+                                        
+
+                                <dd class="msl_event_types">
+                                  
+                                                    <a href="/ents/eventlist/frenchay/">Frenchay Event</a>
+                                     | 
+                                                    <a href="/ents/eventlist/night/">Night</a>
+                                     | 
+                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
+                                    
+                                </dd>
+
+                                <dd class="msl_event_hook">
+
+                              </dd></dl>
+
+                                </div>
+
+                          
+
+                                <div class="event_item item2 itemEven msltypefrenchay msltypenight msltypew16" data-msl-organisation-id="6013">
+
+                              <dl>
+                                <dt>
+                                            
+                                                <a href="http://www.thestudentsunion.co.uk/ents/event/5377/">
+                                                    <span class="msl_event_image">
+                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/bowerwelcomeparty-500-x-500.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
+                                                    </span>
+                                                </a>
+                                            
+
+                                            
+                                            <a href="/ents/event/5377/" class="msl_event_name">Lock In</a>
+                                        </dt>
+                
+                                        <dd class="msl_event_time">6th September 9pm - midnight</dd>
+                
+                                        <dd class="msl_event_location">Frenchay Bar</dd>
+
+                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint accusantium illo deleniti sunt ipsa. saepe aliquid, laboriosam totam vitae?</dd>
+
+                                
+
+                                        
+
+                                <dd class="msl_event_types">
+                                  
+                                                    <a href="/ents/eventlist/frenchay/">Frenchay Event</a>
+                                     | 
+                                                    <a href="/ents/eventlist/night/">Night</a>
+                                     | 
+                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
+                                    
+                                </dd>
+
+                                <dd class="msl_event_hook">
+
+                              </dd></dl>
+
+                                </div>
+
+                          
+
+                                <div class="event_item item3 itemOdd msltypefreshers msltypenight msltypew16_main msltypew16" data-msl-organisation-id="6013">
+
+                              <dl>
+                                <dt>
+                                            
+                                                <a href="http://www.thestudentsunion.co.uk/ents/event/5375/">
+                                                    <span class="msl_event_image">
+                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/23363398592_dae9ed1840_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
+                                                    </span>
+                                                </a>
+                                            
+
+                                            
+                                            <a href="/ents/event/5375/" class="msl_event_name">White T-Shirt Party</a>
+                                        </dt>
+                
+                                        <dd class="msl_event_time">9th September 9pm - midnight</dd>
+                
+                                        <dd class="msl_event_location">Frenchay Bar</dd>
+
+                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
+
+                                <dd class="msl_event_tickets">
+                                            <a class="msl_ticket" href="/ents/event/5375/">Buy Tickets</a>
+                                        </dd>
+
+                                        
+
+                                <dd class="msl_event_types">
+                                  
+                                                    <a href="/ents/eventlist/freshers/">Freshers Event</a>
+                                     | 
+                                                    <a href="/ents/eventlist/night/">Night</a>
+                                     | 
+                                                    <a href="/ents/eventlist/w16_main/">Main</a>
+                                     | 
+                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
+                                    
+                                </dd>
+
+                                <dd class="msl_event_hook">
+
+                              </dd></dl>
+
+                                </div>
+
+                          
+
+                                <div class="event_item item4 itemEven msltypeday msltypeglenside msltypew16" data-msl-organisation-id="6013">
+
+                              <dl>
+                                <dt>
+                                            
+                                                <a href="http://www.thestudentsunion.co.uk//ents/event/5376/">
+                                                    <span class="msl_event_image">
+                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/15316783574_7d873f2ca6_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
+                                                    </span>
+                                                </a>
+                                            
+
+                                            
+                                            <a href="/ents/event/5376/" class="msl_event_name">Green It Up</a>
+                                        </dt>
+                
+                                        <dd class="msl_event_time">15th September 1pm - 4pm</dd>
+                
+                                        <dd class="msl_event_location">Glenside</dd>
+
+                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint accusantium illo deleniti sunt ipsa. saepe aliquid, laboriosam totam vitae?</dd>
+
+                                
+
+                                        
+
+                                <dd class="msl_event_types">
+                                  
+                                                    <a href="/ents/eventlist/day/">Day</a>
+                                     | 
+                                                    <a href="/ents/eventlist/glenside/">Glenside Event</a>
+                                     | 
+                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
+                                    
+                                </dd>
+
+                                <dd class="msl_event_hook">
+
+                              </dd></dl>
+
+                                </div>
+        </div>
+        </div>
+        </div>
+      </section>
+      
       </main>
 
       <aside class="sidebar" role="complementary">
@@ -272,8 +516,11 @@
   
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
+    <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/holmes.js"></script>
+
 
     <script src="assets/js/owl.carousel.min.js"></script>
     <script>
@@ -293,6 +540,20 @@
         nav: false,
         navText: ['<svg xmlns="http://www.w3.org/2000/svg" id="backward" viewBox="0 0 50 50"><style type="text/css">.st0{fill:#40373f;}</style><polygon class="st0" points="35 47.3 37.1 45.2 16.9 25 37.1 4.8 35 2.8 12.8 25 "/></svg>', '<svg xmlns="http://www.w3.org/2000/svg" id="forward" viewBox="0 0 50 50"><style type="text/css">.st0{fill:#40373f;}</style><polygon class="st0" points="15 2.8 12.9 4.8 33.1 25 12.9 45.2 15 47.3 37.3 25 "/></svg>']
     });
+      });
+    </script>
+
+    <script>
+      holmes({
+        input: '.search input',
+        find: '.event_item',
+        placeholder: 'no results',
+        class: {
+            // (optional) class to add to matched elements
+            visible: 'visible',
+            // (optional) class to add to non-matched elements
+            hidden: 'hidden'
+          }
       });
     </script>
 

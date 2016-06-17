@@ -45,11 +45,23 @@ body {
 }
 
 /* Heading Fonts */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5  {
     font-family: 'Alternate Gothic';
     text-transform: uppercase;
+    font-weight:normal!important;
 }
 
+h1, .h1 {
+  &.super-header {
+    font-size:9em;
+  }
+}
+
+h2, .h2 {
+  &.super-header {
+    font-size:5em;
+  }
+}
 /* Links */
 
 a {
