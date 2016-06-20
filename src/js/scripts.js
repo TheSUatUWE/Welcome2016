@@ -87,13 +87,25 @@
         });
     });
 
-    // Welcome Events
+    // Welcome Events MSL
     $( document ).ready(function() {
         $('.event_item').each(function() {
 
           $(this).addClass('shadow-1');
 
           if ( $(this).hasClass('msltypenight') ) {
+            $(this).append('<object class="tod-icon" data="/assets/icons/bright_moon.svg" type="image/svg+xml"></object><div class="w16-tod night"></div>'); 
+          } else {
+              $(this).append('<object class="tod-icon" data="/assets/icons/sun.svg" type="image/svg+xml"></object><div class="w16-tod day"></div>');
+          }
+        });
+    });
+
+     // Welcome Events
+    $( document ).ready(function() {
+        $('.event-card').each(function() {
+
+          if ( $(this).hasClass('w16-night') ) {
             $(this).append('<object class="tod-icon" data="/assets/icons/bright_moon.svg" type="image/svg+xml"></object><div class="w16-tod night"></div>'); 
           } else {
               $(this).append('<object class="tod-icon" data="/assets/icons/sun.svg" type="image/svg+xml"></object><div class="w16-tod day"></div>');

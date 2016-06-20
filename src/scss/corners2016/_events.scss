@@ -3,3 +3,83 @@
 * Events
 * 
 */
+
+section#events {
+
+	padding: 20px 0px;
+
+	.search {
+
+		padding:20px 0px;
+
+		.filter {
+		    height: 40px;
+		    padding: 7px 12px;
+		}
+
+		& > button {
+
+			& > object.icon {
+						height: 30px;
+						margin-bottom: -12px;
+						padding-left: 10px;
+					}
+			&.night {
+				background: $u-sky;
+				background-image: url('/assets/icons/bright_moon.svg');
+				background-size: 30px;
+				background-repeat: no-repeat;
+				background-position: 90%;
+				padding-right: 40px!important;
+			}
+			&.day {
+				background:$u-yellow;
+				background-image: url('/assets/icons/sun.svg');
+				background-size: 30px;
+				background-repeat: no-repeat;
+				background-position: 90%;
+				padding-right: 40px!important;
+			}
+		}
+	}
+	
+	.w16-tod {
+
+		&.day {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 0 75px 75px;
+				border-color: transparent transparent #ffe44d transparent;
+				line-height: 0px;
+				_border-color: #000000 #000000 #ffe44d #000000;
+				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+
+			}
+		&.night {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0 75px 75px;
+			border-color: transparent transparent #a0d9e0 transparent;
+			line-height: 0px;
+			_border-color: #000000 #000000 #a0d9e0 #000000;
+			_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}	
+	}
+
+	.tod-icon {
+	    position: absolute;
+	    right: 5px;
+	    bottom: 5px;
+	    z-index: 1;
+	    width: 30px;
+	}
+}

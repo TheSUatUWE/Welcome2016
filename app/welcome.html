@@ -222,9 +222,10 @@
       
       <main class="main" role="main">
       <section id="landing">
+      <canvas></canvas>
         <div class="featured-image"></div> 
         <div class="landing-welcome">
-          <div class="v-align-wrapper left pad-5">
+          <div class="v-align-wrapper left p-a-3">
             <div class="v-align">
               <h1 class="super-header">Welcome</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
@@ -233,7 +234,7 @@
             </div>
           </div>
 
-          <div class="v-align-wrapper right pad-5 featured-item">
+          <div class="v-align-wrapper right p-a-3 featured-item">
             <div class="v-align">
               <span class="title">NEXT EVENT:</span>
               <h2 class="super-header">White T-shirt Party</h2>
@@ -276,11 +277,108 @@
           </div>
         </div> -->
       </section>
-      <section id="platinum"></section>
-      <section id="events">
-        <div class="search">
-        <input type="search" placeholder="search here" required="">
+      <section id="platinum">
+        <div class="v-align-wrapper">
+          <div class="v-align">
+            <div class="container text-xs-center">
+              <h1>Platinum</h1>
+            </div>
+          
+          </div>
         </div>
+
+      </section>
+      <section id="events">
+        <div class="container">
+          <h2>Events</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quas, excepturi laudantium minima vel velit quis similique distinctio. Fugit, dolorem.</p>
+          <div class="search">
+          <button class="day filter">Day</button>
+          <button class="night filter">Night</button>
+          <button class="filter">Main</button>
+          <span class="spacer"></span>
+          <select class="filter" name="Location" id="">
+            <option value="" default selected>Select Location</option>
+            <option value="bower">Bower Ashton</option>
+            <option value="glenside">Glenside</option>
+            <option value="frenchay">Frenchay</option>
+            <option value="city">City Center</option>
+          </select>
+
+          <input class="filter" type="search" placeholder="Search events" required="">
+          </div>
+
+          <div class="row">
+                      <div class="col-md-6">
+                        <div class="card event-card w16-night shadow-1">
+                          <div class="row no-margin">
+                            <div class="card-image" style="background:url('http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg');background-size: cover;background-position: center;"></div>
+                            <div class="col-md-4 card-img-left-wrap no-pad">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-block">
+                                <h3 class="card-title">Freshers' Fortnight Launch</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea fuga, nihil cupiditate perspiciatis a.</p>
+
+                                <button class="grey right-arrow">Buy tickets</button>
+
+                                <div class="card-meta">
+                                  <div class="location">
+                                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
+                                    Frenchay 
+                                    
+                                  </div>
+                                  <div class="date">
+                                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
+                                    Sept 21 2016
+                                  </div>
+                                </div>
+
+                              </div>
+                              
+                            </div>
+                          </div>
+                          
+                         
+                          
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card event-card w16-night shadow-1">
+                          <div class="row no-margin">
+                            <div class="card-image" style="background:url('http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg');background-size: cover;background-position: center;"></div>
+                            <div class="col-md-4 card-img-left-wrap no-pad">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-block">
+                                <h3 class="card-title">Freshers' Fortnight Launch</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea fuga, nihil cupiditate perspiciatis a.</p>
+
+                                <button class="grey right-arrow">Buy tickets</button>
+
+                                <div class="card-meta">
+                                  <div class="location">
+                                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
+                                    Frenchay 
+                                    
+                                  </div>
+                                  <div class="date">
+                                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
+                                    Sept 21 2016
+                                  </div>
+                                </div>
+
+                              </div>
+                              
+                            </div>
+                          </div>
+                          
+                         
+                          
+                        </div>
+                      </div>        
+        </div>
+        
 
         <!-- <div class="container events-wrapper">
           <div class="col-md-6 events-item">
@@ -305,8 +403,8 @@
             
           </div>
         </div> -->
-
-        <div class="mslwidget">
+   
+       <!--  <div class="mslwidget">
         <div class="msl_eventlist">
 
             
@@ -500,7 +598,7 @@
                                 </div>
         </div>
         </div>
-        </div>
+        </div> -->
       </section>
       
       </main>
@@ -520,6 +618,7 @@
     <script src="assets/components/bootstrap.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
     <script src="assets/js/holmes.js"></script>
+    <script src="assets/js/background.js"></script>
 
 
     <script src="assets/js/owl.carousel.min.js"></script>

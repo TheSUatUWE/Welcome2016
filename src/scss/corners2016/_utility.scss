@@ -4,8 +4,24 @@
 * 
 */
 
+canvas {
+  position: absolute ;
+  bottom: 0 ;
+  right: 0 ;
+  left: 0 ;
+  top: 0 ;
+}  
+
 .hidden {
 	display:none!important;
+}
+
+.no-pad {
+	padding:0 0 0 0;
+}
+
+.no-margin {
+	margin: 0 0 0 0 ;
 }
 
 .v-align-wrapper {
@@ -19,9 +35,6 @@
 	    display: table;
 	    margin: 0 auto;
 
-		&.pad-5 {
-			padding: 5em;
-		}	    
 
 	    &.left {
 	    	right:auto;
