@@ -11,7 +11,7 @@ body.welcome-page {
 	section#landing {
 		height: 90vh;
 		position: relative;
-		@extend %g-sky-green ;
+		@extend %g-brand-spectrum ;
 		overflow:hidden;
 		
 		.featured-image {
@@ -20,7 +20,7 @@ body.welcome-page {
 			background-size: cover;
 			background-repeat: no-repeat;
 			position: absolute;
-			width:50%;
+			width:40%;
 			height: 100%;
 			right: 0;
 			mix-blend-mode: multiply;
@@ -65,8 +65,44 @@ body.welcome-page {
 
 	section#platinum {
 		@extend %g-platinum;
-		height:200px;
+		height:300px;
+		padding:50px 0px;
 		position: relative;
+		color:#fff;
+
+		& h1, & h2, & h3 {
+			margin: 0;
+		}
+
+		span.platinum-pass {
+		    border: 2px solid;
+		    padding: 10px 20px;
+		    border-radius: 5px;
+		    font-family:  AlternateGothicLT-No2;
+		    font-size: 5em;
+		    text-transform: uppercase;
+		}
+	}
+
+	/* Section: Social */
+
+	section#social {
+
+		@extend %g-yellow-orange ;
+		height:300px;
+		padding:50px 0px;
+		position: relative;
+		color:$u-grey;
+
+		& h1, & h2, & h3 {
+			margin: 0;
+		}
+
+		.icon {
+		    width: 5em;
+		    margin:0 1em;
+		}
+
 	}
 
 	/* Section: Events */
@@ -108,6 +144,7 @@ body.welcome-page {
 	        top: 0;
 	        overflow: hidden;
 	        bottom: 0;
+
 	        left: 0;
 	    }
 			

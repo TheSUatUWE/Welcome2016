@@ -15,6 +15,15 @@ section#events {
 		.filter {
 		    height: 40px;
 		    padding: 7px 12px;
+
+		    &.active {
+		    	background-color: $u-grey;
+		    	color:#fff;
+		    }
+		}
+
+		.search-bar {
+			float:right;
 		}
 
 		& > button {
@@ -25,7 +34,7 @@ section#events {
 						padding-left: 10px;
 					}
 			&.night {
-				background: $u-sky;
+				background-color: $u-sky;
 				background-image: url('/assets/icons/bright_moon.svg');
 				background-size: 30px;
 				background-repeat: no-repeat;
@@ -33,53 +42,102 @@ section#events {
 				padding-right: 40px!important;
 			}
 			&.day {
-				background:$u-yellow;
+				background-color:$u-yellow;
 				background-image: url('/assets/icons/sun.svg');
 				background-size: 30px;
 				background-repeat: no-repeat;
 				background-position: 90%;
 				padding-right: 40px!important;
 			}
+			&.main {
+				background-color:#fff;
+				background-image: url('/assets/icons/star.svg');
+				background-size: 30px;
+				background-repeat: no-repeat;
+				background-position: 90%;
+				padding-right: 40px!important;
+			}
+
+			&:hover {
+				background-color:#fff;
+			}
 		}
 	}
 	
-	.w16-tod {
+	.event-card {
+		.w16-tod {
 
-		&.day {
+			&.day {
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 0 75px 75px;
+					border-color: transparent transparent #ffe44d transparent;
+					line-height: 0px;
+					_border-color: #000000 #000000 #ffe44d #000000;
+					_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+					position: absolute;
+					bottom: 0;
+					right: 0;
+
+
+				}
+			&.night {
 				width: 0;
 				height: 0;
 				border-style: solid;
 				border-width: 0 0 75px 75px;
-				border-color: transparent transparent #ffe44d transparent;
+				border-color: transparent transparent #a0d9e0 transparent;
 				line-height: 0px;
-				_border-color: #000000 #000000 #ffe44d #000000;
+				_border-color: #000000 #000000 #a0d9e0 #000000;
 				_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 				position: absolute;
 				bottom: 0;
 				right: 0;
+			}	
+		}
 
+		.tod-icon {
+		    position: absolute;
+		    right: 5px;
+		    bottom:5px;
+		    z-index: 1;
+		    width: 30px;
+		}
 
-			}
-		&.night {
+		.main-icon {
+			position: absolute;
+			right: auto;
+			left: 5px;
+			bottom:auto;
+			top: 5px;
+			z-index: 1;
+			width: 30px;
+		}
+
+		.main {
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 0 0 75px 75px;
-			border-color: transparent transparent #a0d9e0 transparent;
+			border-width: 75px 75px 0 0;
+			border-color:  #fff transparent transparent transparent;
 			line-height: 0px;
-			_border-color: #000000 #000000 #a0d9e0 #000000;
+			_border-color: #fff #000000 #000000  #000000;
 			_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 			position: absolute;
-			bottom: 0;
-			right: 0;
-		}	
-	}
+			bottom: auto;
+			right: auto;
+			left:0;
+			top:0;
+		}
 
-	.tod-icon {
-	    position: absolute;
-	    right: 5px;
-	    bottom: 5px;
-	    z-index: 1;
-	    width: 30px;
 	}
+	
+
+	
+
+
+
+	
+
 }

@@ -101,7 +101,7 @@
         });
     });
 
-     // Welcome Events
+     // Day Night Welcome Events
     $( document ).ready(function() {
         $('.event-card').each(function() {
 
@@ -112,6 +112,35 @@
           }
         });
     });
+
+    // Main Events
+    $( document ).ready(function() {
+        $('.event-card').each(function() {
+
+          if ( $(this).hasClass('w16-main') ) {
+            $(this).append('<object class="main-icon" data="/assets/icons/star.svg" type="image/svg+xml"></object><div class="w16-main main"></div>'); 
+          } 
+        });
+    });
+
+    // Event Filter Buttons 
+    $( document ).ready(function() {
+      $('.filter').click(function(){
+        $(this).toggleClass('active');
+        var curType = $(this).attr('data-event-type');
+        
+      $('.event-card').each(function(){
+        if ( !$(this).hasClass(curType) ) {
+          $(this).toggleClass('hidden');
+        }
+    });
+
+
+
+      });
+    });
+
+    
 
   });
 })(jQuery, window, document);

@@ -20,6 +20,43 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
+    <script src="assets/js/handlebars-v4.0.5.js"></script>
+    <script id="event-template" type="text/x-handlebars-template">
+    <a href="{{Url}}">
+      <div class="col-md-6">
+        <div class="card event-card w16-main w16-night shadow-1">
+          <div class="row no-margin">
+            <div class="card-image" style="background:url('{{ImageUrl}}');background-size: cover;background-position: center;"></div>
+            <div class="col-md-4 card-img-left-wrap no-pad">
+            </div>
+            <div class="col-md-8">
+              <div class="card-block">
+                <h3 class="card-title">{{Title}}</h3>
+                <p class="card-text">{{Descrition}}</p>
+                
+                {{#if HasTickets}}
+                <button class="grey right-arrow">Buy tickets</button>
+                {{/if}}
+
+                <div class="card-meta">
+                  <div class="location">
+                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
+                    {{Location}}
+                    
+                  </div>
+                  <div class="date">
+                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
+                    {{StartDate}} - {{EndDate}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </a> 
+    </script>
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
@@ -42,7 +79,6 @@
 
   </head>
   <body class="welcome-page">
-
     <div id="sidebar-wrapper">
       <div class="sidebar-toggle-top toggled">
           <span class="toggle-bar"></span>
@@ -128,90 +164,20 @@
 
         
           <ul class="nav nav-inline">
-            <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li><!-- 
+             --><li class="nav-item">
+              <a class="nav-link" href="#">Fair</a>
             </li><!--
             --><li class="nav-item">
-              <a class="nav-link" href="#">What's On</a>
+              <a class="nav-link" href="#">Festival</a>
             </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Union</a>
-              <div class="dropdown-menu shadow-5">
-                  <a href="#" class="dropdown-item">Frenchay</a>
-                  <a href="#" class="dropdown-item">Glenside</a>
-                  <a href="#" class="dropdown-item">Gloucester</a>
-                  <a href="#" class="dropdown-item">Loyalty</a>
-                  <a href="#" class="dropdown-item">About Us</a>
-                  <a href="#" class="dropdown-item">Constitution</a>
-                  <a href="#" class="dropdown-item">Information for Union Staff</a>
-                  <a href="#" class="dropdown-item">Information for UWE Staff</a>
-                  <a href="#" class="dropdown-item">Marketing Help</a>
-                  <a href="#" class="dropdown-item">Contact Us</a>
-            </div>
-            </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Community</a>
-              <div class="dropdown-menu shadow-5">
-                  <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
-                  <a href="#" class="dropdown-item">Jobshop</a>
-                  <a href="#" class="dropdown-item">Off the Wall</a>
-                  <a href="#" class="dropdown-item">Societies</a>
-                  <a href="#" class="dropdown-item">Sports</a>
-                  <a href="#" class="dropdown-item">The Green Team</a>
-                  <a href="#" class="dropdown-item">This Girl Can</a>
-                  <a href="#" class="dropdown-item">How To and Membership Resources</a>
-                  <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
-                  <a href="#" class="dropdown-item">Volunteering</a>
-            </div>
-            </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Opportunities</a>
-              <div class="dropdown-menu shadow-5">
-                <a href="#" class="dropdown-item">Feel Good February</a>
-                <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
-                <a href="#" class="dropdown-item"></a>
-                <a href="#" class="dropdown-item">Off the Wall</a>
-                <a href="#" class="dropdown-item">Societies</a>
-                <a href="#" class="dropdown-item">Sports</a>
-                <a href="#" class="dropdown-item">The Green Team</a>
-                <a href="#" class="dropdown-item">This Girl Can</a>
-                <a href="#" class="dropdown-item">How To and Membership Resources</a>
-                <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
-                <a href="#" class="dropdown-item">Volunteering</a>
-            </div>
-            </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Representation</a>
-              <div class="dropdown-menu shadow-5">
-                <a href="#" class="dropdown-item">Advice Centre</a>
-                <a href="#" class="dropdown-item">Campaigns</a>
-                <a href="#" class="dropdown-item">National Union of Students' (NUS) Conferences</a>
-                <a href="#" class="dropdown-item">Policies</a>
-                <a href="#" class="dropdown-item">Presidents &amp; Officers</a>
-                <a href="#" class="dropdown-item">Student Council</a>
-                <a href="#" class="dropdown-item">Student Reps</a>
-                <a href="#" class="dropdown-item">The Big Review</a>
-                <a href="#" class="dropdown-item">Elections</a>
-                <a href="#" class="dropdown-item">Committees</a>
-                <a href="#" class="dropdown-item">The Students' Union Meeting (AGM)</a>
-            </div>
-            </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bars</a>
-              <div class="dropdown-menu shadow-5">
-                <a href="#" class="dropdown-item">Bower Ashton</a>
-                <a href="#" class="dropdown-item">Frenchay Bar and Coffee</a>
-                <a href="#" class="dropdown-item">Glenside Cafe Bar</a>
-            </div>
-            </li><!--
-            --><li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Shops</a>
-              <div class="dropdown-menu shadow-5">
-                <a href="#" class="dropdown-item">Bus Tickets</a>
-                <a href="#" class="dropdown-item">Clothing and Accessories</a>
-                <a href="#" class="dropdown-item">Shops</a>
-                <a href="#" class="dropdown-item">Amazon Portal</a>
-            </div>
+            --><li class="nav-item">
+              <a class="nav-link" href="#">Passes</a>
+            </li><!-- 
+             --><li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
             </li>
           </ul>
           
@@ -230,7 +196,7 @@
               <h1 class="super-header">Welcome</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
 
-              <button class="red right-arrow">View the events programme</button>
+              <button class="red down-arrow">View the events programme</button>
             </div>
           </div>
 
@@ -277,328 +243,86 @@
           </div>
         </div> -->
       </section>
+
       <section id="platinum">
         <div class="v-align-wrapper">
           <div class="v-align">
-            <div class="container text-xs-center">
-              <h1>Platinum</h1>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 text-md-right">
+                  <span class="platinum-pass">P</span>
+                  <span class="platinum-pass">PX</span>
+                </div>
+                <div class="col-md-6 platinum-desc text-md-left">
+                  <h3>Discounts, deals and exclusives with our</h3>
+                  <span class="h1">Platinum Passes</span><br>
+                  <button class="grey right-arrow">Buy yours now</button>
+                </div>
+              </div>
+            
             </div>
           
           </div>
         </div>
-
       </section>
+
       <section id="events">
         <div class="container">
-          <h2>Events</h2>
+          <h2 class="super-header">Events</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quas, excepturi laudantium minima vel velit quis similique distinctio. Fugit, dolorem.</p>
           <div class="search">
-          <button class="day filter">Day</button>
-          <button class="night filter">Night</button>
-          <button class="filter">Main</button>
-          <span class="spacer"></span>
-          <select class="filter" name="Location" id="">
+          <button class="day filter" data-event-type="w16-day">Day</button>
+          <button class="night filter m-r-2" data-event-type="w16-night">Night</button>
+          <button class="main filter m-r-2" data-event-type="w16-main">Main</button>
+          
+          <select class="filter m-r-2" name="Location" id="">
             <option value="" default selected>Select Location</option>
             <option value="bower">Bower Ashton</option>
             <option value="glenside">Glenside</option>
             <option value="frenchay">Frenchay</option>
             <option value="city">City Center</option>
           </select>
-
-          <input class="filter" type="search" placeholder="Search events" required="">
+          <div class="search-bar">
+            <span class="h4">Search</span>
+            <input class="filter" type="search" placeholder="Search events" required="">
+             <input class="test" type="search" placeholder="Search events" required="">
+          </div>
+         
           </div>
 
-          <div class="row">
-                      <div class="col-md-6">
-                        <div class="card event-card w16-night shadow-1">
-                          <div class="row no-margin">
-                            <div class="card-image" style="background:url('http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg');background-size: cover;background-position: center;"></div>
-                            <div class="col-md-4 card-img-left-wrap no-pad">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-block">
-                                <h3 class="card-title">Freshers' Fortnight Launch</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea fuga, nihil cupiditate perspiciatis a.</p>
 
-                                <button class="grey right-arrow">Buy tickets</button>
-
-                                <div class="card-meta">
-                                  <div class="location">
-                                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
-                                    Frenchay 
-                                    
-                                  </div>
-                                  <div class="date">
-                                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
-                                    Sept 21 2016
-                                  </div>
-                                </div>
-
-                              </div>
-                              
-                            </div>
-                          </div>
-                          
-                         
-                          
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card event-card w16-night shadow-1">
-                          <div class="row no-margin">
-                            <div class="card-image" style="background:url('http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg');background-size: cover;background-position: center;"></div>
-                            <div class="col-md-4 card-img-left-wrap no-pad">
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-block">
-                                <h3 class="card-title">Freshers' Fortnight Launch</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea fuga, nihil cupiditate perspiciatis a.</p>
-
-                                <button class="grey right-arrow">Buy tickets</button>
-
-                                <div class="card-meta">
-                                  <div class="location">
-                                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
-                                    Frenchay 
-                                    
-                                  </div>
-                                  <div class="date">
-                                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
-                                    Sept 21 2016
-                                  </div>
-                                </div>
-
-                              </div>
-                              
-                            </div>
-                          </div>
-                          
-                         
-                          
-                        </div>
-                      </div>        
-        </div>
         
 
-        <!-- <div class="container events-wrapper">
-          <div class="col-md-6 events-item">
-            <div class="card">
-              <img class="card-img-left" data-src="..." alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+          <div id="event-listings"></div>
+          
+          
+      
+
+      
+       
+      
+      </section>
+
+      <section id="social">
+        <div class="v-align-wrapper">
+          <div class="v-align">
+            <div class="container">
+              <div class="row text-xs-center">
+                <p>Follow us:</p>
+
+                <object type="image/svg+xml" data="/assets/icons/Facebook Filled.svg" class="icon"></object>
+                <object type="image/svg+xml" data="/assets/icons/Twitter Filled.svg" class="icon"></object>
+                <object type="image/svg+xml" data="/assets/icons/Instagram Filled.svg" class="icon"></object>
+                <object type="image/svg+xml" data="/assets/icons/Snapchat.svg" class="icon"></object>
+                <object type="image/svg+xml" data="/assets/icons/Youtube.svg" class="icon"></object>
+
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
-              <div class="card-block">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
+            
             </div>
+          
           </div>
-          <div class="col-md-6 events-item">
-            
-          </div>
-        </div> -->
-   
-       <!--  <div class="mslwidget">
-        <div class="msl_eventlist">
-
-            
-            
-
-            
-                    
-                    <div>
-           
-
-                        
-
-                        
-
-                                <div class="event_item item1 itemOdd msltypefrenchay msltypenight msltypew16" data-msl-organisation-id="6013">
-
-                              <dl>
-                                <dt>
-                                            
-                                                <a href="/ents/event/5374/">
-                                                    <span class="msl_event_image">
-                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/22153125449_c0df527003_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
-                                                    </span>
-                                                </a>
-                                            
-
-                                            
-                                            <a href="/ents/event/5374/" class="msl_event_name">Freshers' Fortnight Launch</a>
-                                        </dt>
-                
-                                        <dd class="msl_event_time">5th September 9pm - midnight</dd>
-                
-                                        <dd class="msl_event_location">Frenchay Bar</dd>
-
-                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aliquam.</dd>
-
-                                
-
-                                        
-
-                                <dd class="msl_event_types">
-                                  
-                                                    <a href="/ents/eventlist/frenchay/">Frenchay Event</a>
-                                     | 
-                                                    <a href="/ents/eventlist/night/">Night</a>
-                                     | 
-                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
-                                    
-                                </dd>
-
-                                <dd class="msl_event_hook">
-
-                              </dd></dl>
-
-                                </div>
-
-                          
-
-                                <div class="event_item item2 itemEven msltypefrenchay msltypenight msltypew16" data-msl-organisation-id="6013">
-
-                              <dl>
-                                <dt>
-                                            
-                                                <a href="http://www.thestudentsunion.co.uk/ents/event/5377/">
-                                                    <span class="msl_event_image">
-                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/bowerwelcomeparty-500-x-500.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
-                                                    </span>
-                                                </a>
-                                            
-
-                                            
-                                            <a href="/ents/event/5377/" class="msl_event_name">Lock In</a>
-                                        </dt>
-                
-                                        <dd class="msl_event_time">6th September 9pm - midnight</dd>
-                
-                                        <dd class="msl_event_location">Frenchay Bar</dd>
-
-                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint accusantium illo deleniti sunt ipsa. saepe aliquid, laboriosam totam vitae?</dd>
-
-                                
-
-                                        
-
-                                <dd class="msl_event_types">
-                                  
-                                                    <a href="/ents/eventlist/frenchay/">Frenchay Event</a>
-                                     | 
-                                                    <a href="/ents/eventlist/night/">Night</a>
-                                     | 
-                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
-                                    
-                                </dd>
-
-                                <dd class="msl_event_hook">
-
-                              </dd></dl>
-
-                                </div>
-
-                          
-
-                                <div class="event_item item3 itemOdd msltypefreshers msltypenight msltypew16_main msltypew16" data-msl-organisation-id="6013">
-
-                              <dl>
-                                <dt>
-                                            
-                                                <a href="http://www.thestudentsunion.co.uk/ents/event/5375/">
-                                                    <span class="msl_event_image">
-                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/23363398592_dae9ed1840_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
-                                                    </span>
-                                                </a>
-                                            
-
-                                            
-                                            <a href="/ents/event/5375/" class="msl_event_name">White T-Shirt Party</a>
-                                        </dt>
-                
-                                        <dd class="msl_event_time">9th September 9pm - midnight</dd>
-                
-                                        <dd class="msl_event_location">Frenchay Bar</dd>
-
-                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</dd>
-
-                                <dd class="msl_event_tickets">
-                                            <a class="msl_ticket" href="/ents/event/5375/">Buy Tickets</a>
-                                        </dd>
-
-                                        
-
-                                <dd class="msl_event_types">
-                                  
-                                                    <a href="/ents/eventlist/freshers/">Freshers Event</a>
-                                     | 
-                                                    <a href="/ents/eventlist/night/">Night</a>
-                                     | 
-                                                    <a href="/ents/eventlist/w16_main/">Main</a>
-                                     | 
-                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
-                                    
-                                </dd>
-
-                                <dd class="msl_event_hook">
-
-                              </dd></dl>
-
-                                </div>
-
-                          
-
-                                <div class="event_item item4 itemEven msltypeday msltypeglenside msltypew16" data-msl-organisation-id="6013">
-
-                              <dl>
-                                <dt>
-                                            
-                                                <a href="http://www.thestudentsunion.co.uk//ents/event/5376/">
-                                                    <span class="msl_event_image">
-                                                        <img src="http://www.thestudentsunion.co.uk/asset/Event/6013/15316783574_7d873f2ca6_z.jpg?thumbnail_width=150&amp;thumbnail_height=300&amp;resize_type=CropToFit" alt="">
-                                                    </span>
-                                                </a>
-                                            
-
-                                            
-                                            <a href="/ents/event/5376/" class="msl_event_name">Green It Up</a>
-                                        </dt>
-                
-                                        <dd class="msl_event_time">15th September 1pm - 4pm</dd>
-                
-                                        <dd class="msl_event_location">Glenside</dd>
-
-                                <dd class="msl_event_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint accusantium illo deleniti sunt ipsa. saepe aliquid, laboriosam totam vitae?</dd>
-
-                                
-
-                                        
-
-                                <dd class="msl_event_types">
-                                  
-                                                    <a href="/ents/eventlist/day/">Day</a>
-                                     | 
-                                                    <a href="/ents/eventlist/glenside/">Glenside Event</a>
-                                     | 
-                                                    <a href="/ents/eventlist/w16/">Welcome 2016</a>
-                                    
-                                </dd>
-
-                                <dd class="msl_event_hook">
-
-                              </dd></dl>
-
-                                </div>
         </div>
-        </div>
-        </div> -->
       </section>
       
       </main>
@@ -619,6 +343,7 @@
     <script src="assets/js/scripts.min.js"></script>
     <script src="assets/js/holmes.js"></script>
     <script src="assets/js/background.js"></script>
+
 
 
     <script src="assets/js/owl.carousel.min.js"></script>
@@ -645,8 +370,8 @@
     <script>
       holmes({
         input: '.search input',
-        find: '.event_item',
-        placeholder: 'no results',
+        find: '.event-card',
+        placeholder: '<h3 class="super-header">no results</h3>',
         class: {
             // (optional) class to add to matched elements
             visible: 'visible',
@@ -655,6 +380,27 @@
           }
       });
     </script>
+
+     <script type="text/javascript">
+            //wait for page to load
+            $(document).ready(function(){
+              // Extract the text from the template .html() is the jquery helper method for that
+              var raw_template = $('#event-template').html();
+              // Compile that into an handlebars template
+              var template = Handlebars.compile(raw_template);
+              // Retrieve the placeHolder where the Posts will be displayed 
+              var placeHolder = $("#event-listings");
+              // Fetch all Blog Posts data from server in JSON
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/6013?subtree=true&from=2015-12-01&to=2015-12-25&imagesize=portrait",function(data,status,xhr){
+                $.each(data,function(index,element){
+                  // Generate the HTML for each post
+                  var html = template(element);
+                  // Render the posts into the page
+                  placeHolder.append(html);
+                });
+              });
+            });
+          </script>
 
     <script>
     (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

@@ -67,13 +67,66 @@ $u-grey-l50 : lighten( $u-grey, 50% ) ;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+%g-brand-spectrum {
+	background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
+	background-size: 1200% 1200%;
+
+	-webkit-animation: AnimationName 22s ease infinite;
+	-moz-animation: AnimationName 22s ease infinite;
+	-o-animation: AnimationName 22s ease infinite;
+	animation: AnimationName 22s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:0% 15%}
+	    50%{background-position:100% 86%}
+	    100%{background-position:0% 15%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:0% 15%}
+	    50%{background-position:100% 86%}
+	    100%{background-position:0% 15%}
+	}
+	@-o-keyframes AnimationName {
+	    0%{background-position:0% 15%}
+	    50%{background-position:100% 86%}
+	    100%{background-position:0% 15%}
+	}
+	@keyframes AnimationName { 
+	    0%{background-position:0% 15%}
+	    50%{background-position:100% 86%}
+	    100%{background-position:0% 15%}
+	}
+}
+
 %g-platinum {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#515151+0,7f7f7f+49,515151+100 */
-	background: rgb(81,81,81); /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  rgba(81,81,81,1) 0%, rgba(127,127,127,1) 49%, rgba(81,81,81,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg,  rgba(81,81,81,1) 0%,rgba(127,127,127,1) 49%,rgba(81,81,81,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg,  rgba(81,81,81,1) 0%,rgba(127,127,127,1) 49%,rgba(81,81,81,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#515151',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: linear-gradient(129deg, #887b8a, #989898, #818181, #6e6e6e, #7e7f8a);
+	background-size: 1000% 1000%;
+
+	-webkit-animation: PlatinumAnimation 10s infinite;
+	-moz-animation: PlatinumAnimation 10s infinite;
+	-o-animation: PlatinumAnimation 10s infinite;
+	animation: PlatinumAnimation 10s infinite;
+
+	@-webkit-keyframes PlatinumAnimation {
+	    0%{background-position:15% 0%}
+	    50%{background-position:86% 100%}
+	    100%{background-position:15% 0%}
+	}
+	@-moz-keyframes PlatinumAnimation {
+	    0%{background-position:15% 0%}
+	    50%{background-position:86% 100%}
+	    100%{background-position:15% 0%}
+	}
+	@-o-keyframes PlatinumAnimation {
+	    0%{background-position:15% 0%}
+	    50%{background-position:86% 100%}
+	    100%{background-position:15% 0%}
+	}
+	@keyframes PlatinumAnimation { 
+	    0%{background-position:15% 0%}
+	    50%{background-position:86% 100%}
+	    100%{background-position:15% 0%}
+	}
 }
 
  

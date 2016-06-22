@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="facebook-logo" viewBox="0 0 50 50"><path class="st0" d="M40 0H10C4.5 0 0 4.5 0 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10V10C50 4.5 45.5 0 40 0zM39 17h-3c-2.1 0-3 0.5-3 2v3h6l-1 6h-5v20h-7V28h-3v-6h3v-3c0-4.7 1.6-8 7-8 2.9 0 6 1 6 1V17z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="facebook-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="-454 256 50 50" style="enable-background:new -454 256 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#40373F;}
+</style>
+<path class="st0" d="M-414,256h-30c-5.5,0-10,4.5-10,10v30c0,5.5,4.5,10,10,10h30c5.5,0,10-4.5,10-10v-30
+	C-404,260.5-408.5,256-414,256z M-415,273h-3c-2.1,0-3,0.5-3,2v3h6l-1,6h-5v20h-7v-20h-3v-6h3v-3c0-4.7,1.6-8,7-8c2.9,0,6,1,6,1V273
+	z"/>
+</svg>

@@ -42,6 +42,7 @@ module.exports = function(grunt) {
       src: 'src',
       app: 'app',
       assets: '<%= project.app %>/assets',
+      mslassets: '<%= project.app %>/assets-msl',
       css: [
         '<%= project.src %>/scss/styles.scss'
       ],
@@ -203,13 +204,16 @@ module.exports = function(grunt) {
         files: {
           '<%= project.assets %>/css/style.min.css': [
             '<%= project.assets %>/css/style.unprefixed.css'
+          ],
+          '<%= project.mslassets %>/css/w16-style.min.css': [
+            '<%= project.assets %>/css/style.unprefixed.css'
           ]
         }
       },
       dist: {
         files: {
           '<%= project.assets %>/css/style.prefixed.css': [
-            '<%= project.assets %>/css/style.unprefixed.css'
+            '<%= project.assets %>/css/style.unprefixed.css',
           ]
         }
       }

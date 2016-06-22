@@ -4,9 +4,32 @@
 * 
 */
 
+
+/*@font-face {
+    font-family: NewsGothicBT-Roman;
+    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.eot');
+    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0?#iefix') format('embedded-opentype'),
+         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.woff') format('woff'),
+         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.ttf') format('truetype');
+  
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: AlternateGothicLT-No2;
+    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.eot');
+    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.eot?#iefix') format('embedded-opentype'),
+         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.woff') format('woff'),
+         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
 /* Import News Gothic*/
 @font-face {
-    font-family: 'News Gothic';
+    font-family: NewsGothicBT-Roman;
     src: url('../fonts/2EA350_0_0.eot');
     src: url('../fonts/2EA350_0_0?#iefix') format('embedded-opentype'),
          url('../fonts/2EA350_0_0.woff') format('woff'),
@@ -19,10 +42,10 @@
 
 /* Import Alt Gothic */
 @font-face {
-    font-family: 'Alternate Gothic';
+    font-family: AlternateGothicLT-No2;
     src: url('../fonts/2EA350_E_0.eot');
     src: url('../fonts/2EA350_E_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2EA350_E_0.woff') format('woff'),
+         url('../fontss/2EA350_E_0.woff') format('woff'),
          url('../fonts/2EA350_E_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -40,13 +63,13 @@
 
 /* Body Font */
 body {
-    font-family: 'News Gothic';
+    font-family: NewsGothicBT-Roman;
     color:$u-grey;
 }
 
 /* Heading Fonts */
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5  {
-    font-family: 'Alternate Gothic';
+    font-family: AlternateGothicLT-No2;
     text-transform: uppercase;
     font-weight:normal!important;
 }
@@ -78,13 +101,13 @@ a {
 /* Quotes */
 q {
     &::after {
-    font-family:'Alternate Gothic';    
+    font-family:AlternateGothicLT-No2;    
     content: close-quote;
     font-size:110%;
     color:$u-red;
     }
     &::before {
-    font-family:'Alternate Gothic';    
+    font-family:AlternateGothicLT-No2;    
     content: open-quote;
     font-size:110%;
     color:$u-red;

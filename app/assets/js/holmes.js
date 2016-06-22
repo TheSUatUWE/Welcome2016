@@ -99,12 +99,13 @@
       var elements = document.querySelectorAll(options.find);
       var elementsLength = elements.length;
 
+
       // create a container for a placeholder
       if (options.placeholder) {
         var placeholder = document.createElement('div');
         placeholder.classList.add(options.class.hidden);
         placeholder.innerHTML = options.placeholder;
-        elements[0].parentNode.appendChild(placeholder);
+        elements[0].parentNode.parentNode.appendChild(placeholder);
       }
 
       // if a visible class is given, give it to everything
@@ -141,19 +142,25 @@
         var i;
         for (i = 0; i < elementsLength; i++) {
 
-          // if the current element doesn't containt the search string
+          // if the current element doesn't contain the search string
           // add the hidden class and remove the visbible class
           if (elements[i].textContent.toLowerCase().indexOf(searchString) === -1) {
-            elements[i].classList.add(options.class.hidden);
+
+            elements[i].parentNode.classList.add(options.class.hidden);
+
             if (options.class.visible) {
-              elements[i].classList.remove(options.class.visible);
+
+              elements[i].parentNode.classList.remove(options.class.visible);
             }
           // else
           // remove the hidden class and add the visible
           } else {
-            elements[i].classList.remove(options.class.hidden);
+
+            elements[i].parentNode.classList.remove(options.class.hidden);
+
             if (options.class.visible) {
-              elements[i].classList.add(options.class.visible);
+
+              elements[i].parentNode.classList.add(options.class.visible);
             }
             // the element is now found at least once
             found = true;

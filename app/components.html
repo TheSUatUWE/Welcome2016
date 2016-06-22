@@ -1,0 +1,370 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>The Students' Union: Development</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <script src="assets/components/modernizr.js"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.structure.min.css"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.theme.min.css"></script>
+    <link rel="stylesheet" src="assets/components/jquery-ui.min.css"></script>
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#e84253">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+  <body>
+
+    <div id="sidebar-wrapper">
+      <div class="sidebar-toggle-top toggled">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <div class="side-menu-toggle-label"></div>
+        </div>
+      <ul class="sidebar-nav">
+
+          <li class="sidebar-brand">
+              <a href="#">
+                  Good afternoon Luke
+              </a>
+          </li>
+          <li>
+              <a href="#">Profile</a>
+          </li>
+          <li>
+              <a href="#">Memberships</a>
+          </li>
+          <li>
+              <a href="#">Messages</a>
+          </li>
+          <li>
+              <a href="#">Events</a>
+          </li>
+          <li>
+              <a href="#">Basket</a>
+          </li>
+          <li class="seperator">
+            
+          </li>
+          <li id="logout">
+              <a href="#">Log Out</a>
+          </li>
+          <li class="seperator">
+            
+          </li>
+          <li>
+              <a href="#">Site Admin</a>
+          </li>
+          <li>
+              <a href="#">Page Admin</a>
+          </li>
+      </ul>
+    </div>
+
+    <div id="page-wrapper">
+
+      <header class="header" role="banner">
+        <nav class="nav navbar-fixed-top" role="navigation">
+        <div class="mobile-menu-bg"></div>
+        <div class="logo">
+          <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
+              .tri{fill:#F04E5C;}
+              .text{fill:#FFFFFF;}
+            </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
+            <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
+          </a>
+        </div>
+
+        <div class="mobile-menu-toggle">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </div>
+
+        <div class="nav-secondary">
+          <div class="sidebar-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" x="25" y="25" viewBox="0 0 50 50"><path class="user" d="M34.8 33.8c-1.7-0.7-3.8-1.6-3.8-2.3V27c2.5-1.9 4-4.9 4-8v-6c0-5.5-4.5-10-10-10 -5.5 0-10 4.5-10 10v6c0 3.1 1.5 6.2 4 8v4.5c0 0.6-2.1 1.5-3.8 2.3C11.1 35.5 5 38.1 5 45v1h40v-1C45 38.1 38.9 35.5 34.8 33.8z"/></svg>
+            <div class="side-menu-toggle-label"></div>
+          </div>
+
+          <div class="search-wrap">
+            <input id="header-search" type="search" />
+            <input id="header-search-submit" type="submit" value="Search" >
+          </div>
+
+        </div>
+
+        <div class="mobile-menu-circle shadow-5"></div>
+
+        
+          <ul class="nav nav-inline">
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li><!--
+            --><li class="nav-item">
+              <a class="nav-link" href="#">What's On</a>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Union</a>
+              <div class="dropdown-menu shadow-5">
+                  <a href="#" class="dropdown-item">Frenchay</a>
+                  <a href="#" class="dropdown-item">Glenside</a>
+                  <a href="#" class="dropdown-item">Gloucester</a>
+                  <a href="#" class="dropdown-item">Loyalty</a>
+                  <a href="#" class="dropdown-item">About Us</a>
+                  <a href="#" class="dropdown-item">Constitution</a>
+                  <a href="#" class="dropdown-item">Information for Union Staff</a>
+                  <a href="#" class="dropdown-item">Information for UWE Staff</a>
+                  <a href="#" class="dropdown-item">Marketing Help</a>
+                  <a href="#" class="dropdown-item">Contact Us</a>
+            </div>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Community</a>
+              <div class="dropdown-menu shadow-5">
+                  <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
+                  <a href="#" class="dropdown-item">Jobshop</a>
+                  <a href="#" class="dropdown-item">Off the Wall</a>
+                  <a href="#" class="dropdown-item">Societies</a>
+                  <a href="#" class="dropdown-item">Sports</a>
+                  <a href="#" class="dropdown-item">The Green Team</a>
+                  <a href="#" class="dropdown-item">This Girl Can</a>
+                  <a href="#" class="dropdown-item">How To and Membership Resources</a>
+                  <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
+                  <a href="#" class="dropdown-item">Volunteering</a>
+            </div>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Opportunities</a>
+              <div class="dropdown-menu shadow-5">
+                <a href="#" class="dropdown-item">Feel Good February</a>
+                <a href="#" class="dropdown-item">Fundraising &amp; Charity Societies</a>
+                <a href="#" class="dropdown-item"></a>
+                <a href="#" class="dropdown-item">Off the Wall</a>
+                <a href="#" class="dropdown-item">Societies</a>
+                <a href="#" class="dropdown-item">Sports</a>
+                <a href="#" class="dropdown-item">The Green Team</a>
+                <a href="#" class="dropdown-item">This Girl Can</a>
+                <a href="#" class="dropdown-item">How To and Membership Resources</a>
+                <a href="#" class="dropdown-item">National, Faith and Identity Societies</a>
+                <a href="#" class="dropdown-item">Volunteering</a>
+            </div>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Representation</a>
+              <div class="dropdown-menu shadow-5">
+                <a href="#" class="dropdown-item">Advice Centre</a>
+                <a href="#" class="dropdown-item">Campaigns</a>
+                <a href="#" class="dropdown-item">National Union of Students' (NUS) Conferences</a>
+                <a href="#" class="dropdown-item">Policies</a>
+                <a href="#" class="dropdown-item">Presidents &amp; Officers</a>
+                <a href="#" class="dropdown-item">Student Council</a>
+                <a href="#" class="dropdown-item">Student Reps</a>
+                <a href="#" class="dropdown-item">The Big Review</a>
+                <a href="#" class="dropdown-item">Elections</a>
+                <a href="#" class="dropdown-item">Committees</a>
+                <a href="#" class="dropdown-item">The Students' Union Meeting (AGM)</a>
+            </div>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bars</a>
+              <div class="dropdown-menu shadow-5">
+                <a href="#" class="dropdown-item">Bower Ashton</a>
+                <a href="#" class="dropdown-item">Frenchay Bar and Coffee</a>
+                <a href="#" class="dropdown-item">Glenside Cafe Bar</a>
+            </div>
+            </li><!--
+            --><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Shops</a>
+              <div class="dropdown-menu shadow-5">
+                <a href="#" class="dropdown-item">Bus Tickets</a>
+                <a href="#" class="dropdown-item">Clothing and Accessories</a>
+                <a href="#" class="dropdown-item">Shops</a>
+                <a href="#" class="dropdown-item">Amazon Portal</a>
+            </div>
+            </li>
+          </ul>
+          
+        </nav>
+
+        <div class="home-header-slider-wrap">
+          <div id="header-slider" class="owl-carousel">
+          <a href="#">
+            <div class="owl-slide" id="slide1">
+            <div class="slide-image"></div>
+              <div class="v-align-wrapper home-slider">
+                <div class="v-align">
+                  <div class="slider-content">
+                      <h2>Register to Vote by 7 June</h2>
+                    <div class="content-text hidden-md-down">
+                      <p>If you want to vote in the EU referendum on 23 June.</p>
+                    </div>
+                    <button class="cta grey">Register now</button>  
+                  </div>
+                </div>
+              </div>
+            </div>
+           </a> 
+            
+          <a href="#">
+            <div class="owl-slide" id="slide2">
+            <div class="slide-image"></div>
+              <div class="v-align-wrapper home-slider">
+                <div class="v-align">
+                  <div class="slider-content">
+                      <h2>Slide 2</h2>
+                    <div class="content-text hidden-md-down">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt autem, maiores expedita quae adipisci quis assumenda culpa praesentium repellat consequuntur.</p>
+                    </div>
+                    <button class="cta grey">Call to Action</button>
+                  </div>                 
+                </div>
+              </div>
+            </div>
+           </a>
+           <a href="#"> 
+            <div class="owl-slide" id="slide3">
+            <div class="slide-image"></div>
+              <div class="v-align-wrapper home-slider">
+                <div class="v-align">
+                  <div class="slider-content">
+                    <h2>Slide 3</h2>
+                    <div class="content-text hidden-md-down">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia officia, eaque, nemo laboriosam recusandae animi.</p>
+                    </div>
+                    <button class="cta grey">Call to Action</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+          
+          </div>
+        </div>
+      </header>
+      
+      <main class="main" role="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="text-xs-center">Circle Graphs</h2>
+              <div class="clearfix">
+
+                      <div class="c100 p50">
+                          <span>50%</span>
+                          <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                          </div>
+                      </div>
+
+                      <div class="c100 p25">
+                          <span>25%</span>
+                          <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                          </div>
+                      </div>
+
+                      <div class="c100 p12">
+                          <span>123</span>
+                          <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                          </div>
+                      </div>
+
+                      <div class="c100 p90">
+                          <span>90%</span>
+                          <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                          </div>
+                      </div>
+
+                  </div>
+              
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </div>
+        
+
+        <div id="scroller-div"></div>
+      </main>
+
+      <aside class="sidebar" role="complementary">
+
+      </aside>
+
+      <footer class="footer" role="contentinfo">
+
+      </footer>
+    </div>
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
+    <script src="assets/components/jquery-ui.min.js"></script>
+    <script src="assets/components/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#header-slider.owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        center:true,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        margin:0,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        URLhashListener:true,
+        autoplayHoverPause:true
+    });
+      });
+    </script>
+
+    <script>
+    (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+    (f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+    l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXXXXX-XX');
+    ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
