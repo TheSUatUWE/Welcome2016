@@ -124,21 +124,21 @@
     });
 
     // Event Filter Buttons 
-    $( document ).ready(function() {
-      $('.filter').click(function(){
-        $(this).toggleClass('active');
-        var curType = $(this).attr('data-event-type');
+    // $( document ).ready(function() {
+    //   $('.filter').click(function(){
+    //     $(this).toggleClass('active');
+    //     var curType = $(this).attr('data-event-type');
         
-      $('.event-card').each(function(){
-        if ( !$(this).hasClass(curType) ) {
-          $(this).toggleClass('hidden');
-        }
-    });
+    //   $('.event-card').each(function(){
+    //     if ( !$(this).hasClass(curType) ) {
+    //       $(this).toggleClass('hidden');
+    //     }
+    // });
 
 
 
-      });
-    });
+    //   });
+    // });
 
     
 

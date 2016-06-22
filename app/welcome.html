@@ -24,7 +24,7 @@
     <script id="event-template" type="text/x-handlebars-template">
     <a href="{{Url}}">
       <div class="col-md-6">
-        <div class="card event-card w16-main w16-night shadow-1">
+        <div class="card event-card {{Types}} shadow-1">
           <div class="row no-margin">
             <div class="card-image" style="background:url('{{ImageUrl}}');background-size: cover;background-position: center;"></div>
             <div class="col-md-4 card-img-left-wrap no-pad">
@@ -32,10 +32,12 @@
             <div class="col-md-8">
               <div class="card-block">
                 <h3 class="card-title">{{Title}}</h3>
-                <p class="card-text">{{Descrition}}</p>
+                <p class="card-text">{{Description}}</p>
                 
                 {{#if HasTickets}}
                 <button class="grey right-arrow">Buy tickets</button>
+                {{else}}
+                <button class="grey right-arrow">Find out more</button>
                 {{/if}}
 
                 <div class="card-meta">
@@ -46,7 +48,7 @@
                   </div>
                   <div class="date">
                     <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
-                    {{StartDate}} - {{EndDate}}
+                    {{ dateFormat StartDate format="ddd D, YYYY" }}
                   </div>
                 </div>
               </div>
@@ -285,7 +287,6 @@
           <div class="search-bar">
             <span class="h4">Search</span>
             <input class="filter" type="search" placeholder="Search events" required="">
-             <input class="test" type="search" placeholder="Search events" required="">
           </div>
          
           </div>
@@ -293,7 +294,7 @@
 
         
 
-
+          <!-- Placeholder for events listings template -->
           <div id="event-listings"></div>
           
           
@@ -341,7 +342,7 @@
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
-    <script src="assets/js/holmes.js"></script>
+    
     <script src="assets/js/background.js"></script>
 
 
@@ -367,21 +368,9 @@
       });
     </script>
 
-    <script>
-      holmes({
-        input: '.search input',
-        find: '.event-card',
-        placeholder: '<h3 class="super-header">no results</h3>',
-        class: {
-            // (optional) class to add to matched elements
-            visible: 'visible',
-            // (optional) class to add to non-matched elements
-            hidden: 'hidden'
-          }
-      });
-    </script>
-
-     <script type="text/javascript">
+    
+      <script src="assets/js/moment.js"></script>
+       <script type="text/javascript">
             //wait for page to load
             $(document).ready(function(){
               // Extract the text from the template .html() is the jquery helper method for that
@@ -391,7 +380,10 @@
               // Retrieve the placeHolder where the Posts will be displayed 
               var placeHolder = $("#event-listings");
               // Fetch all Blog Posts data from server in JSON
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/6013?subtree=true&from=2015-12-01&to=2015-12-25&imagesize=portrait",function(data,status,xhr){
+
+
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=portrait",function(data,status,xhr){
+               
                 $.each(data,function(index,element){
                   // Generate the HTML for each post
                   var html = template(element);
@@ -399,8 +391,41 @@
                   placeHolder.append(html);
                 });
               });
+
+              //  format an ISO date using Moment.js
+              //  http://momentjs.com/
+              //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
+              //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
+              Handlebars.registerHelper('dateFormat', function(context, block) {
+                if (window.moment) {
+                  var f = block.hash.format || "ddd D, YYYY";
+                  return moment(context).format(f);
+                }else{
+                  return context;   //  moment plugin not available. return data as is.
+                };
+              });
+
             });
           </script>
+
+          <script src="assets/js/holmes.js"></script>
+          <script>
+            holmes({
+              input: '.search input',
+              find: '.event-card',
+              dynamic: true,
+              placeholder: '<h3 class="super-header">no results</h3>',
+              class: {
+                  // (optional) class to add to matched elements
+                  visible: 'visible',
+                  // (optional) class to add to non-matched elements
+                  hidden: 'hidden'
+                }
+            });
+          </script>
+
+          script
+
 
     <script>
     (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
