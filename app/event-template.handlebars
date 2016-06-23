@@ -1,0 +1,36 @@
+<a href="{{Url}}">
+      <div class="col-md-6">
+        <div class="card event-card {{Types}} shadow-1">
+          <div class="row no-margin">
+            <div class="card-image" style="background:url('{{ImageUrl}}');background-size: cover;background-position: center;"></div>
+            <div class="col-md-4 card-img-left-wrap no-pad">
+            </div>
+            <div class="col-md-8">
+              <div class="card-block">
+                <h3 class="card-title">{{Title}}</h3>
+                <p class="card-text">{{Description}}</p>
+                
+                {{#if HasTickets}}
+                <button class="grey right-arrow">Buy tickets</button>
+                {{else}}
+                <button class="grey right-arrow">Find out more</button>
+                {{/if}}
+
+                <div class="card-meta">
+                  <div class="location">
+                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
+                    {{Location}}
+                    
+                  </div>
+                  <div class="date">
+                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
+                    {{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }} 
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </a> 

@@ -87,25 +87,10 @@
         });
     });
 
-    // Welcome Events MSL
-    $( document ).ready(function() {
-        $('.event_item').each(function() {
-
-          $(this).addClass('shadow-1');
-
-          if ( $(this).hasClass('msltypenight') ) {
-            $(this).append('<object class="tod-icon" data="/assets/icons/bright_moon.svg" type="image/svg+xml"></object><div class="w16-tod night"></div>'); 
-          } else {
-              $(this).append('<object class="tod-icon" data="/assets/icons/sun.svg" type="image/svg+xml"></object><div class="w16-tod day"></div>');
-          }
-        });
-    });
-
      // Day Night Welcome Events
-    $( document ).ready(function() {
+    $( window ).load(function() {
         $('.event-card').each(function() {
-
-          if ( $(this).hasClass('w16-night') ) {
+          if ( $(this).hasClass('night') ) {
             $(this).append('<object class="tod-icon" data="/assets/icons/bright_moon.svg" type="image/svg+xml"></object><div class="w16-tod night"></div>'); 
           } else {
               $(this).append('<object class="tod-icon" data="/assets/icons/sun.svg" type="image/svg+xml"></object><div class="w16-tod day"></div>');
@@ -114,31 +99,13 @@
     });
 
     // Main Events
-    $( document ).ready(function() {
+    $( window ).load(function() {
         $('.event-card').each(function() {
-
-          if ( $(this).hasClass('w16-main') ) {
+          if ( $(this).hasClass('w16_main') ) {
             $(this).append('<object class="main-icon" data="/assets/icons/star.svg" type="image/svg+xml"></object><div class="w16-main main"></div>'); 
           } 
         });
     });
-
-    // Event Filter Buttons 
-    // $( document ).ready(function() {
-    //   $('.filter').click(function(){
-    //     $(this).toggleClass('active');
-    //     var curType = $(this).attr('data-event-type');
-        
-    //   $('.event-card').each(function(){
-    //     if ( !$(this).hasClass(curType) ) {
-    //       $(this).toggleClass('hidden');
-    //     }
-    // });
-
-
-
-    //   });
-    // });
 
     
 

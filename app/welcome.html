@@ -24,7 +24,7 @@
     <script id="event-template" type="text/x-handlebars-template">
     <a href="{{Url}}">
       <div class="col-md-6">
-        <div class="card event-card {{Types}} shadow-1">
+        <div class="card event-card {{#each Types}}{{this}} {{/each}}shadow-1">
           <div class="row no-margin">
             <div class="card-image" style="background:url('{{ImageUrl}}');background-size: cover;background-position: center;"></div>
             <div class="col-md-4 card-img-left-wrap no-pad">
@@ -48,7 +48,9 @@
                   </div>
                   <div class="date">
                     <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
-                    {{ dateFormat StartDate format="ddd D, YYYY" }}
+                    {{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }} 
+
+                    
                   </div>
                 </div>
               </div>
@@ -341,7 +343,7 @@
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
+    
     
     <script src="assets/js/background.js"></script>
 
@@ -381,10 +383,9 @@
               var placeHolder = $("#event-listings");
               // Fetch all Blog Posts data from server in JSON
 
-
               $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=portrait",function(data,status,xhr){
-               
-                $.each(data,function(index,element){
+                
+                $.each(data,function(index,element){                
                   // Generate the HTML for each post
                   var html = template(element);
                   // Render the posts into the page
@@ -404,16 +405,18 @@
                   return context;   //  moment plugin not available. return data as is.
                 };
               });
-
             });
           </script>
 
+          
+          
           <script src="assets/js/holmes.js"></script>
           <script>
+          $( window ).load(function() {
             holmes({
               input: '.search input',
               find: '.event-card',
-              dynamic: true,
+              instant: true,
               placeholder: '<h3 class="super-header">no results</h3>',
               class: {
                   // (optional) class to add to matched elements
@@ -422,9 +425,10 @@
                   hidden: 'hidden'
                 }
             });
+          });
           </script>
 
-          script
+          <script src="assets/js/scripts.min.js"></script>
 
 
     <script>
