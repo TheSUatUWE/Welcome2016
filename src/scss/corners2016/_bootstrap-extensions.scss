@@ -9,11 +9,27 @@
 	border:none;
 	margin: 1rem 0;
 
+	& * {
+		transition:all .5s ease;
+	}
+	
+	.card-title {
+		margin: 5px 0 0 0;
+	} 
+
 	.card-image {
 		width: 33.3333333%;
 		position: absolute;
 		height: 100%;
 		
+	}
+	
+	.card-block {
+		position:relative;
+	}
+	.card-img-top {
+	    height: 185px;
+	    border-radius:0 0 0 0;
 	}
 
 	.card-meta {
@@ -30,6 +46,17 @@
 
 		object.icon {
 			width:20px;
+			margin-bottom: -4px;
 		}
 	}
+}
+
+// tooltip 
+
+.ui-tooltip {
+	background-color:$u-grey;
+	color:#fff;
+	padding:5px 8px;
+	border-radius:3px;
+
 }

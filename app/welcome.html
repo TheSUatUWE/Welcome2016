@@ -22,43 +22,37 @@
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template" type="text/x-handlebars-template">
-    <a href="{{Url}}">
-      <div class="col-md-6">
-        <div class="card event-card {{#each Types}}{{this}} {{/each}}shadow-1">
-          <div class="row no-margin">
-            <div class="card-image" style="background:url('{{ImageUrl}}');background-size: cover;background-position: center;"></div>
-            <div class="col-md-4 card-img-left-wrap no-pad">
-            </div>
-            <div class="col-md-8">
-              <div class="card-block">
-                <h3 class="card-title">{{Title}}</h3>
-                <p class="card-text">{{Description}}</p>
-                
-                {{#if HasTickets}}
-                <button class="grey right-arrow">Buy tickets</button>
-                {{else}}
-                <button class="grey right-arrow">Find out more</button>
-                {{/if}}
-
-                <div class="card-meta">
-                  <div class="location">
-                    <object type="image/svg+xml" data="/assets/icons/location_line_grey.svg" class="icon"></object>
-                    {{Location}}
-                    
-                  </div>
-                  <div class="date">
-                    <object type="image/svg+xml" data="/assets/icons/calendar_line_grey.svg" class="icon"></object>
-                    {{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }} 
-
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="col-md-3">
+        <div class="card event-card-small {{#each Types}}{{this}} {{/each}}">
+        <div class="types">{{#each Types}}{{this}} {{/each}}</div>
+          <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
+<!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
+ -->            <div class="card-img-gradient"></div>
           </div>
-        </div>
+          <div class="card-block">
+            <div class="key">
+              <div class="tod" data-toggle="tooltip" data-placement="top" title=""></div>
+              <div class="cat2" data-toggle="tooltip" data-placement="top" title=""></div>
+              <div class="cat3" data-toggle="tooltip" data-placement="top" title=""></div>
+            </div>
+            
+            <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
+            <h4 class="card-title">{{Title}}</h4>
+            <div class="location">{{Location}}</div>                            
+          </div>
+            
+          <div class="description">
+            <span><p>{{Description}}</p></span>
+           
+           {{#if HasTickets}}
+           <a href="{{Url}}"><button class="grey right-arrow">Buy tickets</button></a>
+            
+            {{else}}
+            <a href="{{Url}}"><button class="grey right-arrow">Find out more</button></a>            
+            {{/if}}
+          </div>
+        </div>                  
       </div>
-      </a> 
     </script>
 
     <!-- favicon -->
@@ -206,9 +200,10 @@
 
           <div class="v-align-wrapper right p-a-3 featured-item">
             <div class="v-align">
-              <span class="title">NEXT EVENT:</span>
-              <h2 class="super-header">White T-shirt Party</h2>
+              <span class="title">Featured Event:</span>
+              <h2 class="super-header">Fresher Fair</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo culpa neque deleniti accusamus dolorum aliquid dignissimos, maxime nobis rem vero voluptas soluta, sapiente saepe accusantium veniam repellat, illum facere ipsum.</p>
+            
               
               <div class="meta">
                 <div class="location">
@@ -230,22 +225,6 @@
           
         </div> 
 
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h1 class="super-header">Welcome</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
-
-              <button class="grey right-arrow">View the events programme</button>
-            </div>
-            <div class="col-md-6 featured-item">
-              <span class="featured-item-title">NEXT EVENT:</span>
-              <h2>White T-shirt Party</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo culpa neque deleniti accusamus dolorum aliquid dignissimos, maxime nobis rem vero voluptas soluta, sapiente saepe accusantium veniam repellat, illum facere ipsum.</p>
-                             
-            </div>
-          </div>
-        </div> -->
       </section>
 
       <section id="platinum">
@@ -292,19 +271,10 @@
           </div>
          
           </div>
-
-
-        
-
+          <div id="loader">Loading...</div>
           <!-- Placeholder for events listings template -->
           <div id="event-listings"></div>
-          
-          
-      
 
-      
-       
-      
       </section>
 
       <section id="social">
@@ -383,7 +353,7 @@
               var placeHolder = $("#event-listings");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=portrait",function(data,status,xhr){
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
@@ -391,6 +361,22 @@
                   // Render the posts into the page
                   placeHolder.append(html);
                 });
+              });
+
+       
+
+                  //  format an ISO date using Moment.js (8.9kb min)
+                  //  http://momentjs.com/
+                  //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
+                  //  Options see http://momentjs.com/docs/#/displaying/fromnow/
+
+              Handlebars.registerHelper('dateToNow', function(context, block) {
+                if (window.moment) {
+                  var s = block.hash.suffix || false;
+                      return moment(context).toNow(s);
+                }else{
+                  return context;   //  moment plugin not available. return data as is.
+                };
               });
 
               //  format an ISO date using Moment.js
@@ -411,7 +397,7 @@
           
           
           <script src="assets/js/holmes.js"></script>
-          <script>
+          <script type="text/javascript">
           $( window ).load(function() {
             holmes({
               input: '.search input',

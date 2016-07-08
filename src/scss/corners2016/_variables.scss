@@ -129,6 +129,14 @@ $u-grey-l50 : lighten( $u-grey, 50% ) ;
 	}
 }
 
+%g-grey-trans {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,40373f+100&0.01+0,1+100 */
+	background: -moz-linear-gradient(top,  rgba(64,55,63,0.01) 0%, rgba(64,55,63,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(64,55,63,0.01) 0%,rgba(64,55,63,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(64,55,63,0.01) 0%,rgba(64,55,63,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0340373f', endColorstr='#40373f',GradientType=0 ); /* IE6-9 */
+}
+
  
 /* Social Colour Variables */
 $facebook: #3b5998 ;

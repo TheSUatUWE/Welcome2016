@@ -1,5 +1,5 @@
 // Base class
-.tooltip {
+.ui-tooltip {
   position: absolute;
   z-index: $zindex-tooltip;
   display: block;
@@ -7,8 +7,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   font-size: $font-size-sm;
-  opacity: 0;
-
+  
   &.in { opacity: $tooltip-opacity; }
 
   &.tooltip-top,
