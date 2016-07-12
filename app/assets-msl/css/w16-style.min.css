@@ -5984,16 +5984,18 @@ a.bg-danger:focus, a.bg-danger:hover {
 */
 /* Red Variations */
 /* Grey Variations */
+/* Sky Variations */
+/* Gren Variations */
 /* Gradients */
 body.welcome-page section#events {
-  background: #a0d9e0;
+  background: #c6e8ed;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-  background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%);
+  background: -webkit-linear-gradient(bottom left, #c6e8ed 0%, #9affd6 100%);
+  background: linear-gradient(to top right, #c6e8ed 0%, #9affd6 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l50',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -6068,7 +6070,7 @@ body.welcome-page section#platinum {
     background-position: 15% 0%;
   }
 }
-.event-card-small .card-img-gradient {
+.event-col .event-card-small .card-img-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,40373f+100&0.01+0,1+100 */
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(64, 55, 63, 0.01) 0%, #40373f 100%);
@@ -7603,10 +7605,23 @@ section#events .search {
 section#events .search .filter {
   height: 40px;
   padding: 7px 12px;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
 }
 section#events .search .filter.active {
   background-color: #40373f;
   color: #fff;
+}
+section#events .search .filter.location {
+  border: none;
+  background-color: #fff;
+}
+section#events .search .filter.location:hover {
+  background-color: #009a5b;
+}
+section#events .search .filter.location:hover option {
+  display: block;
+  margin-top: 0;
 }
 section#events .search .search-bar {
   float: right;
@@ -7617,20 +7632,29 @@ section#events .search > button > object.icon {
   padding-left: 10px;
 }
 section#events .search > button.night {
-  background-color: #a0d9e0;
+  background-color: #fff;
   background-image: url("/assets/icons/bright_moon.svg");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 90%;
   padding-right: 40px !important;
 }
+section#events .search > button.night:hover {
+  background-color: #a0d9e0;
+}
+section#events .search > button.night:hover > .key > .night {
+  background-color: #a0d9e0;
+}
 section#events .search > button.day {
-  background-color: #ffe44d;
+  background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 90%;
   padding-right: 40px !important;
+}
+section#events .search > button.day:hover {
+  background-color: #ffe44d;
 }
 section#events .search > button.main {
   background-color: #fff;
@@ -8478,21 +8502,20 @@ section#events #event-listings {
 * Event Cards
 * 
 */
-.event-card-small {
+.event-col .event-card-small {
   height: 320px;
   overflow: hidden;
-  padding-top: 20px;
   background: transparent;
 }
-.event-card-small * {
+.event-col .event-card-small * {
   -webkit-transition: all .3s ease;
           transition: all .3s ease;
 }
-.event-card-small .card-block {
+.event-col .event-card-small .card-block {
   top: -20px;
   background: #fff;
 }
-.event-card-small .countdown {
+.event-col .event-card-small .countdown {
   background: #e84253;
   display: inline-block;
   padding: 2px 10px;
@@ -8501,87 +8524,118 @@ section#events #event-listings {
   z-index: 10;
   font-style: 0.9em;
 }
-.event-card-small .date, .event-card-small .location {
+.event-col .event-card-small .date, .event-col .event-card-small .location {
   font-size: 0.9em;
 }
-.event-card-small .description {
+.event-col .event-card-small .description {
   padding: 0 1.25rem 1.25rem;
   margin-top: -20px;
+  padding-top: 20px;
   background: #fff;
   height: 100%;
 }
-.event-card-small .description span {
+.event-col .event-card-small .description span {
   font-size: 0.8em;
 }
-.event-card-small .description button {
+.event-col .event-card-small .description button {
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
   margin-bottom: -400px;
 }
-.event-card-small .card-img-top {
+.event-col .event-card-small .card-img-top {
   overflow: hidden;
 }
-.event-card-small .key .tod, .event-card-small .key .cat2, .event-card-small .key .cat3 {
+.event-col .event-card-small .card-img-gradient {
+  z-index: 1;
+}
+.event-col:hover .card-block {
+  top: 0;
+  padding-top: 40px;
+}
+.event-col:hover .card-img-top {
+  height: 0 !important;
+}
+.event-col:hover .description {
+  display: block;
+}
+.event-col:hover .description button {
+  margin: 0 0 0 0;
+}
+.event-col:hover .key {
+  top: -20px !important;
+}
+.event-col:hover .countdown {
+  margin: 0;
+}
+.event-col .key {
+  padding: 1.25rem;
+  top: 160px;
+  position: absolute;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+.event-col .key .tod, .event-col .key .cat2, .event-col .key .cat3 {
   width: 0px;
   height: 0px;
   background: #e84253;
   border-radius: 50%;
   position: absolute;
-  top: -60px;
   z-index: 10;
   background-size: 70%;
   background-position: center center;
   background-repeat: no-repeat;
 }
-.event-card-small .key .tod .tod, .event-card-small .key .cat2 .tod, .event-card-small .key .cat3 .tod {
+.event-col .key .tod .tod, .event-col .key .cat2 .tod, .event-col .key .cat3 .tod {
   left: 20px;
 }
-.event-card-small .key .tod .tod-icon, .event-card-small .key .cat2 .tod-icon, .event-card-small .key .cat3 .tod-icon {
+.event-col .key .tod .tod-icon, .event-col .key .cat2 .tod-icon, .event-col .key .cat3 .tod-icon {
   padding: 5px;
   width: 100%;
 }
-.event-card-small .key .tod.night, .event-card-small .key .tod.day, .event-card-small .key .tod.main, .event-card-small .key .cat2.night, .event-card-small .key .cat2.day, .event-card-small .key .cat2.main, .event-card-small .key .cat3.night, .event-card-small .key .cat3.day, .event-card-small .key .cat3.main {
+.event-col .key .tod.night, .event-col .key .tod.day, .event-col .key .tod.main, .event-col .key .cat2.night, .event-col .key .cat2.day, .event-col .key .cat2.main, .event-col .key .cat3.night, .event-col .key .cat3.day, .event-col .key .cat3.main {
   width: 40px;
   height: 40px;
 }
-.event-card-small .key .tod.night, .event-card-small .key .cat2.night, .event-card-small .key .cat3.night {
-  background-color: #a0d9e0;
+.event-col .key .tod.night, .event-col .key .cat2.night, .event-col .key .cat3.night {
+  background-color: #fff;
   background-image: url("/assets/icons/Moon.svg");
 }
-.event-card-small .key .tod.day, .event-card-small .key .cat2.day, .event-card-small .key .cat3.day {
-  background-color: #ffe44d;
+.event-col .key .tod.night:hover, .event-col .key .cat2.night:hover, .event-col .key .cat3.night:hover {
+  background-color: #a0d9e0;
+}
+.event-col .key .tod.day, .event-col .key .cat2.day, .event-col .key .cat3.day {
+  background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
 }
-.event-card-small .key .tod.main, .event-card-small .key .cat2.main, .event-card-small .key .cat3.main {
-  background-color: #adc459;
+.event-col .key .tod.day:hover, .event-col .key .cat2.day:hover, .event-col .key .cat3.day:hover {
+  background-color: #ffe44d;
+}
+.event-col .key .tod.main, .event-col .key .cat2.main, .event-col .key .cat3.main {
+  background-color: #fff;
   background-image: url("/assets/icons/star_filled.svg");
 }
-.event-card-small .key .tod.cat2, .event-card-small .key .cat2.cat2, .event-card-small .key .cat3.cat2 {
+.event-col .key .tod.main:hover, .event-col .key .cat2.main:hover, .event-col .key .cat3.main:hover {
+  background-color: #adc459;
+}
+.event-col .key .tod.cat2, .event-col .key .cat2.cat2, .event-col .key .cat3.cat2 {
   left: 70px;
 }
-.event-card-small .card-img-gradient {
-  z-index: 1;
-}
-.event-card-small:hover .card-block {
-  top: 0;
-  padding-top: 40px;
-}
-.event-card-small:hover .card-img-top {
-  height: 0 !important;
-}
-.event-card-small:hover .description {
-  display: block;
-}
-.event-card-small:hover .description button {
-  margin: 0 0 0 0;
-}
-.event-card-small:hover .countdown {
-  margin: 0;
-}
-.event-card-small:hover .tod, .event-card-small:hover .cat1, .event-card-small:hover .cat2 {
-  top: -20px;
+
+/*
+*
+* Dropdown
+* 
+*/
+select {
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  background-size: 25px;
+  background-image: url("/assets/icons/down4.svg");
+  background-position: right 10% center;
+  background-repeat: no-repeat;
 }
 
 /* Temporary CSS */

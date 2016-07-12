@@ -39,7 +39,31 @@ $u-grey-l30 : lighten( $u-grey, 30% ) ;
 $u-grey-l40 : lighten( $u-grey, 40% ) ;
 $u-grey-l50 : lighten( $u-grey, 50% ) ;
 
+/* Sky Variations */
+
+$u-sky-l10 : lighten( $u-sky, 10% ) ;
+$u-sky-l20 : lighten( $u-sky, 20% ) ;
+$u-sky-l30 : lighten( $u-sky, 30% ) ;
+$u-sky-l40 : lighten( $u-sky, 40% ) ;
+$u-sky-l50 : lighten( $u-sky, 50% ) ;
+
+/* Gren Variations */
+
+$u-green-l10 : lighten( $u-green, 10% ) ;
+$u-green-l20 : lighten( $u-green, 20% ) ;
+$u-green-l30 : lighten( $u-green, 30% ) ;
+$u-green-l40 : lighten( $u-green, 40% ) ;
+$u-green-l50 : lighten( $u-green, 50% ) ;
+
 /* Gradients */
+
+%g-sky-green-light {
+    background: $u-sky-l10; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(bottom left, $u-sky-l10 0%, $u-green-l50 100%);
+    background: -o-linear-gradient(bottom left, $u-sky-l10 0%, $u-green-l50 100%);
+    background: linear-gradient(to top right, $u-sky-l10 0%, $u-green-l50 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l50',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 %g-sky-green {
     background: #a0d9e0; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */

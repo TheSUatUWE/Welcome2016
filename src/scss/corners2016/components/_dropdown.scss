@@ -1,0 +1,15 @@
+/*
+*
+* Dropdown
+* 
+*/
+
+select {
+	cursor:pointer;
+	border: none;
+	-webkit-appearance: none;
+	background-size: 25px;
+	background-image: url('/assets/icons/down4.svg');
+	background-position: right 10% center;
+	background-repeat: no-repeat;
+}

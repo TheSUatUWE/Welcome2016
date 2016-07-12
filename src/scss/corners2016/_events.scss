@@ -5,20 +5,34 @@
 */
 
 section#events {
-
 	padding: 20px 0px;
 
 	.search {
-
 		padding:20px 0px;
 
 		.filter {
 		    height: 40px;
 		    padding: 7px 12px;
 
+		    transition:all .25s ease;
+
 		    &.active {
 		    	background-color: $u-grey;
 		    	color:#fff;
+		    }
+
+		    &.location {
+		    	border:none;
+		    	background-color: #fff;
+
+		    	&:hover {
+		    		background-color: $u-green;
+		    	}
+
+		    	&:hover option {
+		    	    display: block;
+		    	    margin-top: 0; // remove the gap so it doesn't close
+		    	 }
 		    }
 		}
 
@@ -34,20 +48,32 @@ section#events {
 						padding-left: 10px;
 					}
 			&.night {
-				background-color: $u-sky;
+				background-color:#fff;
 				background-image: url('/assets/icons/bright_moon.svg');
 				background-size: 30px;
 				background-repeat: no-repeat;
 				background-position: 90%;
 				padding-right: 40px!important;
+				
+				&:hover {
+					background-color: $u-sky;
+
+					& > .key > .night {
+						background-color: $u-sky;	
+					}
+				}
 			}
 			&.day {
-				background-color:$u-yellow;
+				background-color:#fff;
 				background-image: url('/assets/icons/sun.svg');
 				background-size: 30px;
 				background-repeat: no-repeat;
 				background-position: 90%;
 				padding-right: 40px!important;
+
+				&:hover {
+					background-color:$u-yellow;
+				}
 			}
 			&.main {
 				background-color:#fff;
