@@ -61,6 +61,28 @@ body.welcome-page {
 
 	}
 
+	/* Section: Social */
+
+	section#social-signup {
+		
+		.sign-up {
+			background:$u-grey;
+		}
+
+		.social {
+			text-align: center;
+
+			.social-icon {
+				width:6em;
+				margin-left:20px;
+
+				&:last-of-type {
+					margin-left:0px;
+				}
+			}
+		}
+	}
+
 	/* Section: Platinum */
 
 	section#platinum {

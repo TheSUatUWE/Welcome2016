@@ -1,0 +1,16 @@
+/*
+*
+* Platinum
+* 
+*/
+
+.platinum-pass {
+	@extend %g-platinum;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family:  AlternateGothicLT-No2;
+    font-size: 5em;
+    text-transform: uppercase;
+    color:#fff;
+}

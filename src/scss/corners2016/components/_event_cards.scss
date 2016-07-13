@@ -87,6 +87,16 @@
 			
 			.key {
 				top: -20px!important;
+
+				& > .night {
+					background-color:$u-sky!important;
+				}
+				& > .day {
+					background-color:$u-yellow!important;
+				}
+				& > .main {
+					background-color:$u-lime!important;
+				}
 			}
 
 			.countdown {
@@ -99,7 +109,7 @@
 			padding:1.25rem;
 			top: 160px;
 			position: absolute;
-			transition: all .2s ease;
+			transition: all .3s ease;
 
 
 				.tod, .cat2, .cat3 {
