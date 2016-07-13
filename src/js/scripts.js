@@ -28,7 +28,6 @@
                     // According to jquery docs, this is never called for cross-domain JSONP requests
                 },
 
-
                 success: function(data){
                     if (data.result !== 'success') {
                         var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
@@ -195,9 +194,10 @@
         var blockH = block.outerHeight();
         var grad = img.children('.card-img-gradient');
         var newH = (cardH - blockH);
+        var key = $(this).prev('.key')
 
 
-
+        key.css('top', (newH - 65) );
         img.height(newH);
         grad.height(newH);
 
@@ -213,24 +213,22 @@
     // Add time of day icons to events
     function eventTOD() {
         // Add Night
-       $('.event-card-small').each(function() {
-
-        if ( $(this).hasClass('night') ) {
-          $(this).find('.tod').addClass('night').prop('title', 'Night Event');
-
-        }
+       $('.event-col').each(function() {
+          if ( $(this).children('.event-card-small').hasClass('night') ) {
+            $(this).find('.tod').addClass('night').prop('title', 'Night Event');
+          }          
         });
         // Add Day
 
-        $('.event-card-small').each(function() {
+        $('.event-col').each(function() {
 
-        if ( $(this).hasClass('day') ) {
+        if ( $(this).children('.event-card-small').hasClass('day') ) {
             $(this).find('.tod').addClass('day').prop('title', 'Day Event');
           }
         });
 
-        $('.event-card-small').each(function() {
-        if ( $(this).hasClass('w16_main') ) {
+        $('.event-col').each(function() {
+        if ( $(this).children('.event-card-small').hasClass('w16_main') ) {
           $(this).find('.cat2').addClass('main').prop('title', 'Main Event');
            }
        });
@@ -251,7 +249,6 @@
      window.onload = function() {
       eventLoad();
       eventTOD();
-      // eventMain();
       eventResize();
       initTooltip();
     };

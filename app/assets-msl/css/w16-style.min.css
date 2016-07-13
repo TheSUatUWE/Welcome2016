@@ -8543,7 +8543,6 @@ section#events #event-listings {
           transition: all .3s ease;
 }
 .event-col .event-card-small .card-block {
-  top: -20px;
   background: #fff;
 }
 .event-col .event-card-small .countdown {
