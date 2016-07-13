@@ -75,6 +75,11 @@ body.welcome-page {
 			background:$u-grey;
 			color:#fff;
 			text-align: center;
+
+			.sign-up-wrap {
+				max-width:350px;
+				margin:auto;
+			}
 		}
 
 		.social {

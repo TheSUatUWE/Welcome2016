@@ -9,11 +9,12 @@
         
         var $message;
 
-        function facebookButton() {
-            $('#facebook-button').css('display', 'table');
-         }
+        // function facebookButton() {
+        //     $('#facebook-button').css('display', 'table');
+        //  }
 
-
+        // Submit the form with an ajax/jsonp request.
+        // Based on http://stackoverflow.com/a/15120409/215821
         function submitSubscribeForm($form, $resultElement) {
             $.ajax({
                 type: 'GET',
@@ -51,7 +52,7 @@
                         $resultElement.html('Thank you! We can&#39;t wait to see you in September.<br><small>You will get an email shortly, make sure confirm the subscription in your inbox to get the updates.</small>');
                          
 
-                         $form.delay(1000).fadeOut(500, facebookButton);
+                         // $form.delay(1000).fadeOut(500, facebookButton);
                     }
                 }
             });
@@ -94,8 +95,7 @@
 
         ajaxMailChimpForm($('#subscribe-form'), $('#subscribe-result'));
 
-        // Submit the form with an ajax/jsonp request.
-        // Based on http://stackoverflow.com/a/15120409/215821
+        
         
     });
 

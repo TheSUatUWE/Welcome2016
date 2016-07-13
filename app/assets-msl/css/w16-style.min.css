@@ -7488,6 +7488,10 @@ body.welcome-page section#social-signup .sign-up {
   color: #fff;
   text-align: center;
 }
+body.welcome-page section#social-signup .sign-up .sign-up-wrap {
+  max-width: 350px;
+  margin: auto;
+}
 body.welcome-page section#social-signup .social {
   text-align: center;
 }
@@ -8717,6 +8721,7 @@ select {
 }
 .input-wrap .input-field:focus + .input-label {
   top: -22px;
+  left: 0;
   font-size: 80%;
 }
 .input-wrap .input-label {
@@ -8764,6 +8769,16 @@ select {
   background-repeat: no-repeat;
   right: 0.85rem;
   top: 12px;
+}
+.input-wrap.input-filled > .input-label {
+  top: -22px !important;
+  left: 0 !important;
+  font-size: 80% !important;
+}
+
+#subscribe-result {
+  position: absolute;
+  font-size: 12px;
 }
 
 input {
