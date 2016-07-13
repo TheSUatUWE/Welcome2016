@@ -4,6 +4,104 @@
 
   $(function () {
     
+    //  AJAX MailChimp Sign up //
+    $(document).ready(function(){
+        
+        var $message;
+
+        function facebookButton() {
+            $('#facebook-button').css('display', 'table');
+         }
+
+
+        function submitSubscribeForm($form, $resultElement) {
+            $.ajax({
+                type: 'GET',
+                url: $form.attr('action'),
+                data: $form.serialize(),
+                cache: false,
+                dataType: 'jsonp',
+                jsonp: 'c', // trigger MailChimp to return a JSONP response
+                contentType: 'application/json; charset=utf-8',
+
+                error: function(error){
+                    // According to jquery docs, this is never called for cross-domain JSONP requests
+                },
+
+
+                success: function(data){
+                    if (data.result !== 'success') {
+                        var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
+                        $resultElement.css('color', '#e84253');
+
+                        if (data.msg && data.msg.indexOf(' You&#39;re already subscribed') >= 0) {
+                            message = 'You&#39;re already subscribed. Thank you.';
+                            $resultElement.css('color', '#e84253');
+                        }
+
+                        $resultElement.html(message);
+
+                    } else {
+                        $resultElement.css({
+                          'color' : '#e84253',
+                          'background': '#fff',
+                          'display': 'table',
+                          'padding': '10px',
+                          'border-radius': '3px'
+                        });
+                        $resultElement.html('Thank you! We can&#39;t wait to see you in September.<br><small>You will get an email shortly, make sure confirm the subscription in your inbox to get the updates.</small>');
+                         
+
+                         $form.delay(1000).fadeOut(500, facebookButton);
+                    }
+                }
+            });
+        }
+
+        // Validate the email address in the form
+        function isValidEmail($form) {
+            // If email is empty, show error message.
+            // contains just one @
+            var email = $form.find('input[type="email"]').val();
+            if (!email || !email.length) {
+                return false;
+            } else if (email.indexOf('@') === -1) {
+                return false;
+            }
+
+            return true;
+        }
+
+        // Turn the given MailChimp form into an ajax version of it.
+        // If resultElement is given, the subscribe result is set as html to
+        // that element.
+        function ajaxMailChimpForm($form, $resultElement){
+
+            // Hijack the submission. We'll submit the form manually.
+            $form.submit(function(e) {
+                e.preventDefault();
+
+
+                if (!isValidEmail($form)) {
+                    
+                   $message._show('success', 'A valid email address must be provided.');
+                } else {
+                    $resultElement.css('color', '#e84253');
+                    $resultElement.html('Subscribing...');
+                    submitSubscribeForm($form, $resultElement);
+                }
+            });
+        }
+
+        ajaxMailChimpForm($('#subscribe-form'), $('#subscribe-result'));
+
+        // Submit the form with an ajax/jsonp request.
+        // Based on http://stackoverflow.com/a/15120409/215821
+        
+    });
+
+
+
   	// Menu Toggle
   	$(document).ready(function() {
   		$('.sidebar-toggle').click(function(e) {

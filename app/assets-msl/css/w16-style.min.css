@@ -7477,8 +7477,16 @@ body.welcome-page section#landing .featured-item .meta > div:first-of-type {
 body.welcome-page section#landing .featured-item .meta object.icon {
   width: 20px;
 }
+body.welcome-page section#social-signup {
+  height: 300px;
+}
+body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
+  height: 300px;
+}
 body.welcome-page section#social-signup .sign-up {
   background: #40373f;
+  color: #fff;
+  text-align: center;
 }
 body.welcome-page section#social-signup .social {
   text-align: center;
@@ -8683,6 +8691,84 @@ select {
   font-size: 5em;
   text-transform: uppercase;
   color: #fff;
+}
+
+/*
+*
+* Inputs
+* 
+*/
+.input-wrap {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 2em 0 0;
+  max-width: 350px;
+  width: 100%;
+  vertical-align: top;
+}
+.input-wrap .input-field {
+  padding: 0.85em;
+  background: #efedef;
+  width: 100%;
+  color: #40373f;
+}
+.input-wrap .input-field:focus {
+  outline: none;
+}
+.input-wrap .input-field:focus + .input-label {
+  top: -22px;
+  font-size: 80%;
+}
+.input-wrap .input-label {
+  position: absolute;
+  top: 0.85em;
+  left: 0.85em;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  color: #c0b6bf;
+}
+.input-wrap .submit-button {
+  height: 51px;
+  background: #e84253;
+  width: 100%;
+  position: relative;
+}
+.input-wrap .submit-button input[type="submit"] {
+  color: #fff;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  display: block;
+  right: 0;
+  width: 100%;
+  text-align: left;
+  padding-left: 0.85em;
+}
+.input-wrap .submit-button.right-arrow {
+  width: auto;
+  padding-right: 60px;
+  text-align: left;
+}
+.input-wrap .submit-button.right-arrow:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/right-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 0.85rem;
+  top: 12px;
+}
+
+input {
+  border: 0;
 }
 
 /* Temporary CSS */

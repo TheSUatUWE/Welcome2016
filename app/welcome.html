@@ -186,7 +186,6 @@
       
       <main class="main" role="main">
       <section id="landing">
-      <canvas></canvas>
         <div class="featured-image"></div> 
         <div class="landing-welcome">
           <div class="v-align-wrapper left p-a-3">
@@ -231,20 +230,40 @@
         <div class="container super-fluid">
           <div class="row">
             <div class="col-md-4 sign-up">
-  
-                  
-                
-
+              <div class="v-align-wrapper">
+                <div class="v-align">
+                    <form
+                        id="subscribe-form"
+                        action="http://thestudentsunion.us13.list-manage.com/subscribe/post-json?u=07e48af145119d0dbbee8eb8b&amp;id=9c7e76d5d2"
+                        method="get">
+                      <span class="input-wrap">
+                        <input class="input-field" type="email" value="" name="EMAIL" id="email" />
+                        <label class="input-label" for="email">
+                          <span class="input-label-content">Email Address</span>
+                        </label>
+                        <div class="submit-button right-arrow">
+                          <input type="submit" for="email" value="Sign Up" name="subscribe">
+                        </div>
+                        <div id="subscribe-result">
+                        </div>
+                      </span>
+                    </form>
+                </div>
+              </div>
             </div>
             <div class="col-md-8 social">
 
               <div class="social-wrap">
-                <h4>Join in with the conversation</h4>
-              <object type="image/svg+xml" data="/assets/icons/Facebook Filled.svg" class="social-icon"></object>
-                <object type="image/svg+xml" data="/assets/icons/Twitter Filled.svg" class="social-icon"></object>
-                <object type="image/svg+xml" data="/assets/icons/Instagram Filled.svg" class="social-icon"></object>
-                <object type="image/svg+xml" data="/assets/icons/Snapchat.svg" class="social-icon"></object>
-                <object type="image/svg+xml" data="/assets/icons/Youtube.svg" class="social-icon"></object>
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                      <h4>Join in with the conversation</h4>
+                      <object type="image/svg+xml" data="/assets/icons/Facebook Filled.svg" class="social-icon"></object>
+                      <object type="image/svg+xml" data="/assets/icons/Twitter Filled.svg" class="social-icon"></object>
+                      <object type="image/svg+xml" data="/assets/icons/Instagram Filled.svg" class="social-icon"></object>
+                      <object type="image/svg+xml" data="/assets/icons/Snapchat.svg" class="social-icon"></object>
+                      <object type="image/svg+xml" data="/assets/icons/Youtube.svg" class="social-icon"></object>
+                  </div>
+                </div>                
               </div>
               
             </div>
@@ -344,12 +363,6 @@
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
-    
-    
-    <script src="assets/js/background.js"></script>
-
-
-
     <script src="assets/js/owl.carousel.min.js"></script>
     <script>
       $(document).ready(function(){
