@@ -7469,6 +7469,13 @@ body.welcome-page {
   /* Section: Events */
   /* MSL Markup: General Events */
 }
+body.welcome-page ul.nav.nav-inline, body.welcome-page .search-wrap, body.welcome-page .nav-secondary {
+  display: none !important;
+}
+body.welcome-page nav.nav.scrolled {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 body.welcome-page section#landing {
   height: 90vh;
   position: relative;
@@ -7483,6 +7490,7 @@ body.welcome-page section#landing .featured-image {
   height: 100%;
   right: 0;
   mix-blend-mode: screen;
+  opacity: 0.5;
 }
 body.welcome-page section#landing .row {
   padding-top: 200px;
@@ -7541,6 +7549,9 @@ body.welcome-page section#news .grad-overlay {
 body.welcome-page section#social-signup {
   height: 300px;
 }
+body.welcome-page section#social-signup .sign-up-wrap, body.welcome-page section#social-signup .social-wrap {
+  height: 170px;
+}
 body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
   height: 300px;
 }
@@ -7549,12 +7560,20 @@ body.welcome-page section#social-signup .sign-up {
   color: #fff;
   text-align: center;
 }
+body.welcome-page section#social-signup .sign-up:before {
+  background: #40373f;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 9999px;
+}
 body.welcome-page section#social-signup .sign-up .sign-up-wrap {
   max-width: 350px;
-  margin: auto;
 }
-body.welcome-page section#social-signup .social {
-  text-align: center;
+body.welcome-page section#social-signup .social .social-wrap {
+  float: right;
 }
 body.welcome-page section#social-signup .social .social-icon {
   width: 6em;
@@ -7760,6 +7779,9 @@ section#events .types {
 section#events #event-listings {
   display: none;
 }
+section#events #event-listings > [class*=' col-']:first-of-type {
+  padding-left: 0 !important;
+}
 
 /*
 *
@@ -7784,7 +7806,7 @@ footer.footer object#footer-logo {
   width: 200px;
   position: absolute;
   right: 10%;
-  top: -100px;
+  top: -50px;
 }
 footer.footer a {
   color: #fff;

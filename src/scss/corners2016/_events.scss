@@ -96,5 +96,10 @@ section#events {
 	
 	#event-listings {
 		display:none;
-	}
+		
+		& > [class*=' col-']:first-of-type {
+			padding-left:0!important;
+		}
+	
+	}	
 }
