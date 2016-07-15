@@ -15,7 +15,7 @@ body.welcome-page {
 		overflow:hidden;
 		
 		.featured-image {
-			background-image: url('../img/white-tees.jpg');
+			background-image: url('../img/freshers-fair.jpg');
 			-webkit-background-size: cover;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body.welcome-page {
 			width:40%;
 			height: 100%;
 			right: 0;
-			mix-blend-mode: multiply;
+			mix-blend-mode: screen;
 		}		
 
 		.row {
@@ -31,18 +31,18 @@ body.welcome-page {
 		}
 
 		.featured-item {
-			color:#fff;
+			color:$u-grey;
 
 			span.title {
 				display: block;
-				border-bottom:1px solid #fff;
+				border-bottom:1px solid $u-grey;
 				padding-bottom: 10px;
 				margin-bottom: 40px;
 			}
 
 			.meta {
 
-				text-transform:uppercase;
+	
 				margin-bottom: 20px;
 
 				& > div {
@@ -60,8 +60,49 @@ body.welcome-page {
 		}
 
 	}
+	
+	/* Section: Student Leaders */
+	section#student-leaders {
+		
+		height: 300px;
+		position: relative;
+		background-image: url("/assets/img/FT_wall_extended.jpg");
+		background-position: right;
+		background-size: cover;
+		color:#fff;
 
-	/* Section: Social */
+		.grad-overlay {
+			position: absolute;
+			top: 0;
+			bottom:0;
+			left:0;
+			right: 0;
+			@extend %g-green-trans;
+		}
+
+	}	
+	/* Section: News */
+	section#news {
+		
+		height: 300px;
+		position: relative;
+		background-image: url("/assets/img/acomm_extended.jpg");
+		background-position: right;
+		background-size: cover;
+		color:$u-grey;
+
+		.grad-overlay {
+			position: absolute;
+			top: 0;
+			bottom:0;
+			left:0;
+			right: 0;
+			@extend %g-trans-yellow;
+		}
+
+	}	
+
+	/* Section: Social + Signup */
 
 	section#social-signup {
 		

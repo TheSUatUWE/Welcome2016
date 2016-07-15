@@ -44,6 +44,9 @@
 		background: $u-red;
 		width: 100%;
 		position: relative;
+		overflow: hidden;
+
+		transition: all .25s ease;
 
 		input[type="submit"] {
 			color:#fff;
@@ -61,26 +64,44 @@
 			padding-left: 0.85em;
 		}
 
-		&.right-arrow {
+		&.right-arrow-grey {
 			width: auto;
 			padding-right: 60px;
 			text-align: left;
 			
-			&:after {
+			&::before {
 				width: 30px;
 				height: 25px;
 				margin-left: 40px;
 				position:absolute;
 				content: '';
-				background: url(../icons/right-arrow.svg);
+				background: url(../icons/right-arrow-grey.svg);
 				background-size: cover;
 				background-repeat: no-repeat;
 				right: 0.85rem;
 			    top: 12px;
-
-
+			    transition: all .25s ease;
 			}
-		}	
+
+			&:hover::before {
+				right:3rem;
+			}
+		}
+
+		&.blue {
+			background:$u-sky;
+			
+			input[type="submit"] {
+				color:$u-grey;
+			}
+
+			&:hover {
+				background:$u-sky-d20;		
+			}
+		}
+
+
+
 	}
 	
 	&.input-filled {
@@ -96,6 +117,7 @@
 #subscribe-result {
 	position: absolute;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 input {

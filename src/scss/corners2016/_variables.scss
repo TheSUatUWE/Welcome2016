@@ -44,6 +44,11 @@ $u-grey-l80 : lighten( $u-grey, 80% ) ;
 $u-grey-l90 : lighten( $u-grey, 90% ) ;
 
 /* Sky Variations */
+$u-sky-d10: darken( $u-sky, 10% ) ;
+$u-sky-d20: darken( $u-sky, 20% ) ;
+$u-sky-d30: darken( $u-sky, 30% ) ;
+$u-sky-d40: darken( $u-sky, 40% ) ;
+$u-sky-d50: darken( $u-sky, 50% ) ;
 
 $u-sky-l10 : lighten( $u-sky, 10% ) ;
 $u-sky-l20 : lighten( $u-sky, 20% ) ;
@@ -93,6 +98,23 @@ $u-green-l50 : lighten( $u-green, 50% ) ;
 	background-image: -webkit-linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* Chrome10-25,Safari5.1-6 */
 	background-image: linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%g-trans-yellow {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,ffe44d+98&0+0,1+100 */
+	background: -moz-linear-gradient(left,  rgba(255,228,77,0) 0%, rgba(255,228,77,0.98) 98%, rgba(255,228,77,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(255,228,77,0) 0%,rgba(255,228,77,0.98) 98%,rgba(255,228,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(255,228,77,0) 0%,rgba(255,228,77,0.98) 98%,rgba(255,228,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffe44d', endColorstr='#ffe44d',GradientType=1 ); /* IE6-9 */
+
+}
+
+%g-green-trans {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,009a5b+100&1+0,0.01+100 */
+	background-image: -moz-linear-gradient(left,  rgba(0,154,91,1) 0%, rgba(0,154,91,0.01) 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(left,  rgba(0,154,91,1) 0%,rgba(0,154,91,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(to right,  rgba(0,154,91,1) 0%,rgba(0,154,91,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009a5b', endColorstr='#03009a5b',GradientType=1 ); /* IE6-9 */
 }
 
 %g-brand-spectrum {
@@ -201,3 +223,4 @@ $snapchat: #fffc00 ;
 	background-image: url('http://www.thestudentsunion.co.uk/pageassets/presidents-2000x340-2015.jpg'), linear-gradient(45deg,  #40373f 0%,#e84253 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+

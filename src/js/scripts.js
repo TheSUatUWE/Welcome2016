@@ -194,7 +194,7 @@
         var blockH = block.outerHeight();
         var grad = img.children('.card-img-gradient');
         var newH = (cardH - blockH);
-        var key = $(this).prev('.key')
+        var key = $(this).prev('.key');
 
 
         key.css('top', (newH - 65) );
@@ -228,7 +228,7 @@
         });
 
         $('.event-col').each(function() {
-        if ( $(this).children('.event-card-small').hasClass('w16_main') ) {
+        if ( $(this).children('.event-card-small').hasClass('main') ) {
           $(this).find('.cat2').addClass('main').prop('title', 'Main Event');
            }
        });

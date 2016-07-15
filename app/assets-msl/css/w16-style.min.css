@@ -6012,6 +6012,28 @@ body.content-page .header-banner, body.welcome-page section#social {
   /* IE6-9 fallback on horizontal gradient */
 }
 
+body.welcome-page section#news .grad-overlay {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,ffe44d+98&0+0,1+100 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 228, 77, 0) 0%, rgba(255, 228, 77, 0.98) 98%, #ffe44d 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 228, 77, 0) 0%, rgba(255, 228, 77, 0.98) 98%, #ffe44d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffe44d', endColorstr='#ffe44d',GradientType=1 );
+  /* IE6-9 */
+}
+
+body.welcome-page section#student-leaders .grad-overlay {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,009a5b+100&1+0,0.01+100 */
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(left, #009a5b 0%, rgba(0, 154, 91, 0.01) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(to right, #009a5b 0%, rgba(0, 154, 91, 0.01) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009a5b', endColorstr='#03009a5b',GradientType=1 );
+  /* IE6-9 */
+}
+
 body.welcome-page section#landing {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
@@ -6943,6 +6965,14 @@ canvas {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+.bg-sky {
+  background: #a0d9e0 !important;
+}
+
+.tc-grey {
+  color: #40373f !important;
+}
+
 /*
 *
 * Buttons
@@ -7431,7 +7461,9 @@ body.content-page .header-banner h1 {
 */
 body.welcome-page {
   /* Section: Landing*/
-  /* Section: Social */
+  /* Section: Student Leaders */
+  /* Section: News */
+  /* Section: Social + Signup */
   /* Section: Platinum */
   /* Section: Social */
   /* Section: Events */
@@ -7443,29 +7475,28 @@ body.welcome-page section#landing {
   overflow: hidden;
 }
 body.welcome-page section#landing .featured-image {
-  background-image: url("../img/white-tees.jpg");
+  background-image: url("../img/freshers-fair.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: 40%;
   height: 100%;
   right: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
 }
 body.welcome-page section#landing .row {
   padding-top: 200px;
 }
 body.welcome-page section#landing .featured-item {
-  color: #fff;
+  color: #40373f;
 }
 body.welcome-page section#landing .featured-item span.title {
   display: block;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #40373f;
   padding-bottom: 10px;
   margin-bottom: 40px;
 }
 body.welcome-page section#landing .featured-item .meta {
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 body.welcome-page section#landing .featured-item .meta > div {
@@ -7476,6 +7507,36 @@ body.welcome-page section#landing .featured-item .meta > div:first-of-type {
 }
 body.welcome-page section#landing .featured-item .meta object.icon {
   width: 20px;
+}
+body.welcome-page section#student-leaders {
+  height: 300px;
+  position: relative;
+  background-image: url("/assets/img/FT_wall_extended.jpg");
+  background-position: right;
+  background-size: cover;
+  color: #fff;
+}
+body.welcome-page section#student-leaders .grad-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body.welcome-page section#news {
+  height: 300px;
+  position: relative;
+  background-image: url("/assets/img/acomm_extended.jpg");
+  background-position: right;
+  background-size: cover;
+  color: #40373f;
+}
+body.welcome-page section#news .grad-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 body.welcome-page section#social-signup {
   height: 300px;
@@ -7702,6 +7763,70 @@ section#events #event-listings {
 
 /*
 *
+* Footer
+* 
+*/
+footer.footer {
+  background: #40373f;
+  position: relative;
+  color: #fff;
+  height: 300px;
+}
+footer.footer h5 {
+  border-bottom: solid 1px #3a3239;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+footer.footer .sub-footer {
+  font-size: 0.75rem;
+}
+footer.footer object#footer-logo {
+  width: 200px;
+  position: absolute;
+  right: 10%;
+  top: -100px;
+}
+footer.footer a {
+  color: #fff;
+}
+footer.footer a:hover {
+  color: #e84253;
+}
+footer.footer .footer-information {
+  font-size: 0.75rem;
+}
+footer.footer .contact-info table.address * {
+  vertical-align: top;
+}
+footer.footer .contact-info table.address * td {
+  padding-bottom: 10px;
+}
+footer.footer .contact-info table.address * td:last-of-type {
+  padding-bottom: 0;
+}
+footer.footer .contact-info .footer-contact-icon {
+  height: 0.75rem;
+  padding-right: 10px;
+}
+footer.footer object.footer-angle {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -50px;
+  height: 50px;
+}
+footer.footer object.footer-angle svg {
+  width: 100%;
+}
+
+address > span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/*
+*
 * Boostrap 4.0 extensions
 * 
 */
@@ -7757,6 +7882,10 @@ section#events #event-listings {
   color: #fff;
   padding: 5px 8px;
   border-radius: 3px;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
 }
 
 /****************************************************************
@@ -8737,6 +8866,9 @@ select {
   background: #e84253;
   width: 100%;
   position: relative;
+  overflow: hidden;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
 }
 .input-wrap .submit-button input[type="submit"] {
   color: #fff;
@@ -8753,22 +8885,36 @@ select {
   text-align: left;
   padding-left: 0.85em;
 }
-.input-wrap .submit-button.right-arrow {
+.input-wrap .submit-button.right-arrow-grey {
   width: auto;
   padding-right: 60px;
   text-align: left;
 }
-.input-wrap .submit-button.right-arrow:after {
+.input-wrap .submit-button.right-arrow-grey::before {
   width: 30px;
   height: 25px;
   margin-left: 40px;
   position: absolute;
   content: '';
-  background: url(../icons/right-arrow.svg);
+  background: url(../icons/right-arrow-grey.svg);
   background-size: cover;
   background-repeat: no-repeat;
   right: 0.85rem;
   top: 12px;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+}
+.input-wrap .submit-button.right-arrow-grey:hover::before {
+  right: 3rem;
+}
+.input-wrap .submit-button.blue {
+  background: #a0d9e0;
+}
+.input-wrap .submit-button.blue input[type="submit"] {
+  color: #40373f;
+}
+.input-wrap .submit-button.blue:hover {
+  background: #53bac7;
 }
 .input-wrap.input-filled > .input-label {
   top: -22px !important;
@@ -8779,10 +8925,20 @@ select {
 #subscribe-result {
   position: absolute;
   font-size: 12px;
+  margin-top: 10px;
 }
 
 input {
   border: 0;
+}
+
+/*
+*
+* Sections
+* 
+*/
+section:last-of-type {
+  padding-bottom: 70px !important;
 }
 
 /* Temporary CSS */

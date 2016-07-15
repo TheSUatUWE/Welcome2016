@@ -22,7 +22,7 @@
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template" type="text/x-handlebars-template">
-      <div class="col-md-3 event-col">
+      <div class="col-lg-3 col-md-6 event-col">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
@@ -191,7 +191,7 @@
           <div class="v-align-wrapper left p-a-3">
             <div class="v-align">
               <h1 class="super-header">Welcome</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis corrupti id, doloremque corporis aspernatur quibusdam incidunt saepe in sequi voluptatem, impedit rem omnis, aliquam maiores, nam et natus. Quibusdam placeat incidunt suscipit esse neque quisquam eaque rem amet nihil laborum.</p>
+              <p>Welcome is a program of events that showcases all that life at UWE Bristol has to offer.  It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates. </p>
 
               <button class="red down-arrow">View the events programme</button>
             </div>
@@ -200,23 +200,23 @@
           <div class="v-align-wrapper right p-a-3 featured-item">
             <div class="v-align">
               <span class="title">Featured Event:</span>
-              <h2 class="super-header">Fresher Fair</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo culpa neque deleniti accusamus dolorum aliquid dignissimos, maxime nobis rem vero voluptas soluta, sapiente saepe accusantium veniam repellat, illum facere ipsum.</p>
+              <h2 class="super-header">Freshers Fair</h2>
+              <p>Join in and find out about everything The Students’ Union, Sport Clubs, Societies, the university and Bristol itself has to offer. With over 200 stalls there is plenty of things to do, people to meet and sweets to eat.</p>
             
               
               <div class="meta">
                 <div class="location">
-                  <object type="image/svg+xml" data="/assets/icons/location_filled.svg" class="icon"></object>
-                  Frenchay 
+                  <object type="image/svg+xml" data="/assets/icons/location-dark.svg" class="icon"></object>
+                  ECC, Frenchay Campus 
                   
                 </div>
                 <div class="date">
-                  <object type="image/svg+xml" data="/assets/icons/date_from_filled.svg" class="icon"></object>
-                  Sept 21 2016
+                  <object type="image/svg+xml" data="/assets/icons/date-dark.svg" class="icon"></object>
+                  Fri 16, 11:00 - 14:00
                 </div>
               </div>
 
-              <button class="grey right-arrow">Buy tickets</button>
+              <button class="grey right-arrow">Find out more</button>
 
             </div>
           </div>
@@ -225,11 +225,27 @@
         </div> 
 
       </section>
+
+      <section id="student-leaders">
+      <div class="grad-overlay"></div>
+        <div class="v-align-wrapper">
+          <div class="v-align">
+            <div class="container">
+              <div class="row">
+                <h2>Welcome from your student leaders</h2>
+                <p>Find out about who has been elected to represent you and how to get in touch.</p>
+                <button class="grey right-arrow">Find out more</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+      
       <section id="social-signup">
 
         <div class="container super-fluid">
           <div class="row">
-            <div class="col-md-4 sign-up">
+            <div class="col-md-5 sign-up">
               <div class="v-align-wrapper">
                 <div class="v-align">
                   <div class="sign-up-wrap text-xs-left">
@@ -243,8 +259,8 @@
                           <label class="input-label" for="email">
                             <span class="input-label-content">Email Address</span>
                           </label>
-                          <div class="submit-button right-arrow">
-                            <input type="submit" for="email" value="Sign Up" name="subscribe">
+                          <div class="submit-button right-arrow-grey blue">
+                            <input type="submit" for="email" value="Sign up for updates and offers" name="subscribe">
                           </div>
                           <div id="subscribe-result">
                           </div>
@@ -254,8 +270,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-8 social">
 
+            <div class="col-md-7 social">
               <div class="social-wrap">
                 <div class="v-align-wrapper">
                   <div class="v-align">
@@ -272,8 +288,6 @@
             </div>
           </div>
         </div>
-        
-        
       </section>
      <!--  <section id="platinum">
         <div class="v-align-wrapper">
@@ -296,41 +310,58 @@
           </div>
         </div>
       </section> -->
+      
 
+      <section id="news" class="text-xs-right">
+      <div class="grad-overlay"></div>
+        <div class="v-align-wrapper">
+          <div class="v-align">
+            <div class="container">
+              <div class="row">
+                <h2>Moving in: Our top tips</h2>
+                <p>Living with new people can be scary, here's our advice.</p>
+                <button class="grey right-arrow">Find out more</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+      </section>
       <section id="events">
         <div class="container">
-          <h2 class="super-header">Events</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quas, excepturi laudantium minima vel velit quis similique distinctio. Fugit, dolorem.</p>
-          <div class="search">
-          <button class="day filter" data-event-type="w16-day">Day</button>
-          <button class="night filter" data-event-type="w16-night">Night</button>
-          <button class="main filter" data-event-type="w16-main">Main</button>
-          <select class="location filter" name="Location" id="">
-            <option value="" default selected>Location</option>
-            <option value="bower">Bower Ashton</option>
-            <option value="glenside">Glenside</option>
-            <option value="frenchay">Frenchay</option>
-            <option value="city">City Centre</option>
-          </select>
-          <select class="categories filter" name="Location" id="">
-            <option value="" default selected>Categories</option>
-            <option value="bower">Bower Ashton</option>
-            <option value="glenside">Glenside</option>
-            <option value="frenchay">Frenchay</option>
-            <option value="city">City Center</option>
-          </select>
-          <div class="search-bar">
-            <span class="h4">Search</span>
-            <input class="filter" type="search" placeholder="Search events" required="">
-          </div>
-          </div>
+          <h2>Events</h2>
+          <!-- <div class="search">
+            <button class="day filter" data-event-type="w16-day">Day</button>
+            <button class="night filter" data-event-type="w16-night">Night</button>
+            <button class="main filter" data-event-type="w16-main">Main</button>
+            <select class="location filter" name="Location" id="">
+              <option value="" default selected>Location</option>
+              <option value="bower">Bower Ashton</option>
+              <option value="glenside">Glenside</option>
+              <option value="frenchay">Frenchay</option>
+              <option value="city">City Centre</option>
+            </select>
+            <select class="categories filter" name="Location" id="">
+              <option value="" default selected>Categories</option>
+              <option value="bower">Bower Ashton</option>
+              <option value="glenside">Glenside</option>
+              <option value="frenchay">Frenchay</option>
+              <option value="city">City Center</option>
+            </select>
+            <div class="search-bar">
+              <span class="h4">Search</span>
+              <input class="filter" type="search" placeholder="Search events" required="">
+            </div>
+          </div> -->
           <div id="loader">Loading...</div>
           <!-- Placeholder for events listings template -->
           <div id="event-listings"></div>
 
       </section>
 
-      <section id="social">
+      
+
+      <!-- <section id="social">
         <div class="v-align-wrapper">
           <div class="v-align">
             <div class="container">
@@ -349,7 +380,7 @@
           
           </div>
         </div>
-      </section>
+      </section> -->
       
       </main>
 
@@ -358,6 +389,67 @@
       </aside>
 
       <footer class="footer" role="contentinfo">
+      <object type="image/svg+xml" data="/assets/img/footer-angle.svg" class="footer-angle"></object>
+      <div class="v-align-wrapper">
+        <div class="v-align">
+          <div class="container">
+          
+
+            <div class="row">
+              <div class="col-md-3 contact-info footer-information">
+                <h5>Contact</h5>
+                  <table class="address">
+                    <tr>
+                      <td><object type="image/svg+xml" data="/assets/icons/phone_filled_white.svg" class="footer-contact-icon"></object></td>
+                      <td><a href="tel:01173282577">+44 (0)117 32 82577</a></td>
+                    </tr>
+                    <tr>
+                      <td><object type="image/svg+xml" data="/assets/icons/email_filled_white.svg" class="footer-contact-icon"></object></td>
+                      <td><a href="mailto:thestudentsunion@uwe.ac.uk">thestudentsunion@uwe.ac.uk</a></td>
+                    </tr>
+                    <tr>
+                      <td><object type="image/svg+xml" data="/assets/icons/location_filled_white.svg" class="footer-contact-icon"></object></td>
+                      <td>The Students' Union at UWE,<br>
+                    Union 1, Frenchay Campus,<br>
+                    Coldharbour Lane,<br>
+                    Bristol, BS16 1QY</td>
+                    </tr>
+                  </table>     
+
+                
+              </div>
+              <div class="col-md-3 footer-information">
+                <h5>Information</h5>
+                  <a href="http://www.thestudentsunion.co.uk/contactus/">Contact Us</a><br>
+                  <a href="http://www.thestudentsunion.co.uk/tac/">Terms & Conditions</a><br>
+                  <a href="http://www.thestudentsunion.co.uk/privacy/">Privacy</a><br>
+                  <a href="http://www.thestudentsunion.co.uk/cookies/">Cookies</a><br>
+                  <a href="http://www.thestudentsunion.co.uk/data/">Your Data</a><br>
+                  <a href="http://www.thestudentsunion.co.uk/union/about/work-for-us/">Careers</a><br>
+                           
+              </div>
+              <div class="col-md-3 footer-information">
+
+                
+              </div>
+              <div class="col-md-3 footer-information">
+                <object type="image/svg+xml" data="/assets/img/logo.svg" id="footer-logo"></object>
+              </div>
+            </div><!-- row -->
+            <hr>
+            <div class="row sub-footer">
+              <div class="col-md-3 col-xs-4"><a href="https://beta.companieshouse.gov.uk/company/07675253/">Company No. 07675253</a></div>
+              <div class="col-md-3 col-xs-4"><a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1143067&SubsidiaryNumber=0">Charity No. 1143067</a></div>
+
+               <div class="col-md-3 col-md-offset-3  col-xs-12 text-md-right"><span class="copyright">© Copyright <script>document.write(new Date().getFullYear())</script> The Students' Union at UWE</span></div>
+            </div><!-- row -->
+          </div>
+        </div>
+      </div>
+
+        
+
+        
 
       </footer>
     </div>
