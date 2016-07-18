@@ -7583,7 +7583,7 @@ body.welcome-page section#student-leaders {
   height: 300px;
   position: relative;
   background-image: url("/assets/img/FT_wall_extended.jpg");
-  background-position: 80%;
+  background-position: 90%;
   background-size: cover;
   color: #fff;
   -webkit-transition: all .5s ease;
@@ -7727,6 +7727,15 @@ body.welcome-page section#events {
   }
   body.welcome-page section#student-leaders .grad-overlay {
     opacity: 0.3;
+  }
+  body.welcome-page section#events .event-col {
+    margin-top: 40px;
+  }
+  body.welcome-page section#events .event-col .card-img-top {
+    background-position: center !important;
+  }
+  body.welcome-page section#events .event-col:hover .key {
+    top: -40px !important;
   }
 }
 @media (max-width: 991px) {
@@ -7918,6 +7927,20 @@ address > span {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 767px) {
+  footer.footer {
+    height: auto;
+  }
+  footer.footer .contact-info {
+    margin-bottom: 30px;
+  }
+  footer.footer .row:first-of-type {
+    width: 50%;
+  }
+  footer.footer .v-align-wrapper {
+    position: relative;
+  }
+}
 /*
 *
 * Boostrap 4.0 extensions

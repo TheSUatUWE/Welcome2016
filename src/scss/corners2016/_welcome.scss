@@ -120,7 +120,7 @@ body.welcome-page {
 		height: 300px;
 		position: relative;
 		background-image: url("/assets/img/FT_wall_extended.jpg");
-		background-position: 80%;
+		background-position: 90%;
 		background-size: cover;
 		color:#fff;
 
@@ -330,6 +330,22 @@ body.welcome-page {
 				.grad-overlay {
 					opacity: 0.3;
 				}
+			}
+			section#events {
+				
+				.event-col {
+					margin-top: 40px;
+
+					.card-img-top {
+						background-position:center!important;
+					}
+
+					&:hover .key {
+					    top: -40px !important;
+					}
+				}
+
+
 			}
 
 		}

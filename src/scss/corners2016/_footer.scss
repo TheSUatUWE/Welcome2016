@@ -80,3 +80,19 @@ address {
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	footer.footer {
+		height:auto;
+		
+		.contact-info {
+			margin-bottom: 30px;
+		}
+		.row:first-of-type{
+			width:50%;
+		}
+		.v-align-wrapper {
+			    position: relative;
+		}
+		
+	}
+}
