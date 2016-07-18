@@ -6677,7 +6677,7 @@ nav.nav.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.scrolled .mobile-menu-
 @font-face {
   font-family: AlternateGothicLT-No2;
   src: url("../fonts/2EA350_E_0.eot");
-  src: url("../fonts/2EA350_E_0.eot?#iefix") format("embedded-opentype"), url("../fontss/2EA350_E_0.woff") format("woff"), url("../fonts/2EA350_E_0.ttf") format("truetype");
+  src: url("../fonts/2EA350_E_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2EA350_E_0.woff") format("woff"), url("../fonts/2EA350_E_0.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -7625,9 +7625,6 @@ body.welcome-page section#news:hover {
 body.welcome-page section#news:hover button {
   background-color: #e84253;
 }
-body.welcome-page section#social-signup {
-  height: 300px;
-}
 body.welcome-page section#social-signup .sign-up-wrap {
   height: 170px;
 }
@@ -7704,6 +7701,34 @@ body.welcome-page section#social .icon {
 body.welcome-page section#events {
   position: relative;
 }
+@media (max-width: 767px) {
+  body.welcome-page section#landing {
+    height: 100vh;
+    padding-bottom: 20px;
+  }
+  body.welcome-page section#landing .spacer {
+    margin-left: 1em !important;
+  }
+  body.welcome-page section#landing .landing-welcome {
+    padding-top: 5em;
+  }
+  body.welcome-page section#landing span.intro-text {
+    font-size: 1em;
+  }
+  body.welcome-page section#social-signup .social .social-icon {
+    width: 1.5em;
+  }
+  body.welcome-page section#student-leaders {
+    height: 200px;
+    background-position: 90%;
+  }
+  body.welcome-page section#student-leaders p {
+    opacity: 0;
+  }
+  body.welcome-page section#student-leaders .grad-overlay {
+    opacity: 0.3;
+  }
+}
 @media (max-width: 991px) {
   body.welcome-page section#landing .row {
     padding-top: 0;
@@ -7713,8 +7738,34 @@ body.welcome-page section#events {
   }
   body.welcome-page section#landing .featured-image {
     width: 100%;
-    height: 43%;
+    height: 100%;
     bottom: 0;
+  }
+  body.welcome-page section#social-signup {
+    overflow: hidden;
+  }
+  body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
+    height: 200px;
+  }
+  body.welcome-page section#social-signup .sign-up .sign-up-wrap {
+    max-width: none;
+    height: auto;
+  }
+  body.welcome-page section#social-signup .sign-up .sign-up-wrap .input-wrap {
+    margin: 1em 0 0;
+  }
+  body.welcome-page section#social-signup .sign-up:after {
+    background: #40373f;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 9999px;
+  }
+  body.welcome-page section#social-signup .social .social-wrap {
+    float: none;
+    text-align: center;
   }
 }
 
@@ -7799,9 +7850,8 @@ section#events .types {
 }
 section#events #event-listings {
   display: none;
-}
-section#events #event-listings > [class*=' col-']:first-of-type {
-  padding-left: 0 !important;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
 }
 
 /*

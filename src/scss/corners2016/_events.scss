@@ -96,10 +96,8 @@ section#events {
 	
 	#event-listings {
 		display:none;
-		
-		& > [class*=' col-']:first-of-type {
-			padding-left:0!important;
-		}
-	
-	}	
+		margin-left: -0.9375rem;
+		margin-right: -0.9375rem;	
+	}
+
 }
