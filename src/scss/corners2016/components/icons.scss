@@ -1,0 +1,33 @@
+/*
+*
+* Icons
+* 
+*/
+
+// Social Media
+a.svg-link:hover {
+	
+	svg#facebook-logo .st0 {
+		fill:$facebook;
+	}
+	
+
+	svg#twitter-logo  .st0 {
+		fill:$twitter;
+	}
+
+	svg#insta-logo .st0 {
+		fill:$instagram;
+
+	}
+
+	svg#snapchat-logo .st0 {
+		fill:$snapchat;
+	}
+
+	svg#yt-logo .st0 {
+		fill:$youtube;
+	}
+
+
+}

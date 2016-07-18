@@ -9,7 +9,6 @@ button {
 	padding:7px 12px;
 	transition:all .5s ease;
 	position: relative;
-	margin-bottom:20px;
 
 	&.grey {
 		background:$u-grey;
@@ -73,5 +72,12 @@ button {
 		    top: 5px;
 		}
 			
+	}
+
+	&.close {
+		&:hover {
+			background:none;
+			opacity:1;
+		}
 	}
 }

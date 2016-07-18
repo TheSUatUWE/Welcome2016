@@ -47,6 +47,8 @@ body.welcome-page {
 		background-image: url('../img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
+
+
 	}	
 
 	/* Section: Landing*/
@@ -56,6 +58,11 @@ body.welcome-page {
 		position: relative;
 		@extend %g-brand-spectrum ;
 		overflow:hidden;
+
+		span.intro-text {
+			font-size:$font-size-lg;
+			font-weight: 900;
+		}
 	
 		.featured-image {
 			background-image: url('../img/freshers-fair.jpg');
@@ -210,11 +217,24 @@ body.welcome-page {
 			}
 			.social-icon {
 				width:3em;
-				margin-right:20px;
+				
+				& > path {
+					transition:all .25s ease;
+				}
+				
 
 				&:last-of-type {
 					margin-left:0px;
 				}
+			}
+
+			#snapchat-code {
+				width: 80%;
+			    margin: auto;
+			    display: block;
+			    margin-top: 2rem;
+			    margin-bottom: 2rem;
+
 			}
 		}
 	}
@@ -260,6 +280,8 @@ body.welcome-page {
 		    width: 5em;
 		    margin:0 1em;
 		}
+
+
 
 	}
 

@@ -6904,12 +6904,33 @@ canvas {
   display: none !important;
 }
 
+.spacer {
+  display: inline-block;
+}
+
 .no-pad {
   padding: 0 0 0 0;
 }
 
 .no-margin {
   margin: 0 0 0 0;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+a.svg-link {
+  position: relative;
+  display: inline-block;
+}
+a.svg-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .v-align-wrapper {
@@ -6925,6 +6946,7 @@ canvas {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
+z
 .v-align-wrapper.left {
   right: auto;
   width: 60%;
@@ -6995,7 +7017,6 @@ button {
   -webkit-transition: all .5s ease;
           transition: all .5s ease;
   position: relative;
-  margin-bottom: 20px;
 }
 button.grey {
   background: #40373f;
@@ -7048,6 +7069,10 @@ button.down-arrow:after {
   background-repeat: no-repeat;
   right: 4px;
   top: 5px;
+}
+button.close:hover {
+  background: none;
+  opacity: 1;
 }
 
 /*
@@ -7514,6 +7539,10 @@ body.welcome-page section#landing {
   position: relative;
   overflow: hidden;
 }
+body.welcome-page section#landing span.intro-text {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
 body.welcome-page section#landing .featured-image {
   background-image: url("../img/freshers-fair.jpg");
   background-size: cover;
@@ -7627,10 +7656,20 @@ body.welcome-page section#social-signup .social .social-wrap {
 }
 body.welcome-page section#social-signup .social .social-icon {
   width: 3em;
-  margin-right: 20px;
+}
+body.welcome-page section#social-signup .social .social-icon > path {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
 }
 body.welcome-page section#social-signup .social .social-icon:last-of-type {
   margin-left: 0px;
+}
+body.welcome-page section#social-signup .social #snapchat-code {
+  width: 80%;
+  margin: auto;
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 body.welcome-page section#platinum {
   height: 300px;
@@ -8943,6 +8982,27 @@ input {
 */
 section:last-of-type {
   padding-bottom: 70px !important;
+}
+
+/*
+*
+* Icons
+* 
+*/
+a.svg-link:hover svg#facebook-logo .st0 {
+  fill: #3b5998;
+}
+a.svg-link:hover svg#twitter-logo .st0 {
+  fill: #4099FF;
+}
+a.svg-link:hover svg#insta-logo .st0 {
+  fill: #125688;
+}
+a.svg-link:hover svg#snapchat-logo .st0 {
+  fill: #fffc00;
+}
+a.svg-link:hover svg#yt-logo .st0 {
+  fill: #bb0000;
 }
 
 /* Temporary CSS */
