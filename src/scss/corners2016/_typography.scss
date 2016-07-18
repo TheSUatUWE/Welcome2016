@@ -151,3 +151,17 @@ $interval-size: $range / $intervals !default;
     font-size: 1.2rem;
   }
 }
+
+  @include media-breakpoint-down(md) {
+    h1, .h1 {
+      &.super-header {
+        font-size:5em;
+      }
+    }
+
+    h2, .h2 {
+      &.super-header {
+        font-size:3em;
+      }
+    }
+  }

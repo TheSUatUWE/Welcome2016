@@ -106,7 +106,6 @@ $u-green-l50 : lighten( $u-green, 50% ) ;
 	background: -webkit-linear-gradient(left,  rgba(255,228,77,0) 0%,rgba(255,228,77,0.98) 98%,rgba(255,228,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right,  rgba(255,228,77,0) 0%,rgba(255,228,77,0.98) 98%,rgba(255,228,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffe44d', endColorstr='#ffe44d',GradientType=1 ); /* IE6-9 */
-
 }
 
 %g-green-trans {
@@ -147,6 +146,7 @@ $u-green-l50 : lighten( $u-green, 50% ) ;
 	    100%{background-position:0% 15%}
 	}
 }
+
 
 %g-platinum {
 	background: linear-gradient(129deg, #887b8a, #989898, #818181, #6e6e6e, #7e7f8a);

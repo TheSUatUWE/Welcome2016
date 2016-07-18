@@ -6878,6 +6878,15 @@ mark, .mark {
   }
 }
 
+@media (max-width: 991px) {
+  h1.super-header, .h1.super-header {
+    font-size: 5em;
+  }
+
+  h2.super-header, .h2.super-header {
+    font-size: 3em;
+  }
+}
 /*
 *
 * Utility
@@ -6913,6 +6922,8 @@ canvas {
   height: 100%;
   display: table;
   margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 .v-align-wrapper.left {
   right: auto;
@@ -7460,6 +7471,7 @@ body.content-page .header-banner h1 {
 * 
 */
 body.welcome-page {
+  /* Globals */
   /* Section: Landing*/
   /* Section: Student Leaders */
   /* Section: News */
@@ -7467,14 +7479,35 @@ body.welcome-page {
   /* Section: Platinum */
   /* Section: Social */
   /* Section: Events */
-  /* MSL Markup: General Events */
 }
-body.welcome-page ul.nav.nav-inline, body.welcome-page .search-wrap, body.welcome-page .nav-secondary {
+body.welcome-page ul.nav.nav-inline, body.welcome-page .search-wrap, body.welcome-page .nav-secondary, body.welcome-page .mobile-menu-toggle {
   display: none !important;
 }
 body.welcome-page nav.nav.scrolled {
   background: transparent !important;
   box-shadow: none !important;
+}
+body.welcome-page .bg-pattern-left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-size: 100%;
+  background-image: url("../img/tri-pattern-left.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+body.welcome-page .bg-pattern-right {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-size: 100%;
+  background-image: url("../img/tri-pattern-right.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 body.welcome-page section#landing {
   height: 90vh;
@@ -7502,7 +7535,7 @@ body.welcome-page section#landing .featured-item span.title {
   display: block;
   border-bottom: 1px solid #40373f;
   padding-bottom: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 body.welcome-page section#landing .featured-item .meta {
   margin-bottom: 20px;
@@ -7512,6 +7545,7 @@ body.welcome-page section#landing .featured-item .meta > div {
 }
 body.welcome-page section#landing .featured-item .meta > div:first-of-type {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 body.welcome-page section#landing .featured-item .meta object.icon {
   width: 20px;
@@ -7549,7 +7583,7 @@ body.welcome-page section#news .grad-overlay {
 body.welcome-page section#social-signup {
   height: 300px;
 }
-body.welcome-page section#social-signup .sign-up-wrap, body.welcome-page section#social-signup .social-wrap {
+body.welcome-page section#social-signup .sign-up-wrap {
   height: 170px;
 }
 body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
@@ -7576,8 +7610,8 @@ body.welcome-page section#social-signup .social .social-wrap {
   float: right;
 }
 body.welcome-page section#social-signup .social .social-icon {
-  width: 6em;
-  margin-left: 20px;
+  width: 3em;
+  margin-right: 20px;
 }
 body.welcome-page section#social-signup .social .social-icon:last-of-type {
   margin-left: 0px;
@@ -7612,91 +7646,23 @@ body.welcome-page section#social .icon {
   width: 5em;
   margin: 0 1em;
 }
-body.welcome-page .msl_eventlist > div:first-of-type {
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-body.welcome-page .event_item {
-  width: 46%;
-  display: inline-block;
+body.welcome-page section#events {
   position: relative;
-  margin: 4% 2% 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 wrap;
-          flex: 1 wrap;
-  padding: 2%;
-  background: #fff;
-  /* Main Events */
 }
-body.welcome-page .event_item dl > dd.msl_event_types {
-  display: none;
-}
-body.welcome-page .event_item dl > dd .msl_event_time {
-  text-transform: capitalize;
-}
-body.welcome-page .event_item span.msl_event_image {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-}
-body.welcome-page .event_item > dl {
-  margin-left: 150px;
-}
-body.welcome-page .event_item a.msl_event_name {
-  font-family: 'Alternate Gothic';
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 2em;
-  color: #40373f;
-}
-body.welcome-page .event_item .w16-tod.day {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 75px 75px;
-  border-color: transparent transparent #ffe44d transparent;
-  line-height: 0px;
-  _border-color: #000000 #000000 #ffe44d #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-body.welcome-page .event_item .w16-tod.night {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 75px 75px;
-  border-color: transparent transparent #a0d9e0 transparent;
-  line-height: 0px;
-  _border-color: #000000 #000000 #a0d9e0 #000000;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-body.welcome-page .event_item .tod-icon {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  z-index: 1;
-  width: 30px;
-}
-body.welcome-page .event_item.msltypew16_main {
-  width: 100%;
-}
-
 @media (max-width: 991px) {
-  body.welcome-page .event_item {
+  body.welcome-page section#landing .row {
+    padding-top: 0;
+  }
+  body.welcome-page section#landing .featured-item {
+    margin-top: 50px;
+  }
+  body.welcome-page section#landing .featured-image {
     width: 100%;
+    height: 43%;
+    bottom: 0;
   }
 }
+
 /*
 *
 * Events
