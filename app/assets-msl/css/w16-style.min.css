@@ -7554,9 +7554,11 @@ body.welcome-page section#student-leaders {
   height: 300px;
   position: relative;
   background-image: url("/assets/img/FT_wall_extended.jpg");
-  background-position: right;
+  background-position: 80%;
   background-size: cover;
   color: #fff;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
 }
 body.welcome-page section#student-leaders .grad-overlay {
   position: absolute;
@@ -7565,13 +7567,21 @@ body.welcome-page section#student-leaders .grad-overlay {
   left: 0;
   right: 0;
 }
+body.welcome-page section#student-leaders:hover {
+  background-position: 100%;
+}
+body.welcome-page section#student-leaders:hover button {
+  background-color: #e84253;
+}
 body.welcome-page section#news {
   height: 300px;
   position: relative;
   background-image: url("/assets/img/acomm_extended.jpg");
-  background-position: right;
+  background-position: 80%;
   background-size: cover;
   color: #40373f;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
 }
 body.welcome-page section#news .grad-overlay {
   position: absolute;
@@ -7579,6 +7589,12 @@ body.welcome-page section#news .grad-overlay {
   bottom: 0;
   left: 0;
   right: 0;
+}
+body.welcome-page section#news:hover {
+  background-position: 100%;
+}
+body.welcome-page section#news:hover button {
+  background-color: #e84253;
 }
 body.welcome-page section#social-signup {
   height: 300px;
