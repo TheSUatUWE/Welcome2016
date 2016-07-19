@@ -7051,7 +7051,7 @@ button.right-arrow:after {
   background-size: cover;
   background-repeat: no-repeat;
   right: 4px;
-  top: 5px;
+  top: 4px;
 }
 button.down-arrow {
   width: auto;
@@ -7068,7 +7068,7 @@ button.down-arrow:after {
   background-size: cover;
   background-repeat: no-repeat;
   right: 4px;
-  top: 5px;
+  top: 4px;
 }
 button.close:hover {
   background: none;
@@ -7931,6 +7931,16 @@ address > span {
   footer.footer {
     height: auto;
   }
+  footer.footer object#footer-logo {
+    width: 100px;
+    position: absolute;
+    right: 5%;
+    top: -50px;
+  }
+  footer.footer span.copyright {
+    padding: 10px 0;
+    display: block;
+  }
   footer.footer .contact-info {
     margin-bottom: 30px;
   }
@@ -8782,6 +8792,9 @@ address > span {
 * Event Cards
 * 
 */
+.event-col {
+  min-width: 285px;
+}
 .event-col .event-card-small {
   height: 320px;
   overflow: hidden;

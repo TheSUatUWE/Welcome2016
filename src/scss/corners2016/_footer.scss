@@ -82,8 +82,19 @@ address {
 
 @include media-breakpoint-down(sm) {
 	footer.footer {
+		
 		height:auto;
 		
+		object#footer-logo {
+		    width: 100px;
+		    position: absolute;
+		    right: 5%;
+		    top: -50px;
+		}
+		span.copyright {
+		    padding: 10px 0;
+		    display: block;
+		}
 		.contact-info {
 			margin-bottom: 30px;
 		}

@@ -215,8 +215,12 @@
         var newH = (cardH - blockH);
         var key = $(this).prev('.key');
 
-
-        key.css('top', (newH - 65) );
+        if (document.documentElement.clientWidth < 768) {
+         key.css('top', (newH - 80) );
+        } else {
+           key.css('top', (newH - 65) );
+        }
+       
         img.height(newH);
         grad.height(newH);
 
@@ -271,6 +275,10 @@
       eventResize();
       initTooltip();
     };
+
+    $(window).resize(function() {
+        eventResize();
+    });
 
      // Init tooltips //
   
