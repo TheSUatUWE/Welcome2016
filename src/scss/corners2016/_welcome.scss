@@ -78,7 +78,7 @@ body.welcome-page {
 		}		
 
 		.row {
-			padding-top:200px;
+			padding-top:200px!important;
 		}
 
 		.featured-item {
@@ -293,6 +293,16 @@ body.welcome-page {
 
 
 
+	/* Section: UWE Get Ready */
+
+	section#uwe-get-ready {
+		position: relative;
+		height: 200px;
+
+	}
+
+
+	//  Media Queries
 	@include media-breakpoint-down(sm) { 
 			section#landing {
 				height: 100vh;
@@ -345,7 +355,12 @@ body.welcome-page {
 					}
 				}
 
+			}
 
+			section#news {
+				p {
+					opacity:0;
+				}
 			}
 
 		}
@@ -402,11 +417,12 @@ body.welcome-page {
 		}
 	}
 
-	@include media-breakpoint-down(lg) { 
-		section#social-signup {
-
-
-		}
+	@media screen and (max-height: 992px) and (min-width: 992px) {
+          	section#landing {
+    		.row {
+    			padding-top:0;
+    		}
+    	}
 	}
 
 }

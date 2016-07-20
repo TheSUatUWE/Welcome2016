@@ -219,7 +219,8 @@
 			background:rgba(255,255,255,0.70);
 			transition:all 1s ease;
 
-			& > .logo {				
+			& > .logo {
+				opacity:0.5;				
 				& > a > svg > {
 					& .tri {
 						transform:scale(0.6);

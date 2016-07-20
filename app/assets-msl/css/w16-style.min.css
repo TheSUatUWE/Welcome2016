@@ -7421,6 +7421,9 @@ body.content-page .header-banner h1 {
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
   }
+  nav.nav.scrolled > .logo {
+    opacity: 0.5;
+  }
   nav.nav.scrolled > .logo > a > svg > .tri {
     -webkit-transform: scale(0.6);
         -ms-transform: scale(0.6);
@@ -7504,6 +7507,7 @@ body.welcome-page {
   /* Section: Platinum */
   /* Section: Social */
   /* Section: Events */
+  /* Section: UWE Get Ready */
 }
 body.welcome-page ul.nav.nav-inline, body.welcome-page .search-wrap, body.welcome-page .nav-secondary, body.welcome-page .mobile-menu-toggle {
   display: none !important;
@@ -7555,7 +7559,7 @@ body.welcome-page section#landing .featured-image {
   opacity: 0.5;
 }
 body.welcome-page section#landing .row {
-  padding-top: 200px;
+  padding-top: 200px !important;
 }
 body.welcome-page section#landing .featured-item {
   color: #40373f;
@@ -7701,6 +7705,10 @@ body.welcome-page section#social .icon {
 body.welcome-page section#events {
   position: relative;
 }
+body.welcome-page section#uwe-get-ready {
+  position: relative;
+  height: 200px;
+}
 @media (max-width: 767px) {
   body.welcome-page section#landing {
     height: 100vh;
@@ -7736,6 +7744,9 @@ body.welcome-page section#events {
   }
   body.welcome-page section#events .event-col:hover .key {
     top: -40px !important;
+  }
+  body.welcome-page section#news p {
+    opacity: 0;
   }
 }
 @media (max-width: 991px) {
@@ -7775,6 +7786,11 @@ body.welcome-page section#events {
   body.welcome-page section#social-signup .social .social-wrap {
     float: none;
     text-align: center;
+  }
+}
+@media screen and (max-height: 992px) and (min-width: 992px) {
+  body.welcome-page section#landing .row {
+    padding-top: 0;
   }
 }
 

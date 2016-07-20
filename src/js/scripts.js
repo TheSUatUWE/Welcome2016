@@ -260,7 +260,7 @@
     // Add main event icon to events
     // function eventMain() {
     //   $('.event-card-small').each(function() {
-    //     if ( $(this).hasClass('w16_main') ) {
+    //     if ( $(this).hasClass('w1Res6_main') ) {
     //       $(this).append('<object class="main-icon" data="/assets/icons/star.svg" type="image/svg+xml"></object><div class="w16-main main"></div>'); 
     //     } 
     //   });
@@ -276,12 +276,10 @@
       initTooltip();
     };
 
+    // Fire eventResize whenever the user resizes their window
     $(window).resize(function() {
         eventResize();
     });
-
-     // Init tooltips //
-  
 
 
   });
