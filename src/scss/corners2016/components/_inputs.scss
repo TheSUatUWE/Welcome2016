@@ -78,13 +78,13 @@
 				background: url(../icons/right-arrow-grey.svg);
 				background-size: cover;
 				background-repeat: no-repeat;
-				right: 0.85rem;
+				right: 1.85rem;
 			    top: 12px;
 			    transition: all .25s ease;
 			}
 
 			&:hover::before {
-				right:3rem;
+				right:0.85rem;
 			}
 		}
 
