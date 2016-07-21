@@ -7782,6 +7782,9 @@ body.welcome-page section#uwe-get-ready {
     text-align: center;
   }
 }
+body.welcome-page section#landing .featured-image {
+  width: 45%;
+}
 @media screen and (max-height: 992px) and (min-width: 992px) {
   body.welcome-page section#landing .row {
     padding-top: 0;

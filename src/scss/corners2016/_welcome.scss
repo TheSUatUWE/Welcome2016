@@ -406,6 +406,14 @@ body.welcome-page {
 		}
 	}
 
+	@include media-breakpoint-up(xxl) {
+		section#landing {
+			.featured-image {
+				width:45%;
+			}
+		}
+	}	
+
 	@media screen and (max-height: 992px) and (min-width: 992px) {
           	section#landing {
     		.row {
