@@ -6185,17 +6185,14 @@ nav.nav > * {
 nav.nav .nav-item {
   font-size: 1em;
   line-height: 60px;
-  padding-left: 0px;
-  padding-right: 0px;
   margin: 0;
-  padding: 0 10px;
 }
 nav.nav .nav-item a {
   color: #fff;
+  padding: 0 10px;
 }
 nav.nav .nav-item:hover, nav.nav .nav-item.open {
   background: #e84253;
-  color: #fff;
 }
 nav.nav .nav-item:hover a, nav.nav .nav-item.open a {
   color: #fff;
@@ -6211,7 +6208,11 @@ nav.nav .sidebar-toggle.toggled svg {
 }
 nav.nav .nav-inline {
   display: inline-block;
-  padding-left: 50px;
+  padding-right: 50px;
+  float: right;
+}
+nav.nav .nav-inline .nav-item {
+  border-left: 1px solid transparent;
 }
 nav.nav .nav-inline .nav-item + .nav-item, nav.nav .nav-inline .nav-link + .nav-link {
   margin: 0;
@@ -7508,13 +7509,6 @@ body.welcome-page {
   /* Section: Social */
   /* Section: Events */
   /* Section: UWE Get Ready */
-}
-body.welcome-page ul.nav.nav-inline, body.welcome-page .search-wrap, body.welcome-page .nav-secondary, body.welcome-page .mobile-menu-toggle {
-  display: none !important;
-}
-body.welcome-page nav.nav.scrolled {
-  background: transparent !important;
-  box-shadow: none !important;
 }
 body.welcome-page .bg-pattern-left {
   position: absolute;
