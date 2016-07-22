@@ -110,7 +110,7 @@
 			padding:1.25rem;
 			top: 160px;
 			position: absolute;
-			transition: all .3s ease;
+			transition: all .2s ease;
 
 
 				.tod, .cat2, .cat3 {
@@ -168,7 +168,74 @@
 			    }
 			}
 
+		}
+
+	&.compact-listing {
+		.description, .card-img-top, {
+			display:none;
+		}
+		.key {
+			top:-15px!important;
+			.cat2 {
+				left:50px;
 			}
+			.tod, .cat2, .cat3 {
+				background-image:none;
+				width: 20px;
+				height: 20px;
+				display:none;
+				transition: all .2s ease;
+
+				&.night {
+					display:block;
+					background-color:$u-sky!important;
+				}
+				&.day {
+					display:block;
+					background-color:$u-yellow!important;
+				}
+				&.main {
+					display:block;
+					background-color:$u-lime!important;
+				}
+			}
+
+			
+		}
+		.event-card-small {
+			height: auto;
+		}
+
+		&:hover {
+			.card-block {
+			    top: 0;
+			    padding-top: 20px;
+			}
+			.key {
+				top:-30px!important;
+				.cat2 {
+					left:70px;
+				}
+				.tod, .cat2, .cat3 {
+					background-image:none;
+					width: 40px;
+					height: 40px;
+					
+					&.night {
+						background-image: url('/assets/icons/Moon.svg')!important;
+					}
+
+					&.day {
+						background-image: url('/assets/icons/sun.svg')!important;
+					}
+
+					&.main {
+						background-image: url('/assets/icons/star_filled.svg')!important;
+					}
+				}
+			}
+		}
+	}			
 
 
 

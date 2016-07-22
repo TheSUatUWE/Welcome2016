@@ -8952,8 +8952,8 @@ address > span {
   padding: 1.25rem;
   top: 160px;
   position: absolute;
-  -webkit-transition: all .3s ease;
-          transition: all .3s ease;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
 }
 .event-col .key .tod, .event-col .key .cat2, .event-col .key .cat3 {
   width: 0px;
@@ -9000,6 +9000,62 @@ address > span {
 }
 .event-col .key .tod.cat2, .event-col .key .cat2.cat2, .event-col .key .cat3.cat2 {
   left: 70px;
+}
+.event-col.compact-listing .description, .event-col.compact-listing .card-img-top {
+  display: none;
+}
+.event-col.compact-listing .key {
+  top: -15px !important;
+}
+.event-col.compact-listing .key .cat2 {
+  left: 50px;
+}
+.event-col.compact-listing .key .tod, .event-col.compact-listing .key .cat2, .event-col.compact-listing .key .cat3 {
+  background-image: none;
+  width: 20px;
+  height: 20px;
+  display: none;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+.event-col.compact-listing .key .tod.night, .event-col.compact-listing .key .cat2.night, .event-col.compact-listing .key .cat3.night {
+  display: block;
+  background-color: #a0d9e0 !important;
+}
+.event-col.compact-listing .key .tod.day, .event-col.compact-listing .key .cat2.day, .event-col.compact-listing .key .cat3.day {
+  display: block;
+  background-color: #ffe44d !important;
+}
+.event-col.compact-listing .key .tod.main, .event-col.compact-listing .key .cat2.main, .event-col.compact-listing .key .cat3.main {
+  display: block;
+  background-color: #adc459 !important;
+}
+.event-col.compact-listing .event-card-small {
+  height: auto;
+}
+.event-col.compact-listing:hover .card-block {
+  top: 0;
+  padding-top: 20px;
+}
+.event-col.compact-listing:hover .key {
+  top: -30px !important;
+}
+.event-col.compact-listing:hover .key .cat2 {
+  left: 70px;
+}
+.event-col.compact-listing:hover .key .tod, .event-col.compact-listing:hover .key .cat2, .event-col.compact-listing:hover .key .cat3 {
+  background-image: none;
+  width: 40px;
+  height: 40px;
+}
+.event-col.compact-listing:hover .key .tod.night, .event-col.compact-listing:hover .key .cat2.night, .event-col.compact-listing:hover .key .cat3.night {
+  background-image: url("/assets/icons/Moon.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.day, .event-col.compact-listing:hover .key .cat2.day, .event-col.compact-listing:hover .key .cat3.day {
+  background-image: url("/assets/icons/sun.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.main, .event-col.compact-listing:hover .key .cat2.main, .event-col.compact-listing:hover .key .cat3.main {
+  background-image: url("/assets/icons/star_filled.svg") !important;
 }
 
 /*
@@ -9132,7 +9188,7 @@ select {
   margin: 0 !important;
 }
 .input-wrap.input-search .input-label {
-  top: .55em;
+  top: 0.55em;
 }
 
 #subscribe-result {
