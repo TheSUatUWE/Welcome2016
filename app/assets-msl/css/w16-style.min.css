@@ -6045,7 +6045,7 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-body.welcome-page section#landing {
+body.welcome-page section#landing, body.welcome-page section#banner {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background-size: 1200% 1200%;
@@ -7499,6 +7499,7 @@ body.content-page .header-banner h1 {
 * Welcome
 * 
 */
+/* Start: Landing Page */
 body.welcome-page {
   /* Globals */
   /* Section: Landing*/
@@ -7533,7 +7534,7 @@ body.welcome-page .bg-pattern-right {
   background-position: bottom left;
 }
 body.welcome-page section#landing {
-  height: 90vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -7702,6 +7703,7 @@ body.welcome-page section#events {
 body.welcome-page section#uwe-get-ready {
   position: relative;
   height: 200px;
+  background: #a0d9e0;
 }
 @media (max-width: 767px) {
   body.welcome-page section#landing {
@@ -7791,6 +7793,18 @@ body.welcome-page section#landing .featured-image {
   }
 }
 
+/* End: Landing Page */
+/* Start: Event Page */
+body.welcome-page section#banner {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+body.welcome-page section#banner span.intro-text {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
 /*
 *
 * Events
@@ -7807,6 +7821,9 @@ section#events .search .filter {
   padding: 7px 12px;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
+}
+section#events .search .filter.dropdown {
+  padding: 7px 45px 7px 12px;
 }
 section#events .search .filter.active {
   background-color: #40373f;

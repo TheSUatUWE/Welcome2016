@@ -15,7 +15,9 @@ section#events {
 		    padding: 7px 12px;
 
 		    transition:all .25s ease;
-
+			&.dropdown {
+				padding: 7px 45px 7px 12px;
+			}
 		    &.active {
 		    	background-color: $u-grey;
 		    	color:#fff;

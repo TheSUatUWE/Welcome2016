@@ -4,9 +4,8 @@
 * 
 */
 
+/* Start: Landing Page */
 body.welcome-page {
-
-
 
 	/* Globals */ 
 
@@ -43,7 +42,7 @@ body.welcome-page {
 	/* Section: Landing*/
 
 	section#landing {
-		height: 90vh;
+		height: 100vh;
 		position: relative;
 		@extend %g-brand-spectrum ;
 		overflow:hidden;
@@ -287,6 +286,7 @@ body.welcome-page {
 	section#uwe-get-ready {
 		position: relative;
 		height: 200px;
+		background:$u-sky;
 
 	}
 
@@ -424,6 +424,21 @@ body.welcome-page {
 
 }
 
+/* End: Landing Page */
 
+/* Start: Event Page */
+body.welcome-page {
 
+	section#banner {
+		height: 50vh;
+		position: relative;
+		@extend %g-brand-spectrum ;
+		overflow:hidden;
 
+		span.intro-text {
+			font-size:$font-size-lg;
+			font-weight: 900;
+		}
+
+	}
+}
