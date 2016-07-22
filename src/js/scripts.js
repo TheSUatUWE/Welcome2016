@@ -230,7 +230,7 @@
     // Show event listings and hider loader on window load
     function eventLoad() {
       $('#loader').fadeOut('slow');
-      $('#event-listings').fadeIn('slow');
+      $('#event-listings-card').fadeIn('slow');
     }
 
     // Add time of day icons to events

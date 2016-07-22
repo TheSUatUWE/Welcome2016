@@ -116,6 +116,14 @@ $u-green-l50 : lighten( $u-green, 50% ) ;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009a5b', endColorstr='#03009a5b',GradientType=1 ); /* IE6-9 */
 }
 
+%g-sky-trans {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,a0d9e0+100&0.01+1,1+99 */
+	background: -moz-linear-gradient(top,  rgba(0,154,91,0.01) 0%, rgba(2,155,92,0.01) 1%, rgba(158,216,223,1) 99%, rgba(160,217,224,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,154,91,0.01) 0%,rgba(2,155,92,0.01) 1%,rgba(158,216,223,1) 99%,rgba(160,217,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,154,91,0.01) 0%,rgba(2,155,92,0.01) 1%,rgba(158,216,223,1) 99%,rgba(160,217,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03009a5b', endColorstr='#a0d9e0',GradientType=0 ); /* IE6-9 */
+}
+
 %g-brand-spectrum {
 	background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
 	background-size: 1200% 1200%;

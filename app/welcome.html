@@ -8,6 +8,22 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <!-- Begin Facebook tags -->
+    <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
+    <meta property="og:url" content="welcome.thestudentsunion.co.uk" />
+    <meta property="og:description" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+    <meta property="og:image" content="URL to image for thumbnail (square 350x350px)" />
+    <meta property="fb:page_id" content="Your facebook page ID" />
+    <meta property="og:type" content="website" />
+    <!-- End Facebook tags -->
+
+    <!-- Begin Twitter tags -->
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:url" content="Welcome 2016: The Students' Union at UWE" />
+    <meta name="twitter:card" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+    <meta name="twitter:image" content="URL to image for thumbnail (square 350x350px)" />
+    <!-- End Twitter tags -->
+
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
@@ -21,7 +37,7 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
-    <script id="event-template" type="text/x-handlebars-template">
+    <script id="event-template-card" type="text/x-handlebars-template">
       <div class="col-xl-3 col-lg-4 col-md-6 event-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
@@ -390,7 +406,7 @@
           </div> -->
           <div id="loader">Loading...</div>
           <!-- Placeholder for events listings template -->
-          <div id="event-listings"></div>
+          <div id="event-listings-card"></div>
           
           
 
@@ -508,20 +524,20 @@
             //wait for page to load
             $(document).ready(function(){
               // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template = $('#event-template').html();
+              var raw_template_card = $('#event-template-card').html();
               // Compile that into an handlebars template
-              var template = Handlebars.compile(raw_template);
+              var template_card = Handlebars.compile(raw_template_card);
               // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolder = $("#event-listings");
+              var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
               $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
-                  var html = template(element);
+                  var html = template_card(element);
                   // Render the posts into the page
-                  placeHolder.append(html);
+                  placeHolderCard.append(html);
                 });
               });
 
