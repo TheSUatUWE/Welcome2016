@@ -6944,10 +6944,7 @@ a.svg-link::after {
   height: 100%;
   display: table;
   margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
 }
-z
 .v-align-wrapper.left {
   right: auto;
   width: 60%;
@@ -6999,8 +6996,44 @@ z
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+.bg-red {
+  background: #e84253 !important;
+}
+
+.bg-green {
+  background: #009a5b !important;
+}
+
+.bg-lime {
+  background: #adc459 !important;
+}
+
 .bg-sky {
   background: #a0d9e0 !important;
+}
+
+.bg-yellow {
+  background: #ffe44d !important;
+}
+
+.bg-orange {
+  background: #f58d17 !important;
+}
+
+.bg-grey {
+  background: #40373f !important;
+}
+
+.fc-white {
+  color: #fff !important;
+}
+
+.fc-red {
+  color: #e84253 !important;
+}
+
+.fc-grey {
+  color: #40373f !important;
 }
 
 .tc-grey {
@@ -7796,13 +7829,16 @@ body.welcome-page section#landing .featured-image {
 /* End: Landing Page */
 /* Start: Event Page */
 body.welcome-page section#banner {
-  height: 50vh;
+  height: 30vh;
   position: relative;
   overflow: hidden;
 }
 body.welcome-page section#banner span.intro-text {
   font-size: 1.25rem;
   font-weight: 900;
+}
+body.welcome-page section#banner .row {
+  margin-top: 100px;
 }
 
 /*
@@ -8042,6 +8078,18 @@ address > span {
 
 .ui-helper-hidden-accessible {
   display: none;
+}
+
+/*
+*
+* Style Guide
+* 
+*/
+.color-box {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: inline-block;
 }
 
 /****************************************************************
@@ -9079,6 +9127,12 @@ select {
   top: -22px !important;
   left: 0 !important;
   font-size: 80% !important;
+}
+.input-wrap.input-search {
+  margin: 0 !important;
+}
+.input-wrap.input-search .input-label {
+  top: .55em;
 }
 
 #subscribe-result {

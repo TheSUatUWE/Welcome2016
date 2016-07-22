@@ -430,7 +430,7 @@ body.welcome-page {
 body.welcome-page {
 
 	section#banner {
-		height: 50vh;
+		height: 30vh;
 		position: relative;
 		@extend %g-brand-spectrum ;
 		overflow:hidden;
@@ -438,6 +438,10 @@ body.welcome-page {
 		span.intro-text {
 			font-size:$font-size-lg;
 			font-weight: 900;
+		}
+
+		.row {
+			margin-top: 100px;
 		}
 
 	}

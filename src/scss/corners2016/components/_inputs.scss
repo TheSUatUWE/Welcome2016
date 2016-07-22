@@ -112,6 +112,15 @@
 				font-size: 80%!important;
 			}
 	}
+
+	// Search Input
+	&.input-search {
+		margin:0!important;
+
+		.input-label {
+			top:0.55em;
+		}
+	}
 }
 
 #subscribe-result {

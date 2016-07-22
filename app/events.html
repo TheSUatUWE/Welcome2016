@@ -178,7 +178,7 @@
 
         
           <ul class="nav nav-inline">
-          <li class="nav-item">
+          <li class="nav-item open">
               <a class="nav-link" href="#">Events</a>
             </li><!-- 
              --><li class="nav-item">
@@ -207,8 +207,7 @@
             <div class="v-align">
               <div class="container landing-welcome">
                 <div class="row">
-                  <div class="col-lg-12">
-                    <h1 class="super-header">Events</h1>
+                  <div class="col-lg-6 col-lg-offset-3">
                     <span class="intro-text">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dicta illo quidem obcaecati error magnam culpa id repellendus quae voluptates!</p>
                     </span>          
@@ -242,8 +241,13 @@
               <option value="city">City Center</option>
             </select>
             <div class="search-bar">
-              <span class="h4">Search</span>
-              <input class="filter" type="search" placeholder="Search events" required="">
+
+              <span class="input-wrap input-search">
+                <input class="filter input-field" type="search" value="" required="" id="search" />
+                <label class="input-label" for="search">
+                  <span class="input-label-content">Search for events</span>
+                </label>
+              </span>
             </div>
           </div>
           <div id="loader">Loading...</div>
@@ -481,6 +485,25 @@
 
               $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
+                // Multiple Loops for test purposes
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
                   var html = template_card(element);

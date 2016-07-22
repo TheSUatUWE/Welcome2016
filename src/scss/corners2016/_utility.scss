@@ -58,9 +58,6 @@ a.svg-link {
 	    height: 100%;
 	    display: table;
 	    margin: 0 auto;
-	    padding-left: 0.9375rem;
-	    padding-right: 0.9375rem;
-		z
 
 	    &.left {
 	    	right:auto;
@@ -115,10 +112,49 @@ a.svg-link {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-// Backgrounds
+
+// Background Color
+
+.bg-red {
+		background: $u-red!important;
+}
+
+.bg-green {
+	background: $u-green!important;
+}
+
+.bg-lime {
+	background: $u-lime!important;
+}
 
 .bg-sky {
-	background:$u-sky!important;
+	background: $u-sky!important;
+}
+
+.bg-yellow {
+	background: $u-yellow!important;
+}
+
+.bg-orange {
+	background: $u-orange!important;
+}
+
+.bg-grey {
+	background:$u-grey!important;
+}
+
+// Font Color
+
+.fc-white {
+	color:#fff!important;
+}
+
+.fc-red {
+	color:$u-red!important;
+}
+
+.fc-grey {
+	color:$u-grey!important;
 }
 
 // Text Color
@@ -126,3 +162,4 @@ a.svg-link {
 .tc-grey {
 	color:$u-grey!important;
 }
+
