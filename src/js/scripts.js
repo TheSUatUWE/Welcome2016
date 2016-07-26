@@ -273,6 +273,32 @@
     //   });
     // }
 
+    function initListJs() {
+      var options = {
+          valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
+          listClass: 'list',
+          sortClass: 'sort'
+      };
+
+      var eventList = new List('event-list', options);
+
+      $('.filter').click(function() {
+        var filter = $(this);
+        var filterName = $(this).html().toLowerCase();
+
+        $('.event-col').each(function(){
+          var event = $(this);
+          var card = event.children('.card');
+
+          if ( !card.hasClass(filterName) ) {
+            $(this).toggle();
+          }
+
+        });
+
+      });
+    }
+
     function initTooltip() {
       $('.tod, .cat2, .cat3').tooltip();
     }
@@ -281,12 +307,15 @@
       eventTOD();
       eventResize();
       initTooltip();
+      initListJs();
     };
 
     // Fire eventResize whenever the user resizes their window
     $(window).resize(function() {
         eventResize();
     });
+
+
 
 
   });

@@ -51,7 +51,7 @@
  -->            <div class="card-img-gradient"></div>
           </div>
           <div class="card-block">
-            
+            <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
             <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
             <h4 class="card-title">{{Title}}</h4>
             <div class="location">{{Location}}</div>                            
@@ -228,7 +228,7 @@
       <section id="events">
 <!--       <div class="bg-pattern-left"></div>
  -->        <div class="container pos-rel">
-          <div class="search">
+          <!-- <div class="search">
             <button class="day filter" data-event-type="w16-day">Day</button>
             <button class="night filter" data-event-type="w16-night">Night</button>
             <button class="main filter" data-event-type="w16-main">Main</button>
@@ -255,10 +255,20 @@
                 </label>
               </span>
             </div>
+          </div> -->
+          <div id="event-list">
+            <button class="day filter">Day</button>
+            <button class="day filter">Main</button>
+
+            <input class="search" />
+            <span class="sort" data-sort="card-title">Sort by name</span>
+            <span class="sort" data-sort="location">Sort by location</span>
+            <span class="sort" data-sort="date">Sort by date</span>
+
+            <div id="loader">Loading...</div>
+            <!-- Placeholder for events listings template -->
+            <div id="event-listings-card" class="list"></div>
           </div>
-          <div id="loader">Loading...</div>
-          <!-- Placeholder for events listings template -->
-          <div id="event-listings-card"></div>
           
           
 
