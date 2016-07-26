@@ -49,41 +49,42 @@ a.svg-link {
 }
 
 .v-align-wrapper {
+
 	position: absolute;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    top: 0;
-	    width: 100%;
-	    height: 100%;
-	    display: table;
-	    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin: 0 auto;
 
-	    &.left {
-	    	right:auto;
-	    	width:60%;
-	    }
+    &.left {
+    	right:auto;
+    	width:60%;
+    }
 
-	    &.right {
-	    	left:auto;
-	    	width:40%;
-	    }
+    &.right {
+    	left:auto;
+    	width:40%;
+    }
 
-	    .v-align {
-	        display: table-cell;
-	        vertical-align: middle;
-	        margin: 0 auto;
-	    }
+    .v-align {
+        display: table-cell;
+        vertical-align: middle;
+    }
+        margin: 0 auto;
 
-	    &.home-slider {
-	    	height:350px;
-	    }
+    &.home-slider {
+    	height:350px;
+    }
 }
 
 
 //  Shadows
 
-.shadow-1, button.cta, nav.nav.scrolled {
+.shadow-1, button.cta {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -108,10 +109,9 @@ a.svg-link {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.shadow-1:hover, button.cta:hover, nav.nav.scrolled:hover, .shadow-2:hover, .shadow-3:hover, .shadow-4:hover {
+.shadow-1:hover, button.cta:hover, .shadow-2:hover, .shadow-3:hover, .shadow-4:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 
 // Background Color
 
@@ -129,6 +129,36 @@ a.svg-link {
 
 .bg-sky {
 	background: $u-sky!important;
+	&-l10{
+		background: $u-sky-l10!important;
+	}
+	&-l20{
+		background: $u-sky-l20!important;
+	}
+	&-l30{
+		background: $u-sky-l30!important;
+	}
+	&-l40{
+		background: $u-sky-l40!important;
+	}
+	&-l50{
+		background: $u-sky-l50!important;
+	}
+	&-d10{
+		background: $u-sky-d10!important;
+	}
+	&-d20{
+		background: $u-sky-d20!important;
+	}
+	&-d30{
+		background: $u-sky-d30!important;
+	}
+	&-d40{
+		background: $u-sky-d40!important;
+	}
+	&-d50{
+		background: $u-sky-d50!important;
+	}
 }
 
 .bg-yellow {
@@ -143,23 +173,166 @@ a.svg-link {
 	background:$u-grey!important;
 }
 
+.bg-brand-animation{
+	@extend %g-brand-spectrum;
+}
+
+// Background Color Hovers
+
+.bg-red-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background: $u-red!important;
+	}
+	
+}
+
+.bg-green-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background: $u-green!important;
+	}
+	
+}
+
+.bg-lime-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background: $u-lime!important;
+	}
+	
+}
+
+.bg-sky-hover {
+	transition:background .25s ease;
+
+	&:hover {
+		background: $u-sky!important;
+	}
+	
+	&-l10:hover{
+		background: $u-sky-l10!important;
+	}
+	&-l20:hover{
+		background: $u-sky-l20!important;
+	}
+	&-l30:hover{
+		background: $u-sky-l30!important;
+	}
+	&-l40:hover{
+		background: $u-sky-l40!important;
+	}
+	&-l50:hover{
+		background: $u-sky-l50!important;
+	}
+	&-d10:hover{
+		background: $u-sky-d10!important;
+	}
+	&-d20:hover{
+		background: $u-sky-d20!important;
+	}
+	&-d30:hover{
+		background: $u-sky-d30!important;
+	}
+	&-d40:hover{
+		background: $u-sky-d40!important;
+	}
+	&-d50:hover{
+		background: $u-sky-d50!important;
+	}
+}
+
+.bg-yellow-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background: $u-yellow!important;
+	}
+	
+}
+
+.bg-orange-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background: $u-orange!important;
+	}
+	
+}
+
+.bg-grey-hover {
+	transition:all .25s ease;
+
+	&:hover {
+		background:$u-grey!important;
+	}
+	
+}
+
 // Font Color
 
 .fc-white {
-	color:#fff!important;
+		color: #fff!important;
 }
 
 .fc-red {
-	color:$u-red!important;
+		color: $u-red!important;
+}
+
+.fc-green {
+	color: $u-green!important;
+}
+
+.fc-lime {
+	color: $u-lime!important;
+}
+
+.fc-sky {
+	color: $u-sky!important;
+	&-l10{
+		color: $u-sky-l10!important;
+	}
+	&-l20{
+		color: $u-sky-l20!important;
+	}
+	&-l30{
+		color: $u-sky-l30!important;
+	}
+	&-l40{
+		color: $u-sky-l40!important;
+	}
+	&-l50{
+		color: $u-sky-l50!important;
+	}
+	&-d10{
+		color: $u-sky-d10!important;
+	}
+	&-d20{
+		color: $u-sky-d20!important;
+	}
+	&-d30{
+		color: $u-sky-d30!important;
+	}
+	&-d40{
+		color: $u-sky-d40!important;
+	}
+	&-d50 {
+	color: $u-sky-d50!important;
+	}
+}
+
+.fc-yellow {
+	color: $u-yellow!important;
+}
+
+.fc-orange {
+	color: $u-orange!important;
 }
 
 .fc-grey {
-	color:$u-grey!important;
-}
-
-// Text Color
-
-.tc-grey {
 	color:$u-grey!important;
 }
 

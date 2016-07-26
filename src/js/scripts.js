@@ -4,6 +4,10 @@
 
   $(function () {
 
+
+    // Init Headspace 
+    var headspace = new Headspace(document.querySelector('nav'));
+
     // Smooth Scroll
 
     $( document ).ready(function() {
@@ -187,16 +191,19 @@
     $( document ).ready(function() {
       if ($(window).scrollTop() !== 0) {
         $('.navbar-co').addClass('scrolled');
+        $('.logo').addClass('scrolled');
       }
 
       $(window).scroll(function() {
           if ($(document).scrollTop() > 1) {
             
             $('nav.nav').addClass('scrolled');
+            $('.logo').addClass('scrolled');
 
           } else {
             
             $('nav.nav').removeClass('scrolled');
+            $('.logo').removeClass('scrolled');
             
           }
         });

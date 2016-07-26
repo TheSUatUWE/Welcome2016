@@ -17,7 +17,7 @@ body.welcome-page {
 		bottom:0;
 		left:0;
 
-		background-size:100%;
+		background-size:contain;
 		background-image: url('../img/tri-pattern-left.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
@@ -31,7 +31,7 @@ body.welcome-page {
 		bottom:0;
 		left:0;
 
-		background-size:100%;
+		background-size:contain;
 		background-image: url('../img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
@@ -44,57 +44,41 @@ body.welcome-page {
 	section#landing {
 		height: 100vh;
 		position: relative;
-		@extend %g-brand-spectrum ;
+		background: $u-sky;
 		overflow:hidden;
+		padding-top:200px;
 
 		span.intro-text {
 			font-size:$font-size-lg;
 			font-weight: 900;
 		}
-	
-		.featured-image {
-			background-image: url('../img/freshers-fair.jpg');
-			-webkit-background-size: cover;
-			background-size: cover;
-			background-repeat: no-repeat;
-			position: absolute;
-			width:40%;
-			height: 100%;
-			right: 0;
-			mix-blend-mode: screen;
-			opacity: 0.5;
-		}		
-
-		.row {
-			padding-top:200px!important;
+		
+		.find-out-more {
+			position:absolute;
+			bottom:20px;
+			right:20px;
 		}
 
-		.featured-item {
-			color:$u-grey;
+		.stats-wrapper {
+			.stat {
+				display: inline-block;
+				padding:10px 20px;
+				border-right:2px solid;
 
-			span.title {
-				display: block;
-				border-bottom:1px solid $u-grey;
-				padding-bottom: 10px;
-				margin-bottom: 10px;
-			}
-
-			.meta {
-
-	
-				margin-bottom: 20px;
-
-				& > div {
-					display: inline-block;
-
-					&:first-of-type {
-						margin-right:20px;
-						margin-bottom:10px;
-					}
+				&:first-of-type {
+					padding:10px 20px 10px 0px;
+				}
+				&:last-of-type {
+					border-right:none;
+				}
+				span {
+					font-size: $display4-size;
+					line-height: 3rem;
+					@extend %font-alt;
 				}
 
-				object.icon {
-					width:20px;
+				p, span {
+					margin:0;
 				}
 			}
 		}

@@ -57,7 +57,7 @@ $u-sky-l30 : lighten( $u-sky, 30% ) ;
 $u-sky-l40 : lighten( $u-sky, 40% ) ;
 $u-sky-l50 : lighten( $u-sky, 50% ) ;
 
-/* Gren Variations */
+/* Green Variations */
 
 $u-green-l10 : lighten( $u-green, 10% ) ;
 $u-green-l20 : lighten( $u-green, 20% ) ;
@@ -233,3 +233,9 @@ $snapchat: #fffc00 ;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+/* Typography */
+
+%font-alt {
+	font-family:AlternateGothicLT-No2;;
+	text-transform:uppercase;
+}

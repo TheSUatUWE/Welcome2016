@@ -85,6 +85,20 @@ h2, .h2 {
     font-size:5em;
   }
 }
+
+h1, .h1 {
+  &.super-super-header {
+    font-size:25vw;
+    line-height: 20vw;
+  }
+}
+
+h2, .h2 {
+  &.super-super-header {
+    font-size:15vw;
+    line-height: 10vw;
+  }
+}
 /* Links */
 
 a {

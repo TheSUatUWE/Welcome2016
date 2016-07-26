@@ -25,6 +25,16 @@ button {
 		}	
 	}
 
+	&.sky-d50 {
+		background:$u-sky-d50;
+		color:#fff;
+
+		&:hover {
+			background:$u-grey;
+			color:#fff;	
+		}	
+	}
+
 	&:hover {
 		background: $u-red;
 		&.right-arrow, &.down-arrow {

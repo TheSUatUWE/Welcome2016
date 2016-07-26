@@ -10,7 +10,10 @@
 	display: inline-block;
 	float:left;
 	z-index: 99999;
-	transition: opacity .25s ease;
+	position: fixed;
+	transition: all .5s ease;
+	left: 14px;
+	top: 14px;
 
 	svg {
 		height:100%;
@@ -20,14 +23,33 @@
 			transition:all .5s ;
 		}
 	}
+	&.scrolled {
+		width:100px;
+		
+		svg {
+			& > g {
+				transform: translateX(-999px);
+			}
+		}
+
+		&:hover {
+			width: 200px;
+			
+			svg {
+				& > g {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
 }
 nav.nav {
 	display: inline-block;
 	position: fixed;
 	top:0;
-	background: rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 1);
 	width: 100%;
-	height: 60px;
+	height: 100px;
 	z-index: 9999;
 
 	transition:all .25s ease ;
@@ -38,22 +60,40 @@ nav.nav {
 	}
 	
 	.nav-item {
-		font-size:1em;
-		line-height: 60px;		
+		font-size:1.5em;
+		line-height: 100px;	
 		margin:0;
-
+		position: relative;
+		@extend %font-alt;
 
 		a {
-			color:#fff;
-			padding:0 10px
+			color:$u-grey;
+			padding:0 20px;
+
+			&::after {
+			    content: '';
+			    display: block;
+			    position: absolute;
+			   	width: 0%;
+			    height: 3px;
+			    left: 20px;
+			    bottom: 30px;
+			    background: $u-red;
+			    margin: auto;
+			    transition: all .25s ease;
+			}
 	
 		}
 
 		&:hover, &.open {
-			background:$u-red;
-
+			
 			a {
-				color:#fff;
+
+				&::after {
+				   	width: calc(100% - 40px);
+				   	margin:auto;
+				}
+		
 			}	
 		}	
 
@@ -63,6 +103,24 @@ nav.nav {
 
 		a.dropdown-item {
 			color:$u-grey;
+		}
+
+		&.nav-item-highlight {
+
+			transition:all .25s ease;
+			
+			a {
+				&::after {
+					display:none;
+				}
+			}
+
+			&.sky {
+				background: $u-sky-d40;
+				&:hover {
+					background: $u-sky-d30;
+				}
+			}
 		}
 	}
 
@@ -75,7 +133,6 @@ nav.nav {
 	.nav-inline {
 
 		display: inline-block;
-		padding-right:50px;
 		float:right;
 
 		.nav-item {
@@ -93,12 +150,42 @@ nav.nav {
 	.mobile-menu-toggle {
 		display:none;
 	}
+
 	&.scrolled {
+		transition:all 1s ease;
+
+		.logo {
+			width:120px;
+		}
+
+	}
+
+	// Add .navbar-scrolling to nav for scrolling effects
+	&.navbar-scrolling {
+		background: rgba(255, 255, 255, 0);
+
+		.nav-item {
+
+			a {
+				color:#fff;		
+			}
+		}
+
+	}
+	
+	&.navbar-scrolling.scrolled {
 		transition:all 1s ease;
 		background: #fff;
 
 		.nav-item {
 			border-left: 1px solid $gray-lighter;
+			position: relative;
+			&:after {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+			}
 
 			&.open {
 			 	a.nav-link {
@@ -120,55 +207,55 @@ nav.nav {
 			
 			
 		}
-			.logo {
-				width:120px;
-			}
-			.nav-inline {
-				padding-left:20px;
-			}
-			input#header-search[type=search] {
-				background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search.svg) no-repeat 16px 16px;
+		.logo {
+			width:120px;
+		}
+		.nav-inline {
+			padding-left:20px;
+		}
+		input#header-search[type=search] {
+			background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search.svg) no-repeat 16px 16px;
+			background-size: 25px;
+			padding: 16px;
+			width: 55px;
+			border: none;
+			color: transparent;
+			height: 60px;
+			transition: all .5s;
+			position: absolute;
+			right:0px;
+			z-index: 1;
+
+			&:hover {
+				background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
 				background-size: 25px;
-				padding: 16px;
-				width: 55px;
-				border: none;
-				color: transparent;
+				cursor: pointer;
 				height: 60px;
-				transition: all .5s;
-				position: absolute;
-				right:0px;
-				z-index: 1;
+			}
 
-				&:hover {
-					background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
-					background-size: 25px;
-					cursor: pointer;
-					height: 60px;
-				}
-
-				&:focus {
-					background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
-					border: 1px solid $u-grey;
-					width: 350px;
-					padding-left: 40px;
-					outline: none;
-					background-size: 20px;
-					color: #fff;
-					background-color: $u-red;
-					border: none;
-					height: 60px;
-					right: 86px;
+			&:focus {
+				background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+				border: 1px solid $u-grey;
+				width: 350px;
+				padding-left: 40px;
+				outline: none;
+				background-size: 20px;
+				color: #fff;
+				background-color: $u-red;
+				border: none;
+				height: 60px;
+				right: 86px;
 
 
-					& + input#header-search-submit {
-						width:100%;
-						opacity:1;
+				& + input#header-search-submit {
+					width:100%;
+					opacity:1;
 
-						&:hover {
-							background: $u-red;
-						}
+					&:hover {
+						background: $u-red;
 					}
 				}
+			}
 		}
 
 		.sidebar-toggle {
@@ -557,4 +644,39 @@ nav.nav {
 	    margin-left: 13px;
 	    margin-top: 15px;
 	}
+}
+
+
+
+/**
+ * Headspace starter styles
+ */
+.headspace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.2s ease!important;
+  height: 4rem;
+}
+.headspace--hidden {
+  transform: translate3d(0, -7rem, 0); /* y value should be -1 * height */
+}
+.headspace--fixed {
+  position: fixed;
+}
+
+/**
+ * Optional feature: show header when hovering near top
+ */
+.headspace--hidden:after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 6rem;
+  height: 7rem;
+}
+.headspace--hidden:hover {
+  transform: translate3d(0, 0, 0);
 }
