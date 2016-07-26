@@ -9,6 +9,14 @@ body.welcome-page {
 
 	/* Globals */ 
 
+	.mobile-menu-toggle {
+		padding: 35px 30px;
+		
+		.toggle-bar {
+			background: $u-sky-d50;
+		}
+	}
+
 	.bg-pattern-left {
 		position: absolute;
 		height: 100%;

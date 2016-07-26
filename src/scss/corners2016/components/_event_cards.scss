@@ -12,7 +12,7 @@
 			height: 320px;
 			overflow:hidden;
 			background:transparent;
-
+			border-radius:.25em;
 			& * {
 				transition: all .3s ease;
 			}
@@ -171,9 +171,41 @@
 		}
 
 	&.compact-listing {
-		.description, .card-img-top, {
-			display:none;
+
+		.description {
+			display:block;
+			padding:0!important;
+			margin:0!important;
+			
+			button {
+				bottom:-100px;				
+				transition:bottom .25s ease!important;
+			}
+			span {
+				display:none;
+			}
 		}
+
+		.card-block {
+			background: rgba(255, 255, 255, 0.5);
+		}
+		.card-img-top {
+			pointer-events: auto;
+			    position: absolute;
+			    width: 100%;
+			    top: 0;
+			    left: 0;
+			    height: 100%!important;
+			    display: block;
+			    z-index: 0;
+			    opacity: 1;
+			    background-position: center center!important;
+		}
+		.card-img-gradient {
+			height:100%!important;
+		}
+
+
 		.key {
 			top:-15px!important;
 			.cat2 {
@@ -207,9 +239,35 @@
 		}
 
 		&:hover {
+			.card-img-top {
+				pointer-events: auto;
+			    position: absolute;
+			    width: 100%;
+			    top: 0;
+			    left: 0;
+			    height: 100%!important;
+			    display: block;
+			    
+			    opacity: 1;
+			    background-position: center center!important;
+			}
 			.card-block {
 			    top: 0;
 			    padding-top: 20px;
+
+			}
+			.description {
+				button {
+					bottom:0px;
+				}
+				a {
+					height: 100%;
+					position: absolute;
+					width: 100%;
+					top: 0;
+					display: block;
+					z-index: 999;
+				}
 			}
 			.key {
 				top:-30px!important;

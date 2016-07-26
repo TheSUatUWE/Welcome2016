@@ -34,7 +34,7 @@
 
 		&:hover {
 			width: 200px;
-			
+
 			svg {
 				& > g {
 					transform: translateX(0);
@@ -107,7 +107,7 @@ nav.nav {
 
 		&.nav-item-highlight {
 
-			transition:all .25s ease;
+			transition:background .25s ease;
 			
 			a {
 				&::after {

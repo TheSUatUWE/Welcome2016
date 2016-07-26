@@ -6242,8 +6242,8 @@ nav.nav .nav-item a.dropdown-item {
   color: #40373f;
 }
 nav.nav .nav-item.nav-item-highlight {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
+  -webkit-transition: background .25s ease;
+          transition: background .25s ease;
 }
 nav.nav .nav-item.nav-item-highlight a::after {
   display: none;
@@ -7578,7 +7578,7 @@ body.content-page .header-banner h1 {
 *  @media queries
 * 
 */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .sidebar-toggle-top {
     display: none;
   }
@@ -7590,6 +7590,11 @@ body.content-page .header-banner h1 {
   .home-header-slider-wrap .owl-item.active .owl-slide {
     background-position: -50px 50%;
     background-size: 150% 100%;
+  }
+
+  .headspace--hidden {
+    -webkit-transform: translate3d(0, 0rem, 0);
+    transform: translate3d(0, 0rem, 0);
   }
 
   nav.nav > .mobile-menu-circle {
@@ -7718,8 +7723,8 @@ body.content-page .header-banner h1 {
   nav.nav ul.nav.nav-inline.mobile-active {
     visibility: visible;
     opacity: 1;
-    height: -webkit-calc(100% - 135px);
-    height: calc(100% - 135px);
+    height: -webkit-calc(100vh - 135px);
+    height: calc(100vh - 135px);
     margin-top: 75px;
     padding-left: 0;
     overflow-y: auto;
@@ -7832,6 +7837,12 @@ body.welcome-page {
   /* Section: Social */
   /* Section: Events */
   /* Section: UWE Get Ready */
+}
+body.welcome-page .mobile-menu-toggle {
+  padding: 35px 30px;
+}
+body.welcome-page .mobile-menu-toggle .toggle-bar {
+  background: #205a61;
 }
 body.welcome-page .bg-pattern-left {
   position: absolute;
@@ -9155,6 +9166,7 @@ address > span {
   height: 320px;
   overflow: hidden;
   background: transparent;
+  border-radius: .25em;
 }
 .event-col .event-card-small * {
   -webkit-transition: all .3s ease;
@@ -9279,8 +9291,36 @@ address > span {
 .event-col .key .tod.cat2, .event-col .key .cat2.cat2, .event-col .key .cat3.cat2 {
   left: 70px;
 }
-.event-col.compact-listing .description, .event-col.compact-listing .card-img-top {
+.event-col.compact-listing .description {
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.event-col.compact-listing .description button {
+  bottom: -100px;
+  -webkit-transition: bottom 0.25s ease !important;
+          transition: bottom 0.25s ease !important;
+}
+.event-col.compact-listing .description span {
   display: none;
+}
+.event-col.compact-listing .card-block {
+  background: rgba(255, 255, 255, 0.5);
+}
+.event-col.compact-listing .card-img-top {
+  pointer-events: auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100% !important;
+  display: block;
+  z-index: 0;
+  opacity: 1;
+  background-position: center center !important;
+}
+.event-col.compact-listing .card-img-gradient {
+  height: 100% !important;
 }
 .event-col.compact-listing .key {
   top: -15px !important;
@@ -9311,9 +9351,31 @@ address > span {
 .event-col.compact-listing .event-card-small {
   height: auto;
 }
+.event-col.compact-listing:hover .card-img-top {
+  pointer-events: auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100% !important;
+  display: block;
+  opacity: 1;
+  background-position: center center !important;
+}
 .event-col.compact-listing:hover .card-block {
   top: 0;
   padding-top: 20px;
+}
+.event-col.compact-listing:hover .description button {
+  bottom: 0px;
+}
+.event-col.compact-listing:hover .description a {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: block;
+  z-index: 999;
 }
 .event-col.compact-listing:hover .key {
   top: -30px !important;

@@ -12,7 +12,7 @@
 	
 
 }
-@include media-breakpoint-down(md) { 
+@include media-breakpoint-down(lg) { 
 
 	.sidebar-toggle-top {
 		display:none;
@@ -29,7 +29,10 @@
 		}
 	}
 
-	
+	.headspace--hidden {
+	    -webkit-transform: translate3d(0, 0rem, 0);
+	    transform: translate3d(0, 0rem, 0);
+	}
 	
 	nav.nav {
 
@@ -185,7 +188,7 @@
 			    &.mobile-active {
     				visibility:visible;
     				opacity:1;
-    				height:calc(100% - 135px);
+    				height:calc(100vh - 135px);
     				margin-top:75px;	   
     				padding-left: 0;
     				overflow-y:auto;
