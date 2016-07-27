@@ -57,12 +57,9 @@ section#events {
 				background-position: 90%;
 				padding-right: 40px!important;
 				
-				&:hover {
+				&:hover, &.active {
 					background-color: $u-sky;
-
-					& > .key > .night {
-						background-color: $u-sky;	
-					}
+					color:$u-grey;
 				}
 			}
 			&.day {
@@ -73,8 +70,10 @@ section#events {
 				background-position: 90%;
 				padding-right: 40px!important;
 
-				&:hover {
+				&:hover, &.active {
 					background-color:$u-yellow;
+					color:$u-grey;
+
 				}
 			}
 			&.main {
@@ -84,11 +83,15 @@ section#events {
 				background-repeat: no-repeat;
 				background-position: 90%;
 				padding-right: 40px!important;
+
+				&:hover, &.active {
+					background-color:$u-lime;
+					color:$u-grey;
+
+				}
 			}
 
-			&:hover {
-				background-color:#fff;
-			}
+
 		}
 	}
 

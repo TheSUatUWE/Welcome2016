@@ -274,29 +274,62 @@
     // }
 
     function initListJs() {
+
+      // Options for List.js
       var options = {
           valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
           listClass: 'list',
           sortClass: 'sort'
       };
 
+      // Create new List 
       var eventList = new List('event-list', options);
 
-      $('.filter').click(function() {
-        var filter = $(this);
-        var filterName = $(this).html().toLowerCase();
-
+      // Main Filter buttons
+      $('.main-filter').click(function() {
+        // Declare variables
+        var mainFilterBtn = $(this);
+        var mainFilter = $(this).html().toLowerCase();
+        // Add active class to the clicked filter
+        $(this).toggleClass('active');
+        // Remove active class from all other filters
+        $('.main-filter').not( $(this) ).removeClass('active');
+        
+        // Loop through each event card
         $('.event-col').each(function(){
+          // Declare event card variables
           var event = $(this);
           var card = event.children('.card');
 
-          if ( !card.hasClass(filterName) ) {
-            $(this).toggle();
+          
+          if ( !mainFilterBtn.hasClass('active') ) {
+            console.log('test: shits active bro')
+            eventList.filter();
+          } else {
+            eventList.filter(function(item) {
+               if (item.values().types.includes(mainFilter)  ) {
+                   return true;
+               } else {
+                   return false;
+               }
+            });
           }
-
         });
-
       });
+
+      // Sort buttons 
+      $('#sort-by').change(function() {
+          var selection = this.value;
+          if (selection) {
+              eventList.sort(function(item) {
+                  return (item.values().material == selection);
+              });
+          } else {
+              eventList.sort();
+          }
+      });
+
+
     }
 
     function initTooltip() {

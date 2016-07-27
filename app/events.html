@@ -257,10 +257,27 @@
             </div>
           </div> -->
           <div id="event-list">
-            <button class="day filter">Day</button>
-            <button class="day filter">Main</button>
+            <div class="search">
+              <button class="day filter main-filter">Day</button>
+              <button class="night filter main-filter">Night</button>
+              <button class="main filter main-filter">Main</button>
 
-            <input class="search" />
+              <select class="categories filter dropdown" name="Sort" id="sort-by">
+                <option value="" default selected>Sort by</option>
+                <option class="sort" data-sort="card-title" value="name">Name</option>
+                <option value="glenside">Glenside</option>
+                <option value="frenchay">Frenchay</option>
+                <option value="city">City Center</option>
+              </select>
+              <div class="search-bar">
+                <span class="input-wrap input-search">
+                  <input class="filter input-field class" type="search" value="" required="" id="search" />
+                  <label class="input-label" for="search">
+                    <span class="input-label-content">Search for events</span>
+                  </label>
+                </span>
+              </div>
+            </div>
             <span class="sort" data-sort="card-title">Sort by name</span>
             <span class="sort" data-sort="location">Sort by location</span>
             <span class="sort" data-sort="date">Sort by date</span>

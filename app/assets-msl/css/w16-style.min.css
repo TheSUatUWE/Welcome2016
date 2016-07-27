@@ -8181,11 +8181,9 @@ section#events .search > button.night {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button.night:hover {
+section#events .search > button.night:hover, section#events .search > button.night.active {
   background-color: #a0d9e0;
-}
-section#events .search > button.night:hover > .key > .night {
-  background-color: #a0d9e0;
+  color: #40373f;
 }
 section#events .search > button.day {
   background-color: #fff;
@@ -8195,8 +8193,9 @@ section#events .search > button.day {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button.day:hover {
+section#events .search > button.day:hover, section#events .search > button.day.active {
   background-color: #ffe44d;
+  color: #40373f;
 }
 section#events .search > button.main {
   background-color: #fff;
@@ -8206,8 +8205,9 @@ section#events .search > button.main {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button:hover {
-  background-color: #fff;
+section#events .search > button.main:hover, section#events .search > button.main.active {
+  background-color: #adc459;
+  color: #40373f;
 }
 section#events .types {
   display: none;
