@@ -23,6 +23,7 @@
 			transition:all .5s ;
 		}
 	}
+
 	&.scrolled {
 		width:100px;
 		
@@ -39,6 +40,16 @@
 				& > g {
 					transform: translateX(0);
 				}
+			}
+		}
+	}
+	
+	&.mobileMenuActive {
+		width:100px!important;
+		
+		svg {
+			& > g {
+				transform: translateX(-999px)!important;
 			}
 		}
 	}

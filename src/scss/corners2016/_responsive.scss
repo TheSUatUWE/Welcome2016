@@ -4,6 +4,8 @@
 * 
 */
 
+// Stop scroll when mobile menu active 
+
 @include media-breakpoint-down(xs) { 
 		
 }	
@@ -35,6 +37,14 @@
 	}
 	
 	nav.nav {
+		
+		.logo {
+			width:100px;
+
+			& svg > g {
+			    transform: translateX(-999px);
+			}
+		}
 
 		& > .mobile-menu-circle {
 				display: block;
@@ -66,7 +76,7 @@
 			    		opacity:1;
 			    		top: -300px;
 		    		    right: -300px;
-		    		    width: 1500px;
+		    		    width: 1700px;
 		    		    height: 1501px;
 			    	}
 			    }
@@ -159,9 +169,27 @@
 			    li.nav-item {
 			        display: block;
 			        width: 100%;
-			        text-align: right;
-			        font-size: 0.6em;
-			        line-height: 40px;
+			        text-align: center;
+			        font-size: 1.5em;
+			        line-height: 2em;
+			        padding:0;
+			        
+			        a {
+			        	color:#fff!important;
+			        }
+
+			        &.open, &:hover {
+			        	& a::after {
+			        		width:100px;
+			        	}
+			        }
+
+			        & a::after {
+			        	bottom:10px!important;
+			        	right: 0!important;
+			        	left: 0!important;
+			        	margin: auto;
+			        }
 
 			        .dropdown-menu {
 			            width: 100%;
@@ -189,7 +217,7 @@
     				visibility:visible;
     				opacity:1;
     				height:calc(100vh - 135px);
-    				margin-top:75px;	   
+    				margin-top:95px;	   
     				padding-left: 0;
     				overflow-y:auto;
     				border-radius: 0px;
@@ -245,56 +273,53 @@
 				border-right:none;
 				}
 
-				}
-				.logo {
-					width:120px;
-				}
-				.nav-inline {
-					padding-left:20px;
-				}
-				input#header-search[type=search] {
-					background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+			}
+			.nav-inline {
+				padding-left:20px;
+			}
+			input#header-search[type=search] {
+				background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+				background-size: 25px;
+				padding: 16px;
+				width: 55px;
+				border: none;
+				color: transparent;
+				height: 60px;
+				transition: all .5s;
+				position: absolute;
+				right:0px;
+				z-index: 1;
+
+				&:hover {
+					background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
 					background-size: 25px;
-					padding: 16px;
-					width: 55px;
-					border: none;
-					color: transparent;
+					cursor: pointer;
 					height: 60px;
-					transition: all .5s;
-					position: absolute;
-					right:0px;
-					z-index: 1;
+				}
 
-					&:hover {
-						background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
-						background-size: 25px;
-						cursor: pointer;
-						height: 60px;
-					}
-
-					&:focus {
-						background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
-						border: 1px solid $u-grey;
-						width: 350px;
-						padding-left: 40px;
-						outline: none;
-						background-size: 20px;
-						color: #fff;
-						background-color: $u-red;
-						border: none;
-						height: 60px;
-						right: 86px;
+				&:focus {
+					background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+					border: 1px solid $u-grey;
+					width: 350px;
+					padding-left: 40px;
+					outline: none;
+					background-size: 20px;
+					color: #fff;
+					background-color: $u-red;
+					border: none;
+					height: 60px;
+					right: 86px;
 
 
-						& + input#header-search-submit {
-							width:100%;
-							opacity:1;
+					& + input#header-search-submit {
+						width:100%;
+						opacity:1;
 
-							&:hover {
-								background: $u-red;
-							}
+						&:hover {
+							background: $u-red;
 						}
 					}
+				}
 			}
 
 			.mobile-menu-toggle {

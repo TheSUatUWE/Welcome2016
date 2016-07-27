@@ -155,7 +155,11 @@
           e.preventDefault();
           $('ul.nav.nav-inline').toggleClass('mobile-active');
           $('nav.nav, .mobile-menu-circle').toggleClass('toggled');
-          $(this).toggleClass('toggled');          
+          $(this).toggleClass('toggled');
+          $('.logo').toggleClass('mobileMenuActive');
+        
+          $('body, html, #page-wrapper').toggleClass('mobileMenuActive');
+
       });
     });
 
@@ -282,6 +286,7 @@
           sortClass: 'sort'
       };
 
+    
       // Create new List 
       var eventList = new List('event-list', options);
 
@@ -305,7 +310,7 @@
             eventList.filter();
           } else {
             eventList.filter(function(item) {
-               if (item.values().types.includes(mainFilter)  ) {
+               if (item.values().types.includes(mainFilter) ) {
                    return true;
                } else {
                    return false;
@@ -322,6 +327,7 @@
         var locationFilter = $(this).attr('data-location');
         var filterText = locationFilterBtn.html();
         
+
         // Add active class to the clicked filter
         $(this).toggleClass('active');
         // Remove active class from all other filters
@@ -347,10 +353,14 @@
           }
         });
 
-        // Append selected filter to location-filter button 
-        var locationPlaceholder = locationFilterBtn.parents('.dropdown-menu').prev('#dropdownLocation').children('.current-placeholder');
+        // Append selected filter to location-filter button and update data-current attr
+        var locationPlaceholder = $('#dropdownLocation').children('.current-placeholder');
         locationPlaceholder.empty();
         locationPlaceholder.append(filterText);
+
+        $('#dropdownLocation').attr('data-current', locationFilter);
+
+        
         
       });
 
@@ -387,9 +397,10 @@
         });
 
         // Append selected filter to location-filter button 
-        var catagoryPlaceholder = catagoryFilterBtn.parents('.dropdown-menu').prev('#dropdownCatagory').children('.current-placeholder');
+        var catagoryPlaceholder = $('#dropdownCatagory').children('.current-placeholder');
         catagoryPlaceholder.empty();
         catagoryPlaceholder.append(filterText);
+        $('#dropdownCatagory').attr('data-current', catagoryFilter);
         
       });
 
