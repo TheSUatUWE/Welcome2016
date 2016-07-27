@@ -301,9 +301,7 @@
           var event = $(this);
           var card = event.children('.card');
 
-          
           if ( !mainFilterBtn.hasClass('active') ) {
-            console.log('test: shits active bro')
             eventList.filter();
           } else {
             eventList.filter(function(item) {
@@ -315,6 +313,45 @@
             });
           }
         });
+      });
+
+      // Location buttons
+      $('.location-filter').click(function() {
+        // Declare variables
+        var locationFilterBtn = $(this);
+        var locationFilter = $(this).attr('data-location');
+        var filterText = locationFilterBtn.html();
+        
+        // Add active class to the clicked filter
+        $(this).toggleClass('active');
+        // Remove active class from all other filters
+        $('.location-filter').not( $(this) ).removeClass('active');
+        // 
+
+        // Loop through each event card
+        $('.event-col').each(function(){
+          // Declare event card variables
+          var event = $(this);
+          var card = event.children('.card');
+          
+          if ( locationFilter == 'all' ) {
+            eventList.filter();
+          } else {
+            eventList.filter(function(item) {
+              if (item.values().types.includes(locationFilter)  ) {
+                 return true;
+              } else {
+                 return false;
+              }
+            });
+          }
+        });
+
+        // Append selected filter to location-filter button 
+        var locationPlaceholder = locationFilterBtn.parents('.dropdown-menu').prev('#dropdownLocation').children('.current-placeholder');
+        locationPlaceholder.empty();
+        locationPlaceholder.append(filterText);
+        
       });
 
       // Sort buttons 

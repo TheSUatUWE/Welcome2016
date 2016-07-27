@@ -8144,6 +8144,7 @@ section#events .search {
 section#events .search .filter {
   height: 40px;
   padding: 7px 12px;
+  background: #fff;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
@@ -8167,6 +8168,9 @@ section#events .search .filter.location:hover option {
 }
 section#events .search .search-bar {
   float: right;
+}
+section#events .search .dropdown {
+  display: inline-block;
 }
 section#events .search > button > object.icon {
   height: 30px;

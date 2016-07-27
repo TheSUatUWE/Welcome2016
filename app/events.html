@@ -258,17 +258,35 @@
           </div> -->
           <div id="event-list">
             <div class="search">
-              <button class="day filter main-filter">Day</button>
-              <button class="night filter main-filter">Night</button>
-              <button class="main filter main-filter">Main</button>
+              <button class="day filter main-filter" data-filter="day">Day</button>
+              <button class="night filter main-filter" data-filter="night">Night</button>
+              <button class="main filter main-filter" data-filter="main">Main</button>
 
-              <select class="categories filter dropdown" name="Sort" id="sort-by">
-                <option value="" default selected>Sort by</option>
-                <option class="sort" data-sort="card-title" value="name">Name</option>
-                <option value="glenside">Glenside</option>
-                <option value="frenchay">Frenchay</option>
-                <option value="city">City Center</option>
-              </select>
+              <div class="dropdown">
+                <button class="filter dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sort by <span class="current-container"></span>
+                </button>
+                <div class="dropdown-menu">
+                  <span class="sort dropdown-item" data-sort="card-title">Name</span>
+                  <span class="sort dropdown-item" data-sort="location">Location</span>
+                  <span class="sort dropdown-item" data-sort="start-date">Date</span>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Location: <span class="current-placeholder">All</span>
+                </button>
+                <div class="dropdown-menu">
+                  <span class="filter location-filter dropdown-item" data-location="all">All</span>
+                  <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
+                  <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
+                  <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>
+<!--                   <span class="filter location-filter dropdown-item" data-location="bristol">City Center</span>
+ -->                </div>
+              </div>
+              
+
               <div class="search-bar">
                 <span class="input-wrap input-search">
                   <input class="filter input-field class" type="search" value="" required="" id="search" />
@@ -278,9 +296,6 @@
                 </span>
               </div>
             </div>
-            <span class="sort" data-sort="card-title">Sort by name</span>
-            <span class="sort" data-sort="location">Sort by location</span>
-            <span class="sort" data-sort="date">Sort by date</span>
 
             <div id="loader">Loading...</div>
             <!-- Placeholder for events listings template -->
