@@ -354,6 +354,45 @@
         
       });
 
+      // Catagory buttons
+      $('.catagory-filter').click(function() {
+        // Declare variables
+        var catagoryFilterBtn = $(this);
+        var catagoryFilter = $(this).attr('data-catagory');
+        var filterText = catagoryFilterBtn.html();
+        
+        // Add active class to the clicked filter
+        $(this).toggleClass('active');
+        // Remove active class from all other filters
+        $('.catagory-filter').not( $(this) ).removeClass('active');
+        // 
+
+        // Loop through each event card
+        $('.event-col').each(function(){
+          // Declare event card variables
+          var event = $(this);
+          var card = event.children('.card');
+          
+          if ( catagoryFilter == 'all' ) {
+            eventList.filter();
+          } else {
+            eventList.filter(function(item) {
+              if (item.values().types.includes(catagoryFilter)  ) {
+                 return true;
+              } else {
+                 return false;
+              }
+            });
+          }
+        });
+
+        // Append selected filter to location-filter button 
+        var catagoryPlaceholder = catagoryFilterBtn.parents('.dropdown-menu').prev('#dropdownCatagory').children('.current-placeholder');
+        catagoryPlaceholder.empty();
+        catagoryPlaceholder.append(filterText);
+        
+      });
+
       // Sort buttons 
       $('#sort-by').change(function() {
           var selection = this.value;
