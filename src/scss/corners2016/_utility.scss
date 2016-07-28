@@ -117,14 +117,105 @@ a.svg-link {
 
 .bg-red {
 		background: $u-red!important;
+
+		&-l10{
+			background: $u-red-l10!important;
+		}
+		&-l20{
+			background: $u-red-l20!important;
+		}
+		&-l30{
+			background: $u-red-l30!important;
+		}
+		&-l40{
+			background: $u-red-l40!important;
+		}
+		&-l50{
+			background: $u-red-l50!important;
+		}
+		&-d10{
+			background: $u-red-d10!important;
+		}
+		&-d20{
+			background: $u-red-d20!important;
+		}
+		&-d30{
+			background: $u-red-d30!important;
+		}
+		&-d40{
+			background: $u-red-d40!important;
+		}
+		&-d50{
+			background: $u-red-d50!important;
+		}
 }
 
 .bg-green {
 	background: $u-green!important;
+	&-l10{
+		background: $u-green-l10!important;
+	}
+	&-l20{
+		background: $u-green-l20!important;
+	}
+	&-l30{
+		background: $u-green-l30!important;
+	}
+	&-l40{
+		background: $u-green-l40!important;
+	}
+	&-l50{
+		background: $u-green-l50!important;
+	}
+	&-d10{
+		background: $u-green-d10!important;
+	}
+	&-d20{
+		background: $u-green-d20!important;
+	}
+	&-d30{
+		background: $u-green-d30!important;
+	}
+	&-d40{
+		background: $u-green-d40!important;
+	}
+	&-d50{
+		background: $u-green-d50!important;
+	}
 }
 
 .bg-lime {
 	background: $u-lime!important;
+	&-l10{
+		background: $u-lime-l10!important;
+	}
+	&-l20{
+		background: $u-lime-l20!important;
+	}
+	&-l30{
+		background: $u-lime-l30!important;
+	}
+	&-l40{
+		background: $u-lime-l40!important;
+	}
+	&-l50{
+		background: $u-lime-l50!important;
+	}
+	&-d10{
+		background: $u-lime-d10!important;
+	}
+	&-d20{
+		background: $u-lime-d20!important;
+	}
+	&-d30{
+		background: $u-lime-d30!important;
+	}
+	&-d40{
+		background: $u-lime-d40!important;
+	}
+	&-d50{
+		background: $u-lime-d50!important;
+	}
 }
 
 .bg-sky {
@@ -167,10 +258,70 @@ a.svg-link {
 
 .bg-orange {
 	background: $u-orange!important;
+	&-l10{
+		background: $u-orange-l10!important;
+	}
+	&-l20{
+		background: $u-orange-l20!important;
+	}
+	&-l30{
+		background: $u-orange-l30!important;
+	}
+	&-l40{
+		background: $u-orange-l40!important;
+	}
+	&-l50{
+		background: $u-orange-l50!important;
+	}
+	&-d10{
+		background: $u-orange-d10!important;
+	}
+	&-d20{
+		background: $u-orange-d20!important;
+	}
+	&-d30{
+		background: $u-orange-d30!important;
+	}
+	&-d40{
+		background: $u-orange-d40!important;
+	}
+	&-d50{
+		background: $u-orange-d50!important;
+	}
 }
 
 .bg-grey {
 	background:$u-grey!important;
+	&-l10{
+		background: $u-grey-l10!important;
+	}
+	&-l20{
+		background: $u-grey-l20!important;
+	}
+	&-l30{
+	backgroundr: $u-grey-l30!important;
+	}
+	&-l40{
+		background: $u-grey-l40!important;
+	}
+	&-l50{
+		background: $u-grey-l50!important;
+	}
+	&-d10{
+		background: $u-grey-d10!important;
+	}
+	&-d20{
+		background: $u-grey-d20!important;
+	}
+	&-d30{
+		background: $u-grey-d30!important;
+	}
+	&-d40{
+		background: $u-grey-d40!important;
+	}
+	&-d50 {
+		background: $u-grey-d50!important;
+	}
 }
 
 .bg-brand-animation{
@@ -334,5 +485,6 @@ a.svg-link {
 
 .fc-grey {
 	color:$u-grey!important;
+	
 }
 

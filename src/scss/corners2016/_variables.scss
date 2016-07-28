@@ -16,6 +16,7 @@ $u-lime: #adc459 ;
 $u-green: #009a5b ;
 $u-grey: #40373f ;
 $u-sky: #a0d9e0 ;
+$u-platinum:#999999;
 
 
 /* Red Variations */
@@ -44,6 +45,16 @@ $u-grey-l70 : lighten( $u-grey, 70% ) ;
 $u-grey-l80 : lighten( $u-grey, 80% ) ;
 $u-grey-l90 : lighten( $u-grey, 90% ) ;
 
+$u-grey-d10 : darken( $u-grey, 10% ) ;
+$u-grey-d20 : darken( $u-grey, 20% ) ;
+$u-grey-d30 : darken( $u-grey, 30% ) ;
+$u-grey-d40 : darken( $u-grey, 40% ) ;
+$u-grey-d50 : darken( $u-grey, 50% ) ;
+$u-grey-d60 : darken( $u-grey, 60% ) ;
+$u-grey-d70 : darken( $u-grey, 70% ) ;
+$u-grey-d80 : darken( $u-grey, 80% ) ;
+$u-grey-d90 : darken( $u-grey, 90% ) ;
+
 /* Sky Variations */
 $u-sky-d10: darken( $u-sky, 10% ) ;
 $u-sky-d20: darken( $u-sky, 20% ) ;
@@ -64,6 +75,37 @@ $u-green-l20 : lighten( $u-green, 20% ) ;
 $u-green-l30 : lighten( $u-green, 30% ) ;
 $u-green-l40 : lighten( $u-green, 40% ) ;
 $u-green-l50 : lighten( $u-green, 50% ) ;
+$u-green-d10 : darken( $u-green, 10% ) ;
+$u-green-d20 : darken( $u-green, 20% ) ;
+$u-green-d30 : darken( $u-green, 30% ) ;
+$u-green-d40 : darken( $u-green, 40% ) ;
+$u-green-d50 : darken( $u-green, 50% ) ;
+
+/* Lime Variations */
+
+$u-lime-l10 : lighten( $u-lime, 10% ) ;
+$u-lime-l20 : lighten( $u-lime, 20% ) ;
+$u-lime-l30 : lighten( $u-lime, 30% ) ;
+$u-lime-l40 : lighten( $u-lime, 40% ) ;
+$u-lime-l50 : lighten( $u-lime, 50% ) ;
+$u-lime-d10 : darken( $u-lime, 10% ) ;	
+$u-lime-d20 : darken( $u-lime, 20% ) ;
+$u-lime-d30 : darken( $u-lime, 30% ) ;
+$u-lime-d40 : darken( $u-lime, 40% ) ;
+$u-lime-d50 : darken( $u-lime, 50% ) ;
+
+/* Orange Variations */
+
+$u-orange-l10 : lighten( $u-orange, 10% ) ;
+$u-orange-l20 : lighten( $u-orange, 20% ) ;
+$u-orange-l30 : lighten( $u-orange, 30% ) ;
+$u-orange-l40 : lighten( $u-orange, 40% ) ;
+$u-orange-l50 : lighten( $u-orange, 50% ) ;
+$u-orange-d10 : darken( $u-orange, 10% ) ;
+$u-orange-d20 : darken( $u-orange, 20% ) ;
+$u-orange-d30 : darken( $u-orange, 30% ) ;
+$u-orange-d40 : darken( $u-orange, 40% ) ;
+$u-orange-d50 : darken( $u-orange, 50% ) ;
 
 /* Gradients */
 

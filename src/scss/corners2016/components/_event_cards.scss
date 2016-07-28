@@ -9,6 +9,10 @@
 
 		.event-card-small {
 
+			& .mix{
+				display: none;
+			}
+
 			height: 320px;
 			overflow:hidden;
 			background:transparent;
@@ -138,7 +142,7 @@
 				}	
 			    &.night {
 			    	background-color:#fff;
-			    	background-image: url('/assets/icons/Moon.svg');
+			    	background-image: url('/assets/icons/moon_filled.svg');
 
 			    	&:hover {
 			    		background-color:$u-sky;
@@ -210,6 +214,13 @@
 			top:-15px!important;
 			.cat2 {
 				left:50px;
+
+				&.empty + .cat3 {
+						left:50px;
+					}
+			}
+			.cat3 {
+				left:80px;
 			}
 			.tod, .cat2, .cat3 {
 				background-image:none;
@@ -229,6 +240,41 @@
 				&.main {
 					display:block;
 					background-color:$u-lime!important;
+				}
+				&.liveMusic {
+					display:block;
+					background-color:$u-green!important;
+				}
+				&.alcoholFree {
+					display:block;
+					background-color:$u-orange!important;
+				}
+				&.club {
+					display:block;
+					background-color:$u-sky-d10!important;
+				}
+				&.family {
+					display:block;
+					background-color:$u-red-l10!important;
+				}
+				&.free {
+					display:block;
+					background-color:$u-lime-l10!important;
+				}
+				&.platinum, &.platinumX {
+					display:block;
+					background-color:$u-platinum!important;
+				}
+				&.platinumX {
+
+				}
+				&.ticketed {
+					display:block;
+					background-color:$u-red!important;
+				}
+				&.signUp {
+					display:block;
+					background-color:$u-lime-d10!important;
 				}
 			}
 
@@ -273,22 +319,57 @@
 				top:-30px!important;
 				.cat2 {
 					left:70px;
+	
+					&.empty + .cat3 {
+						left:70px;
+					}
 				}
+				.cat3 {
+					left:120px;
+				}
+
 				.tod, .cat2, .cat3 {
 					background-image:none;
 					width: 40px;
 					height: 40px;
 					
 					&.night {
-						background-image: url('/assets/icons/Moon.svg')!important;
+						background-image: url('/assets/icons/moon_filled.svg')!important;
 					}
-
 					&.day {
 						background-image: url('/assets/icons/sun.svg')!important;
 					}
-
 					&.main {
 						background-image: url('/assets/icons/star_filled.svg')!important;
+					}
+					&.liveMusic {
+						background-image: url('/assets/icons/guitar_filled.svg')!important;
+					}
+					&.alcoholFree {
+						background-image: url('/assets/icons/no_alcohol.svg')!important;
+					}
+					&.club {
+						background-image: url('/assets/icons/dancing_filled.svg')!important;
+					}
+					&.family {
+						background-image: url('/assets/icons/family_filled.svg')!important;
+					}
+					&.free {
+						background-image: url('/assets/icons/free.svg')!important;
+					}
+					&.platinum {
+						background-image: url('/assets/icons/platX.svg')!important;
+					}
+					&.platinumX {
+						background-image: url('/assets/icons/platPlatX.svg')!important;
+						border-radius: 20px;
+						width: 60px;
+					}
+					&.ticketed {
+						background-image: url('/assets/icons/ticket_filled.svg')!important;
+					}
+					&.signUp {
+						background-image: url('/assets/icons/add_user_filled.svg')!important;
 					}
 				}
 			}

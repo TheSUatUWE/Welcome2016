@@ -5986,6 +5986,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Grey Variations */
 /* Sky Variations */
 /* Green Variations */
+/* Lime Variations */
+/* Orange Variations */
 /* Gradients */
 body.welcome-page section#events {
   background: #c6e8ed;
@@ -7126,13 +7128,103 @@ a.svg-link::after {
 .bg-red {
   background: #e84253 !important;
 }
+.bg-red-l10 {
+  background: #ee6f7c !important;
+}
+.bg-red-l20 {
+  background: #f39da6 !important;
+}
+.bg-red-l30 {
+  background: #f9cacf !important;
+}
+.bg-red-l40 {
+  background: #fef8f9 !important;
+}
+.bg-red-l50 {
+  background: white !important;
+}
+.bg-red-d10 {
+  background: #dc1b2f !important;
+}
+.bg-red-d20 {
+  background: #af1525 !important;
+}
+.bg-red-d30 {
+  background: #81101b !important;
+}
+.bg-red-d40 {
+  background: #540a12 !important;
+}
+.bg-red-d50 {
+  background: #260508 !important;
+}
 
 .bg-green {
   background: #009a5b !important;
 }
+.bg-green-l10 {
+  background: #00cd79 !important;
+}
+.bg-green-l20 {
+  background: #01ff97 !important;
+}
+.bg-green-l30 {
+  background: #34ffac !important;
+}
+.bg-green-l40 {
+  background: #67ffc1 !important;
+}
+.bg-green-l50 {
+  background: #9affd6 !important;
+}
+.bg-green-d10 {
+  background: #00673d !important;
+}
+.bg-green-d20 {
+  background: #00341f !important;
+}
+.bg-green-d30 {
+  background: #000101 !important;
+}
+.bg-green-d40 {
+  background: black !important;
+}
+.bg-green-d50 {
+  background: black !important;
+}
 
 .bg-lime {
   background: #adc459 !important;
+}
+.bg-lime-l10 {
+  background: #c0d17f !important;
+}
+.bg-lime-l20 {
+  background: #d2dfa4 !important;
+}
+.bg-lime-l30 {
+  background: #e5ecca !important;
+}
+.bg-lime-l40 {
+  background: #f7f9f0 !important;
+}
+.bg-lime-l50 {
+  background: white !important;
+}
+.bg-lime-d10 {
+  background: #95ad3d !important;
+}
+.bg-lime-d20 {
+  background: #748730 !important;
+}
+.bg-lime-d30 {
+  background: #546123 !important;
+}
+.bg-lime-d40 {
+  background: #333c15 !important;
+}
+.bg-lime-d50 {
+  background: #131608 !important;
 }
 
 .bg-sky {
@@ -7176,9 +7268,69 @@ a.svg-link::after {
 .bg-orange {
   background: #f58d17 !important;
 }
+.bg-orange-l10 {
+  background: #f7a548 !important;
+}
+.bg-orange-l20 {
+  background: #f9bd79 !important;
+}
+.bg-orange-l30 {
+  background: #fbd5aa !important;
+}
+.bg-orange-l40 {
+  background: #fdeddb !important;
+}
+.bg-orange-l50 {
+  background: white !important;
+}
+.bg-orange-d10 {
+  background: #d07309 !important;
+}
+.bg-orange-d20 {
+  background: #9f5807 !important;
+}
+.bg-orange-d30 {
+  background: #6e3d05 !important;
+}
+.bg-orange-d40 {
+  background: #3d2203 !important;
+}
+.bg-orange-d50 {
+  background: #0c0701 !important;
+}
 
 .bg-grey {
   background: #40373f !important;
+}
+.bg-grey-l10 {
+  background: #5b4f5a !important;
+}
+.bg-grey-l20 {
+  background: #776675 !important;
+}
+.bg-grey-l30 {
+  backgroundr: #917f8f !important;
+}
+.bg-grey-l40 {
+  background: #a99aa7 !important;
+}
+.bg-grey-l50 {
+  background: #c0b6bf !important;
+}
+.bg-grey-d10 {
+  background: #251f24 !important;
+}
+.bg-grey-d20 {
+  background: #090809 !important;
+}
+.bg-grey-d30 {
+  background: black !important;
+}
+.bg-grey-d40 {
+  background: black !important;
+}
+.bg-grey-d50 {
+  background: black !important;
 }
 
 .bg-red-hover {
@@ -8205,7 +8357,7 @@ section#events .search > button > object.icon {
 }
 section#events .search > button.night {
   background-color: #fff;
-  background-image: url("/assets/icons/bright_moon.svg");
+  background-image: url("/assets/icons/moon_filled.svg");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 90%;
@@ -8229,7 +8381,7 @@ section#events .search > button.day:hover, section#events .search > button.day.a
 }
 section#events .search > button.main {
   background-color: #fff;
-  background-image: url("/assets/icons/star.svg");
+  background-image: url("/assets/icons/star_filled.svg");
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 90%;
@@ -9198,6 +9350,9 @@ address > span {
   background: transparent;
   border-radius: .25em;
 }
+.event-col .event-card-small .mix {
+  display: none;
+}
 .event-col .event-card-small * {
   -webkit-transition: all .3s ease;
           transition: all .3s ease;
@@ -9299,7 +9454,7 @@ address > span {
 }
 .event-col .key .tod.night, .event-col .key .cat2.night, .event-col .key .cat3.night {
   background-color: #fff;
-  background-image: url("/assets/icons/Moon.svg");
+  background-image: url("/assets/icons/moon_filled.svg");
 }
 .event-col .key .tod.night:hover, .event-col .key .cat2.night:hover, .event-col .key .cat3.night:hover {
   background-color: #a0d9e0;
@@ -9358,6 +9513,12 @@ address > span {
 .event-col.compact-listing .key .cat2 {
   left: 50px;
 }
+.event-col.compact-listing .key .cat2.empty + .cat3 {
+  left: 50px;
+}
+.event-col.compact-listing .key .cat3 {
+  left: 80px;
+}
 .event-col.compact-listing .key .tod, .event-col.compact-listing .key .cat2, .event-col.compact-listing .key .cat3 {
   background-image: none;
   width: 20px;
@@ -9377,6 +9538,38 @@ address > span {
 .event-col.compact-listing .key .tod.main, .event-col.compact-listing .key .cat2.main, .event-col.compact-listing .key .cat3.main {
   display: block;
   background-color: #adc459 !important;
+}
+.event-col.compact-listing .key .tod.liveMusic, .event-col.compact-listing .key .cat2.liveMusic, .event-col.compact-listing .key .cat3.liveMusic {
+  display: block;
+  background-color: #009a5b !important;
+}
+.event-col.compact-listing .key .tod.alcoholFree, .event-col.compact-listing .key .cat2.alcoholFree, .event-col.compact-listing .key .cat3.alcoholFree {
+  display: block;
+  background-color: #f58d17 !important;
+}
+.event-col.compact-listing .key .tod.club, .event-col.compact-listing .key .cat2.club, .event-col.compact-listing .key .cat3.club {
+  display: block;
+  background-color: #7acad3 !important;
+}
+.event-col.compact-listing .key .tod.family, .event-col.compact-listing .key .cat2.family, .event-col.compact-listing .key .cat3.family {
+  display: block;
+  background-color: #ee6f7c !important;
+}
+.event-col.compact-listing .key .tod.free, .event-col.compact-listing .key .cat2.free, .event-col.compact-listing .key .cat3.free {
+  display: block;
+  background-color: #c0d17f !important;
+}
+.event-col.compact-listing .key .tod.platinum, .event-col.compact-listing .key .tod.platinumX, .event-col.compact-listing .key .cat2.platinum, .event-col.compact-listing .key .cat2.platinumX, .event-col.compact-listing .key .cat3.platinum, .event-col.compact-listing .key .cat3.platinumX {
+  display: block;
+  background-color: #999999 !important;
+}
+.event-col.compact-listing .key .tod.ticketed, .event-col.compact-listing .key .cat2.ticketed, .event-col.compact-listing .key .cat3.ticketed {
+  display: block;
+  background-color: #e84253 !important;
+}
+.event-col.compact-listing .key .tod.signUp, .event-col.compact-listing .key .cat2.signUp, .event-col.compact-listing .key .cat3.signUp {
+  display: block;
+  background-color: #95ad3d !important;
 }
 .event-col.compact-listing .event-card-small {
   height: auto;
@@ -9413,19 +9606,54 @@ address > span {
 .event-col.compact-listing:hover .key .cat2 {
   left: 70px;
 }
+.event-col.compact-listing:hover .key .cat2.empty + .cat3 {
+  left: 70px;
+}
+.event-col.compact-listing:hover .key .cat3 {
+  left: 120px;
+}
 .event-col.compact-listing:hover .key .tod, .event-col.compact-listing:hover .key .cat2, .event-col.compact-listing:hover .key .cat3 {
   background-image: none;
   width: 40px;
   height: 40px;
 }
 .event-col.compact-listing:hover .key .tod.night, .event-col.compact-listing:hover .key .cat2.night, .event-col.compact-listing:hover .key .cat3.night {
-  background-image: url("/assets/icons/Moon.svg") !important;
+  background-image: url("/assets/icons/moon_filled.svg") !important;
 }
 .event-col.compact-listing:hover .key .tod.day, .event-col.compact-listing:hover .key .cat2.day, .event-col.compact-listing:hover .key .cat3.day {
   background-image: url("/assets/icons/sun.svg") !important;
 }
 .event-col.compact-listing:hover .key .tod.main, .event-col.compact-listing:hover .key .cat2.main, .event-col.compact-listing:hover .key .cat3.main {
   background-image: url("/assets/icons/star_filled.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.liveMusic, .event-col.compact-listing:hover .key .cat2.liveMusic, .event-col.compact-listing:hover .key .cat3.liveMusic {
+  background-image: url("/assets/icons/guitar_filled.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.alcoholFree, .event-col.compact-listing:hover .key .cat2.alcoholFree, .event-col.compact-listing:hover .key .cat3.alcoholFree {
+  background-image: url("/assets/icons/no_alcohol.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.club, .event-col.compact-listing:hover .key .cat2.club, .event-col.compact-listing:hover .key .cat3.club {
+  background-image: url("/assets/icons/dancing_filled.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.family, .event-col.compact-listing:hover .key .cat2.family, .event-col.compact-listing:hover .key .cat3.family {
+  background-image: url("/assets/icons/family_filled.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.free, .event-col.compact-listing:hover .key .cat2.free, .event-col.compact-listing:hover .key .cat3.free {
+  background-image: url("/assets/icons/free.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.platinum, .event-col.compact-listing:hover .key .cat2.platinum, .event-col.compact-listing:hover .key .cat3.platinum {
+  background-image: url("/assets/icons/platX.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.platinumX, .event-col.compact-listing:hover .key .cat2.platinumX, .event-col.compact-listing:hover .key .cat3.platinumX {
+  background-image: url("/assets/icons/platPlatX.svg") !important;
+  border-radius: 20px;
+  width: 60px;
+}
+.event-col.compact-listing:hover .key .tod.ticketed, .event-col.compact-listing:hover .key .cat2.ticketed, .event-col.compact-listing:hover .key .cat3.ticketed {
+  background-image: url("/assets/icons/ticket_filled.svg") !important;
+}
+.event-col.compact-listing:hover .key .tod.signUp, .event-col.compact-listing:hover .key .cat2.signUp, .event-col.compact-listing:hover .key .cat3.signUp {
+  background-image: url("/assets/icons/add_user_filled.svg") !important;
 }
 
 /*

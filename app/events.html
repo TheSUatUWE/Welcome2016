@@ -44,7 +44,7 @@
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
           <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
         </div>
-        <div class="card event-card-small shadow-1 {{#each Types}}{{this}} {{/each}}">
+        <div class="card event-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
         <div class="types">{{#each Types}}{{this}} {{/each}}</div>
           <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
 <!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>

@@ -244,27 +244,48 @@
       $('#event-listings-card').fadeIn('slow');
     }
 
-    // Add time of day icons to events
+    // Add icons to events
     function eventTOD() {
-        // Add Night
+        // Add Night or Day
        $('.event-col').each(function() {
           if ( $(this).children('.event-card-small').hasClass('night') ) {
-            $(this).find('.tod').addClass('night').prop('title', 'Night Event');
+            $(this).find('.tod').addClass('night').prop('title', 'Night');
+          } else if ( $(this).children('.event-card-small').hasClass('day') ) {
+            $(this).find('.tod').addClass('day').prop('title', 'Day');
           }          
         });
-        // Add Day
 
         $('.event-col').each(function() {
-
-        if ( $(this).children('.event-card-small').hasClass('day') ) {
-            $(this).find('.tod').addClass('day').prop('title', 'Day Event');
+          var cat2 =  $(this).find('.cat2');
+          var cat3 =  $(this).find('.cat3');
+          if ( $(this).children('.event-card-small').hasClass('main') ) {
+           cat2.addClass('main').prop('title', 'Main Event');
+          } else if ( $(this).children('.event-card-small').hasClass('liveMusic') ) {
+            cat2.addClass('liveMusic').prop('title', 'Live Music');
+          } else if ( $(this).children('.event-card-small').hasClass('club') ) {
+            cat2.addClass('club').prop('title', 'Club Night');
+          } else if ( $(this).children('.event-card-small').hasClass('free') ) {
+            cat2.addClass('free').prop('title', 'Free');
+          } else if ( $(this).children('.event-card-small').hasClass('ticketed') ) {
+            cat2.addClass('ticketed').prop('title', 'Ticketed');
+          } else {
+            cat2.addClass('empty');
           }
-        });
+       });
 
         $('.event-col').each(function() {
-        if ( $(this).children('.event-card-small').hasClass('main') ) {
-          $(this).find('.cat2').addClass('main').prop('title', 'Main Event');
-           }
+          var cat3 =  $(this).find('.cat3');
+          if ( $(this).children('.event-card-small').hasClass('platX') ) {
+            cat3.addClass('platinum').prop('title', 'Platinum Extra');
+          } else if ( $(this).children('.event-card-small').hasClass('platPlatX') ) {
+            cat3.addClass('platinumX').prop('title', 'Platinum & Platinum Extra');
+          } else if ( $(this).children('.event-card-small').hasClass('signUp') ) {
+            cat3.addClass('signUp').prop('title', 'Sign Up');
+          } else if ( $(this).children('.event-card-small').hasClass('alcoholFree') ) {
+            cat3.addClass('alcoholFree').prop('title', 'Alcohol Free');
+          } else if ( $(this).children('.event-card-small').hasClass('family') ) {
+            cat3.addClass('family').prop('title', 'Family Friendly');
+          }
        });
     }
 
