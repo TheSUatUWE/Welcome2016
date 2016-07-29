@@ -50,11 +50,11 @@ body.welcome-page {
 	/* Section: Landing*/
 
 	section#landing {
-		height: 100vh;
+		min-height: 100vh;
 		position: relative;
 		background: $u-sky;
 		overflow:hidden;
-		padding-top:200px;
+		padding:200px 0px 100px 0px;
 
 		span.intro-text {
 			font-size:$font-size-lg;
@@ -419,11 +419,12 @@ body.welcome-page {
 /* End: Landing Page */
 
 /* Start: Event Page */
-body.welcome-page {
+body.welcome-page.event-page {
 
 	section#banner {
 		height: 30vh;
 		position: relative;
+		margin-top: 100px;
 		@extend %g-brand-spectrum ;
 		overflow:hidden;
 
@@ -432,9 +433,7 @@ body.welcome-page {
 			font-weight: 900;
 		}
 
-		.row {
-			margin-top: 100px;
-		}
+		
 
 	}
 }

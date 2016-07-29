@@ -260,14 +260,14 @@
           var cat3 =  $(this).find('.cat3');
           if ( $(this).children('.event-card-small').hasClass('main') ) {
            cat2.addClass('main').prop('title', 'Main Event');
+          } else if ( $(this).children('.event-card-small').hasClass('free') ) {
+            cat2.addClass('free').prop('title', 'Free');
+          } else if ( $(this).children('.event-card-small').hasClass('signUp') ) {
+            cat3.addClass('signUp').prop('title', 'Sign Up');
           } else if ( $(this).children('.event-card-small').hasClass('liveMusic') ) {
             cat2.addClass('liveMusic').prop('title', 'Live Music');
           } else if ( $(this).children('.event-card-small').hasClass('club') ) {
             cat2.addClass('club').prop('title', 'Club Night');
-          } else if ( $(this).children('.event-card-small').hasClass('free') ) {
-            cat2.addClass('free').prop('title', 'Free');
-          } else if ( $(this).children('.event-card-small').hasClass('ticketed') ) {
-            cat2.addClass('ticketed').prop('title', 'Ticketed');
           } else {
             cat2.addClass('empty');
           }
@@ -279,8 +279,6 @@
             cat3.addClass('platinum').prop('title', 'Platinum Extra');
           } else if ( $(this).children('.event-card-small').hasClass('platPlatX') ) {
             cat3.addClass('platinumX').prop('title', 'Platinum & Platinum Extra');
-          } else if ( $(this).children('.event-card-small').hasClass('signUp') ) {
-            cat3.addClass('signUp').prop('title', 'Sign Up');
           } else if ( $(this).children('.event-card-small').hasClass('alcoholFree') ) {
             cat3.addClass('alcoholFree').prop('title', 'Alcohol Free');
           } else if ( $(this).children('.event-card-small').hasClass('family') ) {
@@ -288,15 +286,6 @@
           }
        });
     }
-
-    // Add main event icon to events
-    // function eventMain() {
-    //   $('.event-card-small').each(function() {
-    //     if ( $(this).hasClass('w1Res6_main') ) {
-    //       $(this).append('<object class="main-icon" data="/assets/icons/star.svg" type="image/svg+xml"></object><div class="w16-main main"></div>'); 
-    //     } 
-    //   });
-    // }
 
     function initListJs() {
 

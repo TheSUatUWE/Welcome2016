@@ -2910,6 +2910,7 @@ input[type="button"].btn-block {
 
 .open > .dropdown-menu {
   display: block;
+  z-index: 9999;
 }
 .open > a {
   outline: 0;
@@ -4775,7 +4776,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 9999;
   display: none;
   overflow: hidden;
   outline: 0;
@@ -6047,7 +6048,7 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-.bg-brand-animation, body.welcome-page section#banner {
+.bg-brand-animation, body.welcome-page.event-page section#banner {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background-size: 1200% 1200%;
@@ -6192,6 +6193,10 @@ nav.nav .nav-item, body.welcome-page section#landing .stats-wrapper .stat span {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
+}
+.logo.scrolled:hover + nav.nav.headspace--hidden {
+  -webkit-transform: translate3d(0, 0rem, 0);
+          transform: translate3d(0, 0rem, 0);
 }
 .logo.mobileMenuActive {
   width: 100px !important;
@@ -8045,11 +8050,11 @@ body.welcome-page .bg-pattern-right {
   background-position: bottom left;
 }
 body.welcome-page section#landing {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background: #a0d9e0;
   overflow: hidden;
-  padding-top: 200px;
+  padding: 200px 0px 100px 0px;
 }
 body.welcome-page section#landing span.intro-text {
   font-size: 1.25rem;
@@ -8295,17 +8300,15 @@ body.welcome-page section#landing .featured-image {
 
 /* End: Landing Page */
 /* Start: Event Page */
-body.welcome-page section#banner {
+body.welcome-page.event-page section#banner {
   height: 30vh;
   position: relative;
+  margin-top: 100px;
   overflow: hidden;
 }
-body.welcome-page section#banner span.intro-text {
+body.welcome-page.event-page section#banner span.intro-text {
   font-size: 1.25rem;
   font-weight: 900;
-}
-body.welcome-page section#banner .row {
-  margin-top: 100px;
 }
 
 /*
@@ -9526,6 +9529,7 @@ address > span {
   display: none;
   -webkit-transition: all .2s ease;
           transition: all .2s ease;
+  z-index: 1000;
 }
 .event-col.compact-listing .key .tod.night, .event-col.compact-listing .key .cat2.night, .event-col.compact-listing .key .cat3.night {
   display: block;
