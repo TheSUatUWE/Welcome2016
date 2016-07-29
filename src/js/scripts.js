@@ -217,7 +217,7 @@
 
     // Resize event text block to remove unessisary whitespace
     function eventResize() {
-      $('.event-card-small').each(function() {
+      $('.content-card-small').each(function() {
         var cardH = $(this).outerHeight();
         var img = $(this).children('.card-img-top');
         var block = $(this).children('div.card-block'); 
@@ -242,46 +242,47 @@
     function eventLoad() {
       $('#loader').fadeOut('slow');
       $('#event-listings-card').fadeIn('slow');
+      $('#news-listings').fadeIn('slow');
     }
 
     // Add icons to events
     function eventTOD() {
         // Add Night or Day
-       $('.event-col').each(function() {
-          if ( $(this).children('.event-card-small').hasClass('night') ) {
+       $('.item-col').each(function() {
+          if ( $(this).children('.content-card-small').hasClass('night') ) {
             $(this).find('.tod').addClass('night').prop('title', 'Night');
-          } else if ( $(this).children('.event-card-small').hasClass('day') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('day') ) {
             $(this).find('.tod').addClass('day').prop('title', 'Day');
           }          
         });
 
-        $('.event-col').each(function() {
+        $('.item-col').each(function() {
           var cat2 =  $(this).find('.cat2');
           var cat3 =  $(this).find('.cat3');
-          if ( $(this).children('.event-card-small').hasClass('main') ) {
+          if ( $(this).children('.content-card-small').hasClass('main') ) {
            cat2.addClass('main').prop('title', 'Main Event');
-          } else if ( $(this).children('.event-card-small').hasClass('free') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('free') ) {
             cat2.addClass('free').prop('title', 'Free');
-          } else if ( $(this).children('.event-card-small').hasClass('signUp') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('signUp') ) {
             cat3.addClass('signUp').prop('title', 'Sign Up');
-          } else if ( $(this).children('.event-card-small').hasClass('liveMusic') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('liveMusic') ) {
             cat2.addClass('liveMusic').prop('title', 'Live Music');
-          } else if ( $(this).children('.event-card-small').hasClass('club') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('club') ) {
             cat2.addClass('club').prop('title', 'Club Night');
           } else {
             cat2.addClass('empty');
           }
        });
 
-        $('.event-col').each(function() {
+        $('.item-col').each(function() {
           var cat3 =  $(this).find('.cat3');
-          if ( $(this).children('.event-card-small').hasClass('platX') ) {
+          if ( $(this).children('.content-card-small').hasClass('platX') ) {
             cat3.addClass('platinum').prop('title', 'Platinum Extra');
-          } else if ( $(this).children('.event-card-small').hasClass('platPlatX') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('platPlatX') ) {
             cat3.addClass('platinumX').prop('title', 'Platinum & Platinum Extra');
-          } else if ( $(this).children('.event-card-small').hasClass('alcoholFree') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('alcoholFree') ) {
             cat3.addClass('alcoholFree').prop('title', 'Alcohol Free');
-          } else if ( $(this).children('.event-card-small').hasClass('family') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('family') ) {
             cat3.addClass('family').prop('title', 'Family Friendly');
           }
        });
@@ -307,6 +308,7 @@
         var mainFilter = $(this).html().toLowerCase();
         // Add active class to the clicked filter
         $(this).toggleClass('active');
+        console.log(mainFilterBtn);
         // Remove active class from all other filters
         $('.main-filter').not( $(this) ).removeClass('active');
         

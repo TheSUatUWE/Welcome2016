@@ -4,7 +4,7 @@
 * 
 */
 
-section#events {
+section#events, section#news-list {
 	padding: 20px 0px;
 
 	.search {
@@ -49,7 +49,7 @@ section#events {
 			display:inline-block;
 		}
 
-		& .filter-list > button {
+		& button {
 
 			& > object.icon {
 						height: 30px;
@@ -104,7 +104,7 @@ section#events {
 		display:none
 	}
 	
-	#event-listings-card {
+	#event-listings-card, #news-listings {
 		display:none;
 		margin-left: -0.9375rem;
 		margin-right: -0.9375rem;	

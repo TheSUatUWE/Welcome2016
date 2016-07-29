@@ -3,11 +3,11 @@
 * Event Cards
 * 
 */
-	.event-col {
+	.item-col {
 
 		min-width:285px;
 
-		.event-card-small {
+		.content-card-small {
 
 			& .mix{
 				display: none;
@@ -45,6 +45,7 @@
 				padding-top: 20px;
 				background: #fff;
 				height:100%;
+
 
 				& span {
 					font-size: 0.8em;
@@ -102,6 +103,42 @@
 				& > .main {
 					background-color:$u-lime!important;
 				}
+				& > .night {
+					background-color:$u-sky;
+				}
+				& > .day {
+					background-color:$u-yellow;
+				}
+				& > .main {
+					background-color:$u-lime;
+				}
+				& > .liveMusic {
+					background-color:$u-green!important;
+				}
+				& > .alcoholFree {
+					background-color:$u-orange!important;
+				}
+				& > .club {
+					background-color:$u-sky-d10!important;
+				}
+				& > .family {
+					background-color:$u-red-l10!important;
+				}
+				& > .free {
+					background-color:$u-lime-l10!important;
+				}
+				& > .platinum {
+					background-color:$u-platinum!important;
+				}
+				& > .platinumX {
+					background-color:$u-platinum!important;
+				}
+				& > .ticketed {
+					background-color:$u-red!important;
+				}
+				& > .signUp {
+					background-color:$u-lime-d10!important;
+				}
 			}
 
 			.countdown {
@@ -136,7 +173,7 @@
 			    	padding: 5px;
 			    	width: 100%;
 			    }
-				&.night, &.day, &.main {
+				&.night, &.day, &.main, &.liveMusic, &.alcoholFree, &.club, &.family, &.free, &.platinum, &.platinumX, &.ticketed, &.signUp {
 					width: 40px;
 			    	height: 40px;
 				}	
@@ -164,11 +201,79 @@
 			    		background-color:$u-lime;
 			    	}
 			    }
+			    &.liveMusic {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/guitar_filled.svg');
+			    	&:hover {
+			    		background-color:$u-green!important;
+			    	}
+			    }
+			    &.alcoholFree {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/no_alcohol.svg');
+			    	&:hover {
+			    		background-color:$u-orange!important;
+			    	}
+			    }
+			    &.club {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/dancing_filled.svg');
+			    	&:hover {
+			    		background-color:$u-sky-d10!important;
+			    	}
+			    }
+			    &.family {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/family_filled.svg');
+			    	&:hover {
+			    		background-color:$u-red-l10!important;
+			    	}
+			    }
+			    &.free {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/free.svg');
+			    	&:hover {
+			    		background-color:$u-lime-l10!important;
+			    	}
+			    }
+			    &.platinum {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/platX.svg');
+			    	&:hover {
+			    		background-color:$u-platinum!important;
+			    	}
+			    }
+			    &.platinumX {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/platPlatX.svg');
+			    	&:hover {
+			    		background-color:$u-platinum!important;
+			    	}
+			    }
+			    &.ticketed {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/ticketed_filled.svg');
+			    	&:hover {
+			    		background-color:$u-red!important;
+			    	}
+			    }
+			    &.signUp {
+			    	background-color: #fff;
+			    	background-image: url('/assets/icons/add_user_filled.svg');
+			    	&:hover {
+			    		background-color:$u-lime-d10!important;
+			    	}
+			    }
+
 			    &.cat2 {
 			    	left:70px;
+
+			    	&.empty + .cat3 {
+			    			left:70px;
+			    		}
 			    }
 			    &.cat3 {
-			    	
+			    	left:120px;
 			    }
 			}
 
@@ -280,7 +385,7 @@
 
 			
 		}
-		.event-card-small {
+		.content-card-small {
 			height: auto;
 		}
 

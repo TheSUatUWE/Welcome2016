@@ -5990,7 +5990,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Lime Variations */
 /* Orange Variations */
 /* Gradients */
-body.welcome-page section#events {
+body.welcome-page section#events, body.welcome-page section#news-list {
   background: #c6e8ed;
   /* Old browsers */
   /* FF3.6-15 */
@@ -6037,7 +6037,7 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-.event-col .event-card-small .card-img-gradient {
+.item-col .content-card-small .card-img-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,a0d9e0+100&0.01+1,1+99 */
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0, 154, 91, 0.01) 0%, rgba(2, 155, 92, 0.01) 1%, #9ed8df 99%, #a0d9e0 100%);
@@ -6048,7 +6048,7 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-.bg-brand-animation, body.welcome-page.event-page section#banner {
+.bg-brand-animation, body.welcome-page.event-page section#banner, body.welcome-page.news-page section#banner {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background-size: 1200% 1200%;
@@ -6335,7 +6335,7 @@ nav.nav.navbar-scrolling.scrolled .nav-inline {
   padding-left: 20px;
 }
 nav.nav.navbar-scrolling.scrolled input#header-search[type=search] {
-  background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search.svg) no-repeat 16px 16px;
+  background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search.svg) no-repeat 16px 16px;
   background-size: 25px;
   padding: 16px;
   width: 55px;
@@ -6349,13 +6349,13 @@ nav.nav.navbar-scrolling.scrolled input#header-search[type=search] {
   z-index: 1;
 }
 nav.nav.navbar-scrolling.scrolled input#header-search[type=search]:hover {
-  background: #e84253 url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+  background: #e84253 url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
   background-size: 25px;
   cursor: pointer;
   height: 60px;
 }
 nav.nav.navbar-scrolling.scrolled input#header-search[type=search]:focus {
-  background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+  background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 20px;
   border: 1px solid #40373f;
   width: 350px;
   padding-left: 40px;
@@ -6390,7 +6390,7 @@ nav.nav.navbar-scrolling.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.navba
   right: 40px;
 }
 .search-wrap input#header-search[type=search] {
-  background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+  background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
   background-size: 25px;
   padding: 16px;
   width: 55px;
@@ -6407,13 +6407,13 @@ nav.nav.navbar-scrolling.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.navba
   display: none;
 }
 .search-wrap input#header-search[type=search]:hover {
-  background: #e84253 url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+  background: #e84253 url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
   background-size: 25px;
   cursor: pointer;
   height: 60px;
 }
 .search-wrap input#header-search[type=search]:focus {
-  background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+  background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 20px;
   border: 1px solid #40373f;
   width: 350px;
   padding-left: 40px;
@@ -8034,7 +8034,7 @@ body.welcome-page .bg-pattern-left {
   bottom: 0;
   left: 0;
   background-size: cover;
-  background-image: url("../img/tri-pattern-left.png");
+  background-image: url("/assets/img/tri-pattern-left.png");
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -8045,7 +8045,7 @@ body.welcome-page .bg-pattern-right {
   bottom: 0;
   left: 0;
   background-size: cover;
-  background-image: url("../img/tri-pattern-right.png");
+  background-image: url("/assets/img/tri-pattern-right.png");
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -8202,7 +8202,7 @@ body.welcome-page section#social .icon {
   width: 5em;
   margin: 0 1em;
 }
-body.welcome-page section#events {
+body.welcome-page section#events, body.welcome-page section#news-list {
   position: relative;
 }
 body.welcome-page section#uwe-get-ready {
@@ -8276,7 +8276,7 @@ body.welcome-page section#uwe-get-ready {
     margin: 1em 0 0;
   }
   body.welcome-page section#social-signup .sign-up:after {
-    background: #2c7e88;
+    background: #40373f;
     bottom: 0;
     content: "";
     position: absolute;
@@ -8335,9 +8335,41 @@ body.welcome-page.event-page section#social-signup .sign-up:before {
 }
 @media (max-width: 991px) {
   body.welcome-page.event-page section#events .search .search-bar {
-    margin-top: 10px;
+    margin: 10px 0px;
     float: left;
+    display: block;
+    width: 100%;
   }
+}
+
+/* Start: Event Page */
+body.welcome-page.news-page section#banner {
+  height: 30vh;
+  position: relative;
+  margin-top: 100px;
+  overflow: hidden;
+}
+body.welcome-page.news-page section#banner span.intro-text {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+body.welcome-page.news-page section#social-signup .sign-up {
+  background: #2c7e88;
+}
+body.welcome-page.news-page section#social-signup .sign-up:before {
+  background: #2c7e88;
+}
+body.welcome-page.news-page section:last-of-type {
+  padding-bottom: 0 !important;
+}
+body.welcome-page.news-page section#social-signup .sign-up {
+  background: #2c7e88;
+}
+body.welcome-page.news-page section#social-signup .sign-up:before {
+  background: #2c7e88;
+}
+body.welcome-page.news-page section#news-list .search .search-bar {
+  float: none !important;
 }
 
 /*
@@ -8345,13 +8377,13 @@ body.welcome-page.event-page section#social-signup .sign-up:before {
 * Events
 * 
 */
-section#events {
+section#events, section#news-list {
   padding: 20px 0px;
 }
-section#events .search {
+section#events .search, section#news-list .search {
   padding: 20px 0px;
 }
-section#events .search .filter {
+section#events .search .filter, section#news-list .search .filter {
   height: 40px;
   padding: 7px 12px;
   border-radius: .25em;
@@ -8359,36 +8391,36 @@ section#events .search .filter {
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
-section#events .search .filter.dropdown {
+section#events .search .filter.dropdown, section#news-list .search .filter.dropdown {
   padding: 7px 45px 7px 12px;
 }
-section#events .search .filter.active {
+section#events .search .filter.active, section#news-list .search .filter.active {
   background-color: #40373f;
   color: #fff;
 }
-section#events .search .filter.location {
+section#events .search .filter.location, section#news-list .search .filter.location {
   border: none;
   background-color: #fff;
 }
-section#events .search .filter.location:hover {
+section#events .search .filter.location:hover, section#news-list .search .filter.location:hover {
   background-color: #009a5b;
 }
-section#events .search .filter.location:hover option {
+section#events .search .filter.location:hover option, section#news-list .search .filter.location:hover option {
   display: block;
   margin-top: 0;
 }
-section#events .search .search-bar {
+section#events .search .search-bar, section#news-list .search .search-bar {
   float: right;
 }
-section#events .search .dropdown {
+section#events .search .dropdown, section#news-list .search .dropdown {
   display: inline-block;
 }
-section#events .search .filter-list > button > object.icon {
+section#events .search button > object.icon, section#news-list .search button > object.icon {
   height: 30px;
   margin-bottom: -12px;
   padding-left: 10px;
 }
-section#events .search .filter-list > button.night {
+section#events .search button.night, section#news-list .search button.night {
   background-color: #fff;
   background-image: url("/assets/icons/moon_filled.svg");
   background-size: 30px;
@@ -8396,11 +8428,11 @@ section#events .search .filter-list > button.night {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search .filter-list > button.night:hover, section#events .search .filter-list > button.night.active {
+section#events .search button.night:hover, section#events .search button.night.active, section#news-list .search button.night:hover, section#news-list .search button.night.active {
   background-color: #a0d9e0;
   color: #40373f;
 }
-section#events .search .filter-list > button.day {
+section#events .search button.day, section#news-list .search button.day {
   background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
   background-size: 30px;
@@ -8408,11 +8440,11 @@ section#events .search .filter-list > button.day {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search .filter-list > button.day:hover, section#events .search .filter-list > button.day.active {
+section#events .search button.day:hover, section#events .search button.day.active, section#news-list .search button.day:hover, section#news-list .search button.day.active {
   background-color: #ffe44d;
   color: #40373f;
 }
-section#events .search .filter-list > button.main {
+section#events .search button.main, section#news-list .search button.main {
   background-color: #fff;
   background-image: url("/assets/icons/star_filled.svg");
   background-size: 30px;
@@ -8420,14 +8452,14 @@ section#events .search .filter-list > button.main {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search .filter-list > button.main:hover, section#events .search .filter-list > button.main.active {
+section#events .search button.main:hover, section#events .search button.main.active, section#news-list .search button.main:hover, section#news-list .search button.main.active {
   background-color: #adc459;
   color: #40373f;
 }
-section#events .types {
+section#events .types, section#news-list .types {
   display: none;
 }
-section#events #event-listings-card {
+section#events #event-listings-card, section#events #news-listings, section#news-list #event-listings-card, section#news-list #news-listings {
   display: none;
   margin-left: -0.9375rem;
   margin-right: -0.9375rem;
@@ -8535,6 +8567,10 @@ address > span {
   margin: 0 !important;
 }
 
+.dropdown-menu {
+  z-index: 9999;
+}
+
 .card {
   border-radius: 0;
   border: none;
@@ -8578,6 +8614,7 @@ address > span {
   color: #fff;
   padding: 5px 8px;
   border-radius: 3px;
+  pointer-events: none;
 }
 
 .ui-helper-hidden-accessible {
@@ -9374,26 +9411,26 @@ address > span {
 * Event Cards
 * 
 */
-.event-col {
+.item-col {
   min-width: 285px;
 }
-.event-col .event-card-small {
+.item-col .content-card-small {
   height: 320px;
   overflow: hidden;
   background: transparent;
   border-radius: .25em;
 }
-.event-col .event-card-small .mix {
+.item-col .content-card-small .mix {
   display: none;
 }
-.event-col .event-card-small * {
+.item-col .content-card-small * {
   -webkit-transition: all .3s ease;
           transition: all .3s ease;
 }
-.event-col .event-card-small .card-block {
+.item-col .content-card-small .card-block {
   background: #fff;
 }
-.event-col .event-card-small .countdown {
+.item-col .content-card-small .countdown {
   background: #e84253;
   display: inline-block;
   padding: 2px 10px;
@@ -9402,68 +9439,104 @@ address > span {
   z-index: 10;
   font-style: 0.9em;
 }
-.event-col .event-card-small .date, .event-col .event-card-small .location {
+.item-col .content-card-small .date, .item-col .content-card-small .location {
   font-size: 0.9em;
 }
-.event-col .event-card-small .description {
+.item-col .content-card-small .description {
   padding: 0 1.25rem 1.25rem;
   margin-top: -20px;
   padding-top: 20px;
   background: #fff;
   height: 100%;
 }
-.event-col .event-card-small .description span {
+.item-col .content-card-small .description span {
   font-size: 0.8em;
 }
-.event-col .event-card-small .description button {
+.item-col .content-card-small .description button {
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
   margin-bottom: -400px;
 }
-.event-col .event-card-small .card-img-top {
+.item-col .content-card-small .card-img-top {
   overflow: hidden;
 }
-.event-col .event-card-small .card-img-gradient {
+.item-col .content-card-small .card-img-gradient {
   z-index: 1;
 }
-.event-col:hover .card-block {
+.item-col:hover .card-block {
   top: 0;
   padding-top: 40px;
 }
-.event-col:hover .card-img-top {
+.item-col:hover .card-img-top {
   height: 0 !important;
 }
-.event-col:hover .description {
+.item-col:hover .description {
   display: block;
 }
-.event-col:hover .description button {
+.item-col:hover .description button {
   margin: 0 0 0 0;
 }
-.event-col:hover .key {
+.item-col:hover .key {
   top: -20px !important;
 }
-.event-col:hover .key > .night {
+.item-col:hover .key > .night {
   background-color: #a0d9e0 !important;
 }
-.event-col:hover .key > .day {
+.item-col:hover .key > .day {
   background-color: #ffe44d !important;
 }
-.event-col:hover .key > .main {
+.item-col:hover .key > .main {
   background-color: #adc459 !important;
 }
-.event-col:hover .countdown {
+.item-col:hover .key > .night {
+  background-color: #a0d9e0;
+}
+.item-col:hover .key > .day {
+  background-color: #ffe44d;
+}
+.item-col:hover .key > .main {
+  background-color: #adc459;
+}
+.item-col:hover .key > .liveMusic {
+  background-color: #009a5b !important;
+}
+.item-col:hover .key > .alcoholFree {
+  background-color: #f58d17 !important;
+}
+.item-col:hover .key > .club {
+  background-color: #7acad3 !important;
+}
+.item-col:hover .key > .family {
+  background-color: #ee6f7c !important;
+}
+.item-col:hover .key > .free {
+  background-color: #c0d17f !important;
+}
+.item-col:hover .key > .platinum {
+  background-color: #999999 !important;
+}
+.item-col:hover .key > .platinumX {
+  background-color: #999999 !important;
+}
+.item-col:hover .key > .ticketed {
+  background-color: #e84253 !important;
+}
+.item-col:hover .key > .signUp {
+  background-color: #95ad3d !important;
+}
+.item-col:hover .countdown {
   margin: 0;
 }
-.event-col .key {
+.item-col .key {
   padding: 1.25rem;
   top: 160px;
   position: absolute;
   -webkit-transition: all .2s ease;
           transition: all .2s ease;
 }
-.event-col .key .tod, .event-col .key .cat2, .event-col .key .cat3 {
+.item-col .key .tod, .item-col .key .cat2, .item-col .key .cat3 {
   width: 0px;
   height: 0px;
   background: #e84253;
@@ -9474,58 +9547,127 @@ address > span {
   background-position: center center;
   background-repeat: no-repeat;
 }
-.event-col .key .tod .tod, .event-col .key .cat2 .tod, .event-col .key .cat3 .tod {
+.item-col .key .tod .tod, .item-col .key .cat2 .tod, .item-col .key .cat3 .tod {
   left: 20px;
 }
-.event-col .key .tod .tod-icon, .event-col .key .cat2 .tod-icon, .event-col .key .cat3 .tod-icon {
+.item-col .key .tod .tod-icon, .item-col .key .cat2 .tod-icon, .item-col .key .cat3 .tod-icon {
   padding: 5px;
   width: 100%;
 }
-.event-col .key .tod.night, .event-col .key .tod.day, .event-col .key .tod.main, .event-col .key .cat2.night, .event-col .key .cat2.day, .event-col .key .cat2.main, .event-col .key .cat3.night, .event-col .key .cat3.day, .event-col .key .cat3.main {
+.item-col .key .tod.night, .item-col .key .tod.day, .item-col .key .tod.main, .item-col .key .tod.liveMusic, .item-col .key .tod.alcoholFree, .item-col .key .tod.club, .item-col .key .tod.family, .item-col .key .tod.free, .item-col .key .tod.platinum, .item-col .key .tod.platinumX, .item-col .key .tod.ticketed, .item-col .key .tod.signUp, .item-col .key .cat2.night, .item-col .key .cat2.day, .item-col .key .cat2.main, .item-col .key .cat2.liveMusic, .item-col .key .cat2.alcoholFree, .item-col .key .cat2.club, .item-col .key .cat2.family, .item-col .key .cat2.free, .item-col .key .cat2.platinum, .item-col .key .cat2.platinumX, .item-col .key .cat2.ticketed, .item-col .key .cat2.signUp, .item-col .key .cat3.night, .item-col .key .cat3.day, .item-col .key .cat3.main, .item-col .key .cat3.liveMusic, .item-col .key .cat3.alcoholFree, .item-col .key .cat3.club, .item-col .key .cat3.family, .item-col .key .cat3.free, .item-col .key .cat3.platinum, .item-col .key .cat3.platinumX, .item-col .key .cat3.ticketed, .item-col .key .cat3.signUp {
   width: 40px;
   height: 40px;
 }
-.event-col .key .tod.night, .event-col .key .cat2.night, .event-col .key .cat3.night {
+.item-col .key .tod.night, .item-col .key .cat2.night, .item-col .key .cat3.night {
   background-color: #fff;
   background-image: url("/assets/icons/moon_filled.svg");
 }
-.event-col .key .tod.night:hover, .event-col .key .cat2.night:hover, .event-col .key .cat3.night:hover {
+.item-col .key .tod.night:hover, .item-col .key .cat2.night:hover, .item-col .key .cat3.night:hover {
   background-color: #a0d9e0;
 }
-.event-col .key .tod.day, .event-col .key .cat2.day, .event-col .key .cat3.day {
+.item-col .key .tod.day, .item-col .key .cat2.day, .item-col .key .cat3.day {
   background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
 }
-.event-col .key .tod.day:hover, .event-col .key .cat2.day:hover, .event-col .key .cat3.day:hover {
+.item-col .key .tod.day:hover, .item-col .key .cat2.day:hover, .item-col .key .cat3.day:hover {
   background-color: #ffe44d;
 }
-.event-col .key .tod.main, .event-col .key .cat2.main, .event-col .key .cat3.main {
+.item-col .key .tod.main, .item-col .key .cat2.main, .item-col .key .cat3.main {
   background-color: #fff;
   background-image: url("/assets/icons/star_filled.svg");
 }
-.event-col .key .tod.main:hover, .event-col .key .cat2.main:hover, .event-col .key .cat3.main:hover {
+.item-col .key .tod.main:hover, .item-col .key .cat2.main:hover, .item-col .key .cat3.main:hover {
   background-color: #adc459;
 }
-.event-col .key .tod.cat2, .event-col .key .cat2.cat2, .event-col .key .cat3.cat2 {
+.item-col .key .tod.liveMusic, .item-col .key .cat2.liveMusic, .item-col .key .cat3.liveMusic {
+  background-color: #fff;
+  background-image: url("/assets/icons/guitar_filled.svg");
+}
+.item-col .key .tod.liveMusic:hover, .item-col .key .cat2.liveMusic:hover, .item-col .key .cat3.liveMusic:hover {
+  background-color: #009a5b !important;
+}
+.item-col .key .tod.alcoholFree, .item-col .key .cat2.alcoholFree, .item-col .key .cat3.alcoholFree {
+  background-color: #fff;
+  background-image: url("/assets/icons/no_alcohol.svg");
+}
+.item-col .key .tod.alcoholFree:hover, .item-col .key .cat2.alcoholFree:hover, .item-col .key .cat3.alcoholFree:hover {
+  background-color: #f58d17 !important;
+}
+.item-col .key .tod.club, .item-col .key .cat2.club, .item-col .key .cat3.club {
+  background-color: #fff;
+  background-image: url("/assets/icons/dancing_filled.svg");
+}
+.item-col .key .tod.club:hover, .item-col .key .cat2.club:hover, .item-col .key .cat3.club:hover {
+  background-color: #7acad3 !important;
+}
+.item-col .key .tod.family, .item-col .key .cat2.family, .item-col .key .cat3.family {
+  background-color: #fff;
+  background-image: url("/assets/icons/family_filled.svg");
+}
+.item-col .key .tod.family:hover, .item-col .key .cat2.family:hover, .item-col .key .cat3.family:hover {
+  background-color: #ee6f7c !important;
+}
+.item-col .key .tod.free, .item-col .key .cat2.free, .item-col .key .cat3.free {
+  background-color: #fff;
+  background-image: url("/assets/icons/free.svg");
+}
+.item-col .key .tod.free:hover, .item-col .key .cat2.free:hover, .item-col .key .cat3.free:hover {
+  background-color: #c0d17f !important;
+}
+.item-col .key .tod.platinum, .item-col .key .cat2.platinum, .item-col .key .cat3.platinum {
+  background-color: #fff;
+  background-image: url("/assets/icons/platX.svg");
+}
+.item-col .key .tod.platinum:hover, .item-col .key .cat2.platinum:hover, .item-col .key .cat3.platinum:hover {
+  background-color: #999999 !important;
+}
+.item-col .key .tod.platinumX, .item-col .key .cat2.platinumX, .item-col .key .cat3.platinumX {
+  background-color: #fff;
+  background-image: url("/assets/icons/platPlatX.svg");
+}
+.item-col .key .tod.platinumX:hover, .item-col .key .cat2.platinumX:hover, .item-col .key .cat3.platinumX:hover {
+  background-color: #999999 !important;
+}
+.item-col .key .tod.ticketed, .item-col .key .cat2.ticketed, .item-col .key .cat3.ticketed {
+  background-color: #fff;
+  background-image: url("/assets/icons/ticketed_filled.svg");
+}
+.item-col .key .tod.ticketed:hover, .item-col .key .cat2.ticketed:hover, .item-col .key .cat3.ticketed:hover {
+  background-color: #e84253 !important;
+}
+.item-col .key .tod.signUp, .item-col .key .cat2.signUp, .item-col .key .cat3.signUp {
+  background-color: #fff;
+  background-image: url("/assets/icons/add_user_filled.svg");
+}
+.item-col .key .tod.signUp:hover, .item-col .key .cat2.signUp:hover, .item-col .key .cat3.signUp:hover {
+  background-color: #95ad3d !important;
+}
+.item-col .key .tod.cat2, .item-col .key .cat2.cat2, .item-col .key .cat3.cat2 {
   left: 70px;
 }
-.event-col.compact-listing .description {
+.item-col .key .tod.cat2.empty + .cat3, .item-col .key .cat2.cat2.empty + .cat3, .item-col .key .cat3.cat2.empty + .cat3 {
+  left: 70px;
+}
+.item-col .key .tod.cat3, .item-col .key .cat2.cat3, .item-col .key .cat3.cat3 {
+  left: 120px;
+}
+.item-col.compact-listing .description {
   display: block;
   padding: 0 !important;
   margin: 0 !important;
 }
-.event-col.compact-listing .description button {
+.item-col.compact-listing .description button {
   bottom: -100px;
   -webkit-transition: bottom 0.25s ease !important;
           transition: bottom 0.25s ease !important;
 }
-.event-col.compact-listing .description span {
+.item-col.compact-listing .description span {
   display: none;
 }
-.event-col.compact-listing .card-block {
+.item-col.compact-listing .card-block {
   background: rgba(255, 255, 255, 0.5);
 }
-.event-col.compact-listing .card-img-top {
+.item-col.compact-listing .card-img-top {
   pointer-events: auto;
   position: absolute;
   width: 100%;
@@ -9537,22 +9679,22 @@ address > span {
   opacity: 1;
   background-position: center center !important;
 }
-.event-col.compact-listing .card-img-gradient {
+.item-col.compact-listing .card-img-gradient {
   height: 100% !important;
 }
-.event-col.compact-listing .key {
+.item-col.compact-listing .key {
   top: -15px !important;
 }
-.event-col.compact-listing .key .cat2 {
+.item-col.compact-listing .key .cat2 {
   left: 50px;
 }
-.event-col.compact-listing .key .cat2.empty + .cat3 {
+.item-col.compact-listing .key .cat2.empty + .cat3 {
   left: 50px;
 }
-.event-col.compact-listing .key .cat3 {
+.item-col.compact-listing .key .cat3 {
   left: 80px;
 }
-.event-col.compact-listing .key .tod, .event-col.compact-listing .key .cat2, .event-col.compact-listing .key .cat3 {
+.item-col.compact-listing .key .tod, .item-col.compact-listing .key .cat2, .item-col.compact-listing .key .cat3 {
   background-image: none;
   width: 20px;
   height: 20px;
@@ -9561,54 +9703,54 @@ address > span {
           transition: all .2s ease;
   z-index: 1000;
 }
-.event-col.compact-listing .key .tod.night, .event-col.compact-listing .key .cat2.night, .event-col.compact-listing .key .cat3.night {
+.item-col.compact-listing .key .tod.night, .item-col.compact-listing .key .cat2.night, .item-col.compact-listing .key .cat3.night {
   display: block;
   background-color: #a0d9e0 !important;
 }
-.event-col.compact-listing .key .tod.day, .event-col.compact-listing .key .cat2.day, .event-col.compact-listing .key .cat3.day {
+.item-col.compact-listing .key .tod.day, .item-col.compact-listing .key .cat2.day, .item-col.compact-listing .key .cat3.day {
   display: block;
   background-color: #ffe44d !important;
 }
-.event-col.compact-listing .key .tod.main, .event-col.compact-listing .key .cat2.main, .event-col.compact-listing .key .cat3.main {
+.item-col.compact-listing .key .tod.main, .item-col.compact-listing .key .cat2.main, .item-col.compact-listing .key .cat3.main {
   display: block;
   background-color: #adc459 !important;
 }
-.event-col.compact-listing .key .tod.liveMusic, .event-col.compact-listing .key .cat2.liveMusic, .event-col.compact-listing .key .cat3.liveMusic {
+.item-col.compact-listing .key .tod.liveMusic, .item-col.compact-listing .key .cat2.liveMusic, .item-col.compact-listing .key .cat3.liveMusic {
   display: block;
   background-color: #009a5b !important;
 }
-.event-col.compact-listing .key .tod.alcoholFree, .event-col.compact-listing .key .cat2.alcoholFree, .event-col.compact-listing .key .cat3.alcoholFree {
+.item-col.compact-listing .key .tod.alcoholFree, .item-col.compact-listing .key .cat2.alcoholFree, .item-col.compact-listing .key .cat3.alcoholFree {
   display: block;
   background-color: #f58d17 !important;
 }
-.event-col.compact-listing .key .tod.club, .event-col.compact-listing .key .cat2.club, .event-col.compact-listing .key .cat3.club {
+.item-col.compact-listing .key .tod.club, .item-col.compact-listing .key .cat2.club, .item-col.compact-listing .key .cat3.club {
   display: block;
   background-color: #7acad3 !important;
 }
-.event-col.compact-listing .key .tod.family, .event-col.compact-listing .key .cat2.family, .event-col.compact-listing .key .cat3.family {
+.item-col.compact-listing .key .tod.family, .item-col.compact-listing .key .cat2.family, .item-col.compact-listing .key .cat3.family {
   display: block;
   background-color: #ee6f7c !important;
 }
-.event-col.compact-listing .key .tod.free, .event-col.compact-listing .key .cat2.free, .event-col.compact-listing .key .cat3.free {
+.item-col.compact-listing .key .tod.free, .item-col.compact-listing .key .cat2.free, .item-col.compact-listing .key .cat3.free {
   display: block;
   background-color: #c0d17f !important;
 }
-.event-col.compact-listing .key .tod.platinum, .event-col.compact-listing .key .tod.platinumX, .event-col.compact-listing .key .cat2.platinum, .event-col.compact-listing .key .cat2.platinumX, .event-col.compact-listing .key .cat3.platinum, .event-col.compact-listing .key .cat3.platinumX {
+.item-col.compact-listing .key .tod.platinum, .item-col.compact-listing .key .tod.platinumX, .item-col.compact-listing .key .cat2.platinum, .item-col.compact-listing .key .cat2.platinumX, .item-col.compact-listing .key .cat3.platinum, .item-col.compact-listing .key .cat3.platinumX {
   display: block;
   background-color: #999999 !important;
 }
-.event-col.compact-listing .key .tod.ticketed, .event-col.compact-listing .key .cat2.ticketed, .event-col.compact-listing .key .cat3.ticketed {
+.item-col.compact-listing .key .tod.ticketed, .item-col.compact-listing .key .cat2.ticketed, .item-col.compact-listing .key .cat3.ticketed {
   display: block;
   background-color: #e84253 !important;
 }
-.event-col.compact-listing .key .tod.signUp, .event-col.compact-listing .key .cat2.signUp, .event-col.compact-listing .key .cat3.signUp {
+.item-col.compact-listing .key .tod.signUp, .item-col.compact-listing .key .cat2.signUp, .item-col.compact-listing .key .cat3.signUp {
   display: block;
   background-color: #95ad3d !important;
 }
-.event-col.compact-listing .event-card-small {
+.item-col.compact-listing .content-card-small {
   height: auto;
 }
-.event-col.compact-listing:hover .card-img-top {
+.item-col.compact-listing:hover .card-img-top {
   pointer-events: auto;
   position: absolute;
   width: 100%;
@@ -9619,14 +9761,14 @@ address > span {
   opacity: 1;
   background-position: center center !important;
 }
-.event-col.compact-listing:hover .card-block {
+.item-col.compact-listing:hover .card-block {
   top: 0;
   padding-top: 20px;
 }
-.event-col.compact-listing:hover .description button {
+.item-col.compact-listing:hover .description button {
   bottom: 0px;
 }
-.event-col.compact-listing:hover .description a {
+.item-col.compact-listing:hover .description a {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -9634,59 +9776,59 @@ address > span {
   display: block;
   z-index: 999;
 }
-.event-col.compact-listing:hover .key {
+.item-col.compact-listing:hover .key {
   top: -30px !important;
 }
-.event-col.compact-listing:hover .key .cat2 {
+.item-col.compact-listing:hover .key .cat2 {
   left: 70px;
 }
-.event-col.compact-listing:hover .key .cat2.empty + .cat3 {
+.item-col.compact-listing:hover .key .cat2.empty + .cat3 {
   left: 70px;
 }
-.event-col.compact-listing:hover .key .cat3 {
+.item-col.compact-listing:hover .key .cat3 {
   left: 120px;
 }
-.event-col.compact-listing:hover .key .tod, .event-col.compact-listing:hover .key .cat2, .event-col.compact-listing:hover .key .cat3 {
+.item-col.compact-listing:hover .key .tod, .item-col.compact-listing:hover .key .cat2, .item-col.compact-listing:hover .key .cat3 {
   background-image: none;
   width: 40px;
   height: 40px;
 }
-.event-col.compact-listing:hover .key .tod.night, .event-col.compact-listing:hover .key .cat2.night, .event-col.compact-listing:hover .key .cat3.night {
+.item-col.compact-listing:hover .key .tod.night, .item-col.compact-listing:hover .key .cat2.night, .item-col.compact-listing:hover .key .cat3.night {
   background-image: url("/assets/icons/moon_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.day, .event-col.compact-listing:hover .key .cat2.day, .event-col.compact-listing:hover .key .cat3.day {
+.item-col.compact-listing:hover .key .tod.day, .item-col.compact-listing:hover .key .cat2.day, .item-col.compact-listing:hover .key .cat3.day {
   background-image: url("/assets/icons/sun.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.main, .event-col.compact-listing:hover .key .cat2.main, .event-col.compact-listing:hover .key .cat3.main {
+.item-col.compact-listing:hover .key .tod.main, .item-col.compact-listing:hover .key .cat2.main, .item-col.compact-listing:hover .key .cat3.main {
   background-image: url("/assets/icons/star_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.liveMusic, .event-col.compact-listing:hover .key .cat2.liveMusic, .event-col.compact-listing:hover .key .cat3.liveMusic {
+.item-col.compact-listing:hover .key .tod.liveMusic, .item-col.compact-listing:hover .key .cat2.liveMusic, .item-col.compact-listing:hover .key .cat3.liveMusic {
   background-image: url("/assets/icons/guitar_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.alcoholFree, .event-col.compact-listing:hover .key .cat2.alcoholFree, .event-col.compact-listing:hover .key .cat3.alcoholFree {
+.item-col.compact-listing:hover .key .tod.alcoholFree, .item-col.compact-listing:hover .key .cat2.alcoholFree, .item-col.compact-listing:hover .key .cat3.alcoholFree {
   background-image: url("/assets/icons/no_alcohol.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.club, .event-col.compact-listing:hover .key .cat2.club, .event-col.compact-listing:hover .key .cat3.club {
+.item-col.compact-listing:hover .key .tod.club, .item-col.compact-listing:hover .key .cat2.club, .item-col.compact-listing:hover .key .cat3.club {
   background-image: url("/assets/icons/dancing_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.family, .event-col.compact-listing:hover .key .cat2.family, .event-col.compact-listing:hover .key .cat3.family {
+.item-col.compact-listing:hover .key .tod.family, .item-col.compact-listing:hover .key .cat2.family, .item-col.compact-listing:hover .key .cat3.family {
   background-image: url("/assets/icons/family_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.free, .event-col.compact-listing:hover .key .cat2.free, .event-col.compact-listing:hover .key .cat3.free {
+.item-col.compact-listing:hover .key .tod.free, .item-col.compact-listing:hover .key .cat2.free, .item-col.compact-listing:hover .key .cat3.free {
   background-image: url("/assets/icons/free.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.platinum, .event-col.compact-listing:hover .key .cat2.platinum, .event-col.compact-listing:hover .key .cat3.platinum {
+.item-col.compact-listing:hover .key .tod.platinum, .item-col.compact-listing:hover .key .cat2.platinum, .item-col.compact-listing:hover .key .cat3.platinum {
   background-image: url("/assets/icons/platX.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.platinumX, .event-col.compact-listing:hover .key .cat2.platinumX, .event-col.compact-listing:hover .key .cat3.platinumX {
+.item-col.compact-listing:hover .key .tod.platinumX, .item-col.compact-listing:hover .key .cat2.platinumX, .item-col.compact-listing:hover .key .cat3.platinumX {
   background-image: url("/assets/icons/platPlatX.svg") !important;
   border-radius: 20px;
   width: 60px;
 }
-.event-col.compact-listing:hover .key .tod.ticketed, .event-col.compact-listing:hover .key .cat2.ticketed, .event-col.compact-listing:hover .key .cat3.ticketed {
+.item-col.compact-listing:hover .key .tod.ticketed, .item-col.compact-listing:hover .key .cat2.ticketed, .item-col.compact-listing:hover .key .cat3.ticketed {
   background-image: url("/assets/icons/ticket_filled.svg") !important;
 }
-.event-col.compact-listing:hover .key .tod.signUp, .event-col.compact-listing:hover .key .cat2.signUp, .event-col.compact-listing:hover .key .cat3.signUp {
+.item-col.compact-listing:hover .key .tod.signUp, .item-col.compact-listing:hover .key .cat2.signUp, .item-col.compact-listing:hover .key .cat3.signUp {
   background-image: url("/assets/icons/add_user_filled.svg") !important;
 }
 

@@ -229,7 +229,7 @@ nav.nav {
 			padding-left:20px;
 		}
 		input#header-search[type=search] {
-			background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search.svg) no-repeat 16px 16px;
+			background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search.svg) no-repeat 16px 16px;
 			background-size: 25px;
 			padding: 16px;
 			width: 55px;
@@ -242,14 +242,14 @@ nav.nav {
 			z-index: 1;
 
 			&:hover {
-				background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+				background: $u-red  url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
 				background-size: 25px;
 				cursor: pointer;
 				height: 60px;
 			}
 
 			&:focus {
-				background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+				background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 20px;
 				border: 1px solid $u-grey;
 				width: 350px;
 				padding-left: 40px;
@@ -296,7 +296,7 @@ nav.nav {
 	right: 40px;
 
 	input#header-search[type=search] {
-		background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+		background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
 		background-size: 25px;
 		padding: 16px;
 		width: 55px;
@@ -313,13 +313,13 @@ nav.nav {
 			display: none;
 		}
 		&:hover {
-			background: $u-red  url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 16px;
+			background: $u-red  url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 16px;
 			background-size: 25px;
 			cursor: pointer;
 			height: 60px;
 		}
 		&:focus {
-			background: url(http://www.thestudentsunion.co.uk/assets/site_resources/search-white.svg) no-repeat 16px 20px;
+			background: url(http://www.thestudentsunion.co.uk/corners/corners/assets/site_resources/search-white.svg) no-repeat 16px 20px;
 			border: 1px solid $u-grey;
 			width: 350px;
 			padding-left: 40px;

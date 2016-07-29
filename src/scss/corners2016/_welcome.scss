@@ -26,7 +26,7 @@ body.welcome-page {
 		left:0;
 
 		background-size:cover;
-		background-image: url('../img/tri-pattern-left.png');
+		background-image: url('/assets/img/tri-pattern-left.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
 	}	
@@ -40,7 +40,7 @@ body.welcome-page {
 		left:0;
 
 		background-size:cover;
-		background-image: url('../img/tri-pattern-right.png');
+		background-image: url('/assets/img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
 
@@ -175,7 +175,7 @@ body.welcome-page {
 			text-align: center;
 
 			&:before {
-				background: #40373f;
+				background: $u-grey;
 			    bottom: 0;
 			    content: "";
 			    position: absolute;
@@ -265,7 +265,7 @@ body.welcome-page {
 
 	/* Section: Events */
 
-	section#events {
+	section#events, section#news-list  {
 		position: relative;
 		@extend %g-sky-green-light ;
 	}
@@ -380,7 +380,7 @@ body.welcome-page {
 					}
 				}
 				&:after {
-				    background: $u-sky-d40;
+				    background: $u-grey;
 				    bottom: 0;
 				    content: "";
 				    position: absolute;
@@ -477,9 +477,60 @@ body.welcome-page.event-page {
 	@include media-breakpoint-down(md) {		
 		section#events {
 			& .search .search-bar {
-				margin-top: 10px;
-				float:left;
+				margin: 10px 0px;
+				float: left;
+				display: block;
+				width: 100%;
 			}	
 		}	
 	}
+}
+
+
+// News Page 
+
+/* Start: Event Page */
+body.welcome-page.news-page {
+
+	section#banner {
+		height: 30vh;
+		position: relative;
+		margin-top: 100px;
+		@extend %g-brand-spectrum ;
+		overflow:hidden;
+
+		span.intro-text {
+			font-size:$font-size-lg;
+			font-weight: 900;
+		}
+	}
+
+	section#social-signup {
+		.sign-up {
+			background: $u-sky-d40;
+			&:before {
+				background:$u-sky-d40;
+			}
+		}
+	}
+	section:last-of-type {
+	    padding-bottom: 0!important;
+	}
+	section#social-signup {
+		.sign-up {
+			background: $u-sky-d40;
+			&:before {
+				background:$u-sky-d40;
+			}
+		}
+	}
+
+	section#news-list {
+		.search {
+			.search-bar {
+				float:none!important;
+			}
+		}
+	}
+
 }

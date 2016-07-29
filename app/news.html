@@ -37,8 +37,8 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
-    <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col compact-listing"  onclick="">
+    <script id="news-template-card" type="text/x-handlebars-template">
+      <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
@@ -52,20 +52,16 @@
           </div>
           <div class="card-block">
             <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
-            <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
+            <div class="date">{{ dateFormat StartDate format="ddd D" }}</div>
             <h4 class="card-title">{{Title}}</h4>
             <div class="location">{{Location}}</div>                            
           </div>
             
           <div class="description">
-            <span><p>{{Description}}</p></span>
+            <span><p>{{{Leader}}}</p></span>
            
-           {{#if HasTickets}}
-           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Buy tickets</button></a>
-            
-            {{else}}
-            <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Find out more</button></a>            
-            {{/if}}
+           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Read more</button></a>
+           
           </div>
         </div>                  
       </div>
@@ -92,7 +88,7 @@
     <meta name="theme-color" content="#ffffff">
 
   </head>
-  <body class="welcome-page event-page">
+  <body class="welcome-page news-page">
     <div id="sidebar-wrapper">
       <div class="sidebar-toggle-top toggled">
           <span class="toggle-bar"></span>
@@ -215,7 +211,7 @@
                 <div class="row">
                   <div class="col-lg-6 col-lg-offset-3">
                     <span class="intro-text">
-                      <p>Throughout September we have range events to welcome you to life at UWE Bristol. We have 200<sup>+</sup> events, use the filters to find what suits you.</p>
+                      <p>Keep in loop with the latest news and blog posts.</p>
                     </span>          
                   </div>
                   
@@ -225,58 +221,25 @@
           </div>
       </section>
 
-      <section id="events">
+      <section id="news-list">
      <div class="bg-pattern-left"></div>
        <div class="container pos-rel">
 
-          <div id="event-list">
+          <div id="news-list">
             <div class="search">
                 <div class="search-bar">
                   <span class="input-wrap input-search">
                     <input class="filter input-field class" type="search" value="" required="" id="search" />
                     <label class="input-label" for="search">
-                      <span class="input-label-content">Search for events</span>
+                      <span class="input-label-content">Search for news</span>
                     </label>
                   </span>
-                </div>
-                
-                <button class="day filter main-filter" data-filter="day">Day</button>
-                <button class="night filter main-filter" data-filter="night">Night</button>
-                <button class="main filter main-filter" data-filter="main">Main</button>
-
-                <div class="location-filters dropdown">
-                  <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
-                    Location: <span class="current-placeholder">All</span>
-                  </button>
-                  <div class="dropdown-menu">
-                    <span class="filter location-filter dropdown-item" data-location="all">All</span>
-                    <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
-                    <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
-                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>              </div>
-                </div>
-
-                <div class="catagory-filters dropdown">
-                  <button class="filter dropdown-toggle" type="button" id="dropdownCatagory" data-toggle="dropdown" data-current="" aria-haspopup="true" aria-expanded="false">
-                    Catagory: <span class="current-placeholder">All</span>
-                  </button>
-                  <div class="dropdown-menu">
-                    <span class="filter catagory-filter dropdown-item" data-catagory="all">All</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubsSociety">Clubs and Society</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubNight">Club Night</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="Free">Free</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
-                 </div>
-                </div>            
+                </div>         
             </div>
 
             <div id="loader">Loading...</div>
             <!-- Placeholder for events listings template -->
-            <div id="event-listings-card" class="list"></div>
+            <div id="news-listings" class="list"></div>
           </div>
           
           
@@ -477,14 +440,14 @@
             //wait for page to load
             $(document).ready(function(){
               // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#event-template-card').html();
+              var raw_template_card = $('#news-template-card').html();
               // Compile that into an handlebars template
               var template_card = Handlebars.compile(raw_template_card);
               // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#event-listings-card");
+              var placeHolderCard = $("#news-listings");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
@@ -545,24 +508,6 @@
           </script>
 
           
-          
-          <script src="assets/js/holmes.js"></script>
-          <script type="text/javascript">
-          $( window ).load(function() {
-            holmes({
-              input: '.search input',
-              find: '.event-col',
-              instant: true,
-              placeholder: '<h3 class="super-header">no results</h3>',
-              class: {
-                  // (optional) class to add to matched elements
-                  visible: 'visible',
-                  // (optional) class to add to non-matched elements
-                  hidden: 'hidden'
-                }
-            });
-          });
-          </script>
 
           <script src="assets/js/scripts.min.js"></script>
 

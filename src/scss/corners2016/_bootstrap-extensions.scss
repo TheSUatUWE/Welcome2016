@@ -16,7 +16,9 @@
 	}
 }
 
-
+.dropdown-menu {
+	z-index: 9999;
+}
 // Card 
 .card {
 	border-radius:0;
@@ -72,6 +74,7 @@
 	color:#fff;
 	padding:5px 8px;
 	border-radius:3px;
+	pointer-events:none;
 
 }
 

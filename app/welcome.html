@@ -38,13 +38,13 @@
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 event-col"  onclick="">
+      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
           <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
         </div>
-        <div class="card event-card-small shadow-1 {{#each Types}}{{this}} {{/each}}">
+        <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}">
         <div class="types">{{#each Types}}{{this}} {{/each}}</div>
           <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
 <!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
@@ -571,25 +571,7 @@
             });
           </script>
 
-          
-          
-          <script src="assets/js/holmes.js"></script>
-          <script type="text/javascript">
-          $( window ).load(function() {
-            holmes({
-              input: '.search input',
-              find: '.event-col',
-              instant: true,
-              placeholder: '<h3 class="super-header">no results</h3>',
-              class: {
-                  // (optional) class to add to matched elements
-                  visible: 'visible',
-                  // (optional) class to add to non-matched elements
-                  hidden: 'hidden'
-                }
-            });
-          });
-          </script>
+  
 
           <script src="assets/js/scripts.min.js"></script>
 
