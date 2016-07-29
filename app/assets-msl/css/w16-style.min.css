@@ -8033,7 +8033,7 @@ body.welcome-page .bg-pattern-left {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-size: contain;
+  background-size: cover;
   background-image: url("../img/tri-pattern-left.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -8044,7 +8044,7 @@ body.welcome-page .bg-pattern-right {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-size: contain;
+  background-size: cover;
   background-image: url("../img/tri-pattern-right.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -8276,7 +8276,7 @@ body.welcome-page section#uwe-get-ready {
     margin: 1em 0 0;
   }
   body.welcome-page section#social-signup .sign-up:after {
-    background: #40373f;
+    background: #2c7e88;
     bottom: 0;
     content: "";
     position: absolute;
@@ -8310,6 +8310,35 @@ body.welcome-page.event-page section#banner span.intro-text {
   font-size: 1.25rem;
   font-weight: 900;
 }
+body.welcome-page.event-page section:last-of-type {
+  padding-bottom: 0 !important;
+}
+body.welcome-page.event-page section#events input#search {
+  width: 300px;
+}
+body.welcome-page.event-page section#events .search .filter.catagory-filter[data-catagory='liveMusic'] {
+  color: #009a5b;
+}
+body.welcome-page.event-page section#events .search .filter.catagory-filter[data-catagory='liveMusic']:hover {
+  color: #fff;
+  background: #009a5b;
+}
+body.welcome-page.event-page section#giag {
+  position: relative;
+  height: 200px;
+}
+body.welcome-page.event-page section#social-signup .sign-up {
+  background: #2c7e88;
+}
+body.welcome-page.event-page section#social-signup .sign-up:before {
+  background: #2c7e88;
+}
+@media (max-width: 991px) {
+  body.welcome-page.event-page section#events .search .search-bar {
+    margin-top: 10px;
+    float: left;
+  }
+}
 
 /*
 *
@@ -8325,6 +8354,7 @@ section#events .search {
 section#events .search .filter {
   height: 40px;
   padding: 7px 12px;
+  border-radius: .25em;
   background: #fff;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
@@ -8353,12 +8383,12 @@ section#events .search .search-bar {
 section#events .search .dropdown {
   display: inline-block;
 }
-section#events .search > button > object.icon {
+section#events .search .filter-list > button > object.icon {
   height: 30px;
   margin-bottom: -12px;
   padding-left: 10px;
 }
-section#events .search > button.night {
+section#events .search .filter-list > button.night {
   background-color: #fff;
   background-image: url("/assets/icons/moon_filled.svg");
   background-size: 30px;
@@ -8366,11 +8396,11 @@ section#events .search > button.night {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button.night:hover, section#events .search > button.night.active {
+section#events .search .filter-list > button.night:hover, section#events .search .filter-list > button.night.active {
   background-color: #a0d9e0;
   color: #40373f;
 }
-section#events .search > button.day {
+section#events .search .filter-list > button.day {
   background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
   background-size: 30px;
@@ -8378,11 +8408,11 @@ section#events .search > button.day {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button.day:hover, section#events .search > button.day.active {
+section#events .search .filter-list > button.day:hover, section#events .search .filter-list > button.day.active {
   background-color: #ffe44d;
   color: #40373f;
 }
-section#events .search > button.main {
+section#events .search .filter-list > button.main {
   background-color: #fff;
   background-image: url("/assets/icons/star_filled.svg");
   background-size: 30px;
@@ -8390,7 +8420,7 @@ section#events .search > button.main {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search > button.main:hover, section#events .search > button.main.active {
+section#events .search .filter-list > button.main:hover, section#events .search .filter-list > button.main.active {
   background-color: #adc459;
   color: #40373f;
 }
@@ -8515,7 +8545,7 @@ address > span {
           transition: all .5s ease;
 }
 .card .card-title {
-  margin: 5px 0 0 0;
+  margin: 1px 0 0 0;
 }
 .card .card-image {
   width: 33.3333333%;

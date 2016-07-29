@@ -336,13 +336,11 @@
         var locationFilterBtn = $(this);
         var locationFilter = $(this).attr('data-location');
         var filterText = locationFilterBtn.html();
-        
-
         // Add active class to the clicked filter
         $(this).toggleClass('active');
         // Remove active class from all other filters
         $('.location-filter').not( $(this) ).removeClass('active');
-        // 
+        
 
         // Loop through each event card
         $('.event-col').each(function(){

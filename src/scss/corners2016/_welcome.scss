@@ -25,7 +25,7 @@ body.welcome-page {
 		bottom:0;
 		left:0;
 
-		background-size:contain;
+		background-size:cover;
 		background-image: url('../img/tri-pattern-left.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
@@ -39,7 +39,7 @@ body.welcome-page {
 		bottom:0;
 		left:0;
 
-		background-size:contain;
+		background-size:cover;
 		background-image: url('../img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
@@ -380,7 +380,7 @@ body.welcome-page {
 					}
 				}
 				&:after {
-				    background: #40373f;
+				    background: $u-sky-d40;
 				    bottom: 0;
 				    content: "";
 				    position: absolute;
@@ -432,8 +432,54 @@ body.welcome-page.event-page {
 			font-size:$font-size-lg;
 			font-weight: 900;
 		}
+	}
 
-		
+	section:last-of-type {
+	    padding-bottom: 0!important;
+	}
 
+	section#events {
+		input#search {
+		    width: 300px;
+		}
+
+		// Catagory colors
+		.search {
+			.filter.catagory-filter {
+				&[data-catagory='giag'] {
+					
+				}
+				&[data-catagory='liveMusic'] {
+					color:$u-green;
+					
+					&:hover {
+						color:#fff;
+						background: $u-green;
+					}
+				}
+			}
+		}
+			
+	}
+	section#giag {
+		position: relative;
+		height: 200px;
+	}
+	section#social-signup {
+		.sign-up {
+			background: $u-sky-d40;
+			&:before {
+				background:$u-sky-d40;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {		
+		section#events {
+			& .search .search-bar {
+				margin-top: 10px;
+				float:left;
+			}	
+		}	
 	}
 }
