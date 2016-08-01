@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    <title>The Students' Union: Welcome</title>
+    <title>Welcome 2016: Platinum</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- Begin Facebook tags -->
-    <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
+    <meta property="og:title" content="Welcome 2016: Events" />
     <meta property="og:url" content="welcome.thestudentsunion.co.uk" />
     <meta property="og:description" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="URL to image for thumbnail (square 350x350px)" />
@@ -37,35 +37,30 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
-    <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
+    <script id="news-template-card" type="text/x-handlebars-template">
+      <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
           <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
         </div>
-        <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}">
+        <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
         <div class="types">{{#each Types}}{{this}} {{/each}}</div>
           <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
 <!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
  -->            <div class="card-img-gradient"></div>
           </div>
           <div class="card-block">
-            
-            <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
+            <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
             <h4 class="card-title">{{Title}}</h4>
             <div class="location">{{Location}}</div>                            
           </div>
             
           <div class="description">
-            <span><p>{{Description}}</p></span>
+            <span><p>{{{Leader}}}</p></span>
            
-           {{#if HasTickets}}
-           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Buy tickets</button></a>
-            
-            {{else}}
-            <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Find out more</button></a>            
-            {{/if}}
+           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Read more</button></a>
+           
           </div>
         </div>                  
       </div>
@@ -92,7 +87,8 @@
     <meta name="theme-color" content="#ffffff">
 
   </head>
-  <body class="welcome-page">
+  <body class="welcome-page platinum-page">
+
     <div id="page-wrapper">
 
       <header class="header" role="banner">
@@ -105,9 +101,8 @@
             <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
           </a>
         </div>
-        <nav class="nav navbar-fixed-top" role="navigation">
+        <nav class="nav navbar-fixed-top shadow-1" role="navigation">
         <div class="mobile-menu-bg"></div>
-        
 
         <div class="mobile-menu-toggle">
           <span class="toggle-bar"></span>
@@ -115,12 +110,10 @@
           <span class="toggle-bar"></span>
         </div>
 
-
         <div class="mobile-menu-circle shadow-5"></div>
 
-        
-          <ul class="nav nav-inline">
-            <li class="nav-item">
+           <ul class="nav nav-inline">
+            <li class="nav-item open">
               <a class="nav-link" href="#">Platinum</a>
             </li><!-- 
              --><li class="nav-item">
@@ -140,56 +133,75 @@
       </header>
       
       <main class="main" role="main">
-      <section id="landing">
-        <div class="bg-pattern-left"></div>
-          <div class="container-fluid landing-welcome ">
-            <div class="row">
-              <div class="col-lg-12">
-                <h1 class="super-super-header fc-white text-xs-center">Welcome</h1>
-              </div>
-              <div class="col-sm-6 col-sm-offset-3">
-                 <p class="fc-sky-d50">Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates.</p>
-                 <div class="stats-wrapper fc-sky-d50">
-                   <div class="stat">
-                     <span>1</span>
-                     <p>Month</p>
-                   </div>
-                   <div class="stat">
-                     <span>200<sup>+</sup></span>
-                     <p>Events</p>
-                   </div>
-                   <div class="stat">
-                     <span>15,000<sup>+</sup></span>
-                     <p>Attendants</p>
-                   </div>
-                   <div class="stat">
-                     <span>30<sup>+</sup></span>
-                     <p>Locations</p>
-                   </div>
-                 </div>                   
-               </div>
-              
-            </div>
+     
+    <section id="platinum">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="super-header">Platinum Passes</h1>
+            <p>The Platinum passes get you queue jump to all included events as well as discounts in the bar and shop. The best part is you can save money all year round.</p>
           </div>
-          <a class="find-out-more" href="#student-leaders"><button class="sky-d50 down-arrow" role="button">Find out more</button></a>   
-      </section>
-
-      <section id="student-leaders" onclick="">
-      <div class="bg-pattern-left"></div>
-      <div class="grad-overlay"></div>
-        <div class="v-align-wrapper">
-          <div class="v-align">
-            <div class="container">
-              <div class="row">
-                <h2>Welcome from your student leaders</h2>
-                <p>Find out about who has been elected to represent you and how to get in touch.</p>
-                <a href="http://www.thestudentsunion.co.uk/representation/presidents/"><button class="grey right-arrow">Find out more</button></a>
+          <div class="col-md-5">
+            <div class="card text-xs-center platinum-card">
+              <div class="card-header">
+                <h2 class="card-title super-header">Platinum</h2>
+              </div>
+              <div class="card-block">
                 
+                  <ul>
+                    <li>Main events<br><small>Free Entry - Queue Jump</small></li>
+                    <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
+                    <li>£5 off Hoodie</li>
+                    <li>10% off Food and Hot Drinks</li>
+                    <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
+Jersey Lily and The White Lion</small></li>
+                    <li>Pryzm<br><small>Free entry every Thursday</small></li>
+                    <li>SWX <br><small>£1 off entry Friday and Saturday</small></li>
+                    <li>Discounted Summer Ball 2017 Ticket</li>
+                    <li>Drinks deals all year round </li>
+                  </ul>
+              </div>
+              <div class="card-footer text-muted">
+                <a href="#"><h3>£79</h3>
+                <small>Over £200 of savings</small></a>
               </div>
             </div>
           </div>
-        </div> 
-      </section>
+
+          <div class="col-md-7">
+            <div class="card text-xs-center platinum-card">
+              <div class="card-header">
+                <h2 class="card-title super-header">Platinum Extra</h2>
+              </div>
+              <div class="card-block">
+                
+                  <ul>
+                    <li>Freshers events<br><small>Free Entry - Queue Jump</small></li>
+                    <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
+                    <li>£5 off Hoodie</li>
+                    <li>10% off Food and Hot Drinks</li>
+                    <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
+Jersey Lily and The White Lion
+</small></li>
+                    <li>Pryzm<br><small>Free entry every Thursday</small></li>
+                    <li>SWX <br><small>£1 off entry Friday and Saturday</small></li>
+                    <li>Discounted Summer Ball 2017 Ticket</li>
+                    <li>Drinks deals all year round </li>
+                  </ul>
+              </div>
+              <div class="card-footer text-muted">
+                <a href="#"><h3>£99</h3>
+                <small>£250 of savings</small></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
+    </section>
+
+     
       
       <section id="social-signup">
 
@@ -289,80 +301,8 @@
             </div>
           </div>
         </div>
-      </section>      
-
-      <section id="news" class="text-xs-right" onclick="">
-      <div class="bg-pattern-right"></div>
-      <div class="grad-overlay"></div>
-        <div class="v-align-wrapper">
-          <div class="v-align">
-            <div class="container">
-              <div class="row">
-                <h2>Moving in: Our top tips</h2>
-                <p>Living with new people can be daunting, here's our advice.</p>
-                <a href="http://www.thestudentsunion.co.uk/news/article/21646/Moving-in-with-new-Housemates-Our-Top-Tips/"><button class="grey right-arrow">Find out more</button></a>
-              </div>
-            </div>
-          </div>
-        </div> 
-      </section>
-      
-      <section id="events">
-      <div class="bg-pattern-left"></div>
-        <div class="container pos-rel">
-          <h2>Events</h2>
-          <p>Below are just a few events so you know what to expect. The full programme will be available soon.</p>
-          <!-- <div class="search">
-            <button class="day filter" data-event-type="w16-day">Day</button>
-            <button class="night filter" data-event-type="w16-night">Night</button>
-            <button class="main filter" data-event-type="w16-main">Main</button>
-            <select class="location filter" name="Location" id="">
-              <option value="" default selected>Location</option>
-              <option value="bower">Bower Ashton</option>
-              <option value="glenside">Glenside</option>
-              <option value="frenchay">Frenchay</option>
-              <option value="city">City Centre</option>
-            </select>
-            <select class="categories filter" name="Location" id="">
-              <option value="" default selected>Categories</option>
-              <option value="bower">Bower Ashton</option>
-              <option value="glenside">Glenside</option>
-              <option value="frenchay">Frenchay</option>
-              <option value="city">City Center</option>
-            </select>
-            <div class="search-bar">
-              <span class="h4">Search</span>
-              <input class="filter" type="search" placeholder="Search events" required="">
-            </div>
-          </div> -->
-          <div id="loader">Loading...</div>
-          <!-- Placeholder for events listings template -->
-          <div id="event-listings-card"></div>
-          
-          
-
-      </section>
-
-      <section id="uwe-get-ready">
-        <div class="v-align-wrapper">
-          <div class="v-align">
-            <div class="container">
-              <a href="http://www1.uwe.ac.uk/students/getready" target="_blank">
-                <button class="grey right-arrow">For more information see the UWE 'Get ready' page</button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-       
-      </section>
-      
+      </section>            
       </main>
-
-      <aside class="sidebar" role="complementary">
-
-      </aside>
-
       <footer class="footer" role="contentinfo">
       <object type="image/svg+xml" data="/assets/img/footer-angle.svg" class="footer-angle"></object>
       <div class="v-align-wrapper">
@@ -455,15 +395,34 @@
             //wait for page to load
             $(document).ready(function(){
               // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#event-template-card').html();
+              var raw_template_card = $('#news-template-card').html();
               // Compile that into an handlebars template
               var template_card = Handlebars.compile(raw_template_card);
               // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#event-listings-card");
+              var placeHolderCard = $("#news-listings");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
                 
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
+                // Multiple Loops for test purposes
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
+                $.each(data,function(index,element){                
+                  // Generate the HTML for each post
+                  var html = template_card(element);
+                  // Render the posts into the page
+                  placeHolderCard.append(html);
+                });
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
                   var html = template_card(element);
@@ -503,7 +462,7 @@
             });
           </script>
 
-  
+          
 
           <script src="assets/js/scripts.min.js"></script>
 

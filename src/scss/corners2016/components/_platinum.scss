@@ -14,3 +14,55 @@
     text-transform: uppercase;
     color:#fff;
 }
+
+.platinum-card {
+	color:$u-grey;
+	
+	.card-block {
+		padding:0;
+	}
+
+	ul {
+		list-style-type: none;
+		font-size:$font-size-sm;
+		padding:0;
+		margin:0;
+		li {
+		    padding: 10px;
+		    border-bottom: 1px solid $u-platinum;
+			&:first-of-type {
+			}
+		    &:last-of-type {
+		    	border-bottom:none;
+		    }
+		    &:hover {
+		    	background:$u-platinum;
+		    	color:#fff;
+		    }
+		}
+	}
+	.card-header {
+		background: $u-platinum;
+		border:none;
+	}
+	.card-footer {
+		border:none;
+		@extend %g-sky-green-light;
+		padding:0;
+		transition:all 5s ease;
+
+		a {
+			color:$u-grey;
+			display: block;
+			padding: 0.75rem 1.25rem;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:hover {
+			@extend %g-sky-green;
+		}
+	}
+}

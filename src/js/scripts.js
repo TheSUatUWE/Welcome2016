@@ -313,7 +313,7 @@
         $('.main-filter').not( $(this) ).removeClass('active');
         
         // Loop through each event card
-        $('.event-col').each(function(){
+        $('.item-col').each(function(){
           // Declare event card variables
           var event = $(this);
           var card = event.children('.card');

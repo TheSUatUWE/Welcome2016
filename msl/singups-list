@@ -1,0 +1,19 @@
+$( document ).ready(function() {
+    $('#ctl00_signups_upSignup').addClass('list');
+    $('dl.msl_signup>dt').addClass('event-name');
+});
+function initListJs() {
+      // Options for List.js
+      var options = {
+          valueNames: [ 'event-name', 'card-title', 'types', 'location', 'date' ],
+          sortClass: 'sort',
+          listContainer: '.event-list',
+          list: 'list'
+      };
+      // Create new List 
+      var signupList = new List('event-list', options);    
+    }
+
+window.onload = function() {
+      initListJs();
+    };

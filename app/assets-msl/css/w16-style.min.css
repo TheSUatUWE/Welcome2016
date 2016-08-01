@@ -5990,7 +5990,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Lime Variations */
 /* Orange Variations */
 /* Gradients */
-body.welcome-page section#events, body.welcome-page section#news-list {
+body.welcome-page section#events, body.welcome-page section#news-list, .platinum-card .card-footer {
   background: #c6e8ed;
   /* Old browsers */
   /* FF3.6-15 */
@@ -5999,6 +5999,18 @@ body.welcome-page section#events, body.welcome-page section#news-list {
   background: linear-gradient(to top right, #c6e8ed 0%, #9affd6 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l50',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.platinum-card .card-footer:hover {
+  background: #a0d9e0;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
+  background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -6077,7 +6089,7 @@ body.welcome-page section#student-leaders .grad-overlay {
     background-position: 0% 15%;
   }
 }
-body.welcome-page section#platinum, .platinum-pass {
+.platinum-pass {
   background: -webkit-linear-gradient(321deg, #887b8a, #989898, #818181, #6e6e6e, #7e7f8a);
   background: linear-gradient(129deg, #887b8a, #989898, #818181, #6e6e6e, #7e7f8a);
   background-size: 1000% 1000%;
@@ -8016,7 +8028,6 @@ body.welcome-page {
   /* Section: Student Leaders */
   /* Section: News */
   /* Section: Social + Signup */
-  /* Section: Platinum */
   /* Section: Social */
   /* Section: Events */
   /* Section: UWE Get Ready */
@@ -8172,23 +8183,6 @@ body.welcome-page section#social-signup .social #snapchat-code {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-body.welcome-page section#platinum {
-  height: 300px;
-  padding: 50px 0px;
-  position: relative;
-  color: #fff;
-}
-body.welcome-page section#platinum h1, body.welcome-page section#platinum h2, body.welcome-page section#platinum h3 {
-  margin: 0;
-}
-body.welcome-page section#platinum span.platinum-pass {
-  border: 2px solid;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: AlternateGothicLT-No2;
-  font-size: 5em;
-  text-transform: uppercase;
-}
 body.welcome-page section#social {
   height: 300px;
   padding: 50px 0px;
@@ -8342,7 +8336,8 @@ body.welcome-page.event-page section#social-signup .sign-up:before {
   }
 }
 
-/* Start: Event Page */
+/* End: Event Page */
+/* Start: News Page */
 body.welcome-page.news-page section#banner {
   height: 30vh;
   position: relative;
@@ -8362,14 +8357,41 @@ body.welcome-page.news-page section#social-signup .sign-up:before {
 body.welcome-page.news-page section:last-of-type {
   padding-bottom: 0 !important;
 }
-body.welcome-page.news-page section#social-signup .sign-up {
-  background: #2c7e88;
-}
-body.welcome-page.news-page section#social-signup .sign-up:before {
-  background: #2c7e88;
-}
 body.welcome-page.news-page section#news-list .search .search-bar {
   float: none !important;
+}
+
+/* Start: Event Page */
+body.welcome-page.platinum-page {
+  /* Section: Platinum */
+}
+body.welcome-page.platinum-page section#social-signup .sign-up {
+  background: #205a61;
+}
+body.welcome-page.platinum-page section#social-signup .sign-up:before {
+  background: #205a61;
+}
+body.welcome-page.platinum-page section#platinum {
+  background: #40373f;
+  min-height: 100vh;
+  margin-top: 100px;
+  padding: 50px 0px;
+  position: relative;
+  color: #fff;
+}
+body.welcome-page.platinum-page section#platinum h1, body.welcome-page.platinum-page section#platinum h2, body.welcome-page.platinum-page section#platinum h3 {
+  margin: 0;
+}
+body.welcome-page.platinum-page section#platinum span.platinum-pass {
+  border: 2px solid;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: AlternateGothicLT-No2;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+body.welcome-page.platinum-page section:last-of-type {
+  padding-bottom: 0 !important;
 }
 
 /*
@@ -8572,7 +8594,6 @@ address > span {
 }
 
 .card {
-  border-radius: 0;
   border: none;
   margin: 1rem 0;
 }
@@ -9515,10 +9536,10 @@ address > span {
   background-color: #c0d17f !important;
 }
 .item-col:hover .key > .platinum {
-  background-color: #999999 !important;
+  background-color: #c7c7c7 !important;
 }
 .item-col:hover .key > .platinumX {
-  background-color: #999999 !important;
+  background-color: #c7c7c7 !important;
 }
 .item-col:hover .key > .ticketed {
   background-color: #e84253 !important;
@@ -9619,14 +9640,14 @@ address > span {
   background-image: url("/assets/icons/platX.svg");
 }
 .item-col .key .tod.platinum:hover, .item-col .key .cat2.platinum:hover, .item-col .key .cat3.platinum:hover {
-  background-color: #999999 !important;
+  background-color: #c7c7c7 !important;
 }
 .item-col .key .tod.platinumX, .item-col .key .cat2.platinumX, .item-col .key .cat3.platinumX {
   background-color: #fff;
   background-image: url("/assets/icons/platPlatX.svg");
 }
 .item-col .key .tod.platinumX:hover, .item-col .key .cat2.platinumX:hover, .item-col .key .cat3.platinumX:hover {
-  background-color: #999999 !important;
+  background-color: #c7c7c7 !important;
 }
 .item-col .key .tod.ticketed, .item-col .key .cat2.ticketed, .item-col .key .cat3.ticketed {
   background-color: #fff;
@@ -9737,7 +9758,7 @@ address > span {
 }
 .item-col.compact-listing .key .tod.platinum, .item-col.compact-listing .key .tod.platinumX, .item-col.compact-listing .key .cat2.platinum, .item-col.compact-listing .key .cat2.platinumX, .item-col.compact-listing .key .cat3.platinum, .item-col.compact-listing .key .cat3.platinumX {
   display: block;
-  background-color: #999999 !important;
+  background-color: #c7c7c7 !important;
 }
 .item-col.compact-listing .key .tod.ticketed, .item-col.compact-listing .key .cat2.ticketed, .item-col.compact-listing .key .cat3.ticketed {
   display: block;
@@ -9860,6 +9881,48 @@ select {
   font-size: 5em;
   text-transform: uppercase;
   color: #fff;
+}
+
+.platinum-card {
+  color: #40373f;
+}
+.platinum-card .card-block {
+  padding: 0;
+}
+.platinum-card ul {
+  list-style-type: none;
+  font-size: 0.875rem;
+  padding: 0;
+  margin: 0;
+}
+.platinum-card ul li {
+  padding: 10px;
+  border-bottom: 1px solid #c7c7c7;
+}
+.platinum-card ul li:last-of-type {
+  border-bottom: none;
+}
+.platinum-card ul li:hover {
+  background: #c7c7c7;
+  color: #fff;
+}
+.platinum-card .card-header {
+  background: #c7c7c7;
+  border: none;
+}
+.platinum-card .card-footer {
+  border: none;
+  padding: 0;
+  -webkit-transition: all 5s ease;
+          transition: all 5s ease;
+}
+.platinum-card .card-footer a {
+  color: #40373f;
+  display: block;
+  padding: 0.75rem 1.25rem;
+}
+.platinum-card .card-footer a:hover {
+  text-decoration: none;
 }
 
 /*
