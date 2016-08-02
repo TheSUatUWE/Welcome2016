@@ -17,9 +17,12 @@
 
 .platinum-card {
 	color:$u-grey;
+	box-shadow: rgba(255,255,255,0.2) 0px 0px 30px 0px;
+	transition: all .25s ease;
 	
 	.card-block {
 		padding:0;
+		color:$u-grey-l20;
 	}
 
 	ul {
@@ -36,23 +39,24 @@
 		    	border-bottom:none;
 		    }
 		    &:hover {
-		    	background:$u-platinum;
-		    	color:#fff;
+		    	background:$u-platinum-l40;
 		    }
 		}
 	}
 	.card-header {
+		color:$u-platinum-l30;
 		background: $u-platinum;
-		border:none;
+		border-bottom:1px solid $u-platinum-d10;
 	}
 	.card-footer {
-		border:none;
-		@extend %g-sky-green-light;
+		color:$u-platinum-l30;
+		border-top:1px solid $u-platinum-d10;
+		background:$u-platinum;
 		padding:0;
 		transition:all 5s ease;
 
 		a {
-			color:$u-grey;
+			color:$u-platinum-d30;
 			display: block;
 			padding: 0.75rem 1.25rem;
 
@@ -60,9 +64,9 @@
 				text-decoration: none;
 			}
 		}
+	}
 
-		&:hover {
-			@extend %g-sky-green;
-		}
+	&:hover {
+		box-shadow: rgba(255,255,255,0.5) 0px 0px 50px 0px;
 	}
 }

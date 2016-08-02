@@ -62,18 +62,18 @@ nav.nav {
 	display: inline-block;
 	position: fixed;
 	top:0;
-	background: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255,0.5);
 	width: 100%;
 	height: 100px;
 	z-index: 9999;
 
-	transition:all .25s ease ;
+	transition:background 4s ease ;
 	
 	& > * {
 		transition:all .25s ease ;
 
 	}
-	
+
 	.nav-item {
 		font-size:1.5em;
 		line-height: 100px;	
@@ -278,8 +278,6 @@ nav.nav {
 			fill:$u-grey;
 			}	
 		}
-
-		
 
 		.sidebar-toggle-top .toggle-bar, .mobile-menu-toggle .toggle-bar {
 			background: $u-grey;

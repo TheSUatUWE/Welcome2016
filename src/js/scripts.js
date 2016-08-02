@@ -6,8 +6,11 @@
 
 
     // Init Headspace 
-    var headspace = new Headspace(document.querySelector('nav'));
-
+    // var headspace = new Headspace(document.querySelector('nav'));
+    Headspace(document.querySelector('nav'), { // can use factory method instead of `new`
+      startOffset: 1,                            // default: height of element
+      tolerance: 5,                               // default: 8
+    })
     // Smooth Scroll
 
     $( document ).ready(function() {
@@ -345,7 +348,7 @@
         
 
         // Loop through each event card
-        $('.event-col').each(function(){
+        $('.item-col').each(function(){
           // Declare event card variables
           var event = $(this);
           var card = event.children('.card');
@@ -388,7 +391,7 @@
         // 
 
         // Loop through each event card
-        $('.event-col').each(function(){
+        $('.item-col').each(function(){
           // Declare event card variables
           var event = $(this);
           var card = event.children('.card');

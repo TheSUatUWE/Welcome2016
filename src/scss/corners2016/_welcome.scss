@@ -7,7 +7,15 @@
 /* Start: Landing Page */
 body.welcome-page {
 
-	/* Globals */ 
+	/* Globals */
+	section:last-of-type {
+	    padding-bottom: 0!important;
+	}
+	section:first-of-type {
+		padding:150px 0px 50px!important;
+	}
+
+
 
 	.mobile-menu-toggle {
 		padding: 35px 30px;
@@ -29,6 +37,20 @@ body.welcome-page {
 		background-image: url('/assets/img/tri-pattern-left.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
+	}
+
+	.bg-pattern-left-top {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		bottom:0;
+		left:0;
+
+		background-size:contain;
+		background-image: url('/assets/img/tri-pattern-left-top.png');
+		background-repeat: no-repeat;
+		background-position: top left;
 	}	
 
 	.bg-pattern-right {
@@ -46,7 +68,8 @@ body.welcome-page {
 
 
 	}	
-
+	
+	
 	/* Section: Landing*/
 
 	section#landing {
@@ -54,7 +77,6 @@ body.welcome-page {
 		position: relative;
 		background: $u-sky;
 		overflow:hidden;
-		padding:200px 0px 100px 0px;
 
 		span.intro-text {
 			font-size:$font-size-lg;
@@ -170,12 +192,12 @@ body.welcome-page {
 		}
 
 		.sign-up {
-			background:$u-grey;
+			background:$u-sky-d40;
 			color:#fff;
 			text-align: center;
 
 			&:before {
-				background: $u-grey;
+				background: $u-sky-d40;
 			    bottom: 0;
 			    content: "";
 			    position: absolute;
@@ -263,17 +285,37 @@ body.welcome-page {
 
 
 	//  Media Queries
-	@include media-breakpoint-down(sm) { 
+	@include media-breakpoint-down(sm) {
+
+			body.welcome-page section:first-of-type {
+			    padding: 150px 0px 100px !important;
+			} 
 			section#landing {
-				height: 100vh;
-			    padding-bottom: 20px;
+
+				.stats-wrapper {
+					text-align: center;
+					
+					& > .stat {
+						
+						border-right: 1px solid;
+						
+						& > p {
+							font-size:0.7em;
+						}
+
+						& > span {
+						    font-size: 1.5rem;
+						    line-height: 2rem;
+						}
+					}
+				}
 
 			    .spacer {
 			    	margin-left:1em!important;
 			    }	
 
 				.landing-welcome {
-				    padding-top: 5em;
+				    padding-top: 1em;
 				}
 
 				span.intro-text {
@@ -323,6 +365,11 @@ body.welcome-page {
 				}
 			}
 
+			footer.footer {
+			    height: auto;
+			    margin-top: 40px;
+			}
+
 		}
 		
 	@include media-breakpoint-down(md) {
@@ -359,7 +406,7 @@ body.welcome-page {
 					}
 				}
 				&:after {
-				    background: $u-grey;
+				    background: $u-sky-d40;
 				    bottom: 0;
 				    content: "";
 				    position: absolute;
@@ -400,24 +447,10 @@ body.welcome-page {
 /* Start: Event Page */
 body.welcome-page.event-page {
 
-	section#banner {
-		height: 30vh;
-		position: relative;
-		margin-top: 100px;
-		@extend %g-brand-spectrum ;
-		overflow:hidden;
 
-		span.intro-text {
-			font-size:$font-size-lg;
-			font-weight: 900;
-		}
-	}
-
-	section:last-of-type {
-	    padding-bottom: 0!important;
-	}
 
 	section#events {
+		padding-top:150px;
 		input#search {
 		    width: 300px;
 		}
@@ -429,12 +462,6 @@ body.welcome-page.event-page {
 					
 				}
 				&[data-catagory='liveMusic'] {
-					color:$u-green;
-					
-					&:hover {
-						color:#fff;
-						background: $u-green;
-					}
 				}
 			}
 		}
@@ -443,14 +470,6 @@ body.welcome-page.event-page {
 	section#giag {
 		position: relative;
 		height: 200px;
-	}
-	section#social-signup {
-		.sign-up {
-			background: $u-sky-d40;
-			&:before {
-				background:$u-sky-d40;
-			}
-		}
 	}
 
 	@include media-breakpoint-down(md) {		
@@ -468,12 +487,11 @@ body.welcome-page.event-page {
 /* End: Event Page */
 
 /* Start: News Page */
-body.welcome-page.news-page {
+body.welcome-page.blog-page {
 
 	section#banner {
 		height: 30vh;
 		position: relative;
-		margin-top: 100px;
 		@extend %g-brand-spectrum ;
 		overflow:hidden;
 
@@ -481,18 +499,6 @@ body.welcome-page.news-page {
 			font-size:$font-size-lg;
 			font-weight: 900;
 		}
-	}
-
-	section#social-signup {
-		.sign-up {
-			background: $u-sky-d40;
-			&:before {
-				background:$u-sky-d40;
-			}
-		}
-	}
-	section:last-of-type {
-	    padding-bottom: 0!important;
 	}
 
 	section#news-list {
@@ -507,21 +513,12 @@ body.welcome-page.news-page {
 
 /* Start: Event Page */
 body.welcome-page.platinum-page {
-	section#social-signup {
-		.sign-up {
-			background: $u-sky-d50;
-			&:before {
-				background:$u-sky-d50;
-			}
-		}
-	}
-	/* Section: Platinum */
+
 
 	section#platinum {
 		background:$u-grey;
 		min-height:100vh;
-		margin-top:100px;
-		padding:50px 0px;
+		padding:150px 0px 50px;
 		position: relative;
 		color:#fff;
 
@@ -538,7 +535,12 @@ body.welcome-page.platinum-page {
 		    text-transform: uppercase;
 		}
 	}
-	section:last-of-type {
-	    padding-bottom: 0!important;
+}
+
+/* Start: page Page */
+body.welcome-page.faq-page {
+	section#faq-list {
+		@extend %g-sky-green-light ;
 	}
 }
+/* End: FAQ Page */
