@@ -115,7 +115,78 @@ body.welcome-page {
 
 	}
 
-	
+	/* Section: Get Started */
+	section#get-started {
+		@extend %g-brand-spectrum;
+		padding:150px 0;
+		.card.get-started {
+		    height: 300px;
+		    background-color:rgba(255, 255, 255, 0.3);
+		    text-align: center;
+
+		    &:hover {
+		    	background-color:rgba(0, 0, 0, 0.3);
+		    }
+		}
+		a {
+			color:$u-grey;
+
+			&:hover {
+				color:#fff;
+			}
+		}
+
+		.bg-placeholder {
+		    position: absolute;
+		    height: 100%;
+		    width: 100%;
+		    bottom: 0;
+		    left: 0;
+		    z-index: 0;
+			transition:all 1s ease;
+			opacity:0;
+			background-size:contain;
+			background-image: url('/assets/img/tri-pattern-left.png');
+			background-repeat: no-repeat;
+			background-position: bottom left;
+
+			&.events {
+				transition:all 1s ease;
+				background-color:$u-sky;
+			}
+
+			&.faq {
+				transition:all 1s ease;
+				background-color:$u-red;
+			}
+
+			&.blog {
+				transition: all .25s ease;
+				background-color:$u-yellow;
+			}
+
+			&.platinum {
+				transition: all .25s ease;
+				background-color:$u-grey;
+			}
+
+			&.freshersFair {
+				transition: all .25s ease;
+				background-color:$u-red;
+			}
+			&.closingFestival {
+				transition: all .25s ease;
+				background-color:$u-green;
+			}
+			&.UWE {
+				transition: all .25s ease;
+				background-color:#E30613;
+			}
+
+
+
+		}
+	}
 	/* Section: Student Leaders */
 	section#student-leaders {
 		
@@ -188,7 +259,7 @@ body.welcome-page {
 			height:170px;
 		}
 		& .container > .row > *[class*='col-'] {
-			height: 300px;
+			height: 400px;
 		}
 
 		.sign-up {
@@ -265,7 +336,7 @@ body.welcome-page {
 	}
 
 	/* Section: Events */
-
+	
 	section#events, section#news-list  {
 		position: relative;
 		@extend %g-sky-green-light ;
@@ -289,7 +360,8 @@ body.welcome-page {
 
 			body.welcome-page section:first-of-type {
 			    padding: 150px 0px 100px !important;
-			} 
+			}
+
 			section#landing {
 
 				.stats-wrapper {
@@ -454,6 +526,11 @@ body.welcome-page.event-page {
 		input#search {
 		    width: 300px;
 		}
+		
+		#event-list {
+			margin-top: 2em;
+		}
+
 
 		// Catagory colors
 		.search {
@@ -465,8 +542,16 @@ body.welcome-page.event-page {
 				}
 			}
 		}
-			
+		.card.featured-event {
+		    height: 200px;
+		    text-align: center;
+
+		    & > .v-align-wrapper {
+		    	padding:20px;
+		    }
+		}		
 	}
+
 	section#giag {
 		position: relative;
 		height: 200px;
@@ -486,25 +571,18 @@ body.welcome-page.event-page {
 
 /* End: Event Page */
 
-/* Start: News Page */
+/* Start: Blog Page */
 body.welcome-page.blog-page {
 
-	section#banner {
-		height: 30vh;
-		position: relative;
-		@extend %g-brand-spectrum ;
-		overflow:hidden;
-
-		span.intro-text {
-			font-size:$font-size-lg;
-			font-weight: 900;
-		}
-	}
-
-	section#news-list {
-		.search {
-			.search-bar {
-				float:none!important;
+	section#blog-list {
+		@extend %g-yellow-orange;
+		.search-wrapper {
+			padding-top:0;
+			& > .search {
+				padding-top:0;
+				.search-bar {
+					float:none!important;
+				}
 			}
 		}
 	}
@@ -537,10 +615,10 @@ body.welcome-page.platinum-page {
 	}
 }
 
-/* Start: page Page */
+/* Start: FAQ Page */
 body.welcome-page.faq-page {
 	section#faq-list {
-		@extend %g-sky-green-light ;
+		@extend %g-red-grey ;
 	}
 }
 /* End: FAQ Page */

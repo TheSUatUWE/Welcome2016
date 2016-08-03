@@ -5991,7 +5991,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Orange Variations */
 /* Platibum Variations */
 /* Gradients */
-body.welcome-page section#events, body.welcome-page section#news-list, body.welcome-page.faq-page section#faq-list {
+body.welcome-page section#events, body.welcome-page section#news-list {
   background: #c6e8ed;
   /* Old browsers */
   /* FF3.6-15 */
@@ -6003,7 +6003,7 @@ body.welcome-page section#events, body.welcome-page section#news-list, body.welc
   /* IE6-9 fallback on horizontal gradient */
 }
 
-body.content-page .header-banner, body.welcome-page section#social {
+body.content-page .header-banner, body.welcome-page section#social, body.welcome-page.blog-page section#blog-list {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
   background-image: #ffe44d;
   /* Old browsers */
@@ -6013,6 +6013,19 @@ body.content-page .header-banner, body.welcome-page section#social {
   background-image: linear-gradient(45deg, #ffe44d 0%, #f58d17 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+body.welcome-page.faq-page section#faq-list {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40373f+0,e84253+100 */
+  background-image: #40373f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(45deg, #40373f 0%, #e84253 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(45deg, #40373f 0%, #e84253 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40373f', endColorstr='#e84253',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -6049,7 +6062,7 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-.bg-brand-animation, body.welcome-page.blog-page section#banner {
+.bg-brand-animation, body.welcome-page section#get-started {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background-size: 1200% 1200%;
@@ -7053,7 +7066,7 @@ canvas {
 }
 
 .pos-rel {
-  position: relative;
+  position: relative !important;
 }
 
 a.svg-link {
@@ -8014,6 +8027,7 @@ body.content-page .header-banner h1 {
 body.welcome-page {
   /* Globals */
   /* Section: Landing*/
+  /* Section: Get Started */
   /* Section: Student Leaders */
   /* Section: News */
   /* Section: Social + Signup */
@@ -8099,6 +8113,73 @@ body.welcome-page section#landing .stats-wrapper .stat span {
 body.welcome-page section#landing .stats-wrapper .stat p, body.welcome-page section#landing .stats-wrapper .stat span {
   margin: 0;
 }
+body.welcome-page section#get-started {
+  padding: 150px 0;
+}
+body.welcome-page section#get-started .card.get-started {
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+body.welcome-page section#get-started .card.get-started:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body.welcome-page section#get-started a {
+  color: #40373f;
+}
+body.welcome-page section#get-started a:hover {
+  color: #fff;
+}
+body.welcome-page section#get-started .bg-placeholder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  opacity: 0;
+  background-size: contain;
+  background-image: url("/assets/img/tri-pattern-left.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+body.welcome-page section#get-started .bg-placeholder.events {
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #a0d9e0;
+}
+body.welcome-page section#get-started .bg-placeholder.faq {
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #e84253;
+}
+body.welcome-page section#get-started .bg-placeholder.blog {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  background-color: #ffe44d;
+}
+body.welcome-page section#get-started .bg-placeholder.platinum {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  background-color: #40373f;
+}
+body.welcome-page section#get-started .bg-placeholder.freshersFair {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  background-color: #e84253;
+}
+body.welcome-page section#get-started .bg-placeholder.closingFestival {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  background-color: #009a5b;
+}
+body.welcome-page section#get-started .bg-placeholder.UWE {
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
+  background-color: #E30613;
+}
 body.welcome-page section#student-leaders {
   height: 300px;
   position: relative;
@@ -8149,7 +8230,7 @@ body.welcome-page section#social-signup .sign-up-wrap {
   height: 170px;
 }
 body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
-  height: 300px;
+  height: 400px;
 }
 body.welcome-page section#social-signup .sign-up {
   background: #2c7e88;
@@ -8321,6 +8402,16 @@ body.welcome-page.event-page section#events {
 body.welcome-page.event-page section#events input#search {
   width: 300px;
 }
+body.welcome-page.event-page section#events #event-list {
+  margin-top: 2em;
+}
+body.welcome-page.event-page section#events .card.featured-event {
+  height: 200px;
+  text-align: center;
+}
+body.welcome-page.event-page section#events .card.featured-event > .v-align-wrapper {
+  padding: 20px;
+}
 body.welcome-page.event-page section#giag {
   position: relative;
   height: 200px;
@@ -8335,17 +8426,14 @@ body.welcome-page.event-page section#giag {
 }
 
 /* End: Event Page */
-/* Start: News Page */
-body.welcome-page.blog-page section#banner {
-  height: 30vh;
-  position: relative;
-  overflow: hidden;
+/* Start: Blog Page */
+body.welcome-page.blog-page section#blog-list .search-wrapper {
+  padding-top: 0;
 }
-body.welcome-page.blog-page section#banner span.intro-text {
-  font-size: 1.25rem;
-  font-weight: 900;
+body.welcome-page.blog-page section#blog-list .search-wrapper > .search {
+  padding-top: 0;
 }
-body.welcome-page.blog-page section#news-list .search .search-bar {
+body.welcome-page.blog-page section#blog-list .search-wrapper > .search .search-bar {
   float: none !important;
 }
 
@@ -8369,20 +8457,20 @@ body.welcome-page.platinum-page section#platinum span.platinum-pass {
   text-transform: uppercase;
 }
 
-/* Start: page Page */
+/* Start: FAQ Page */
 /* End: FAQ Page */
 /*
 *
 * Events
 * 
 */
-section#events, section#news-list {
+section#events, section#news-list, .search-wrapper {
   padding: 20px 0px;
 }
-section#events .search, section#news-list .search {
+section#events .search, section#news-list .search, .search-wrapper .search {
   padding: 20px 0px;
 }
-section#events .search .filter, section#news-list .search .filter {
+section#events .search .filter, section#news-list .search .filter, .search-wrapper .search .filter {
   height: 40px;
   padding: 7px 12px;
   border-radius: .25em;
@@ -8390,36 +8478,36 @@ section#events .search .filter, section#news-list .search .filter {
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
-section#events .search .filter.dropdown, section#news-list .search .filter.dropdown {
+section#events .search .filter.dropdown, section#news-list .search .filter.dropdown, .search-wrapper .search .filter.dropdown {
   padding: 7px 45px 7px 12px;
 }
-section#events .search .filter.active, section#news-list .search .filter.active {
+section#events .search .filter.active, section#news-list .search .filter.active, .search-wrapper .search .filter.active {
   background-color: #40373f;
   color: #fff;
 }
-section#events .search .filter.location, section#news-list .search .filter.location {
+section#events .search .filter.location, section#news-list .search .filter.location, .search-wrapper .search .filter.location {
   border: none;
   background-color: #fff;
 }
-section#events .search .filter.location:hover, section#news-list .search .filter.location:hover {
+section#events .search .filter.location:hover, section#news-list .search .filter.location:hover, .search-wrapper .search .filter.location:hover {
   background-color: #009a5b;
 }
-section#events .search .filter.location:hover option, section#news-list .search .filter.location:hover option {
+section#events .search .filter.location:hover option, section#news-list .search .filter.location:hover option, .search-wrapper .search .filter.location:hover option {
   display: block;
   margin-top: 0;
 }
-section#events .search .search-bar, section#news-list .search .search-bar {
+section#events .search .search-bar, section#news-list .search .search-bar, .search-wrapper .search .search-bar {
   float: right;
 }
-section#events .search .dropdown, section#news-list .search .dropdown {
+section#events .search .dropdown, section#news-list .search .dropdown, .search-wrapper .search .dropdown {
   display: inline-block;
 }
-section#events .search button > object.icon, section#news-list .search button > object.icon {
+section#events .search button > object.icon, section#news-list .search button > object.icon, .search-wrapper .search button > object.icon {
   height: 30px;
   margin-bottom: -12px;
   padding-left: 10px;
 }
-section#events .search button.night, section#news-list .search button.night {
+section#events .search button.night, section#news-list .search button.night, .search-wrapper .search button.night {
   background-color: #fff;
   background-image: url("/assets/icons/moon_filled.svg");
   background-size: 30px;
@@ -8427,11 +8515,11 @@ section#events .search button.night, section#news-list .search button.night {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search button.night:hover, section#events .search button.night.active, section#news-list .search button.night:hover, section#news-list .search button.night.active {
+section#events .search button.night:hover, section#events .search button.night.active, section#news-list .search button.night:hover, section#news-list .search button.night.active, .search-wrapper .search button.night:hover, .search-wrapper .search button.night.active {
   background-color: #a0d9e0;
   color: #40373f;
 }
-section#events .search button.day, section#news-list .search button.day {
+section#events .search button.day, section#news-list .search button.day, .search-wrapper .search button.day {
   background-color: #fff;
   background-image: url("/assets/icons/sun.svg");
   background-size: 30px;
@@ -8439,11 +8527,11 @@ section#events .search button.day, section#news-list .search button.day {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search button.day:hover, section#events .search button.day.active, section#news-list .search button.day:hover, section#news-list .search button.day.active {
+section#events .search button.day:hover, section#events .search button.day.active, section#news-list .search button.day:hover, section#news-list .search button.day.active, .search-wrapper .search button.day:hover, .search-wrapper .search button.day.active {
   background-color: #ffe44d;
   color: #40373f;
 }
-section#events .search button.main, section#news-list .search button.main {
+section#events .search button.main, section#news-list .search button.main, .search-wrapper .search button.main {
   background-color: #fff;
   background-image: url("/assets/icons/star_filled.svg");
   background-size: 30px;
@@ -8451,14 +8539,14 @@ section#events .search button.main, section#news-list .search button.main {
   background-position: 90%;
   padding-right: 40px !important;
 }
-section#events .search button.main:hover, section#events .search button.main.active, section#news-list .search button.main:hover, section#news-list .search button.main.active {
+section#events .search button.main:hover, section#events .search button.main.active, section#news-list .search button.main:hover, section#news-list .search button.main.active, .search-wrapper .search button.main:hover, .search-wrapper .search button.main.active {
   background-color: #adc459;
   color: #40373f;
 }
-section#events .types, section#news-list .types {
+section#events .types, section#news-list .types, .search-wrapper .types {
   display: none;
 }
-section#events #event-listings-card, section#events #news-listings, section#news-list #event-listings-card, section#news-list #news-listings {
+section#events #event-listings-card, section#events #news-listings, section#news-list #event-listings-card, section#news-list #news-listings, .search-wrapper #event-listings-card, .search-wrapper #news-listings {
   display: none;
   margin-left: -0.9375rem;
   margin-right: -0.9375rem;

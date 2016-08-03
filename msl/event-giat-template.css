@@ -1,0 +1,137 @@
+.event-image { 
+  float: right; 
+  width: 180px;
+  height: 120px;
+  overflow: hidden; 
+}
+.event-image img { width:180px; }
+.event-details { 
+  float: left; 
+  width: 435px;
+  min-height: 120px;
+}
+.event-details h1 {
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    font-weight:normal;
+    padding-bottom: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0em;
+}
+p.event-time {font-size:1.2em; margin-bottom: 0em;padding: 0.5em 0.5em 0.25em;}
+p.event-location {font-size:1.2em; margin-bottom: 1em;padding: 0.25em 0.5em 0.5em}
+
+.event-description { clear: both; }
+
+.key-icon {
+  width:20px;
+  margin-right: 10px;
+}
+
+.widget.similar-events > div {
+    display: inline-table;
+    width: 49%;
+    height: 250px;
+    background: #f3f3f3;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+dd.event_location {
+    margin-bottom: 10px;
+}
+
+div.widget.similar-events > div > dl > dt > a > span.event_image > img {
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+div.widget.similar-events > div > dl > dt > a > span {
+  font-size:1.5em;
+}
+dd.event_description {
+    clear: both;
+}
+dd.event_time {
+    margin-top: 30px;
+}
+.signup-btn h3 {
+    padding-bottom: 5px;
+    border-bottom: none;
+}
+
+.signup-btn {
+      background-image: url('/assets/ents/templates/Forward-white.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 20px center;
+    padding-right: 50px;
+    transition:all .25s ease;
+}
+
+
+.event_tickets h3 {
+  font-family: NewsGothicBT-Roman,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    border: none;
+    position: relative;
+    font-size: 1.2em;
+    padding: 10px 10px 0px 10px;
+    overflow: visible;
+}
+
+.signup-btn:hover {
+  background-color:#ee6f7c;
+  background-position: right 10px center;
+}
+
+.giat-banner {
+    display: block;
+    padding: 1.5em;
+    background-color: #f58d17;
+    background-image: url('/assets/ents/templates/Forward.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 20px center;
+    margin: 20px 0px;
+    transition: all .25s ease;
+}
+
+a.giat-btn {
+  color:#40373f;
+}
+
+a.giat-btn:hover {
+  text-decoration:  none;  
+}
+
+
+.giat-banner:hover {
+    background-position: right 5px center;
+    background-color:#d07309;
+}
+
+input#ctl00_Main_ctl09_rptTickets_ctl00_btnAddTicket {
+    font-family: AlternateGothicLT-No2, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url('/assets/ents/templates/Forward-white.svg')!important;
+    background-repeat: no-repeat!important;
+    background-size: 20px!important;
+    background-position: right 20px center!important;
+    padding-right: 50px;
+    transition:all .25s ease!important;
+    
+}
+
+input#ctl00_Main_ctl09_rptTickets_ctl00_btnAddTicket:hover {
+    background-color:#ee6f7c!important;
+  background-position: right 10px center!important;
+
+}

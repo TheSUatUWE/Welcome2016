@@ -121,7 +121,7 @@
         
           <ul class="nav nav-inline">
             <li class="nav-item">
-              <a class="nav-link" href="/platinum.html">Platinum</a>
+              <a class="nav-link" href="/platinum.html">Platinum Passes</a>
             </li><!-- 
              --><li class="nav-item">
               <a class="nav-link" href="/blog.html">Blog</a>
@@ -130,7 +130,7 @@
               <a class="nav-link" href="/faq.html">FAQ</a>
             </li><!-- 
              --><li class="nav-item nav-item-highlight sky">
-              <a class="nav-link fc-white" href="/programme.html">Programme </a>
+              <a class="nav-link fc-white" href="/events.html">Events</a>
             </li>
           </ul>
           
@@ -171,7 +171,101 @@
               
             </div>
           </div>
-          <a class="find-out-more" href="#student-leaders"><button class="sky-d50 down-arrow" role="button">Find out more</button></a>   
+          <a class="find-out-more" href="#get-started"><button class="sky-d50 down-arrow" role="button">Get started</button></a>   
+      </section>
+
+      <section id="get-started" class="pos-rel">
+      <div class="bg-pattern-left-top"></div>
+      <div class="bg-placeholder"></div>
+        <div class="container">
+          <div class="row">
+
+            <a href="/programme.html">
+              <div class="col-sm-6 get-started-col" data-bg="events">
+                <div class="card get-started shadow-1">
+                  <div class="v-align-wrapper">
+                    <div class="v-align">
+                      <div class="card-block">
+                        <h3>Events</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="col-sm-3 get-started-col" data-bg="faq">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>FAQ</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 get-started-col" data-bg="blog">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>Blog</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 get-started-col" data-bg="platinum">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>Platinum Passes</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 get-started-col" data-bg="freshersFair">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>Freshers Fair</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 get-started-col" data-bg="closingFestival">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>Closing Festival</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 get-started-col" data-bg="UWE">
+              <div class="card get-started shadow-1">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="card-block">
+                        <h3>UWE: Get Ready</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
       <!-- <section id="student-leaders" onclick="">
@@ -394,12 +488,30 @@
 
       </footer>
     </div>
-  
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script>
+      $( document ).ready(function() {
+          var placeholder = $('.bg-placeholder');
+          var card = $('.get-started-col > .card');
+
+          card.mouseover(function(){
+            var cardType = $(this).parent('.get-started-col').attr("data-bg");
+            placeholder.attr('class', ('bg-placeholder '+cardType) );
+            placeholder.css('opacity', '1');
+
+            
+          });
+
+          card.mouseout(function(){
+            placeholder.css('opacity', '0');
+          });
+      }); 
+    </script>
     <script>
       $(document).ready(function(){
         $('#header-slider.owl-carousel').owlCarousel({

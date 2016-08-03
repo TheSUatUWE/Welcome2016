@@ -1,0 +1,89 @@
+.event-image { 
+  float: right; 
+  width: 180px;
+  height: 120px;
+  overflow: hidden; 
+}
+.event-image img { width:180px; }
+.event-details { 
+  float: left; 
+  width: 435px;
+  min-height: 120px;
+}
+.event-details h1 {
+    font-weight:normal; 
+    text-transform: uppercase;
+    font-size: 5em;
+    padding: 0.25em 0 0!important;
+    margin: 0;
+    border-bottom: 0;
+
+}
+p.event-time {font-size:1.2em; margin-bottom: 0em;padding: 0.5em 0.5em 0.25em;}
+p.event-location {font-size:1.2em; margin-bottom: 1em;padding: 0.25em 0.5em 0.5em}
+
+.event-description { clear: both; }
+
+.key-icon {
+  width:20px;
+  margin-right: 10px;
+}
+
+.widget.similar-events > div {
+    display: inline-table;
+    width: 49%;
+    height: 250px;
+    background: #d6d6d6;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+dd.event_location {
+    margin-bottom: 10px;
+}
+
+div.widget.similar-events > div > dl > dt > a > span.event_image > img {
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+div.widget.similar-events > div > dl > dt > a > span {
+  font-size:1.5em;
+}
+dd.event_description {
+    clear: both;
+}
+dd.event_time {
+    margin-top: 30px;
+}
+.signup-btn h3 {
+    padding-bottom: 5px;
+    border-bottom: none;
+}
+
+.event_tickets h3 {
+  font-family: NewsGothicBT-Roman,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    border: none;
+    position: relative;
+    font-size: 1.2em;
+    padding: 10px 10px 0px 10px;
+    overflow: visible;
+    padding-left: 43px;
+}
+
+}
+
+.event_tickets h3:after {
+    content: '';
+    background: url('/assets/ents/templates/ticket_filled.svg');
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
