@@ -19,6 +19,16 @@ $u-sky: #a0d9e0 ;
 $u-platinum:#c7c7c7;
 
 
+/* UWE Red */
+
+$UWE : #E30613;
+$UWE-d10: darken( $UWE, 10% ) ;
+$UWE-d20: darken( $UWE, 20% ) ;
+$UWE-d30: darken( $UWE, 30% ) ;
+$UWE-d40: darken( $UWE, 40% ) ;
+$UWE-d50: darken( $UWE, 50% ) ;
+
+
 /* Red Variations */
 
 $u-red-d10: darken( $u-red, 10% ) ;
@@ -107,6 +117,19 @@ $u-orange-d30 : darken( $u-orange, 30% ) ;
 $u-orange-d40 : darken( $u-orange, 40% ) ;
 $u-orange-d50 : darken( $u-orange, 50% ) ;
 
+/* Yellow Variations */
+
+$u-yellow-l10 : lighten( $u-yellow, 10% ) ;
+$u-yellow-l20 : lighten( $u-yellow, 20% ) ;
+$u-yellow-l30 : lighten( $u-yellow, 30% ) ;
+$u-yellow-l40 : lighten( $u-yellow, 40% ) ;
+$u-yellow-l50 : lighten( $u-yellow, 50% ) ;
+$u-yellow-d10 : darken( $u-yellow, 10% ) ;
+$u-yellow-d20 : darken( $u-yellow, 20% ) ;
+$u-yellow-d30 : darken( $u-yellow, 30% ) ;
+$u-yellow-d40 : darken( $u-yellow, 40% ) ;
+$u-yellow-d50 : darken( $u-yellow, 50% ) ;
+
 /* Platibum Variations */
 $u-platinum-l10 : lighten( $u-platinum, 10% ) ;
 $u-platinum-l20 : lighten( $u-platinum, 20% ) ;
@@ -118,6 +141,7 @@ $u-platinum-d20 : darken( $u-platinum, 20% ) ;
 $u-platinum-d30 : darken( $u-platinum, 30% ) ;
 $u-platinum-d40 : darken( $u-platinum, 40% ) ;
 $u-platinum-d50 : darken( $u-platinum, 50% ) ;
+
 
 /* Gradients */
 

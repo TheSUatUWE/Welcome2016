@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    <title>Welcome 2016: Platinum</title>
+    <title>Welcome 2016: Give It A Go</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- Begin Facebook tags -->
-    <meta property="og:title" content="Welcome 2016: Events" />
+    <meta property="og:title" content="Programme: Welcome 2016" />
     <meta property="og:url" content="welcome.thestudentsunion.co.uk" />
     <meta property="og:description" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="URL to image for thumbnail (square 350x350px)" />
@@ -19,7 +19,7 @@
 
     <!-- Begin Twitter tags -->
     <meta name="twitter:title" content="" />
-    <meta name="twitter:url" content="Welcome 2016: The Students' Union at UWE" />
+    <meta name="twitter:url" content="Programme: Welcome 2016" />
     <meta name="twitter:card" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta name="twitter:image" content="URL to image for thumbnail (square 350x350px)" />
     <!-- End Twitter tags -->
@@ -37,8 +37,8 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
-    <script id="news-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
+    <script id="event-template-card" type="text/x-handlebars-template">
+      <div class="col-xl-3 col-lg-4 col-md-6 item-col compact-listing"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
@@ -52,15 +52,20 @@
           </div>
           <div class="card-block">
             <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
+            <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
             <h4 class="card-title">{{Title}}</h4>
             <div class="location">{{Location}}</div>                            
           </div>
             
           <div class="description">
-            <span><p>{{{Leader}}}</p></span>
+            <span><p>{{Description}}</p></span>
            
-           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Read more</button></a>
-           
+           {{#if HasTickets}}
+           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Buy tickets</button></a>
+            
+            {{else}}
+            <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Find out more</button></a>            
+            {{/if}}
           </div>
         </div>                  
       </div>
@@ -87,7 +92,7 @@
     <meta name="theme-color" content="#ffffff">
 
   </head>
-  <body class="welcome-page platinum-page">
+  <body class="welcome-page event-page">
 
     <div id="page-wrapper">
 
@@ -104,17 +109,17 @@
         <nav class="nav navbar-fixed-top shadow-1" role="navigation">
         <div class="mobile-menu-bg"></div>
 
-        <div class="mobile-menu-toggle">
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-        </div>
+          <div class="mobile-menu-toggle">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </div>
+    
+          <div class="mobile-menu-circle shadow-5"></div>
 
-        <div class="mobile-menu-circle shadow-5"></div>
-
-           <ul class="nav nav-inline">
+          <ul class="nav nav-inline">
             <li class="nav-item">
-              <a class="nav-link" href="/platinum.html">Platinum Passes</a>
+              <a class="nav-link" href="/platinum.html">Platinum</a>
             </li><!-- 
              --><li class="nav-item">
               <a class="nav-link" href="/blog.html">Blog</a>
@@ -122,8 +127,8 @@
              --><li class="nav-item">
               <a class="nav-link" href="/faq.html">FAQ</a>
             </li><!-- 
-             --><li class="nav-item nav-item-highlight sky">
-              <a class="nav-link fc-white" href="/events.html">Events</a>
+             --><li class="nav-item">
+              <a class="nav-link" href="/events.html">Events</a>
             </li>
           </ul>
           
@@ -133,76 +138,67 @@
       </header>
       
       <main class="main" role="main">
-     
-    <section id="platinum">
-    <div class="bg-pattern-left-top"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="super-header">Platinum Passes</h1>
-            <p>The Platinum passes get you queue jump to all included events as well as discounts in the bar and shop. The best part is you can save money all year round.</p>
-            <div class="alert alert-danger" role="alert">
-              <strong>Oh snap!</strong> Platinum passes will be available for purchase Thursday 11 August along with tickets.
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="card text-xs-center platinum-card">
-              <div class="card-header">
-                <h2 class="card-title super-header">Platinum</h2>
-              </div>
-              <div class="card-block">
-                
-                  <ul>
-                    <li>Main events<br><small>Free Entry - Queue Jump</small></li>
-                    <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
-                    <li>£5 off Hoodie</li>
-                    <li>10% off Food and Hot Drinks</li>
-                    <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
-Jersey Lily and The White Lion</small></li>
-                    <li>Pryzm<br><small>Free entry every Thursday</small></li>
-                    <li>SWX Bristol<br><small>£1 off entry Friday and Saturday</small></li>
-                    <li>Discounted Summer Ball 2017 Ticket</li>
-                    <li>Drinks deals all year round </li>
-                  </ul>
-              </div>
-              <div class="card-footer text-muted">
-                <h3>£79</h3>
-                <small>Over £200 of savings</small>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-7">
-            <div class="card text-xs-center platinum-card">
-              <div class="card-header">
-                <h2 class="card-title super-header">Platinum Extra</h2>
-              </div>
-              <div class="card-block">
-                  <ul>
-                    <li>Freshers events<br><small>Free Entry - Queue Jump</small></li>
-                    <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
-                    <li>£5 off Hoodie</li>
-                    <li>10% off Food and Hot Drinks</li>
-                    <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
-Jersey Lily and The White Lion
-</small></li>
-                    <li>Pryzm<br><small>Free entry every Thursday</small></li>
-                    <li>SWX Bristol<br><small>£1 off entry Friday and Saturday</small></li>
-                    <li>Discounted Summer Ball 2017 Ticket</li>
-                    <li>Drinks deals all year round </li>
-                  </ul>
-              </div>
-              <div class="card-footer text-muted">
-                <h3>£99</h3>
-                <small>£250 of savings</small>
-              </div>
+      <section id="events">
+     <div class="bg-pattern-left"></div>
+       <div class="container pos-rel">
+          <h1 class="super-header">Give It A Go</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa adipisci ratione cupiditate, facilis reprehenderit. Corrupti tempore rem in, vero rerum?.</p>
+
+          <div id="event-list">
+            <hr>  
+            <div class="search">
+                <div class="search-bar">
+                  <span class="input-wrap input-search">
+                    <input class="filter input-field class" type="search" value="" required="" id="search" />
+                    <label class="input-label" for="search">
+                      <span class="input-label-content">Search for events</span>
+                    </label>
+                  </span>
+                </div>
+                
+                <button class="day filter main-filter" data-filter="day">Day</button>
+                <button class="night filter main-filter" data-filter="night">Night</button>
+                <button class="main filter main-filter" data-filter="main">Main</button>
+
+                <div class="location-filters dropdown">
+                  <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
+                    Location: <span class="current-placeholder">All</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <span class="filter location-filter dropdown-item" data-location="all">All</span>
+                    <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
+                    <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
+                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>              </div>
+                </div>
+
+                <div class="catagory-filters dropdown">
+                  <button class="filter dropdown-toggle" type="button" id="dropdownCatagory" data-toggle="dropdown" data-current="" aria-haspopup="true" aria-expanded="false">
+                    Catagory: <span class="current-placeholder">All</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <span class="filter catagory-filter dropdown-item" data-catagory="all">All</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="clubsSociety">Clubs and Society</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="clubNight">Club Night</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="Free">Free</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
+                 </div>
+                </div>            
             </div>
+
+            <div id="loader">Loading...</div>
+            <!-- Placeholder for events listings template -->
+            <div id="event-listings-card" class="list"></div>
           </div>
-        </div>
-      </div>
+          
           
 
-    </section>
+      </section>
 
      
       
@@ -398,14 +394,14 @@ Jersey Lily and The White Lion
             //wait for page to load
             $(document).ready(function(){
               // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#news-template-card').html();
+              var raw_template_card = $('#event-template-card').html();
               // Compile that into an handlebars template
               var template_card = Handlebars.compile(raw_template_card);
               // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#news-listings");
+              var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=giat",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
@@ -413,25 +409,7 @@ Jersey Lily and The White Lion
                   // Render the posts into the page
                   placeHolderCard.append(html);
                 });
-                // Multiple Loops for test purposes
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
+                
               });
 
        
@@ -466,6 +444,8 @@ Jersey Lily and The White Lion
           </script>
 
           
+          
+     
 
           <script src="assets/js/scripts.min.js"></script>
 

@@ -5983,12 +5983,14 @@ a.bg-danger:focus, a.bg-danger:hover {
 /*
 * The Students' Union Colour Variables
 */
+/* UWE Red */
 /* Red Variations */
 /* Grey Variations */
 /* Sky Variations */
 /* Green Variations */
 /* Lime Variations */
 /* Orange Variations */
+/* Yellow Variations */
 /* Platibum Variations */
 /* Gradients */
 body.welcome-page section#events, body.welcome-page section#news-list {
@@ -8116,19 +8118,44 @@ body.welcome-page section#landing .stats-wrapper .stat p, body.welcome-page sect
 body.welcome-page section#get-started {
   padding: 150px 0;
 }
+body.welcome-page section#get-started a.card-link {
+  color: #40373f;
+}
+body.welcome-page section#get-started .get-started-col {
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='events']:hover > .get-started {
+  background-color: #e84253;
+  color: #fff;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='faq']:hover > .get-started {
+  background-color: #a0d9e0;
+  color: #fff;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='blog']:hover > .get-started {
+  background-color: #f58d17;
+  color: #fff;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='platinum']:hover > .get-started {
+  background-color: #c7c7c7;
+  color: #fff;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='freshersFair']:hover > .get-started {
+  background-color: #ffe44d;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='closingFestival']:hover > .get-started {
+  background-color: #009a5b;
+  color: #fff;
+}
+body.welcome-page section#get-started .get-started-col[data-bg='UWE']:hover > .get-started {
+  background-color: #E30613;
+  color: #fff;
+}
 body.welcome-page section#get-started .card.get-started {
   height: 300px;
   background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
-}
-body.welcome-page section#get-started .card.get-started:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-body.welcome-page section#get-started a {
-  color: #40373f;
-}
-body.welcome-page section#get-started a:hover {
-  color: #fff;
 }
 body.welcome-page section#get-started .bg-placeholder {
   position: absolute;
@@ -8148,37 +8175,37 @@ body.welcome-page section#get-started .bg-placeholder {
 body.welcome-page section#get-started .bg-placeholder.events {
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
-  background-color: #a0d9e0;
+  background-color: #f39da6;
 }
 body.welcome-page section#get-started .bg-placeholder.faq {
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
-  background-color: #e84253;
+  background-color: #53bac7;
 }
 body.welcome-page section#get-started .bg-placeholder.blog {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
-  background-color: #ffe44d;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #f9bd79;
 }
 body.welcome-page section#get-started .bg-placeholder.platinum {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
-  background-color: #40373f;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #776675;
 }
 body.welcome-page section#get-started .bg-placeholder.freshersFair {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
-  background-color: #e84253;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #e6c300;
 }
 body.welcome-page section#get-started .bg-placeholder.closingFestival {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
-  background-color: #009a5b;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #01ff97;
 }
 body.welcome-page section#get-started .bg-placeholder.UWE {
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
-  background-color: #E30613;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+  background-color: #b1050f;
 }
 body.welcome-page section#student-leaders {
   height: 300px;
@@ -8661,10 +8688,6 @@ address > span {
 .card {
   border: none;
   margin: 1rem 0;
-}
-.card * {
-  -webkit-transition: all .5s ease;
-          transition: all .5s ease;
 }
 .card .card-title {
   margin: 1px 0 0 0;
@@ -9983,14 +10006,12 @@ select {
   color: white;
   border-top: 1px solid #aeaeae;
   background: #c7c7c7;
-  padding: 0;
   -webkit-transition: all 5s ease;
           transition: all 5s ease;
 }
 .platinum-card .card-footer a {
   color: #7b7b7b;
   display: block;
-  padding: 0.75rem 1.25rem;
 }
 .platinum-card .card-footer a:hover {
   text-decoration: none;

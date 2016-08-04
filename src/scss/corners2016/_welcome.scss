@@ -119,21 +119,48 @@ body.welcome-page {
 	section#get-started {
 		@extend %g-brand-spectrum;
 		padding:150px 0;
+
+		a.card-link {
+			color:$u-grey;
+		}
+
+		.get-started-col {
+
+			transition:all 1s ease; 
+
+			&[data-bg='events']:hover > .get-started {
+				background-color:$u-red;
+				color:#fff;
+			}
+			&[data-bg='faq']:hover > .get-started {
+				background-color:$u-sky;
+				color:#fff;
+			}
+			&[data-bg='blog']:hover > .get-started {
+				background-color:$u-orange;
+				color:#fff;
+			}
+			&[data-bg='platinum']:hover > .get-started {
+				background-color:$u-platinum;
+				color:#fff;
+			}
+			&[data-bg='freshersFair']:hover > .get-started {
+				background-color:$u-yellow;
+			}
+			&[data-bg='closingFestival']:hover > .get-started {
+				background-color:$u-green;
+				color:#fff;
+			}
+			&[data-bg='UWE']:hover > .get-started {
+				background-color:$UWE;
+				color:#fff;
+			}
+		}
+
 		.card.get-started {
 		    height: 300px;
 		    background-color:rgba(255, 255, 255, 0.3);
 		    text-align: center;
-
-		    &:hover {
-		    	background-color:rgba(0, 0, 0, 0.3);
-		    }
-		}
-		a {
-			color:$u-grey;
-
-			&:hover {
-				color:#fff;
-			}
 		}
 
 		.bg-placeholder {
@@ -152,35 +179,35 @@ body.welcome-page {
 
 			&.events {
 				transition:all 1s ease;
-				background-color:$u-sky;
+				background-color:$u-red-l20;
 			}
 
 			&.faq {
 				transition:all 1s ease;
-				background-color:$u-red;
+				background-color:$u-sky-d20;
 			}
 
 			&.blog {
-				transition: all .25s ease;
-				background-color:$u-yellow;
+				transition: all 1s ease;
+				background-color:$u-orange-l20;
 			}
 
 			&.platinum {
-				transition: all .25s ease;
-				background-color:$u-grey;
+				transition: all 1s ease;
+				background-color:$u-grey-l20;
 			}
 
 			&.freshersFair {
-				transition: all .25s ease;
-				background-color:$u-red;
+				transition: all 1s ease;
+				background-color:$u-yellow-d20;
 			}
 			&.closingFestival {
-				transition: all .25s ease;
-				background-color:$u-green;
+				transition: all 1s ease;
+				background-color:$u-green-l20;
 			}
 			&.UWE {
-				transition: all .25s ease;
-				background-color:#E30613;
+				transition: all 1s ease;
+				background-color:$UWE-d10;
 			}
 
 

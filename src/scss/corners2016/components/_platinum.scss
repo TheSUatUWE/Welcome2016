@@ -52,13 +52,11 @@
 		color:$u-platinum-l30;
 		border-top:1px solid $u-platinum-d10;
 		background:$u-platinum;
-		padding:0;
 		transition:all 5s ease;
 
 		a {
 			color:$u-platinum-d30;
 			display: block;
-			padding: 0.75rem 1.25rem;
 
 			&:hover {
 				text-decoration: none;
