@@ -59,24 +59,29 @@
                     if (data.result !== 'success') {
                         var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
                         $resultElement.css('color', '#e84253');
+                        $resultElement.delay(6500).fadeOut(250);
 
                         if (data.msg && data.msg.indexOf(' You&#39;re already subscribed') >= 0) {
                             message = 'You&#39;re already subscribed. Thank you.';
-                            $resultElement.css('color', '#e84253');
+                            $resultElement.css({'color': '#e84253', 'background': '#fff'});
+                            $resultElement.delay(6500).fadeOut(250);
                         }
 
                         $resultElement.html(message);
+                        $resultElement.delay(6500).fadeOut(250);
+
 
                     } else {
+                       $resultElement.fadeIn(1000);
                         $resultElement.css({
-                          'color' : '#e84253',
-                          'background': '#fff',
+                          'color' : '#fff',
+                          'background': '#e84253',
                           'display': 'table',
                           'padding': '10px',
-                          'border-radius': '3px'
                         });
                         $resultElement.html('Thank you! We can&#39;t wait to see you in September.<br><small>You will get an email shortly, make sure confirm the subscription in your inbox to get the updates.</small>');
-                         
+                        
+                        $resultElement.delay(6500).fadeOut(250);
 
                          // $form.delay(1000).fadeOut(500, facebookButton);
                     }
@@ -246,6 +251,7 @@
       $('#loader').fadeOut('slow');
       $('#event-listings-card').fadeIn('slow');
       $('#news-listings').fadeIn('slow');
+      eventTOD();
     }
 
     // Add icons to events
@@ -437,7 +443,6 @@
     }
      window.onload = function() {
       eventLoad();
-      eventTOD();
       eventResize();
       initTooltip();
       initListJs();

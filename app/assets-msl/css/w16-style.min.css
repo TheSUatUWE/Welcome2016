@@ -8602,7 +8602,7 @@ footer.footer object#footer-logo {
   width: 200px;
   position: absolute;
   right: 10%;
-  top: -50px;
+  top: -49px;
 }
 footer.footer a {
   color: #fff;
@@ -10124,9 +10124,13 @@ select {
 }
 
 #subscribe-result {
-  position: absolute;
-  font-size: 12px;
+  position: fixed;
   margin-top: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
 }
 
 input {

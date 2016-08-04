@@ -38,7 +38,7 @@
 
     <script src="assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col compact-listing"  onclick="">
+      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
@@ -140,7 +140,7 @@
       <main class="main" role="main">
 
       <section id="events">
-     <div class="bg-pattern-left"></div>
+     <div class="bg-pattern-left-top"></div>
        <div class="container pos-rel">
           <h1 class="super-header">Events</h1>
           <p>Throughout September we have range events to welcome you to life at UWE Bristol. We have 200<sup>+</sup> events, use the filters to find what suits you.</p>
@@ -449,25 +449,6 @@
 
               $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-                // Multiple Loops for test purposes
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
                   var html = template_card(element);
