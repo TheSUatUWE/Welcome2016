@@ -5,46 +5,64 @@
 */
 
 .card.faq {
-	.card-block[aria-expanded="false"] {
-		border-bottom:0px solid #fff;
-		
-		&:before {
-		  content: "";
-		  position: absolute;
-		  width: 40px;
-		  height: 100%;
-		  top: 0;
-		  right: 20px;
-		  z-index: 1;
-		  background-image: url(/assets/icons/up4.svg);
-		  background-repeat: no-repeat;
-		  background-position: center;
-		  background-size: 30px;
-		  transition:all .25s ease;
-		  transform: rotate(0deg);
+	
+	background-color: rgba(255, 255, 255, 0.5);
+	
+	.card-title {
+		font-weight:bold;
+	}
+
+	&[aria-expanded="false"] {
+		.card-block.question {
+			border-bottom:0px solid #fff;
+			
+			&:before {
+			  content: "";
+			  position: absolute;
+			  width: 40px;
+			  height: 100%;
+			  top: 0;
+			  right: 20px;
+			  z-index: 1;
+			  background-image: url(/assets/icons/up4.svg);
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: 30px;
+			  transition:all .25s ease;
+			  transform: rotate(0deg);
+			}
 		}
 	}
 	
-	.card-block[aria-expanded="true"] {
-	    border-bottom:1px solid $gray-lighter;
-    	&:before {
-    	  content: "";
-		  position: absolute;
-		  width: 40px;
-		  height: 100%;
-		  top: 0;
-		  right: 20px;
-		  z-index: 1;
-		  background-image: url(/assets/icons/up4.svg);
-		  background-repeat: no-repeat;
-		  background-position: center;
-		  background-size: 30px;
-		  transition:all .25s ease;
-		  transform: rotate(180deg);
-    	}
+	
+	&[aria-expanded="true"] {
+
+		background-color:#fff;
+
+		.card-block.question {
+		    border-bottom:1px solid $gray-lighter;
+
+	    	&:before {
+	    	  content: "";
+			  position: absolute;
+			  width: 40px;
+			  height: 100%;
+			  top: 0;
+			  right: 20px;
+			  z-index: 1;
+			  background-image: url(/assets/icons/up4.svg);
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: 30px;
+			  transition:all .25s ease;
+			  transform: rotate(180deg);
+
+	    	}
+		}
 	}
 
 	&:hover {
 		cursor: pointer;
+		background-color: #fff;
 	}
 }

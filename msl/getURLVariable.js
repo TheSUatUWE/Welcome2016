@@ -8,6 +8,7 @@ $( document ).ready(function() {
 	return vars;
 	}
 
+	var placeholder = $('.sign-up-placeholder')
 	var event = getUrlVars()["event"];
 
 	event = event.replace(/_/g," ");
@@ -15,6 +16,9 @@ $( document ).ready(function() {
 	curEventTitle = $('dl.msl_signup dt:contains("' + event + '")');
 
 	curEvent = curEventTitle.parent('.msl_signup');
+
+	curEvent.appendTo(placeholder);
+
 
 	
 

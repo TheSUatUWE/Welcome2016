@@ -8118,7 +8118,7 @@ body.welcome-page section#landing .stats-wrapper .stat p, body.welcome-page sect
 body.welcome-page section#get-started {
   padding: 150px 0;
 }
-body.welcome-page section#get-started a.card-link {
+body.welcome-page section#get-started a.card-link-wrap {
   color: #40373f;
 }
 body.welcome-page section#get-started .get-started-col {
@@ -10168,10 +10168,16 @@ a.svg-link:hover svg#yt-logo .st0 {
 * FAQ
 * 
 */
-.card.faq .card-block[aria-expanded="false"] {
+.card.faq {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.card.faq .card-title {
+  font-weight: bold;
+}
+.card.faq[aria-expanded="false"] .card-block.question {
   border-bottom: 0px solid #fff;
 }
-.card.faq .card-block[aria-expanded="false"]:before {
+.card.faq[aria-expanded="false"] .card-block.question:before {
   content: "";
   position: absolute;
   width: 40px;
@@ -10189,10 +10195,13 @@ a.svg-link:hover svg#yt-logo .st0 {
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-.card.faq .card-block[aria-expanded="true"] {
+.card.faq[aria-expanded="true"] {
+  background-color: #fff;
+}
+.card.faq[aria-expanded="true"] .card-block.question {
   border-bottom: 1px solid #eceeef;
 }
-.card.faq .card-block[aria-expanded="true"]:before {
+.card.faq[aria-expanded="true"] .card-block.question:before {
   content: "";
   position: absolute;
   width: 40px;
@@ -10212,6 +10221,7 @@ a.svg-link:hover svg#yt-logo .st0 {
 }
 .card.faq:hover {
   cursor: pointer;
+  background-color: #fff;
 }
 
 /* Temporary CSS */
