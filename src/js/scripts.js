@@ -247,12 +247,12 @@
     }
 
     // Show event listings and hider loader on window load
-    let eventLoad = function(callback) {
+    function eventLoad() {
       $('#loader').fadeOut('slow');
       $('#event-listings-card').fadeIn('slow');
       $('#news-listings').fadeIn('slow');
-      eventTOD();
-      callback();
+
+      
     }
 
     // Add icons to events
@@ -298,21 +298,17 @@
        });
     }
 
-    let initListJs = function() {
+    function initListJs() {
 
-      
+      // Options for List.js
+      var options = {
+          valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
+          listClass: 'list',
+          sortClass: 'sort'
+      };
 
-      $( document ).ajaxComplete(function() {
-          // Options for List.js
-        var options = {
-            valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
-            listClass: 'list',
-            sortClass: 'sort'
-        };
-        // Create new List 
-        var eventList = new List('event-list', options);
-      });
-      
+      // Create new List 
+      var eventList = new List('event-list', options);
 
       // Main Filter buttons
       $('.main-filter').click(function() {
@@ -442,15 +438,21 @@
 
     }
 
-
     function initTooltip() {
       $('.tod, .cat2, .cat3').tooltip();
     }
      window.onload = function() {
-      eventLoad(initListJs);
-      eventResize();
+      eventLoad();
       initTooltip();
+      eventResize();
     };
+
+    // Fire List Functions once AJAX completed
+    $(document).ajaxComplete(function () {
+        initListJs();
+        eventTOD();
+        eventResize();
+    });
 
     // Fire eventResize whenever the user resizes their window
     $(window).resize(function() {
