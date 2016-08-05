@@ -247,11 +247,12 @@
     }
 
     // Show event listings and hider loader on window load
-    function eventLoad() {
+    let eventLoad = function(callback) {
       $('#loader').fadeOut('slow');
       $('#event-listings-card').fadeIn('slow');
       $('#news-listings').fadeIn('slow');
       eventTOD();
+      callback();
     }
 
     // Add icons to events
@@ -297,18 +298,21 @@
        });
     }
 
-    function initListJs() {
+    let initListJs = function() {
 
-      // Options for List.js
-      var options = {
-          valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
-          listClass: 'list',
-          sortClass: 'sort'
-      };
+      
 
-    
-      // Create new List 
-      var eventList = new List('event-list', options);
+      $( document ).ajaxComplete(function() {
+          // Options for List.js
+        var options = {
+            valueNames: [ 'start-date', 'card-title', 'types', 'location', 'date' ],
+            listClass: 'list',
+            sortClass: 'sort'
+        };
+        // Create new List 
+        var eventList = new List('event-list', options);
+      });
+      
 
       // Main Filter buttons
       $('.main-filter').click(function() {
@@ -438,14 +442,14 @@
 
     }
 
+
     function initTooltip() {
       $('.tod, .cat2, .cat3').tooltip();
     }
      window.onload = function() {
-      eventLoad();
+      eventLoad(initListJs);
       eventResize();
       initTooltip();
-      initListJs();
     };
 
     // Fire eventResize whenever the user resizes their window

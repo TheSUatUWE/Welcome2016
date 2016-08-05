@@ -17,9 +17,10 @@ $( document ).ready(function() {
 
 	curEvent = curEventTitle.parent('.msl_signup');
 
-	curEvent.appendTo(placeholder);
+	curEvent.addClass('selected').appendTo(placeholder);
 
 
 	
 
 });
+
