@@ -24,16 +24,16 @@
     <meta name="twitter:image" content="https://welcome.thestudentsunion.co.uk/assets/img/welcome-ogp.jpg" />
     <!-- End Twitter tags -->
 
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="/www.google-analytics.com" rel="dns-prefetch">
+    <link href="/ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
 
     <script src="assets/components/modernizr.js"></script>
-    <link rel="stylesheet" src="//assets/components/jquery-ui.structure.min.css"></script>
-    <link rel="stylesheet" src="//assets/components/jquery-ui.theme.min.css"></script>
-    <link rel="stylesheet" src="//assets/components/jquery-ui.min.css"></script>
+    <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
+    <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
+    <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
 
-    <script src="//assets/js/handlebars-v4.0.5.js"></script>
+    <script src="/assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
       <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
         <div class="key">
@@ -506,63 +506,25 @@
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
-        
-      <script src="assets/js/moment.js"></script>
-       <script type="text/javascript">
-            //wait for page to load
-            $(document).ready(function(){
-              // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#event-template-card').html();
-              // Compile that into an handlebars template
-              var template_card = Handlebars.compile(raw_template_card);
-              // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#event-listings-card");
-              // Fetch all Blog Posts data from server in JSON
-
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
-                
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-              });
-
-       
-
-                  //  format an ISO date using Moment.js (8.9kb min)
-                  //  http://momentjs.com/
-                  //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
-                  //  Options see http://momentjs.com/docs/#/displaying/fromnow/
-
-              Handlebars.registerHelper('dateToNow', function(context, block) {
-                if (window.moment) {
-                  var s = block.hash.suffix || false;
-                      return moment(context).toNow(s);
-                }else{
-                  return context;   //  moment plugin not available. return data as is.
-                };
-              });
-
-              //  format an ISO date using Moment.js
-              //  http://momentjs.com/
-              //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
-              //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
-              Handlebars.registerHelper('dateFormat', function(context, block) {
-                if (window.moment) {
-                  var f = block.hash.format || "ddd D, YYYY";
-                  return moment(context).format(f);
-                }else{
-                  return context;   //  moment plugin not available. return data as is.
-                };
-              });
-            });
-          </script>
-
-  
+ 
 
           <script src="assets/js/scripts.min.js"></script>
+
+          <script>
+                $( document ).ready(function() {
+                    var placeholder = $('.bg-placeholder');
+                    var card = $('.get-started-col > .card');
+                    card.mouseover(function(){
+                      var cardType = $(this).parent('.get-started-col').attr("data-bg");
+                      placeholder.attr('class', ('bg-placeholder '+cardType) );
+                      placeholder.css('opacity', '1');
+                      
+                    });
+                    card.mouseout(function(){
+                      placeholder.css('opacity', '0');
+                    });
+                }); 
+              </script>
 
 
     <script>
