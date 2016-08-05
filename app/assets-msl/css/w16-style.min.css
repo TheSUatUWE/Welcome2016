@@ -6175,7 +6175,7 @@ nav.nav .nav-item, body.welcome-page section#landing .stats-wrapper .stat span {
 */
 .logo {
   width: 200px;
-  height: auto;
+  height: 149px;
   padding: 10px;
   display: inline-block;
   float: left;
@@ -6193,6 +6193,15 @@ nav.nav .nav-item, body.welcome-page section#landing .stats-wrapper .stat span {
 .logo svg > g {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
+}
+.logo.loading {
+  width: 100%;
+  height: 100%;
+  background-color: #e84253;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
 }
 .logo.scrolled {
   width: 100px;

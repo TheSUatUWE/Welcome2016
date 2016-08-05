@@ -438,10 +438,15 @@
 
     }
 
+    
+
+    // Init Tooltips
     function initTooltip() {
       $('.tod, .cat2, .cat3').tooltip();
     }
-     window.onload = function() {
+     
+    //  Init events functions once everything has loaded
+    window.onload = function() {
       eventLoad();
       initTooltip();
       eventResize();
@@ -458,9 +463,6 @@
     $(window).resize(function() {
         eventResize();
     });
-
-
-
 
   });
 })(jQuery, window, document);
