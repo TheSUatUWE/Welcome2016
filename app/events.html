@@ -5,13 +5,13 @@
     <title>Welcome 2016: Events</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
+    <meta name="description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- Begin Facebook tags -->
     <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
     <meta property="og:url" content="https://welcome.thestudentsunion.co.uk" />
-    <meta property="og:description" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+    <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="https://welcome.thestudentsunion.co.uk/assets/img/welcome-ogp.jpg" />
     <meta property="og:type" content="website" />
     <meta property="fb:app_id" content="1742104569380690">
@@ -20,7 +20,7 @@
     <!-- Begin Twitter tags -->
     <meta name="twitter:title" content="Welcome 2016: The Students' Union at UWE" />
     <meta name="twitter:url" content="Welcome 2016: The Students' Union at UWE" />
-    <meta name="twitter:card" content="Welcome is a program of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+    <meta name="twitter:card" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta name="twitter:image" content="https://welcome.thestudentsunion.co.uk/assets/img/welcome-ogp.jpg" />
     <!-- End Twitter tags -->
 
@@ -141,55 +141,15 @@
      <div class="bg-pattern-left-top"></div>
        <div class="container pos-rel">
           <h1 class="super-header">Events</h1>
-          <p>Throughout September we have range events to welcome you to life at UWE Bristol. We have 200<sup>+</sup> events, use the filters to find what suits you.</p>
+          <p>Throughout September we have range of 200<sup>+</sup> events to welcome you to life at UWE Bristol.</p>
           <div class="row">
-            <div class="col-md-3">
-              <div class="card featured-event giat shadow-1"> 
-                  <div class="v-align-wrapper">
-                    <div class="v-align"> 
-                        <h3>Give It A Go</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, explicabo.
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card featured-event freshers-festival shadow-1">
-                  <div class="v-align-wrapper">
-                    <div class="v-align"> 
-                        <h3>Freshers Festival</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, explicabo.
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card featured-event freshers-fair shadow-1">
-                  <div class="v-align-wrapper">
-                    <div class="v-align"> 
-                        <h3>Freshers Fair</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, explicabo.
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card featured-event closing-party shadow-1">
-                  <div class="v-align-wrapper">
-                    <div class="v-align"> 
-                        <h3>Closing Party</h3>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, explicabo.
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
+    
           <div class="alert alert-danger" role="alert">
-              <strong>Oh snap!</strong> Tickets will be available for purchase on Thursday 11 August.
+              <strong>Oh snap!</strong> <br> Below you will find our main events for your Welcome programme. More will be added soon. Tickets will be available for purchase on Thursday 11 August.
             </div>
           <div id="event-list">
             <hr>  
-            <div class="search">
+         <!--    <div class="search">
                 <div class="search-bar">
                   <span class="input-wrap input-search">
                     <input class="filter input-field class" type="search" value="" required="" id="search" />
@@ -231,7 +191,7 @@
                     <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
                  </div>
                 </div>            
-            </div>
+            </div> -->
 
             <div id="loader">Loading...</div>
             <!-- Placeholder for events listings template -->
@@ -426,7 +386,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
+              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
