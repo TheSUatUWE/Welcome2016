@@ -38,9 +38,9 @@
     <script id="event-template-card" type="text/x-handlebars-template">
       <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
         <div class="key">
-          <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
-          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
+          <div class="tod shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
+          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
+          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
         </div>
         <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
         <div class="types">{{#each Types}}{{this}} {{/each}}</div>
@@ -117,16 +117,16 @@
 
           <ul class="nav nav-inline">
             <li class="nav-item">
-              <a class="nav-link" href="/platinum.html">Platinum</a>
+              <a class="nav-link" href="/platinum">Platinum</a>
             </li><!-- 
              --><li class="nav-item">
-              <a class="nav-link" href="/blog.html">Blog</a>
+              <a class="nav-link" href="/blog">Blog</a>
             </li><!-- 
              --><li class="nav-item">
-              <a class="nav-link" href="/faq.html">FAQ</a>
+              <a class="nav-link" href="/faq">FAQ</a>
             </li><!-- 
              --><li class="nav-item open">
-              <a class="nav-link" href="/events.html">Events</a>
+              <a class="nav-link" href="/events">Events</a>
             </li>
           </ul>
           
@@ -150,7 +150,7 @@
           <div id="event-list">
             <hr>  
             <div class="search">
-                <div class="col-xs-12 p-a-0">
+                <div class="col-xs-12 p-a-0 m-b-1">
                   <div class="search-bar">
                     <span class="input-wrap input-search">
                       <input class="filter input-field class" type="search" value="" required="" id="search" />
@@ -374,7 +374,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/components/jquery.js"><\/script>');</script>
     <script src="/assets/components/jquery-ui.min.js"></script>
+
+    <script src="/assets/components/tether.min.js"></script>
     <script src="/assets/components/bootstrap.min.js"></script>
+
         
       <script src="/assets/js/moment.js"></script>
        <script type="text/javascript">

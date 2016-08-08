@@ -6790,27 +6790,6 @@ nav.nav.navbar-scrolling.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.navba
 * Typography
 * 
 */
-/*@font-face {
-    font-family: NewsGothicBT-Roman;
-    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.eot');
-    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0?#iefix') format('embedded-opentype'),
-         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.woff') format('woff'),
-         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_0_0.ttf') format('truetype');
-  
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: AlternateGothicLT-No2;
-    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.eot');
-    src: url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.eot?#iefix') format('embedded-opentype'),
-         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.woff') format('woff'),
-         url('//www.thestudentsunion.co.uk/assets/site_resources/2EA350_E_0.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}*/
 /* Import News Gothic*/
 @font-face {
   font-family: NewsGothicBT-Roman;
@@ -6853,7 +6832,7 @@ body {
 
 /* Heading Fonts */
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
-  font-family: AlternateGothicLT-No2;
+  font-family: AlternateGothicLT-No2, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: normal !important;
 }
@@ -8744,6 +8723,7 @@ address > span {
   padding: 5px 8px;
   border-radius: 3px;
   pointer-events: none;
+  z-index: 99999;
 }
 
 .ui-helper-hidden-accessible {
@@ -9689,84 +9669,84 @@ address > span {
 }
 .item-col .key .tod.night, .item-col .key .cat2.night, .item-col .key .cat3.night {
   background-color: #fff;
-  background-image: url("/assets/icons/moon_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/moon_filled.svg");
 }
 .item-col .key .tod.night:hover, .item-col .key .cat2.night:hover, .item-col .key .cat3.night:hover {
   background-color: #a0d9e0;
 }
 .item-col .key .tod.day, .item-col .key .cat2.day, .item-col .key .cat3.day {
   background-color: #fff;
-  background-image: url("/assets/icons/sun.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/sun.svg");
 }
 .item-col .key .tod.day:hover, .item-col .key .cat2.day:hover, .item-col .key .cat3.day:hover {
   background-color: #ffe44d;
 }
 .item-col .key .tod.main, .item-col .key .cat2.main, .item-col .key .cat3.main {
   background-color: #fff;
-  background-image: url("/assets/icons/star_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/star_filled.svg");
 }
 .item-col .key .tod.main:hover, .item-col .key .cat2.main:hover, .item-col .key .cat3.main:hover {
   background-color: #adc459;
 }
 .item-col .key .tod.liveMusic, .item-col .key .cat2.liveMusic, .item-col .key .cat3.liveMusic {
   background-color: #fff;
-  background-image: url("/assets/icons/guitar_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/guitar_filled.svg");
 }
 .item-col .key .tod.liveMusic:hover, .item-col .key .cat2.liveMusic:hover, .item-col .key .cat3.liveMusic:hover {
   background-color: #009a5b !important;
 }
 .item-col .key .tod.alcoholFree, .item-col .key .cat2.alcoholFree, .item-col .key .cat3.alcoholFree {
   background-color: #fff;
-  background-image: url("/assets/icons/no_alcohol.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/no_alcohol.svg");
 }
 .item-col .key .tod.alcoholFree:hover, .item-col .key .cat2.alcoholFree:hover, .item-col .key .cat3.alcoholFree:hover {
   background-color: #f58d17 !important;
 }
 .item-col .key .tod.club, .item-col .key .cat2.club, .item-col .key .cat3.club {
   background-color: #fff;
-  background-image: url("/assets/icons/dancing_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/dancing_filled.svg");
 }
 .item-col .key .tod.club:hover, .item-col .key .cat2.club:hover, .item-col .key .cat3.club:hover {
   background-color: #7acad3 !important;
 }
 .item-col .key .tod.family, .item-col .key .cat2.family, .item-col .key .cat3.family {
   background-color: #fff;
-  background-image: url("/assets/icons/family_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/family_filled.svg");
 }
 .item-col .key .tod.family:hover, .item-col .key .cat2.family:hover, .item-col .key .cat3.family:hover {
   background-color: #ee6f7c !important;
 }
 .item-col .key .tod.free, .item-col .key .cat2.free, .item-col .key .cat3.free {
   background-color: #fff;
-  background-image: url("/assets/icons/free.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/free.svg");
 }
 .item-col .key .tod.free:hover, .item-col .key .cat2.free:hover, .item-col .key .cat3.free:hover {
   background-color: #c0d17f !important;
 }
 .item-col .key .tod.platinum, .item-col .key .cat2.platinum, .item-col .key .cat3.platinum {
   background-color: #fff;
-  background-image: url("/assets/icons/platX.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/platX.svg");
 }
 .item-col .key .tod.platinum:hover, .item-col .key .cat2.platinum:hover, .item-col .key .cat3.platinum:hover {
   background-color: #c7c7c7 !important;
 }
 .item-col .key .tod.platinumX, .item-col .key .cat2.platinumX, .item-col .key .cat3.platinumX {
   background-color: #fff;
-  background-image: url("/assets/icons/platPlatX.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/platPlatX.svg");
 }
 .item-col .key .tod.platinumX:hover, .item-col .key .cat2.platinumX:hover, .item-col .key .cat3.platinumX:hover {
   background-color: #c7c7c7 !important;
 }
 .item-col .key .tod.ticketed, .item-col .key .cat2.ticketed, .item-col .key .cat3.ticketed {
   background-color: #fff;
-  background-image: url("/assets/icons/ticketed_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/ticketed_filled.svg");
 }
 .item-col .key .tod.ticketed:hover, .item-col .key .cat2.ticketed:hover, .item-col .key .cat3.ticketed:hover {
   background-color: #e84253 !important;
 }
 .item-col .key .tod.signUp, .item-col .key .cat2.signUp, .item-col .key .cat3.signUp {
   background-color: #fff;
-  background-image: url("/assets/icons/add_user_filled.svg");
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/add_user_filled.svg");
 }
 .item-col .key .tod.signUp:hover, .item-col .key .cat2.signUp:hover, .item-col .key .cat3.signUp:hover {
   background-color: #95ad3d !important;
@@ -9923,42 +9903,42 @@ address > span {
   height: 40px;
 }
 .item-col.compact-listing:hover .key .tod.night, .item-col.compact-listing:hover .key .cat2.night, .item-col.compact-listing:hover .key .cat3.night {
-  background-image: url("/assets/icons/moon_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/moon_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.day, .item-col.compact-listing:hover .key .cat2.day, .item-col.compact-listing:hover .key .cat3.day {
-  background-image: url("/assets/icons/sun.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/sun.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.main, .item-col.compact-listing:hover .key .cat2.main, .item-col.compact-listing:hover .key .cat3.main {
-  background-image: url("/assets/icons/star_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/star_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.liveMusic, .item-col.compact-listing:hover .key .cat2.liveMusic, .item-col.compact-listing:hover .key .cat3.liveMusic {
-  background-image: url("/assets/icons/guitar_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/guitar_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.alcoholFree, .item-col.compact-listing:hover .key .cat2.alcoholFree, .item-col.compact-listing:hover .key .cat3.alcoholFree {
-  background-image: url("/assets/icons/no_alcohol.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/no_alcohol.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.club, .item-col.compact-listing:hover .key .cat2.club, .item-col.compact-listing:hover .key .cat3.club {
-  background-image: url("/assets/icons/dancing_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/dancing_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.family, .item-col.compact-listing:hover .key .cat2.family, .item-col.compact-listing:hover .key .cat3.family {
-  background-image: url("/assets/icons/family_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/family_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.free, .item-col.compact-listing:hover .key .cat2.free, .item-col.compact-listing:hover .key .cat3.free {
-  background-image: url("/assets/icons/free.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/free.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.platinum, .item-col.compact-listing:hover .key .cat2.platinum, .item-col.compact-listing:hover .key .cat3.platinum {
-  background-image: url("/assets/icons/platX.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/platX.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.platinumX, .item-col.compact-listing:hover .key .cat2.platinumX, .item-col.compact-listing:hover .key .cat3.platinumX {
-  background-image: url("/assets/icons/platPlatX.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/platPlatX.svg") !important;
   border-radius: 20px;
   width: 60px;
 }
 .item-col.compact-listing:hover .key .tod.ticketed, .item-col.compact-listing:hover .key .cat2.ticketed, .item-col.compact-listing:hover .key .cat3.ticketed {
-  background-image: url("/assets/icons/ticket_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/ticket_filled.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.signUp, .item-col.compact-listing:hover .key .cat2.signUp, .item-col.compact-listing:hover .key .cat3.signUp {
-  background-image: url("/assets/icons/add_user_filled.svg") !important;
+  background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/add_user_filled.svg") !important;
 }
 
 /*
