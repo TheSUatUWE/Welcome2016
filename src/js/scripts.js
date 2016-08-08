@@ -5,12 +5,14 @@
   $(function () {
 
 
-    // Init Headspace 
+  $( document ).ready(function() {
+      // Init Headspace 
     // var headspace = new Headspace(document.querySelector('nav'));
-    Headspace(document.querySelector('nav'), { // can use factory method instead of `new`
+    new Headspace(document.querySelector('nav'), { // can use factory method instead of `new`
       startOffset: 1,                            // default: height of element
       tolerance: 5,                               // default: 8
-    })
+    });
+  });
     // Smooth Scroll
 
     $( document ).ready(function() {
@@ -359,7 +361,7 @@
           var event = $(this);
           var card = event.children('.card');
           
-          if ( locationFilter == 'all' ) {
+          if ( locationFilter === 'all' ) {
             eventList.filter();
           } else {
             eventList.filter(function(item) {
@@ -402,7 +404,7 @@
           var event = $(this);
           var card = event.children('.card');
           
-          if ( catagoryFilter == 'all' ) {
+          if ( catagoryFilter === 'all' ) {
             eventList.filter();
           } else {
             eventList.filter(function(item) {
@@ -428,7 +430,7 @@
           var selection = this.value;
           if (selection) {
               eventList.sort(function(item) {
-                  return (item.values().material == selection);
+                  return (item.values().material === selection);
               });
           } else {
               eventList.sort();
