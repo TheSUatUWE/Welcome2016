@@ -12,9 +12,14 @@
 		font-weight:bold;
 	}
 
+	.card-block.question {
+		padding: 1.25rem 3rem 1.25rem 1.25rem;
+	}
+
 	&[aria-expanded="false"] {
 		.card-block.question {
 			border-bottom:0px solid #fff;
+
 			
 			&:before {
 			  content: "";

@@ -6814,16 +6814,16 @@ nav.nav.navbar-scrolling.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.navba
 /* Import News Gothic*/
 @font-face {
   font-family: NewsGothicBT-Roman;
-  src: url("../fonts/2EA350_0_0.eot");
-  src: url("../fonts/2EA350_0_0?#iefix") format("embedded-opentype"), url("../fonts/2EA350_0_0.woff") format("woff"), url("../fonts/2EA350_0_0.ttf") format("truetype");
+  src: url("/assets/fonts/2EA350_0_0.eot");
+  src: url("/assets/fonts/2EA350_0_0?#iefix") format("embedded-opentype"), url("/assets/fonts/2EA350_0_0.woff") format("woff"), url("/assets/fonts/2EA350_0_0.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Import Alt Gothic */
 @font-face {
   font-family: AlternateGothicLT-No2;
-  src: url("../fonts/2EA350_E_0.eot");
-  src: url("../fonts/2EA350_E_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2EA350_E_0.woff") format("woff"), url("../fonts/2EA350_E_0.ttf") format("truetype");
+  src: url("/assets/fonts/2EA350_E_0.eot");
+  src: url("/assets/fonts/2EA350_E_0.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/2EA350_E_0.woff") format("woff"), url("/assets/fonts/2EA350_E_0.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -10196,6 +10196,9 @@ a.svg-link:hover svg#yt-logo .st0 {
 }
 .card.faq .card-title {
   font-weight: bold;
+}
+.card.faq .card-block.question {
+  padding: 1.25rem 3rem 1.25rem 1.25rem;
 }
 .card.faq[aria-expanded="false"] .card-block.question {
   border-bottom: 0px solid #fff;
