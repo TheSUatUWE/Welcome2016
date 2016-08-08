@@ -94,9 +94,9 @@
     <div id="page-wrapper">
 
       <header class="header" role="banner">
-        <div class="logo">
+        <div class="logo loading">
           <a href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax" viewBox="0 0 741 505.6"><style type="text/css">  
               .tri{fill:#e84253;}
               .text{fill:#FFFFFF;}
             </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
@@ -146,7 +146,7 @@
                 <h1 class="super-super-header fc-white text-sm-center text-xs-left">Welcome</h1>
               </div>
               <div class="col-sm-6 col-sm-offset-3">
-                 <p class="fc-sky-d50">Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. <span class="hidden-sm-down">This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates.</span></p>
+                 <p class="fc-sky-d50">Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates.</p>
                  <div class="stats-wrapper fc-sky-d50">
                    <div class="stat">
                      <span>1</span>
@@ -458,6 +458,18 @@
  
 
           <script src="/assets/js/scripts.min.js"></script>
+          <script>
+            $( document ).ready(function() {
+                window.onload = function() {
+                  setTimeout(function(){
+                    $('.logo').removeClass('loading');
+                  },1500);
+            };
+
+            }); 
+
+
+          </script>
           
 
           <script>

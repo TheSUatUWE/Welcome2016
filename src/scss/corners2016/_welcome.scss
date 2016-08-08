@@ -12,7 +12,7 @@ body.welcome-page {
 	    padding-bottom: 0!important;
 	}
 	section:first-of-type {
-		padding:150px 0px 50px!important;
+		padding:150px 0px 50px;
 	}
 
 
@@ -389,7 +389,14 @@ body.welcome-page {
 			    padding: 150px 0px 100px !important;
 			}
 
+			
+
 			section#landing {
+				.find-out-more {
+							    position: absolute;
+							    bottom: 90px!important;
+							    right: 20px;
+							}
 
 				.stats-wrapper {
 					text-align: center;

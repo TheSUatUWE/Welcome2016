@@ -466,5 +466,20 @@
         eventResize();
     });
 
+    // Loader 
+     $( document ).ready(function() {
+                    var placeholder = $('.bg-placeholder');
+                    var card = $('.get-started-col > .card');
+                    card.mouseover(function(){
+                      var cardType = $(this).parent('.get-started-col').attr("data-bg");
+                      placeholder.attr('class', ('bg-placeholder '+cardType) );
+                      placeholder.css('opacity', '1');
+                      
+                    });
+                    card.mouseout(function(){
+                      placeholder.css('opacity', '0');
+                    });
+                }); 
+
   });
 })(jQuery, window, document);

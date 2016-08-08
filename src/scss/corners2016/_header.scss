@@ -17,18 +17,26 @@
 
 	svg {
 		width:100%;
+		overflow:visible;
 		& > g {
-			transition:all .5s ;
+			transition:all .35s ease-in-out ;
 		}
+		polygon.tri {
+				transition: all .35s ease-in-out;
+			}
 	}
 	
 	&.loading {
-		width:100%;
-		height:100%;
-		background-color: $u-red;
-		top:0;
-		left:0;
-		transition: all .5s ease;
+		svg {
+			polygon.tri {
+				transform: scale(100, 100) rotate(10deg);
+				transform-origin: center;
+				transition: all .35s ease-in-out;
+			}
+			g.text-wrap {
+			    transform: scale(2,2);
+			}
+		}
 	}
 
 	&.scrolled {
@@ -56,7 +64,7 @@
 	}
 	
 	&.mobileMenuActive {
-		width:100px!important;
+		width:70px;
 		
 		svg {
 			& > g {
@@ -636,13 +644,31 @@ nav.nav {
 
 }
 
-@media screen and (max-width: 1160px){
 
+@include media-breakpoint-down(sm) {
+	body.welcome-page section:first-of-type {
+		padding:100px 0px 50px!important;
+	}
+
+	.logo {
+		width:120px;
+		height:82px;
+		
+		&.scrolled {
+			width:70px;
+		}
+	}		
+	nav.nav {
+		height:75px;
+		
+		.mobile-menu-toggle {
+		    padding: 25px!important;
+		}
+
+	}
 }
 
-@media screen and (max-width: 1160px){
 
-}
 @media screen and (max-width: 1000px){
 	nav.nav {
 		li.nav-item {
@@ -655,6 +681,7 @@ nav.nav {
 		.logo {
 			width:120px;
 		}
+
 		.nav-inline {
 		    display: inline-block;
 		    padding-left: 20px;
@@ -667,6 +694,8 @@ nav.nav {
 	    margin-top: 15px;
 	}
 }
+
+
 
 
 
