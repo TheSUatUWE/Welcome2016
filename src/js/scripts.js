@@ -250,7 +250,7 @@
 
     // Show event listings and hider loader on window load
     function eventLoad() {
-      $('#loader').fadeOut('slow');
+      $('#loader').css('visibility', 'hidden');
       $('#event-listings-card').fadeIn('slow');
       $('#news-listings').fadeIn('slow');
 
@@ -279,7 +279,7 @@
             cat3.addClass('signUp').prop('title', 'Sign Up');
           } else if ( $(this).children('.content-card-small').hasClass('liveMusic') ) {
             cat2.addClass('liveMusic').prop('title', 'Live Music');
-          } else if ( $(this).children('.content-card-small').hasClass('club') ) {
+          } else if ( $(this).children('.content-card-small').hasClass('clubnight') ) {
             cat2.addClass('club').prop('title', 'Club Night');
           } else {
             cat2.addClass('empty');
@@ -452,12 +452,12 @@
       eventLoad();
       initTooltip();
       eventResize();
+      eventTOD();
     };
 
     // Fire List Functions once AJAX completed
     $(document).ajaxComplete(function () {
         initListJs();
-        eventTOD();
         eventResize();
     });
 

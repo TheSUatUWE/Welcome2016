@@ -36,7 +36,7 @@
 
     <script src="/assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
+      <div class="col-xl-3 col-lg-4 col-md-6 item-col "  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
@@ -149,8 +149,8 @@
             </div>
           <div id="event-list">
             <hr>  
-            <div class="search">
-                <div class="col-xs-12 p-a-0 m-b-1">
+            <div class="search col-xs-12 p-a-0 m-b-1">
+               
                   <div class="search-bar">
                     <span class="input-wrap input-search">
                       <input class="filter input-field class" type="search" value="" required="" id="search" />
@@ -159,13 +159,13 @@
                       </label>
                     </span>
                   </div>
-                </div>
-                
-                <!-- <button class="day filter main-filter" data-filter="day">Day</button>
+      
+                <!--
+                <button class="day filter main-filter" data-filter="day">Day</button>
                 <button class="night filter main-filter" data-filter="night">Night</button>
                 <button class="main filter main-filter" data-filter="main">Main</button>
 
-                <div class="location-filters dropdown">
+                 <div class="location-filters dropdown">
                   <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
                     Location: <span class="current-placeholder">All</span>
                   </button>
@@ -173,7 +173,8 @@
                     <span class="filter location-filter dropdown-item" data-location="all">All</span>
                     <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
                     <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
-                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>              </div>
+                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>  
+                    <span class="filter location-filter dropdown-item" data-location="offCampus">Off Campus</span>              </div>
                 </div>
 
                 <div class="catagory-filters dropdown">
@@ -186,13 +187,13 @@
                     <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubNight">Club Night</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="clubnight">Club Night</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="Free">Free</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
                  </div>
-                </div>  -->           
+                </div>    -->         
             </div>
 
             <div id="loader">Loading...</div>
@@ -221,7 +222,7 @@
                     <h4>Be the first to know</h4>
                       <form
                           id="subscribe-form"
-                          action="http://thestudentsunion.us13.list-manage.com/subscribe/post-json?u=07e48af145119d0dbbee8eb8b&amp;id=9c7e76d5d2"
+                          action="//thestudentsunion.us13.list-manage.com/subscribe/post-json?u=07e48af145119d0dbbee8eb8b&amp;id=9c7e76d5d2"
                           method="get">
                         <span class="input-wrap">
                           <input class="input-field" type="email" value="" name="EMAIL" id="email" />
@@ -391,7 +392,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
+              $.get("//www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
@@ -437,6 +438,36 @@
      
 
           <script src="/assets/js/scripts.min.js"></script>
+          <script>  
+          
+         
+
+          // Fire compact once AJAX completed
+          $(document).ajaxComplete(function () {
+              if (window.matchMedia("(min-width: 544px)").matches) {
+               /* the viewport is at least 400 pixels wide */
+             } else {
+               $('.item-col').addClass('compact-listing');
+             }
+          });
+
+          // media query event handler
+          if (matchMedia) {
+            var mq = window.matchMedia("(min-width: 544px)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+          }
+
+          // media query change
+          function WidthChange(mq) {
+            if (mq.matches) {
+              $('.item-col').removeClass('compact-listing');
+            } else {
+              $('.item-col').addClass('compact-listing');
+            }
+
+          }
+          </script>
           <script src="/assets/js/list.min.js"></script>
 
 

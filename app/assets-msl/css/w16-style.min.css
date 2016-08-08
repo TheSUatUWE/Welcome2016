@@ -6186,6 +6186,9 @@ nav.nav .nav-item, body.welcome-page section#landing .stats-wrapper .stat span {
   left: 14px;
   top: 14px;
 }
+.logo svg {
+  width: 100%;
+}
 .logo svg > g {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
@@ -8572,10 +8575,9 @@ section#events .search button.main:hover, section#events .search button.main.act
 section#events .types, section#news-list .types, .search-wrapper .types {
   display: none;
 }
-section#events #event-listings-card, section#events #news-listings, section#news-list #event-listings-card, section#news-list #news-listings, .search-wrapper #event-listings-card, .search-wrapper #news-listings {
-  display: none;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+section#events #event-listings-card, section#news-list #event-listings-card, .search-wrapper #event-listings-card {
+  width: 100%;
+  margin: 0;
 }
 
 /*
@@ -8718,12 +8720,7 @@ address > span {
 }
 
 .ui-tooltip {
-  background-color: #40373f;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 3px;
-  pointer-events: none;
-  z-index: 99999;
+  background-color: #40373f !important;
 }
 
 .ui-helper-hidden-accessible {
@@ -9524,6 +9521,7 @@ address > span {
   min-width: 285px;
 }
 .item-col .content-card-small {
+  width: 100%;
   height: 320px;
   overflow: hidden;
   background: transparent;
@@ -9760,6 +9758,9 @@ address > span {
 .item-col .key .tod.cat3, .item-col .key .cat2.cat3, .item-col .key .cat3.cat3 {
   left: 120px;
 }
+.item-col.compact-listing {
+  padding: 0;
+}
 .item-col.compact-listing .description {
   display: block;
   padding: 0 !important;
@@ -9775,6 +9776,7 @@ address > span {
 }
 .item-col.compact-listing .card-block {
   background: rgba(255, 255, 255, 0.5);
+  padding: 3rem 1.25rem 1.25rem 1.25rem;
 }
 .item-col.compact-listing .card-img-top {
   pointer-events: auto;
@@ -9792,7 +9794,7 @@ address > span {
   height: 100% !important;
 }
 .item-col.compact-listing .key {
-  top: -15px !important;
+  top: 0px !important;
 }
 .item-col.compact-listing .key .cat2 {
   left: 50px;
@@ -9858,6 +9860,8 @@ address > span {
 }
 .item-col.compact-listing .content-card-small {
   height: auto;
+  margin: 0;
+  border-radius: 0;
 }
 .item-col.compact-listing:hover .card-img-top {
   pointer-events: auto;
@@ -9872,7 +9876,7 @@ address > span {
 }
 .item-col.compact-listing:hover .card-block {
   top: 0;
-  padding-top: 20px;
+  padding: 3rem 1.25rem 3.5rem 1.25rem;
 }
 .item-col.compact-listing:hover .description button {
   bottom: 0px;
@@ -9941,6 +9945,12 @@ address > span {
   background-image: url("//welcome.thestudentsunion.co.uk/assets/icons/add_user_filled.svg") !important;
 }
 
+@media (max-width: 767px) {
+  section#events #event-listings-card {
+    width: 100%;
+    margin: 0;
+  }
+}
 /*
 *
 * Dropdown

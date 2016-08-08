@@ -65,12 +65,7 @@
 // tooltip 
 
 .ui-tooltip {
-	background-color:$u-grey;
-	color:#fff;
-	padding:5px 8px;
-	border-radius:3px;
-	pointer-events:none;
-	z-index:	99999;
+	background-color:$u-grey!important;
 }
 
 .ui-helper-hidden-accessible {

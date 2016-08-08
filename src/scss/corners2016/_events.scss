@@ -103,11 +103,10 @@ section#events, section#news-list, .search-wrapper {
 	.types {
 		display:none
 	}
-	
-	#event-listings-card, #news-listings {
-		display:none;
-		margin-left: -0.9375rem;
-		margin-right: -0.9375rem;	
+	#event-listings-card {
+		width:100%;
+		margin:0;
 	}
+
 
 }

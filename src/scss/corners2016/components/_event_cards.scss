@@ -9,6 +9,8 @@
 
 		.content-card-small {
 
+			width:100%;
+
 			& .mix{
 				display: none;
 			}
@@ -280,7 +282,7 @@
 		}
 
 	&.compact-listing {
-
+		padding:0;
 		.description {
 			display:block;
 			padding:0!important;
@@ -297,6 +299,7 @@
 
 		.card-block {
 			background: rgba(255, 255, 255, 0.5);
+			padding: 3rem 1.25rem 1.25rem 1.25rem;
 		}
 		.card-img-top {
 			pointer-events: auto;
@@ -316,7 +319,8 @@
 
 
 		.key {
-			top:-15px!important;
+			top:0px!important;
+
 			.cat2 {
 				left:50px;
 
@@ -387,6 +391,8 @@
 		}
 		.content-card-small {
 			height: auto;
+			margin:0;
+			border-radius:0;
 		}
 
 		&:hover {
@@ -404,8 +410,7 @@
 			}
 			.card-block {
 			    top: 0;
-			    padding-top: 20px;
-
+				padding: 3rem 1.25rem 3.5rem 1.25rem;
 			}
 			.description {
 				button {
@@ -483,6 +488,13 @@
 
 
 
-	}
+}
 	
+@include media-breakpoint-down(sm) { 
+	section#events #event-listings-card {
+		width: 100%;
+		margin: 0;
+	}	
+}
+
 	
