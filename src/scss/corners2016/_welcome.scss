@@ -473,6 +473,9 @@ body.welcome-page {
 		
 	@include media-breakpoint-down(md) {
 		section#landing {
+			.landing-welcome {
+				padding-bottom:2em;
+			}
 			.row {
 				padding-top:0;
 			}				
@@ -484,6 +487,15 @@ body.welcome-page {
 				height: 100%;
 				bottom: 0;
 
+			}
+		}
+
+		/* Section: Get Started */
+		section#get-started {
+			.get-started-col {
+				.card.get-started {
+					height:100px;
+				}
 			}
 		}
 
@@ -649,3 +661,12 @@ body.welcome-page.faq-page {
 	}
 }
 /* End: FAQ Page */
+
+/* Start: 404 Page */
+body.welcome-page.error-404-page {
+	section#error-404 {
+		height:600px;
+		@extend %g-brand-spectrum ;
+	}
+}
+/* End: 404 Page */

@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    <title>Welcome 2016: Events</title>
+    <title>Welcome 2016: Give It A Go</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
@@ -34,41 +34,6 @@
     <link rel="stylesheet" src="assets/components/jquery-ui.theme.min.css"></script>
     <link rel="stylesheet" src="assets/components/jquery-ui.min.css"></script>
 
-    <script src="assets/js/handlebars-v4.0.5.js"></script>
-    <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
-        <div class="key">
-          <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
-          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-        </div>
-        <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
-        <div class="types">{{#each Types}}{{this}} {{/each}}</div>
-          <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
-<!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
- -->            <div class="card-img-gradient"></div>
-          </div>
-          <div class="card-block">
-            <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
-            <div class="date">{{ dateFormat StartDate format="ddd D, HH:mm " }} - {{ dateFormat EndDate format="HH:mm" }}</div>
-            <h4 class="card-title">{{Title}}</h4>
-            <div class="location">{{Location}}</div>                            
-          </div>
-            
-          <div class="description">
-            <span><p>{{Description}}</p></span>
-           
-           {{#if HasTickets}}
-           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Buy tickets</button></a>
-            
-            {{else}}
-            <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Find out more</button></a>            
-            {{/if}}
-          </div>
-        </div>                  
-      </div>
-    </script>
-
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
@@ -90,7 +55,7 @@
     <meta name="theme-color" content="#ffffff">
 
   </head>
-  <body class="welcome-page event-page">
+  <body class="welcome-page error-404-page">
 
     <div id="page-wrapper">
 
@@ -98,7 +63,7 @@
         <div class="logo">
           <a href="/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
-              .tri{fill:#e84253;}
+              .tri{fill:#F04E5C;}
               .text{fill:#FFFFFF;}
             </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
             <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
@@ -125,7 +90,7 @@
              --><li class="nav-item">
               <a class="nav-link" href="/faq.html">FAQ</a>
             </li><!-- 
-             --><li class="nav-item open">
+             --><li class="nav-item">
               <a class="nav-link" href="/events.html">Events</a>
             </li>
           </ul>
@@ -137,72 +102,22 @@
       
       <main class="main" role="main">
 
-      <section id="events">
-     <div class="bg-pattern-left-top"></div>
-       <div class="container pos-rel">
-          <h1 class="super-header">Events</h1>
-          <p>Throughout September we have range of 200<sup>+</sup> events to welcome you to life at UWE Bristol.</p>
-          <div class="row">
-    
-          <div class="alert alert-danger" role="alert">
-              <strong>Oh snap!</strong> <br> Below you will find our main events for your Welcome programme. More will be added soon. Tickets will be available for purchase on Thursday 11 August.
-            </div>
-          <div id="event-list">
-            <hr>  
-            <div class="search">
-                <div class="col-xs-12 p-a-0">
-                  <div class="search-bar">
-                    <span class="input-wrap input-search">
-                      <input class="filter input-field class" type="search" value="" required="" id="search" />
-                      <label class="input-label" for="search">
-                        <span class="input-label-content">Search for events</span>
-                      </label>
-                    </span>
-                  </div>
-                </div>
-                
-                <!-- <button class="day filter main-filter" data-filter="day">Day</button>
-                <button class="night filter main-filter" data-filter="night">Night</button>
-                <button class="main filter main-filter" data-filter="main">Main</button>
-
-                <div class="location-filters dropdown">
-                  <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
-                    Location: <span class="current-placeholder">All</span>
-                  </button>
-                  <div class="dropdown-menu">
-                    <span class="filter location-filter dropdown-item" data-location="all">All</span>
-                    <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
-                    <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
-                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>              </div>
-                </div>
-
-                <div class="catagory-filters dropdown">
-                  <button class="filter dropdown-toggle" type="button" id="dropdownCatagory" data-toggle="dropdown" data-current="" aria-haspopup="true" aria-expanded="false">
-                    Catagory: <span class="current-placeholder">All</span>
-                  </button>
-                  <div class="dropdown-menu">
-                    <span class="filter catagory-filter dropdown-item" data-catagory="all">All</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubsSociety">Clubs and Society</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubNight">Club Night</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="Free">Free</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
+      <section id="error-404">
+     <div class="bg-pattern-left"></div>
+       <div class="container pos-rel text-xs-center">
+         <div class="v-align-wrapper">
+           <div class="v-align">
+             <div class="card">
+               <div class="card-block">
+                   <h1 class="super-header">
+                     Maintenance
+                   </h1>
+                   <p>Our tech team are making web magic happen!<br><br>We will be back shortly.<br><br>Check out the <a href="https://www.facebook.com/groups/1658092681114201/">Offical Facebook Group</a> in the meantime.</p>
                  </div>
-                </div>  -->           
-            </div>
-
-            <div id="loader">Loading...</div>
-            <!-- Placeholder for events listings template -->
-            <div id="event-listings-card" class="list">
-              <!-- <div class="col-xl-3 col-lg-4 col-md-6 item-col hidden" onclick="">
-              </div> -->
-          
-            </div>
-          </div>
+               </div>
+           </div>
+         </div>
+        </div>
           
           
 
@@ -375,67 +290,8 @@
     <script>window.jQuery || document.write('<script src="assets/components/jquery.js"><\/script>');</script>
     <script src="assets/components/jquery-ui.min.js"></script>
     <script src="assets/components/bootstrap.min.js"></script>
-        
-      <script src="assets/js/moment.js"></script>
-       <script type="text/javascript">
-            //wait for page to load
-            $(document).ready(function(){
-              // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#event-template-card').html();
-              // Compile that into an handlebars template
-              var template_card = Handlebars.compile(raw_template_card);
-              // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#event-listings-card");
-              // Fetch all Blog Posts data from server in JSON
-
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
-                
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
-                });
-              });
-
-       
-
-                  //  format an ISO date using Moment.js (8.9kb min)
-                  //  http://momentjs.com/
-                  //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
-                  //  Options see http://momentjs.com/docs/#/displaying/fromnow/
-
-              Handlebars.registerHelper('dateToNow', function(context, block) {
-                if (window.moment) {
-                  var s = block.hash.suffix || false;
-                      return moment(context).toNow(s);
-                }else{
-                  return context;   //  moment plugin not available. return data as is.
-                };
-              });
-
-              //  format an ISO date using Moment.js
-              //  http://momentjs.com/
-              //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
-              //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
-              Handlebars.registerHelper('dateFormat', function(context, block) {
-                if (window.moment) {
-                  var f = block.hash.format || "ddd D, YYYY";
-                  return moment(context).format(f);
-                }else{
-                  return context;   //  moment plugin not available. return data as is.
-                };
-              });
-            });
-          </script>
-
-          
-          
-     
-
+               
           <script src="assets/js/scripts.min.js"></script>
-          <script src="assets/js/list.min.js"></script>
-
 
 
     <script>
