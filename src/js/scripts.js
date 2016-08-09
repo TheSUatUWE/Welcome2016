@@ -253,8 +253,6 @@
       $('#loader').css('visibility', 'hidden');
       $('#event-listings-card').fadeIn('slow');
       $('#news-listings').fadeIn('slow');
-
-      
     }
 
     // Add icons to events

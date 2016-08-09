@@ -8150,6 +8150,8 @@ body.welcome-page section#get-started .get-started-col {
 body.welcome-page section#get-started .get-started-col[data-bg='events']:hover > .get-started {
   background-color: #e84253;
   color: #fff;
+  background-blend-mode: multiply;
+  background-image: url(../img/closing-festival.jpg);
 }
 body.welcome-page section#get-started .get-started-col[data-bg='faq']:hover > .get-started {
   background-color: #a0d9e0;
@@ -8175,7 +8177,7 @@ body.welcome-page section#get-started .get-started-col[data-bg='UWE']:hover > .g
   color: #fff;
 }
 body.welcome-page section#get-started .card.get-started {
-  height: 300px;
+  height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
 }
@@ -8761,6 +8763,11 @@ address > span {
 
 .ui-tooltip {
   background-color: #40373f !important;
+  z-index: 99999;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 2px 5px;
+  pointer-events: none;
 }
 
 .ui-helper-hidden-accessible {
@@ -9554,7 +9561,7 @@ address > span {
 
 /*
 *
-* Event Cards
+* Content Cards
 * 
 */
 .item-col .content-card-small {
@@ -9608,6 +9615,10 @@ address > span {
 }
 .item-col .content-card-small .card-img-gradient {
   z-index: 1;
+}
+.item-col .content-card-small.news:hover .card-block {
+  top: 0;
+  padding-top: 1.25rem;
 }
 .item-col:hover .card-block {
   top: 0;

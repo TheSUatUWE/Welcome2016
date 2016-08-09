@@ -66,6 +66,11 @@
 
 .ui-tooltip {
 	background-color:$u-grey!important;
+	z-index:99999;
+	color:#fff;
+	border-radius:$border-radius;
+	padding:2px 5px;
+	pointer-events:none;
 }
 
 .ui-helper-hidden-accessible {

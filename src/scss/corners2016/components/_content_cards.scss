@@ -1,6 +1,6 @@
 /*
 *
-* Event Cards
+* Content Cards
 * 
 */
 	.item-col {
@@ -69,6 +69,14 @@
 				z-index: 1;
 			}
 			
+			&.news {
+				&:hover {
+					.card-block {
+					    top: 0;
+					    padding-top: 1.25rem;
+					}
+				}
+			}
 
 		}
 
