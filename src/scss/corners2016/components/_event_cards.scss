@@ -5,8 +5,6 @@
 */
 	.item-col {
 
-		min-width:285px;
-
 		.content-card-small {
 
 			width:100%;
@@ -283,6 +281,9 @@
 
 	&.compact-listing {
 		padding:0;
+		border-bottom: 1px solid #c1c1c1;
+		border-top: 1px solid #c1c1c1;
+		margin-bottom: 20px;
 		.description {
 			display:block;
 			padding:0!important;
@@ -416,14 +417,7 @@
 				button {
 					bottom:0px;
 				}
-				a {
-					height: 100%;
-					position: absolute;
-					width: 100%;
-					top: 0;
-					display: block;
-					z-index: 999;
-				}
+				
 			}
 			.key {
 				top:-30px!important;

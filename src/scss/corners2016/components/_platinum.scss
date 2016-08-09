@@ -68,3 +68,100 @@
 		box-shadow: rgba(255,255,255,0.5) 0px 0px 50px 0px;
 	}
 }
+
+#pricing-table {
+
+	color:$u-grey;
+	text-align: center;
+
+
+	th {
+	    border-right: 1px solid $u-platinum;
+	    border-top:1px solid $u-platinum;
+	    background:$u-platinum;
+	    color:#fff;
+	    text-align:center;
+
+	    &:first-of-type {
+	    	border-top:none;
+	    	background:none;
+	    }
+
+	    &:nth-of-type(2) {
+	    	border-right: 1px solid $u-platinum-l50;
+	    }
+	}
+	
+	tr {
+		&.price-row  {
+			& > td:nth-of-type(2){
+				border-right: 1px solid $u-platinum-l50;
+			}
+			& > .feature {
+				background:transparent;
+				border-bottom: none;
+				border-right:1px solid $u-platinum-d10;
+			}
+		}
+
+		&.divider {
+			td {
+				&:nth-of-type(1) {
+					border:none;
+				}
+				&:nth-of-type(2) {
+					border-right:none;
+				}
+				&:nth-of-type(3) {
+					border-right:none;
+				}
+			}
+		}
+
+		&.freshers-main-event, &.freshers-ticketed-event {
+			display:none;
+
+			&.open {
+				display:table-row;
+			}
+		}
+	}
+
+	
+
+	td {
+		padding:5px;
+		border-right:1px solid $u-platinum-d10;
+		background:#fff;
+		border-bottom: 1px solid $u-platinum-d10;
+
+		&.feature {
+			background:transparent;
+			border-bottom: none;
+			text-align: right;
+		}
+
+		&.price {
+			background:$u-platinum-d10;
+			color:#fff;
+			font-size: 2em;
+			border-right:1px solid $u-platinum-d10;
+			border-bottom: 1px solid $u-platinum-d10;
+
+			&:last-of-type {
+				border-right:1px solid $u-platinum-d10;
+			}
+
+
+		}
+	}
+
+	th {
+		padding:10px;
+	}
+}
+
+img.platinum-tick {
+	max-width:40px;
+	max-height:40px;
+}

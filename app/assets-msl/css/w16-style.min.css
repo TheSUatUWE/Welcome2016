@@ -6889,6 +6889,10 @@ h2.super-super-header, .h2.super-super-header {
   line-height: 10vw;
 }
 
+h3.super-header, .h3.super-header {
+  font-size: 3vw;
+}
+
 /* Links */
 a {
   color: #af1525;
@@ -9553,9 +9557,6 @@ address > span {
 * Event Cards
 * 
 */
-.item-col {
-  min-width: 285px;
-}
 .item-col .content-card-small {
   width: 100%;
   height: 320px;
@@ -9796,6 +9797,9 @@ address > span {
 }
 .item-col.compact-listing {
   padding: 0;
+  border-bottom: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+  margin-bottom: 20px;
 }
 .item-col.compact-listing .description {
   display: block;
@@ -9916,14 +9920,6 @@ address > span {
 }
 .item-col.compact-listing:hover .description button {
   bottom: 0px;
-}
-.item-col.compact-listing:hover .description a {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  display: block;
-  z-index: 999;
 }
 .item-col.compact-listing:hover .key {
   top: -30px !important;
@@ -10064,6 +10060,77 @@ select {
 }
 .platinum-card:hover {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 50px 0px;
+}
+
+#pricing-table {
+  color: #40373f;
+  text-align: center;
+}
+#pricing-table th {
+  border-right: 1px solid #c7c7c7;
+  border-top: 1px solid #c7c7c7;
+  background: #c7c7c7;
+  color: #fff;
+  text-align: center;
+}
+#pricing-table th:first-of-type {
+  border-top: none;
+  background: none;
+}
+#pricing-table th:nth-of-type(2) {
+  border-right: 1px solid white;
+}
+#pricing-table tr.price-row > td:nth-of-type(2) {
+  border-right: 1px solid white;
+}
+#pricing-table tr.price-row > .feature {
+  background: transparent;
+  border-bottom: none;
+  border-right: 1px solid #aeaeae;
+}
+#pricing-table tr.divider td:nth-of-type(1) {
+  border: none;
+}
+#pricing-table tr.divider td:nth-of-type(2) {
+  border-right: none;
+}
+#pricing-table tr.divider td:nth-of-type(3) {
+  border-right: none;
+}
+#pricing-table tr.freshers-main-event, #pricing-table tr.freshers-ticketed-event {
+  display: none;
+}
+#pricing-table tr.freshers-main-event.open, #pricing-table tr.freshers-ticketed-event.open {
+  display: table-row;
+}
+#pricing-table td {
+  padding: 5px;
+  border-right: 1px solid #aeaeae;
+  background: #fff;
+  border-bottom: 1px solid #aeaeae;
+}
+#pricing-table td.feature {
+  background: transparent;
+  border-bottom: none;
+  text-align: right;
+}
+#pricing-table td.price {
+  background: #aeaeae;
+  color: #fff;
+  font-size: 2em;
+  border-right: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+}
+#pricing-table td.price:last-of-type {
+  border-right: 1px solid #aeaeae;
+}
+#pricing-table th {
+  padding: 10px;
+}
+
+img.platinum-tick {
+  max-width: 40px;
+  max-height: 40px;
 }
 
 /*

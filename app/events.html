@@ -36,7 +36,7 @@
 
     <script src="/assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col "  onclick="">
+      <div class="col-xl-3 col-lg-4 col-sm-6 item-col"  onclick="">
         <div class="key">
           <div class="tod shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
           <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""><div class="tooltip-arrow"></div></div>
@@ -392,7 +392,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("//www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post
@@ -439,8 +439,6 @@
 
           <script src="/assets/js/scripts.min.js"></script>
           <script>  
-          
-         
 
           // Fire compact once AJAX completed
           $(document).ajaxComplete(function () {
