@@ -160,7 +160,7 @@
                     </span>
                   </div>
       
-                <!--
+                
                 <button class="day filter main-filter" data-filter="day">Day</button>
                 <button class="night filter main-filter" data-filter="night">Night</button>
                 <button class="main filter main-filter" data-filter="main">Main</button>
@@ -193,7 +193,7 @@
                     <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
                  </div>
-                </div>    -->         
+                </div>             
             </div>
 
             <div id="loader">Loading...</div>
@@ -391,7 +391,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&Types=main",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

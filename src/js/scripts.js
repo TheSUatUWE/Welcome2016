@@ -259,11 +259,13 @@
     function eventTOD() {
         // Add Night or Day
        $('.item-col').each(function() {
+          var tod =  $(this).find('.tod');
+
           if ( $(this).children('.content-card-small').hasClass('night') ) {
-            $(this).find('.tod').addClass('night').prop('title', 'Night');
+            tod.addClass('night').prop('title', 'Night');
           } else if ( $(this).children('.content-card-small').hasClass('day') ) {
-            $(this).find('.tod').addClass('day').prop('title', 'Day');
-          }          
+            tod.addClass('day').prop('title', 'Day');
+          }       
         });
 
         $('.item-col').each(function() {
@@ -274,7 +276,7 @@
           } else if ( $(this).children('.content-card-small').hasClass('free') ) {
             cat2.addClass('free').prop('title', 'Free');
           } else if ( $(this).children('.content-card-small').hasClass('signUp') ) {
-            cat3.addClass('signUp').prop('title', 'Sign Up');
+            cat2.addClass('signUp').prop('title', 'Sign Up');
           } else if ( $(this).children('.content-card-small').hasClass('liveMusic') ) {
             cat2.addClass('liveMusic').prop('title', 'Live Music');
           } else if ( $(this).children('.content-card-small').hasClass('clubnight') ) {
@@ -290,6 +292,10 @@
             cat3.addClass('platinum').prop('title', 'Platinum Extra');
           } else if ( $(this).children('.content-card-small').hasClass('platPlatX') ) {
             cat3.addClass('platinumX').prop('title', 'Platinum & Platinum Extra');
+          } else if ( $(this).children('.content-card-small').hasClass('regularEvent') ) {
+            cat3.addClass('regularEvent').prop('title', 'Regular');
+          } else if ( $(this).children('.content-card-small').hasClass('giag') ) {
+            cat3.addClass('giag').prop('title', 'Give It A Go');
           } else if ( $(this).children('.content-card-small').hasClass('alcoholFree') ) {
             cat3.addClass('alcoholFree').prop('title', 'Alcohol Free');
           } else if ( $(this).children('.content-card-small').hasClass('family') ) {
