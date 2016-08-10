@@ -2863,7 +2863,7 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border-radius: 0 0.25em 0.25em 0.25em;
+  border-radius: 0 0 0.25em 0.25em;
 }
 
 .dropdown-divider {
@@ -8099,7 +8099,7 @@ body.welcome-page .bg-pattern-right {
   width: 100%;
   bottom: 0;
   left: 0;
-  background-size: cover;
+  background-size: 100%;
   background-image: url("/assets/img/tri-pattern-right.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -8469,6 +8469,14 @@ body.welcome-page.event-page section#events input#search {
 }
 body.welcome-page.event-page section#events #event-list {
   margin-top: 2em;
+}
+body.welcome-page.event-page section#events .search #dropdownLocation:hover, body.welcome-page.event-page section#events .search #dropdownLocation.active {
+  background: #f58d17;
+  color: #40373f;
+}
+body.welcome-page.event-page section#events .search #dropdownCatagory:hover, body.welcome-page.event-page section#events .search #dropdownCatagory.active {
+  background: #009a5b;
+  color: #40373f;
 }
 body.welcome-page.event-page section#events .card.featured-event {
   height: 200px;

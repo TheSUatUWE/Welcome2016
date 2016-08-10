@@ -391,7 +391,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=main",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

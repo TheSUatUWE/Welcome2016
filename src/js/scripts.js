@@ -321,6 +321,17 @@
         // Declare variables
         var mainFilterBtn = $(this);
         var mainFilter = $(this).html().toLowerCase();
+        var locationPlaceholder= $('#dropdownLocation').children('.current-placeholder');
+        var catagoryPlaceholder = $('#dropdownCatagory').children('.current-placeholder');
+
+        // Reset Location and Catagory Plac
+        locationPlaceholder.empty();
+        locationPlaceholder.append('All');
+        catagoryPlaceholder.empty();
+        catagoryPlaceholder.append('All');
+        $('#dropdownCatagory').removeClass('active');
+        $('#dropdownLocation').removeClass('active');
+
         // Add active class to the clicked filter
         $(this).toggleClass('active');
         console.log(mainFilterBtn);
@@ -353,11 +364,22 @@
         var locationFilterBtn = $(this);
         var locationFilter = $(this).attr('data-location');
         var filterText = locationFilterBtn.html();
+        var catagoryPlaceholder = $('#dropdownCatagory').children('.current-placeholder');
+
+        // Reset Catagory Placeholder
+        catagoryPlaceholder.empty();
+        catagoryPlaceholder.append('All');
+
+        // Reset Main Filters
+         $('.main-filter').removeClass('active');
         // Add active class to the clicked filter
         $(this).toggleClass('active');
         // Remove active class from all other filters
         $('.location-filter').not( $(this) ).removeClass('active');
         
+        // Toggle active class on button 
+        $('#dropdownLocation').addClass('active');
+        $('#dropdownCatagory').removeClass('active');
 
         // Loop through each event card
         $('.item-col').each(function(){
@@ -395,7 +417,19 @@
         var catagoryFilterBtn = $(this);
         var catagoryFilter = $(this).attr('data-catagory');
         var filterText = catagoryFilterBtn.html();
-        
+        var locationPlaceholder= $('#dropdownLocation').children('.current-placeholder');
+
+
+        // Reset Location Placeholder
+        locationPlaceholder.empty();
+        locationPlaceholder.append('All');
+
+        // Toggle active class on button 
+        $('#dropdownCatagory').addClass('active');
+        $('#dropdownLocation').removeClass('active');
+
+        // Reset Main Filters
+         $('.main-filter').removeClass('active');
         // Add active class to the clicked filter
         $(this).toggleClass('active');
         // Remove active class from all other filters

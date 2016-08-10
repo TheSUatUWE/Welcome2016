@@ -61,7 +61,7 @@ body.welcome-page {
 		bottom:0;
 		left:0;
 
-		background-size:cover;
+		background-size:100%;
 		background-image: url('/assets/img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
@@ -580,13 +580,18 @@ body.welcome-page.event-page {
 		}
 
 
-		// Catagory colors
+		// Filter colors
 		.search {
-			.filter.catagory-filter {
-				&[data-catagory='giag'] {
-					
+			#dropdownLocation {
+				&:hover, &.active {
+					background:$u-orange;
+					color:$u-grey;
 				}
-				&[data-catagory='liveMusic'] {
+			}
+			#dropdownCatagory {
+				&:hover, &.active {
+					background: $u-green;
+					color:$u-grey;
 				}
 			}
 		}
