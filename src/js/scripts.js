@@ -456,13 +456,14 @@
       eventLoad();
       initTooltip();
       eventResize();
-      eventTOD();
+      
     };
 
     // Fire List Functions once AJAX completed
     $(document).ajaxComplete(function () {
         initListJs();
         eventResize();
+        eventTOD();
     });
 
     // Fire eventResize whenever the user resizes their window
