@@ -12,7 +12,29 @@ button {
 
 	&.grey {
 		background:$u-grey;
-		color:#fff;	
+		color:#fff;
+
+		&.left-arrow {
+			width: auto;
+			padding-left: 60px!important;
+			padding-right:10px;
+			text-align: left;
+			
+			&:after {
+				width: 30px;
+				height: 25px;
+				margin-left: 0px;
+				position:absolute;
+				content: '';
+				background: url(../icons/left-arrow-white.svg);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				right: 4px;
+			    top: 4px;
+
+
+			}
+		}	
 	}
 
 	&.red {
@@ -61,6 +83,26 @@ button {
 			background-size: cover;
 			background-repeat: no-repeat;
 			right: 4px;
+		    top: 4px;
+
+
+		}
+	}
+	&.left-arrow {
+		width: auto;
+		padding-right: 60px;
+		text-align: left;
+		
+		&:after {
+			width: 30px;
+			height: 25px;
+			margin-right: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/left-arrow.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			left: 4px;
 		    top: 4px;
 
 

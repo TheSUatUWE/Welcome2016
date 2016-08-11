@@ -250,9 +250,11 @@
 
     // Show event listings and hider loader on window load
     function eventLoad() {
-      $('#loader').css('visibility', 'hidden');
-      $('#event-listings-card').fadeIn('slow');
-      $('#news-listings').fadeIn('slow');
+      $('#loader').fadeOut('slow').promise().done(function(){
+        $('#event-listings-card').delay(2000).fadeIn('slow');
+        $('#news-listings').fadeIn('slow');
+      });
+      
     }
 
     // Add icons to events
@@ -521,4 +523,28 @@
                 }); 
 
   });
+
+  // Floating Filters 
+  // $( document ).ready(function() {
+  //   var search =  $('.search');
+  //   var navPos = $('nav.nav').position().top;
+  //   var distance = $('.search').offset().top,
+  //       $window = $(window);
+
+  //   $window.scroll(function() {
+  //       if ( $window.scrollTop() >= distance ) {
+  //           search.addClass('float');        
+  //       } else {
+  //         search.removeClass('float');
+  //       }
+
+  //       if (navPos ===  0 ) {
+  //         search.css('top', '0');
+  //       } else { 
+  //         search.css('top', '100px');
+  //       }
+
+  //   });
+  // });
+
 })(jQuery, window, document);

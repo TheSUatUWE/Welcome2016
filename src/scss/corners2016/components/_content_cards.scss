@@ -530,4 +530,35 @@
 	}	
 }
 
+.card-loader {
+	opacity:0.5;
+	height:320px;
 	
+	background: linear-gradient(180deg, #ffffff, #b2b2b2);
+	background-size: 400% 400%;
+
+	-webkit-animation: AnimationName 3s ease infinite;
+	-moz-animation: AnimationName 3s ease infinite;
+	animation: AnimationName 3s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:50% 0%}
+	    50%{background-position:50% 100%}
+	    100%{background-position:50% 0%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:50% 0%}
+	    50%{background-position:50% 100%}
+	    100%{background-position:50% 0%}
+	}
+	@keyframes AnimationName { 
+	    0%{background-position:50% 0%}
+	    50%{background-position:50% 100%}
+	    100%{background-position:50% 0%}
+	}
+
+	.card-block {
+		height:100%;
+		text-align: center;
+	}
+}	

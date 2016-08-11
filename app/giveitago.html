@@ -29,18 +29,18 @@
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="/assets/css/style.min.css" rel="stylesheet">
 
-    <script src="/assets/components/modernizr.js"></script>
+    <script src="assets/components/modernizr.js"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
 
     <script src="/assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-3 col-lg-4 col-md-6 item-col"  onclick="">
+      <div class="col-xl-3 col-lg-4 col-sm-6 item-col"  onclick="">
         <div class="key">
-          <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
-          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
+          <div class="tod shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""></div>
+          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""></div>
+          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="bottom" data-offset="-10px 0" title=""></div>
         </div>
         <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
         <div class="types">{{#each Types}}{{this}} {{/each}}</div>
@@ -98,7 +98,7 @@
         <div class="logo">
           <a href="/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
-              .tri{fill:#F04E5C;}
+              .tri{fill:#e84253;}
               .text{fill:#FFFFFF;}
             </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
             <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
@@ -125,7 +125,7 @@
              --><li class="nav-item">
               <a class="nav-link" href="/faq">FAQ</a>
             </li><!-- 
-             --><li class="nav-item">
+             --><li class="nav-item open">
               <a class="nav-link" href="/events">Events</a>
             </li>
           </ul>
@@ -138,28 +138,40 @@
       <main class="main" role="main">
 
       <section id="events">
-     <div class="bg-pattern-left"></div>
+     <div class="bg-pattern-left-top"></div>
        <div class="container pos-rel">
+          <a href="/events">
+            <button class="grey left-arrow">
+            Back to regular events
+            </button>
+          </a>      
+
           <h1 class="super-header">Give It A Go</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa adipisci ratione cupiditate, facilis reprehenderit. Corrupti tempore rem in, vero rerum?.</p>
+          <p>This is for you to have a go at everything The Students’ Union has to offer. Whether you’re deciding which sports club or society to join or want to find out more about how to become a student rep, we have a taster session for everything. With extra sessions being added every day, make sure you keep checking this page. 
+</p>
+          <div class="row">
+    
+
 
           <div id="event-list">
             <hr>  
-            <div class="search">
-                <div class="search-bar">
-                  <span class="input-wrap input-search">
-                    <input class="filter input-field class" type="search" value="" required="" id="search" />
-                    <label class="input-label" for="search">
-                      <span class="input-label-content">Search for events</span>
-                    </label>
-                  </span>
-                </div>
+            <div class="search col-xs-12 p-a-0 m-b-1">
+               
+                  <div class="search-bar">
+                    <span class="input-wrap input-search">
+                      <input class="filter input-field" type="search" value="" required="" id="search" />
+                      <label class="input-label" for="search">
+                        <span class="input-label-content">Search for events</span>
+                      </label>
+                    </span>
+                  </div>
+      
                 
                 <button class="day filter main-filter" data-filter="day">Day</button>
                 <button class="night filter main-filter" data-filter="night">Night</button>
                 <button class="main filter main-filter" data-filter="main">Main</button>
 
-                <div class="location-filters dropdown">
+                 <div class="location-filters dropdown">
                   <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
                     Location: <span class="current-placeholder">All</span>
                   </button>
@@ -167,7 +179,8 @@
                     <span class="filter location-filter dropdown-item" data-location="all">All</span>
                     <span class="filter location-filter dropdown-item" data-location="bower">Bower Ashton</span>
                     <span class="filter location-filter dropdown-item" data-location="glenside">Glenside</span>
-                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>              </div>
+                    <span class="filter location-filter dropdown-item" data-location="frenchay">Frenchay</span>  
+                    <span class="filter location-filter dropdown-item" data-location="offCampus">Off Campus</span>              </div>
                 </div>
 
                 <div class="catagory-filters dropdown">
@@ -176,22 +189,114 @@
                   </button>
                   <div class="dropdown-menu">
                     <span class="filter catagory-filter dropdown-item" data-catagory="all">All</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubsSociety">Clubs and Society</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="signUp">Sign Up</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="clubNight">Club Night</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="clubnight">Club Night</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="Free">Free</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="free">Platinum + Platinum Extra</span>
                  </div>
-                </div>            
+                </div>             
             </div>
 
-            <div id="loader">Loading...</div>
+         
+            
             <!-- Placeholder for events listings template -->
-            <div id="event-listings-card" class="list"></div>
+            <div id="event-listings-card" class="list">           
+
+              <div id="loader">
+
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card card-loader">
+                    <div class="card-block">
+                      <div class="v-align-wrapper">
+                        <div class="v-align">
+                          Loading
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
           </div>
           
           
@@ -364,8 +469,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/components/jquery.js"><\/script>');</script>
     <script src="/assets/components/jquery-ui.min.js"></script>
-    <script src="/assets/components/tether.min.js"></script>
+
     <script src="/assets/components/bootstrap.min.js"></script>
+
         
       <script src="/assets/js/moment.js"></script>
        <script type="text/javascript">
@@ -387,7 +493,6 @@
                   // Render the posts into the page
                   placeHolderCard.append(html);
                 });
-                
               });
 
        
@@ -426,6 +531,36 @@
      
 
           <script src="/assets/js/scripts.min.js"></script>
+          <script>  
+
+          // Fire compact once AJAX completed
+          $(document).ajaxComplete(function () {
+              if (window.matchMedia("(min-width: 544px)").matches) {
+               /* the viewport is at least 400 pixels wide */
+             } else {
+               $('.item-col').addClass('compact-listing');
+             }
+          });
+
+          // media query event handler
+          if (matchMedia) {
+            var mq = window.matchMedia("(min-width: 544px)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+          }
+
+          // media query change
+          function WidthChange(mq) {
+            if (mq.matches) {
+              $('.item-col').removeClass('compact-listing');
+            } else {
+              $('.item-col').addClass('compact-listing');
+            }
+
+          }
+          </script>
+          <script src="/assets/js/list.min.js"></script>
+
 
 
     <script>

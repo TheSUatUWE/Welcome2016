@@ -146,7 +146,41 @@
                 </div>         
             </div>
 
-            <div id="loader">Loading...</div>
+            <div id="loader">
+              <div class="col-md-4">
+                <div class="card card-loader">
+                  <div class="card-block">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        Loading
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-loader">
+                  <div class="card-block">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        Loading
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-loader">
+                  <div class="card-block">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        Loading
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Placeholder for events listings template -->
             <div id="news-listings" class="list">
                     <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
@@ -362,7 +396,7 @@
               var placeHolderCard = $("#news-listings");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("//www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

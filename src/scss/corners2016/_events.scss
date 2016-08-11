@@ -10,11 +10,32 @@ section#events, section#news-list, .search-wrapper {
 	.search {
 		padding:20px 0px;
 
+		transition: all .25s ease;
+
+		&.float {
+			position: fixed;
+			top: 0px;
+			z-index: 999999;
+			width: 100%;
+			left: 0;
+			background: rgba(0, 0, 0, 0.59);
+			padding: 30px 30px 30px 150px !important;
+		}
+
 		.filter {
 		    height: 40px;
 		    padding: 7px 12px;
 			border-radius: .25em;
 		    background: #fff;
+
+		    &.dropdown-item {
+		    	border-radius:0;
+
+		    	&:hover {
+		    		background:$u-grey;
+		    		color:#fff;
+		    	}
+		    }
 		    
 
 		    transition:all .25s ease;
@@ -108,5 +129,30 @@ section#events, section#news-list, .search-wrapper {
 		margin:0;
 	}
 
+
+}
+
+.loader {
+	position: absolute;
+    z-index: 999999;
+    top: 184px;
+    width: 100%;
+}
+
+.featured-event {
+
+	a {
+		color:$u-grey;
+	}
+
+	.card {
+	    height: 100px;
+	    background-color: rgba(255, 255, 255, 0.3);
+	    text-align: center;
+
+	    h4 {
+	    	margin:0;	
+	    }
+	}
 
 }
