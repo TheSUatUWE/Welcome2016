@@ -5,6 +5,7 @@
 */
 	.item-col {
 
+		position: relative;
 		.content-card-small {
 
 			width:100%;
@@ -184,7 +185,7 @@
 			    	padding: 5px;
 			    	width: 100%;
 			    }
-				&.night, &.day, &.main, &.liveMusic, &.alcoholFree, &.club, &.family, &.free, &.platinum, &.platinumX, &.ticketed, &.signUp, &.giag {
+				&.night, &.day, &.main, &.liveMusic, &.alcoholFree, &.club, &.family, &.free, &.platPlatX, &.platX, &.ticketed, &.signUp, &.giag {
 					width: 40px;
 			    	height: 40px;
 				}	
@@ -247,16 +248,16 @@
 			    		background-color:$u-lime-l10!important;
 			    	}
 			    }
-			    &.platinum {
+			    &.platPlatX {
 			    	background-color: #fff;
-			    	background-image: url('/assets/icons/platX.svg');
+			    	background-image: url('/assets/icons/platPlatX.svg');
 			    	&:hover {
 			    		background-color:$u-platinum!important;
 			    	}
 			    }
-			    &.platinumX {
+			    &.platX {
 			    	background-color: #fff;
-			    	background-image: url('/assets/icons/platPlatX.svg');
+			    	background-image: url('/assets/icons/platX.svg');
 			    	&:hover {
 			    		background-color:$u-platinum!important;
 			    	}
@@ -396,13 +397,11 @@
 					display:block;
 					background-color:$u-lime-l10!important;
 				}
-				&.platinum, &.platinumX {
+				&.platX, &.platPlatX {
 					display:block;
 					background-color:$u-platinum!important;
 				}
-				&.platinumX {
 
-				}
 				&.ticketed {
 					display:block;
 					background-color:$u-red!important;
@@ -494,13 +493,13 @@
 					&.free {
 						background-image: url('/assets/icons/free.svg')!important;
 					}
-					&.platinum {
-						background-image: url('/assets/icons/platX.svg')!important;
-					}
-					&.platinumX {
+					&.platPlatX {
 						background-image: url('/assets/icons/platPlatX.svg')!important;
 						border-radius: 20px;
 						width: 60px;
+					}
+					&.platinumX {
+						background-image: url('/assets/icons/platX.svg')!important;
 					}
 					&.ticketed {
 						background-image: url('/assets/icons/ticket_filled.svg')!important;

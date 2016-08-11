@@ -570,6 +570,7 @@ body.welcome-page.event-page {
 
 
 	section#events {
+
 		padding-top:150px;
 		input#search {
 		    width: 300px;
@@ -612,6 +613,10 @@ body.welcome-page.event-page {
 
 	@include media-breakpoint-down(md) {		
 		section#events {
+			.featured-event .card h4 {
+			    margin: 0;
+			    font-size: 1.2em;
+			}
 			& .search .search-bar {
 				margin: 10px 0px;
 				float: left;

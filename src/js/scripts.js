@@ -290,10 +290,10 @@
 
         $('.item-col').each(function() {
           var cat3 =  $(this).find('.cat3');
-          if ( $(this).children('.content-card-small').hasClass('platX') ) {
-            cat3.addClass('platinum').prop('title', 'Platinum Extra');
-          } else if ( $(this).children('.content-card-small').hasClass('platPlatX') ) {
-            cat3.addClass('platinumX').prop('title', 'Platinum & Platinum Extra');
+          if ( $(this).children('.content-card-small').hasClass('platPlatX') && $(this).children('.content-card-small').hasClass('platX') ) {
+            cat3.addClass('platPlatX').prop('title', 'Platinum');
+          } else if ( $(this).children('.content-card-small').hasClass('platX') ) {
+            cat3.addClass('platX').prop('title', 'Platinum');
           } else if ( $(this).children('.content-card-small').hasClass('regularEvent') ) {
             cat3.addClass('regularEvent').prop('title', 'Regular');
           } else if ( $(this).children('.content-card-small').hasClass('giag') ) {
@@ -509,18 +509,18 @@
 
     // Loader 
      $( document ).ready(function() {
-                    var placeholder = $('.bg-placeholder');
-                    var card = $('.get-started-col > .card');
-                    card.mouseover(function(){
-                      var cardType = $(this).parent('.get-started-col').attr("data-bg");
-                      placeholder.attr('class', ('bg-placeholder '+cardType) );
-                      placeholder.css('opacity', '1');
-                      
-                    });
-                    card.mouseout(function(){
-                      placeholder.css('opacity', '0');
-                    });
-                }); 
+          var placeholder = $('.bg-placeholder');
+          var card = $('.get-started-col > .card');
+          card.mouseover(function(){
+            var cardType = $(this).parent('.get-started-col').attr("data-bg");
+            placeholder.attr('class', ('bg-placeholder '+cardType) );
+            placeholder.css('opacity', '1');
+            
+          });
+          card.mouseout(function(){
+            placeholder.css('opacity', '0');
+          });
+      }); 
 
   });
 

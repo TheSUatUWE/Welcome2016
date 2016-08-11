@@ -6811,7 +6811,7 @@ nav.nav.navbar-scrolling.scrolled .sidebar-toggle-top .toggle-bar, nav.nav.navba
   left: 0;
   right: 0;
   top: 6rem;
-  height: 7rem;
+  height: 3rem;
 }
 
 .headspace--hidden:hover {
@@ -8525,6 +8525,10 @@ body.welcome-page.event-page section#giag {
   height: 200px;
 }
 @media (max-width: 991px) {
+  body.welcome-page.event-page section#events .featured-event .card h4 {
+    margin: 0;
+    font-size: 1.2em;
+  }
   body.welcome-page.event-page section#events .search .search-bar {
     margin: 10px 0px;
     float: left;
@@ -8582,7 +8586,6 @@ section#events, section#news-list, .search-wrapper {
   padding: 20px 0px;
 }
 section#events .search, section#news-list .search, .search-wrapper .search {
-  padding: 20px 0px;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
@@ -8600,6 +8603,7 @@ section#events .search .filter, section#news-list .search .filter, .search-wrapp
   padding: 7px 12px;
   border-radius: .25em;
   background: #fff;
+  margin-bottom: 5px;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
@@ -9644,6 +9648,9 @@ address > span {
 * Content Cards
 * 
 */
+.item-col {
+  position: relative;
+}
 .item-col .content-card-small {
   width: 100%;
   height: 320px;
@@ -9792,7 +9799,7 @@ address > span {
   padding: 5px;
   width: 100%;
 }
-.item-col .key .tod.night, .item-col .key .tod.day, .item-col .key .tod.main, .item-col .key .tod.liveMusic, .item-col .key .tod.alcoholFree, .item-col .key .tod.club, .item-col .key .tod.family, .item-col .key .tod.free, .item-col .key .tod.platinum, .item-col .key .tod.platinumX, .item-col .key .tod.ticketed, .item-col .key .tod.signUp, .item-col .key .tod.giag, .item-col .key .cat2.night, .item-col .key .cat2.day, .item-col .key .cat2.main, .item-col .key .cat2.liveMusic, .item-col .key .cat2.alcoholFree, .item-col .key .cat2.club, .item-col .key .cat2.family, .item-col .key .cat2.free, .item-col .key .cat2.platinum, .item-col .key .cat2.platinumX, .item-col .key .cat2.ticketed, .item-col .key .cat2.signUp, .item-col .key .cat2.giag, .item-col .key .cat3.night, .item-col .key .cat3.day, .item-col .key .cat3.main, .item-col .key .cat3.liveMusic, .item-col .key .cat3.alcoholFree, .item-col .key .cat3.club, .item-col .key .cat3.family, .item-col .key .cat3.free, .item-col .key .cat3.platinum, .item-col .key .cat3.platinumX, .item-col .key .cat3.ticketed, .item-col .key .cat3.signUp, .item-col .key .cat3.giag {
+.item-col .key .tod.night, .item-col .key .tod.day, .item-col .key .tod.main, .item-col .key .tod.liveMusic, .item-col .key .tod.alcoholFree, .item-col .key .tod.club, .item-col .key .tod.family, .item-col .key .tod.free, .item-col .key .tod.platPlatX, .item-col .key .tod.platX, .item-col .key .tod.ticketed, .item-col .key .tod.signUp, .item-col .key .tod.giag, .item-col .key .cat2.night, .item-col .key .cat2.day, .item-col .key .cat2.main, .item-col .key .cat2.liveMusic, .item-col .key .cat2.alcoholFree, .item-col .key .cat2.club, .item-col .key .cat2.family, .item-col .key .cat2.free, .item-col .key .cat2.platPlatX, .item-col .key .cat2.platX, .item-col .key .cat2.ticketed, .item-col .key .cat2.signUp, .item-col .key .cat2.giag, .item-col .key .cat3.night, .item-col .key .cat3.day, .item-col .key .cat3.main, .item-col .key .cat3.liveMusic, .item-col .key .cat3.alcoholFree, .item-col .key .cat3.club, .item-col .key .cat3.family, .item-col .key .cat3.free, .item-col .key .cat3.platPlatX, .item-col .key .cat3.platX, .item-col .key .cat3.ticketed, .item-col .key .cat3.signUp, .item-col .key .cat3.giag {
   width: 40px;
   height: 40px;
 }
@@ -9852,18 +9859,18 @@ address > span {
 .item-col .key .tod.free:hover, .item-col .key .cat2.free:hover, .item-col .key .cat3.free:hover {
   background-color: #c0d17f !important;
 }
-.item-col .key .tod.platinum, .item-col .key .cat2.platinum, .item-col .key .cat3.platinum {
-  background-color: #fff;
-  background-image: url("/assets/icons/platX.svg");
-}
-.item-col .key .tod.platinum:hover, .item-col .key .cat2.platinum:hover, .item-col .key .cat3.platinum:hover {
-  background-color: #c7c7c7 !important;
-}
-.item-col .key .tod.platinumX, .item-col .key .cat2.platinumX, .item-col .key .cat3.platinumX {
+.item-col .key .tod.platPlatX, .item-col .key .cat2.platPlatX, .item-col .key .cat3.platPlatX {
   background-color: #fff;
   background-image: url("/assets/icons/platPlatX.svg");
 }
-.item-col .key .tod.platinumX:hover, .item-col .key .cat2.platinumX:hover, .item-col .key .cat3.platinumX:hover {
+.item-col .key .tod.platPlatX:hover, .item-col .key .cat2.platPlatX:hover, .item-col .key .cat3.platPlatX:hover {
+  background-color: #c7c7c7 !important;
+}
+.item-col .key .tod.platX, .item-col .key .cat2.platX, .item-col .key .cat3.platX {
+  background-color: #fff;
+  background-image: url("/assets/icons/platX.svg");
+}
+.item-col .key .tod.platX:hover, .item-col .key .cat2.platX:hover, .item-col .key .cat3.platX:hover {
   background-color: #c7c7c7 !important;
 }
 .item-col .key .tod.ticketed, .item-col .key .cat2.ticketed, .item-col .key .cat3.ticketed {
@@ -9994,7 +10001,7 @@ address > span {
   display: block;
   background-color: #c0d17f !important;
 }
-.item-col.compact-listing .key .tod.platinum, .item-col.compact-listing .key .tod.platinumX, .item-col.compact-listing .key .cat2.platinum, .item-col.compact-listing .key .cat2.platinumX, .item-col.compact-listing .key .cat3.platinum, .item-col.compact-listing .key .cat3.platinumX {
+.item-col.compact-listing .key .tod.platX, .item-col.compact-listing .key .tod.platPlatX, .item-col.compact-listing .key .cat2.platX, .item-col.compact-listing .key .cat2.platPlatX, .item-col.compact-listing .key .cat3.platX, .item-col.compact-listing .key .cat3.platPlatX {
   display: block;
   background-color: #c7c7c7 !important;
 }
@@ -10078,13 +10085,13 @@ address > span {
 .item-col.compact-listing:hover .key .tod.free, .item-col.compact-listing:hover .key .cat2.free, .item-col.compact-listing:hover .key .cat3.free {
   background-image: url("/assets/icons/free.svg") !important;
 }
-.item-col.compact-listing:hover .key .tod.platinum, .item-col.compact-listing:hover .key .cat2.platinum, .item-col.compact-listing:hover .key .cat3.platinum {
-  background-image: url("/assets/icons/platX.svg") !important;
-}
-.item-col.compact-listing:hover .key .tod.platinumX, .item-col.compact-listing:hover .key .cat2.platinumX, .item-col.compact-listing:hover .key .cat3.platinumX {
+.item-col.compact-listing:hover .key .tod.platPlatX, .item-col.compact-listing:hover .key .cat2.platPlatX, .item-col.compact-listing:hover .key .cat3.platPlatX {
   background-image: url("/assets/icons/platPlatX.svg") !important;
   border-radius: 20px;
   width: 60px;
+}
+.item-col.compact-listing:hover .key .tod.platinumX, .item-col.compact-listing:hover .key .cat2.platinumX, .item-col.compact-listing:hover .key .cat3.platinumX {
+  background-image: url("/assets/icons/platX.svg") !important;
 }
 .item-col.compact-listing:hover .key .tod.ticketed, .item-col.compact-listing:hover .key .cat2.ticketed, .item-col.compact-listing:hover .key .cat3.ticketed {
   background-image: url("/assets/icons/ticket_filled.svg") !important;
@@ -10181,10 +10188,23 @@ select {
 }
 
 .platinum-card {
+  overflow: hidden;
   color: #40373f;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 30px 0px;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
+}
+.platinum-card .platinum-overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  z-index: 99999999;
+  border-radius: 0.20em;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
 }
 .platinum-card .card-block {
   padding: 0;
@@ -10227,6 +10247,9 @@ select {
 }
 .platinum-card:hover {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 50px 0px;
+}
+.platinum-card:hover .platinum-overlay {
+  opacity: 1;
 }
 
 #pricing-table {
