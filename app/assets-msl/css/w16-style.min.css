@@ -7136,7 +7136,6 @@ a.svg-link::after {
 .v-align-wrapper {
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
   top: 0;
   width: 100%;
@@ -8570,6 +8569,10 @@ body.welcome-page section#uwe-get-ready {
   }
   body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
     height: 200px;
+  }
+  body.welcome-page section#social-signup .sign-up .v-align-wrapper {
+    left: auto;
+    right: auto;
   }
   body.welcome-page section#social-signup .sign-up .sign-up-wrap {
     max-width: none;

@@ -557,6 +557,10 @@ body.welcome-page {
 			}
 
 			.sign-up {
+				.v-align-wrapper {
+					left:auto;
+					right:auto;
+				}
 				.sign-up-wrap {
 					max-width: none;
 					height:auto;
@@ -577,7 +581,7 @@ body.welcome-page {
 			}
 
 			.social {
-				
+
 				&:before {
 				    background: #fff;
 				    bottom: 0;
