@@ -9837,6 +9837,7 @@ address > span {
   bottom: 0;
   left: 0;
   margin-bottom: -400px;
+  border-radius: 0 0 0.25em 0.25em;
 }
 .item-col .content-card-small .card-img-top {
   overflow: hidden;

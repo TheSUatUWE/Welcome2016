@@ -235,7 +235,7 @@
     function eventReveal() {
         $('#loader').fadeOut('slow');
         $('#event-listings-card').delay(2000).fadeIn('slow');
-        $('#news-listings').delay(2000).fadeIn('slow');
+        $('#news-listings').fadeIn('slow');
     }
 
     // Add icons to events
