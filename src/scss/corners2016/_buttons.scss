@@ -9,6 +9,7 @@ button {
 	padding:7px 12px;
 	transition:all .5s ease;
 	position: relative;
+	border-radius: 0.25em;
 
 	&.grey {
 		background:$u-grey;

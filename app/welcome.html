@@ -147,12 +147,12 @@
              <div class="v-align">
                <div class="row">
                   <div class="col-md-12">
-                    <h1 class="super-super-header m-b-3 text-xs-center">Welcome</h1>
+                    <h1 class="super-super-header m-b-3 fadeIn-onLoad text-xs-center">Welcome</h1>
                   </div>
                  <div class="col-sm-6 col-sm-offset-3 text-xs-center">
                  
                   
-                    <div class="stats-wrapper">
+                    <div class="stats-wrapper fadeIn-onLoad">
                       <div class="stat">
                         <span>1</span>
                         <p>Month</p>
@@ -170,7 +170,10 @@
                         <p>Locations</p>
                       </div>
                     </div>
-                     <a class="get-started-cta" href="#get-started"><button class="grey down-arrow-grey line m-t-3" role="button">Get started</button></a>                    
+                    <div class="fadeIn-onLoad">
+                      <a class="get-started-cta " href="#get-started"><button class="grey down-arrow-grey line m-t-3" role="button">Get started</button></a>
+                    </div>
+                                        
                   </div>
                </div>
              </div>
@@ -467,16 +470,21 @@
           
           <script>
 
+            $( document ).ready(function() {
+              
 
-            var bg2 = new Waypoint({
-              element: document.getElementById('landing'),
-              handler: function(direction) {
-                $('.bg-2').fadeToggle(2000);
 
-                console.log('bg2');
-              },
-              offset: '-50%'
-            })
+
+              var bg2 = new Waypoint({
+                element: document.getElementById('landing'),
+                handler: function(direction) {
+                  $('.bg-2').fadeToggle(2000);
+
+                  console.log('bg2');
+                },
+                offset: '-50%'
+              });
+            });
           </script>
 
           <script type="text/javascript">

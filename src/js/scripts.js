@@ -232,12 +232,10 @@
     }
 
     // Show event listings and hider loader on window load
-    function eventLoad() {
-      $('#loader').fadeOut('slow').promise().done(function(){
+    function eventReveal() {
+        $('#loader').fadeOut('slow');
         $('#event-listings-card').delay(2000).fadeIn('slow');
-        $('#news-listings').fadeIn('slow');
-      });
-      
+        $('#news-listings').delay(2000).fadeIn('slow');
     }
 
     // Add icons to events
@@ -472,7 +470,7 @@
      
     //  Init events functions once everything has loaded
     window.onload = function() {
-      eventLoad();
+      eventReveal();
       initTooltip();
       eventResize();
       
@@ -515,14 +513,20 @@
      };
    }
 
+   // fadeIn-onLoad 
+   $(document).ready(function () {
+       $('.fadeIn-onLoad').delay(1000).fadeIn(1000);
+   });
+
+
    // Logo 
-    $( document ).ready(function() {
-          window.onload = function() {
-            setTimeout(function(){
-              $('.logo').removeClass('loading');
-            },1500);
-      };
-    });
+    // $( document ).ready(function() {
+    //       window.onload = function() {
+    //         setTimeout(function(){
+    //           $('.logo').removeClass('loading');
+    //         },1500);
+    //   };
+    // });
   // Floating Filters 
   // $( document ).ready(function() {
   //   var search =  $('.search');

@@ -5994,15 +5994,16 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Platibum Variations */
 /* Gradients */
 body.welcome-page #page-wrapper.welcome-page-wrapper, body.welcome-page section#events, body.welcome-page section#news-list {
-  background: #c6e8ed;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0d9e0+1,62efb4+100 */
+  background: #a0d9e0;
   /* Old browsers */
   /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #a0d9e0 1%, #62efb4 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(bottom left, #c6e8ed 0%, #67ffc1 100%);
-  background: linear-gradient(to top right, #c6e8ed 0%, #67ffc1 100%);
+  background: linear-gradient(to right, #a0d9e0 1%, #62efb4 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l40',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#62efb4',GradientType=1 );
+  /* IE6-9 */
 }
 
 body.content-page .header-banner, body.welcome-page .bg-2, body.welcome-page section#social, body.welcome-page.blog-page section#blog-list {
@@ -7561,6 +7562,7 @@ button {
   -webkit-transition: all .5s ease;
           transition: all .5s ease;
   position: relative;
+  border-radius: 0.25em;
 }
 button.grey {
   background: #40373f;
@@ -7921,10 +7923,16 @@ body.content-page .header-banner h1 {
   nav.nav > .mobile-menu-circle {
     display: block;
     opacity: 1;
-    background: #a0d9e0;
-    background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-    background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 );
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
+    background: #ffe44d;
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ffe44d 0%, #f58d17 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ffe44d 0%, #f58d17 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
     position: fixed;
     top: 40px;
     right: 40px;
@@ -8022,9 +8030,10 @@ body.content-page .header-banner h1 {
     display: block;
     width: 100%;
     text-align: center;
+    padding: 10px 0 0 0;
     font-size: 1.5em;
-    line-height: 2em;
-    padding: 0;
+    line-height: 2.5em;
+    margin-bottom: 1em;
   }
   nav.nav ul.nav.nav-inline li.nav-item a {
     color: #fff !important;
@@ -8184,7 +8193,7 @@ body.welcome-page .mobile-menu-toggle {
   padding: 35px 30px;
 }
 body.welcome-page .mobile-menu-toggle .toggle-bar {
-  background: #205a61;
+  background: #40373f;
 }
 body.welcome-page .bg-2 {
   position: fixed;
@@ -8398,6 +8407,7 @@ body.welcome-page section#news:hover button {
 }
 body.welcome-page section#social-signup {
   background: #fff;
+  overflow: hidden !important;
 }
 body.welcome-page section#social-signup .sign-up-wrap {
   height: 170px;
@@ -10669,8 +10679,8 @@ a.svg-link:hover svg#yt-logo .st0 {
 * Animation Classes
 * 
 */
-.fade-slide-on-load {
-  opacity: 0;
+.fadeIn-onLoad {
+  display: none;
 }
 
 /* Temporary CSS */

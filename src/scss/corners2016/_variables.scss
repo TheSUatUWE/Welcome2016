@@ -148,11 +148,12 @@ $u-platinum-d50 : darken( $u-platinum, 50% ) ;
 /* Gradients */
 
 %g-sky-green-light {
-    background: $u-sky-l10; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-linear-gradient(bottom left, $u-sky-l10 0%, $u-green-l40 100%);
-    background: -o-linear-gradient(bottom left, $u-sky-l10 0%, $u-green-l40 100%);
-    background: linear-gradient(to top right, $u-sky-l10 0%, $u-green-l40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0d9e0+1,62efb4+100 */
+background: rgb(160,217,224); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(160,217,224,1) 1%, rgba(98,239,180,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(160,217,224,1) 1%,rgba(98,239,180,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(160,217,224,1) 1%,rgba(98,239,180,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#62efb4',GradientType=1 ); /* IE6-9 */
 }
 
 %g-sky-green {

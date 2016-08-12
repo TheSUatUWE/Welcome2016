@@ -29,7 +29,7 @@ body.welcome-page {
 		padding: 35px 30px;
 		
 		.toggle-bar {
-			background: $u-sky-d50;
+			background: $u-grey;
 		}
 	}
 
@@ -299,6 +299,7 @@ body.welcome-page {
 
 	section#social-signup {
 		background:#fff;
+		overflow: hidden!important;
 		
 		.sign-up-wrap {
 			height:170px;

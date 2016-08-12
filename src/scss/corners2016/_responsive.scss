@@ -49,11 +49,12 @@
 		& > .mobile-menu-circle {
 				display: block;
 				opacity:1;
-			    background: #a0d9e0;
-			    background: -webkit-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-			    background: -o-linear-gradient(bottom left, #a0d9e0 0%, #009a5b 100%);
-			    background: linear-gradient(to top right, #a0d9e0 0%, #009a5b 100%);
-			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9e0', endColorstr='#009a5b',GradientType=1 );
+			    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
+			    background: #ffe44d; /* Old browsers */
+			    background: -moz-linear-gradient(45deg,  #ffe44d 0%, #f58d17 100%); /* FF3.6-15 */
+			    background: -webkit-linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* Chrome10-25,Safari5.1-6 */
+			    background: linear-gradient(45deg,  #ffe44d 0%,#f58d17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe44d', endColorstr='#f58d17',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 			    position: fixed;
 			    top: 40px;
 			    right: 40px;
@@ -170,9 +171,10 @@
 			        display: block;
 			        width: 100%;
 			        text-align: center;
+			        padding: 10px 0 0 0;
 			        font-size: 1.5em;
-			        line-height: 2em;
-			        padding:0;
+			        line-height: 2.5em;
+			        margin-bottom: 1em;
 			        
 			        a {
 			        	color:#fff!important;
