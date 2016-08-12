@@ -10,7 +10,7 @@
 
     <!-- Begin Facebook tags -->
     <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
-    <meta property="og:url" content="https:" />
+    <meta property="og:url" content="https://welcome.thestudentsunion.co.uk/" />
     <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="https:/assets/img/welcome-ogp.jpg" />
     <meta property="og:type" content="website" />
@@ -147,7 +147,7 @@
 
             <div class="featured-event">
                <a href="/giveitago">
-                <div class="col-xs-4 featured-event">
+                <div class="col-sm-3 col-xs-6 featured-event">
                   <div class="card shadow-1">
                     <div class="v-align-wrapper">
                       <div class="v-align">
@@ -160,7 +160,7 @@
                 </div>
               </a>
               <a href="/freshers-fair">
-                <div class="col-xs-4 featured-event">
+                <div class="col-sm-3 col-xs-6 featured-event">
                   <div class="card shadow-1">
                     <div class="v-align-wrapper">
                       <div class="v-align">
@@ -173,12 +173,25 @@
                 </div>
               </a>
               <a href="/freshers-festival">
-                <div class="col-xs-4 featured-event">
+                <div class="col-sm-3 col-xs-6 featured-event">
                   <div class="card shadow-1">
                     <div class="v-align-wrapper">
                       <div class="v-align">
                         <div class="card-block">
                             <h4>Closing Festival</h4>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/platinum">
+                <div class="col-sm-3 col-xs-6 featured-event">
+                  <div class="card shadow-1">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        <div class="card-block">
+                            <h4>Platinum</h4>
                           </div>
                       </div>
                     </div>
@@ -520,7 +533,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=main",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=w16",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

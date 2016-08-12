@@ -91,7 +91,8 @@
   </head>
   <body class="welcome-page">
   
-    <div id="page-wrapper">
+    <div id="page-wrapper" class="welcome-page-wrapper">
+    <div class="bg-2"></div>
 
       <header class="header" role="banner">
         <div class="logo">
@@ -139,45 +140,52 @@
       
       <main class="main" role="main">
       <section id="landing">
-        <div class="bg-pattern-left"></div>
+        <div class="bg-pattern-right pos-fixed"></div>
+        <div class="bg-decoration-1"></div>
           <div class="container-fluid landing-welcome ">
-            <div class="row">
-              <div class="col-lg-12">
-                <h1 class="super-super-header fc-white text-sm-center text-xs-left">Welcome</h1>
-              </div>
-              <div class="col-sm-6 col-sm-offset-3">
-                 <p class="fc-sky-d50">Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. <span class="hidden-sm-down">This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates.</span></p>
-                 <div class="stats-wrapper fc-sky-d50">
-                   <div class="stat">
-                     <span>1</span>
-                     <p>Month</p>
-                   </div>
-                   <div class="stat">
-                     <span>200<sup>+</sup></span>
-                     <p>Events</p>
-                   </div>
-                   <div class="stat">
-                     <span>15,000<sup>+</sup></span>
-                     <p>Students</p>
-                   </div>
-                   <div class="stat">
-                     <span>30<sup>+</sup></span>
-                     <p>Locations</p>
-                   </div>
-                 </div>                   
+           <div class="v-align-wrapper">
+             <div class="v-align">
+               <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="super-super-header m-b-3 text-xs-center">Welcome</h1>
+                  </div>
+                 <div class="col-sm-6 col-sm-offset-3 text-xs-center">
+                 
+                  
+                    <div class="stats-wrapper">
+                      <div class="stat">
+                        <span>1</span>
+                        <p>Month</p>
+                      </div>
+                      <div class="stat">
+                        <span>200<sup>+</sup></span>
+                        <p>Events</p>
+                      </div>
+                      <div class="stat">
+                        <span>15,000<sup>+</sup></span>
+                        <p>Students</p>
+                      </div>
+                      <div class="stat">
+                        <span>30<sup>+</sup></span>
+                        <p>Locations</p>
+                      </div>
+                    </div>
+                     <a class="get-started-cta" href="#get-started"><button class="grey down-arrow-grey line m-t-3" role="button">Get started</button></a>                    
+                  </div>
                </div>
-              
-            </div>
+             </div>
+           </div>
           </div>
-          <a class="find-out-more" href="#get-started"><button class="sky-d50 down-arrow" role="button">Get started</button></a>   
+           
       </section>
 
       <section id="get-started" class="pos-rel">
-      <div class="bg-pattern-left-top"></div>
       <div class="bg-placeholder"></div>
         <div class="container">
           <div class="row">
-            <div class="col-md-12"><h2 class="super-header">Get Started</h2></div>
+            <div class="col-md-12"><h2 class="super-header">Get Started</h2>
+            <p>Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year. <span class="hidden-sm-down">This site gives you an idea about what to expect, we will be releasing more information about events and tickets over the summer so keep your eyes peeled and sign up with your email for updates.</span></p></div>
+
 
             <a class="card-link-wrap" href="/events">
               <div class="col-sm-6 get-started-col" data-bg="events">
@@ -454,7 +462,43 @@
  
 
           <script src="/assets/js/scripts.min.js"></script>
+          <script src="/assets/js/jquery.waypoints.min.js"></script>
+          <script src="/assets/js/sticky.min.js"></script>
           
+          <script>
+
+
+            var bg2 = new Waypoint({
+              element: document.getElementById('landing'),
+              handler: function(direction) {
+                $('.bg-2').fadeToggle(2000);
+
+                console.log('bg2');
+              },
+              offset: '-50%'
+            })
+          </script>
+
+          <script type="text/javascript">
+            // Smooth Scroll
+
+            $( document ).ready(function() {
+                $(function() {
+                  $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                      if (target.length) {
+                        $('html, body').animate({
+                          scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                      }
+                    }
+                  });
+                });
+            });
+          </script>
 
           <script>
                 $( document ).ready(function() {

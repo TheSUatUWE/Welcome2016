@@ -14,6 +14,30 @@ button {
 		background:$u-grey;
 		color:#fff;
 
+		&.down-arrow-grey:hover:after {
+			width: 30px;
+			height: 25px;
+			margin-left: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/down-arrow.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			right: 4px;
+		    top: 4px;
+		}
+
+		&.line {
+			border:3px solid $u-grey;
+			background:none;
+			color:$u-grey;
+
+			&:hover {
+				background:$u-grey;
+				color:#fff;
+			}
+		}
+
 		&.left-arrow {
 			width: auto;
 			padding-left: 60px!important;
@@ -50,6 +74,16 @@ button {
 	&.sky-d50 {
 		background:$u-sky-d50;
 		color:#fff;
+
+		&.line {
+			border:3px solid $u-sky-d50;
+			background:none;
+			color:$u-sky-d50;
+
+			&:hover {
+				background:$u-sky-d50;
+			}
+		}
 
 		&:hover {
 			background:$u-grey;
@@ -128,6 +162,34 @@ button {
 		}
 			
 	}
+
+	&.down-arrow-grey {
+		width: auto;
+		padding-right: 60px;
+		text-align: left;
+		
+		&:after {
+			width: 30px;
+			height: 25px;
+			margin-left: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/down-arrow-grey.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			right: 4px;
+		    top: 4px;
+			
+			&:hover {
+				background: url(../icons/down-arrow.svg);
+			}
+		}
+			
+	}
+
+
+
+
 
 	&.close {
 		

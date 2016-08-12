@@ -15,7 +15,15 @@ body.welcome-page {
 		padding:150px 0px 50px;
 	}
 
+	#page-wrapper {
+		z-index: 2;
+		position: relative;
+		display: block;
+	}
 
+	#page-wrapper.welcome-page-wrapper {
+		@extend %g-sky-green-light;
+	}
 
 	.mobile-menu-toggle {
 		padding: 35px 30px;
@@ -23,6 +31,17 @@ body.welcome-page {
 		.toggle-bar {
 			background: $u-sky-d50;
 		}
+	}
+
+	.bg-2 {
+		@extend %g-yellow-orange;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		display: none;
 	}
 
 	.bg-pattern-left {
@@ -74,20 +93,16 @@ body.welcome-page {
 
 	section#landing {
 		min-height: 100vh;
+		height:100vh;
 		position: relative;
-		background: $u-sky;
+		
 		overflow:hidden;
 
 		span.intro-text {
 			font-size:$font-size-lg;
 			font-weight: 900;
 		}
-		
-		.find-out-more {
-			position:absolute;
-			bottom:20px;
-			right:20px;
-		}
+	
 
 		.stats-wrapper {
 			.stat {
@@ -117,8 +132,8 @@ body.welcome-page {
 
 	/* Section: Get Started */
 	section#get-started {
-		@extend %g-brand-spectrum;
-		padding:150px 0;
+		
+		padding:100px 0;
 
 		a.card-link-wrap {
 			color:$u-grey;
@@ -283,6 +298,7 @@ body.welcome-page {
 	/* Section: Social + Signup */
 
 	section#social-signup {
+		background:#fff;
 		
 		.sign-up-wrap {
 			height:170px;
@@ -311,7 +327,31 @@ body.welcome-page {
 			}
 		}
 
+
+
 		.social {			
+			background:#fff;
+
+			&:before {
+				background: #fff;
+			    bottom: 0;
+			    content: "";
+			    position: absolute;
+			    left: 100%;
+			    top: 0;
+			    width: 9999px;
+			}
+
+			&:after {
+				background:transparent;
+			    bottom: 0;
+			    content: "";
+			    position: absolute;
+			    right: 100%;
+			    top: 0;
+			    width: 9999px;
+			}
+
 			.social-wrap {
 				float:right;
 			}
@@ -394,11 +434,11 @@ body.welcome-page {
 			
 
 			section#landing {
-				.find-out-more {
-							    position: absolute;
-							    bottom: 90px!important;
-							    right: 20px;
-							}
+
+				.v-align-wrapper {
+					top:75px;
+				}
+
 
 				.stats-wrapper {
 					text-align: center;
@@ -531,6 +571,28 @@ body.welcome-page {
 				    content: "";
 				    position: absolute;
 				    left: 100%;
+				    top: 0;
+				    width: 9999px;
+				}
+			}
+
+			.social {
+				
+				&:before {
+				    background: #fff;
+				    bottom: 0;
+				    content: "";
+				    position: absolute;
+				    right: 100%;
+				    top: 0;
+				    width: 9999px;
+				}
+				&:after {
+				    background: #fff;
+				    bottom: 0;
+				    content: "";
+				    position: absolute;
+				    right: 100%;
 				    top: 0;
 				    width: 9999px;
 				}

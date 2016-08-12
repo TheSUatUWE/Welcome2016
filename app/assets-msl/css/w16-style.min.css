@@ -5993,19 +5993,19 @@ a.bg-danger:focus, a.bg-danger:hover {
 /* Yellow Variations */
 /* Platibum Variations */
 /* Gradients */
-body.welcome-page section#events, body.welcome-page section#news-list {
+body.welcome-page #page-wrapper.welcome-page-wrapper, body.welcome-page section#events, body.welcome-page section#news-list {
   background: #c6e8ed;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(bottom left, #c6e8ed 0%, #9affd6 100%);
-  background: linear-gradient(to top right, #c6e8ed 0%, #9affd6 100%);
+  background: -webkit-linear-gradient(bottom left, #c6e8ed 0%, #67ffc1 100%);
+  background: linear-gradient(to top right, #c6e8ed 0%, #67ffc1 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l50',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$u-sky-l10', endColorstr='$u-green-l40',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
-body.content-page .header-banner, body.welcome-page section#social, body.welcome-page.blog-page section#blog-list {
+body.content-page .header-banner, body.welcome-page .bg-2, body.welcome-page section#social, body.welcome-page.blog-page section#blog-list {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,f58d17+100 */
   background-image: #ffe44d;
   /* Old browsers */
@@ -6032,28 +6032,29 @@ body.welcome-page.faq-page section#faq-list {
 }
 
 body.welcome-page section#news .grad-overlay {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffe44d+0,ffe44d+98&0+0,1+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,ffe44d+100&0.01+1,1+99 */
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(255, 228, 77, 0) 0%, rgba(255, 228, 77, 0.98) 98%, #ffe44d 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 154, 91, 0.01) 0%, rgba(3, 155, 91, 0.01) 1%, #fce34d 99%, #ffe44d 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(255, 228, 77, 0) 0%, rgba(255, 228, 77, 0.98) 98%, #ffe44d 100%);
+  background: linear-gradient(to bottom, rgba(0, 154, 91, 0.01) 0%, rgba(3, 155, 91, 0.01) 1%, #fce34d 99%, #ffe44d 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffe44d', endColorstr='#ffe44d',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03009a5b', endColorstr='#ffe44d',GradientType=0 );
   /* IE6-9 */
 }
 
 body.welcome-page section#student-leaders .grad-overlay {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,009a5b+100&1+0,0.01+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,009a5b+100&0.01+1,1+99 */
   /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(left, #009a5b 0%, rgba(0, 154, 91, 0.01) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 154, 91, 0.01) 0%, rgba(0, 154, 91, 0.01) 1%, #009a5b 99%, #009a5b 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(to right, #009a5b 0%, rgba(0, 154, 91, 0.01) 100%);
+  background: linear-gradient(to bottom, rgba(0, 154, 91, 0.01) 0%, rgba(0, 154, 91, 0.01) 1%, #009a5b 99%, #009a5b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009a5b', endColorstr='#03009a5b',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03009a5b', endColorstr='#009a5b',GradientType=0 );
   /* IE6-9 */
 }
 
 .item-col .content-card-small .card-img-gradient {
+  opacity: 0.8;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009a5b+0,a0d9e0+100&0.01+1,1+99 */
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0, 154, 91, 0.01) 0%, rgba(2, 155, 92, 0.01) 1%, #9ed8df 99%, #a0d9e0 100%);
@@ -6064,7 +6065,29 @@ body.welcome-page section#student-leaders .grad-overlay {
   /* IE6-9 */
 }
 
-.bg-brand-animation, body.welcome-page section#get-started, body.welcome-page.error-404-page section#error-404 {
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 15%;
+  }
+  50% {
+    background-position: 100% 86%;
+  }
+  100% {
+    background-position: 0% 15%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 15%;
+  }
+  50% {
+    background-position: 100% 86%;
+  }
+  100% {
+    background-position: 0% 15%;
+  }
+}
+.bg-brand-animation, body.welcome-page.error-404-page section#error-404 {
   background: -webkit-linear-gradient(141deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background: linear-gradient(309deg, #a0d9e0, #009a5b, #adc459, #ffe44d, #f58d17, #e84253);
   background-size: 1200% 1200%;
@@ -7093,6 +7116,10 @@ canvas {
   position: relative !important;
 }
 
+.pos-fixed {
+  position: fixed !important;
+}
+
 a.svg-link {
   position: relative;
   display: inline-block;
@@ -7540,6 +7567,27 @@ button.grey {
   background: #40373f;
   color: #fff;
 }
+button.grey.down-arrow-grey:hover:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/down-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
+button.grey.line {
+  border: 3px solid #40373f;
+  background: none;
+  color: #40373f;
+}
+button.grey.line:hover {
+  background: #40373f;
+  color: #fff;
+}
 button.grey.left-arrow {
   width: auto;
   padding-left: 60px !important;
@@ -7569,6 +7617,14 @@ button.red:hover {
 button.sky-d50 {
   background: #205a61;
   color: #fff;
+}
+button.sky-d50.line {
+  border: 3px solid #205a61;
+  background: none;
+  color: #205a61;
+}
+button.sky-d50.line:hover {
+  background: #205a61;
 }
 button.sky-d50:hover {
   background: #40373f;
@@ -7630,6 +7686,26 @@ button.down-arrow:after {
   background-repeat: no-repeat;
   right: 4px;
   top: 4px;
+}
+button.down-arrow-grey {
+  width: auto;
+  padding-right: 60px;
+  text-align: left;
+}
+button.down-arrow-grey:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/down-arrow-grey.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
+button.down-arrow-grey:after:hover {
+  background: url(../icons/down-arrow.svg);
 }
 button.close:hover {
   background: none;
@@ -8100,11 +8176,25 @@ body.welcome-page section:last-of-type {
 body.welcome-page section:first-of-type {
   padding: 150px 0px 50px;
 }
+body.welcome-page #page-wrapper {
+  z-index: 2;
+  position: relative;
+  display: block;
+}
 body.welcome-page .mobile-menu-toggle {
   padding: 35px 30px;
 }
 body.welcome-page .mobile-menu-toggle .toggle-bar {
   background: #205a61;
+}
+body.welcome-page .bg-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: none;
 }
 body.welcome-page .bg-pattern-left {
   position: absolute;
@@ -8141,18 +8231,13 @@ body.welcome-page .bg-pattern-right {
 }
 body.welcome-page section#landing {
   min-height: 100vh;
+  height: 100vh;
   position: relative;
-  background: #a0d9e0;
   overflow: hidden;
 }
 body.welcome-page section#landing span.intro-text {
   font-size: 1.25rem;
   font-weight: 900;
-}
-body.welcome-page section#landing .find-out-more {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
 }
 body.welcome-page section#landing .stats-wrapper .stat {
   display: inline-block;
@@ -8173,7 +8258,7 @@ body.welcome-page section#landing .stats-wrapper .stat p, body.welcome-page sect
   margin: 0;
 }
 body.welcome-page section#get-started {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 body.welcome-page section#get-started a.card-link-wrap {
   color: #40373f;
@@ -8312,6 +8397,9 @@ body.welcome-page section#news:hover {
 body.welcome-page section#news:hover button {
   background-color: #e84253;
 }
+body.welcome-page section#social-signup {
+  background: #fff;
+}
 body.welcome-page section#social-signup .sign-up-wrap {
   height: 170px;
 }
@@ -8334,6 +8422,27 @@ body.welcome-page section#social-signup .sign-up:before {
 }
 body.welcome-page section#social-signup .sign-up .sign-up-wrap {
   max-width: 350px;
+}
+body.welcome-page section#social-signup .social {
+  background: #fff;
+}
+body.welcome-page section#social-signup .social:before {
+  background: #fff;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 9999px;
+}
+body.welcome-page section#social-signup .social:after {
+  background: transparent;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 9999px;
 }
 body.welcome-page section#social-signup .social .social-wrap {
   float: right;
@@ -8380,10 +8489,8 @@ body.welcome-page section#uwe-get-ready {
   body.welcome-page body.welcome-page section:first-of-type {
     padding: 150px 0px 100px !important;
   }
-  body.welcome-page section#landing .find-out-more {
-    position: absolute;
-    bottom: 90px !important;
-    right: 20px;
+  body.welcome-page section#landing .v-align-wrapper {
+    top: 75px;
   }
   body.welcome-page section#landing .stats-wrapper {
     text-align: center;
@@ -8477,6 +8584,24 @@ body.welcome-page section#uwe-get-ready {
     content: "";
     position: absolute;
     left: 100%;
+    top: 0;
+    width: 9999px;
+  }
+  body.welcome-page section#social-signup .social:before {
+    background: #fff;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 9999px;
+  }
+  body.welcome-page section#social-signup .social:after {
+    background: #fff;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 100%;
     top: 0;
     width: 9999px;
   }
@@ -8779,6 +8904,9 @@ address > span {
     position: absolute;
     right: 5%;
     top: -50px;
+  }
+  footer.footer object.footer-angle {
+    background: #fff;
   }
   footer.footer span.copyright {
     padding: 10px 0;
@@ -10531,6 +10659,15 @@ a.svg-link:hover svg#yt-logo .st0 {
 .card.faq:hover {
   cursor: pointer;
   background-color: #fff;
+}
+
+/*
+*
+* Animation Classes
+* 
+*/
+.fade-slide-on-load {
+  opacity: 0;
 }
 
 /* Temporary CSS */

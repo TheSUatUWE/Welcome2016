@@ -10,7 +10,7 @@
 
     <!-- Begin Facebook tags -->
     <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
-    <meta property="og:url" content="https://welcome.thestudentsunion.co.uk/assets/" />
+    <meta property="og:url" content="https://welcome.thestudentsunion.co.uk/" />
     <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="https:/assets/img/welcome-ogp.jpg" />
     <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="/assets/css/style.min.css" rel="stylesheet">
 
-    <script src="assets/components/modernizr.js"></script>
+    <script src="/assets/components/modernizr.js"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
     <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
@@ -441,6 +441,35 @@
           
 
           <script src="/assets/js/scripts.min.js"></script>
+          <script>  
+
+          // Fire compact once AJAX completed
+          $(document).ajaxComplete(function () {
+              if (window.matchMedia("(min-width: 544px)").matches) {
+               /* the viewport is at least 400 pixels wide */
+             } else {
+               $('.item-col').addClass('compact-listing');
+             }
+          });
+
+          // media query event handler
+          if (matchMedia) {
+            var mq = window.matchMedia("(min-width: 544px)");
+            mq.addListener(WidthChange);
+            WidthChange(mq);
+          }
+
+          // media query change
+          function WidthChange(mq) {
+            if (mq.matches) {
+              $('.item-col').removeClass('compact-listing');
+            } else {
+              $('.item-col').addClass('compact-listing');
+            }
+
+          }
+          </script>
+          <script src="/assets/js/list.min.js"></script>
 
 
     <script>

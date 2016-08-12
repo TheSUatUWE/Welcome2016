@@ -13,24 +13,7 @@
       tolerance: 5,                               // default: 8
     });
   });
-    // Smooth Scroll
-
-    $( document ).ready(function() {
-        $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    });
+    
     
     //  AJAX MailChimp Sign up //
     $(document).ready(function(){
@@ -522,7 +505,7 @@
           });
       }); 
 
-  });
+ 
   
   // PolyFill Includes
    if (!String.prototype.includes) {
@@ -530,12 +513,21 @@
          'use strict';
          return String.prototype.indexOf.apply(this, arguments) !== -1;
      };
- }
+   }
 
+   // Logo 
+    $( document ).ready(function() {
+          window.onload = function() {
+            setTimeout(function(){
+              $('.logo').removeClass('loading');
+            },1500);
+      };
+    });
   // Floating Filters 
   // $( document ).ready(function() {
   //   var search =  $('.search');
-  //   var navPos = $('nav.nav').position().top;
+  //   var searchFloated =  $('.search.float');
+  //   var nav = $('nav.nav');
   //   var distance = $('.search').offset().top,
   //       $window = $(window);
 
@@ -545,14 +537,18 @@
   //       } else {
   //         search.removeClass('float');
   //       }
-
-  //       if (navPos ===  0 ) {
-  //         search.css('top', '0');
-  //       } else { 
-  //         search.css('top', '100px');
-  //       }
-
   //   });
+
+  //   $window.scroll(function() {      
+  //       if ( $('nav.nav').hasclass('headspace--hidden') ) {
+  //         search.css('top', '100px');
+  //       } else { 
+  //         search.css('top', '0px');
+  //       }       
+  //   });
+
   // });
 
+
+ });
 })(jQuery, window, document);
