@@ -8986,16 +8986,20 @@ address > span {
   margin-bottom: -4px;
 }
 
-.ui-tooltip {
-  background-color: #40373f !important;
+body .ui-tooltip, body .ui-widget-content {
+  background: #40373f !important;
   z-index: 99999;
   color: #fff;
   border-radius: 0.25rem;
   padding: 2px 5px;
   pointer-events: none;
+  box-shadow: none;
+  border: none;
+  font-family: NewsGothicBT-Roman;
+  font-size: 0.875rem;
 }
 
-.ui-helper-hidden-accessible {
+body .ui-helper-hidden-accessible {
   display: none;
 }
 

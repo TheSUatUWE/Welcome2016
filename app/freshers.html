@@ -1,8 +1,8 @@
-<!doctype html>
+<!doctype html >
   
   <head>
     <meta charset="utf-8">
-    <title>Welcome 2016: Give It A Go</title>
+    <title>Welcome 2016: Freshers Events</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
@@ -10,7 +10,7 @@
 
     <!-- Begin Facebook tags -->
     <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
-    <meta property="og:url" content="https:" />
+    <meta property="og:url" content="https://welcome.thestudentsunion.co.uk/" />
     <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
     <meta property="og:image" content="https:/assets/img/welcome-ogp.jpg" />
     <meta property="og:type" content="website" />
@@ -30,9 +30,9 @@
     <link href="/assets/css/style.min.css" rel="stylesheet">
 
     <script src="assets/components/modernizr.js"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
+    <link rel="stylesheet" href="/assets/components/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="/assets/components/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="/assets/components/jquery-ui.min.css">
 
     <script src="/assets/js/handlebars-v4.0.5.js"></script>
     <script id="event-template-card" type="text/x-handlebars-template">
@@ -140,22 +140,69 @@
       <section id="events">
      <div class="bg-pattern-left-top"></div>
        <div class="container pos-rel">
-          <a href="/events">
-            <button class="grey left-arrow">
-            Back to regular events
-            </button>
-          </a>      
-
-          <h1 class="super-header">Give It A Go</h1>
-          <p>This is for you to have a go at everything The Students’ Union has to offer. Whether you’re deciding which sports club or society to join or want to find out more about how to become a student rep, we have a taster session for everything. With extra sessions being added every day, make sure you keep checking this page. 
-</p>
+          <h1 class="super-header">Events</h1>
+          <p>Throughout September we have range of 200<sup>+</sup> events to welcome you to life at UWE Bristol.</p>
           <div class="row">
     
 
-
+            <div class="featured-event">
+               <a href="/giveitago">
+                <div class="col-sm-3 col-xs-6 featured-event">
+                  <div class="card shadow-1">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        <div class="card-block">
+                            <h4>Give It A Go</h4>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/freshers-fair">
+                <div class="col-sm-3 col-xs-6 featured-event">
+                  <div class="card shadow-1">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        <div class="card-block">
+                            <h4>Freshers Fair</h4>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/freshers-festival">
+                <div class="col-sm-3 col-xs-6 featured-event">
+                  <div class="card shadow-1">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        <div class="card-block">
+                            <h4>Closing Festival</h4>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/platinum">
+                <div class="col-sm-3 col-xs-6 featured-event">
+                  <div class="card shadow-1">
+                    <div class="v-align-wrapper">
+                      <div class="v-align">
+                        <div class="card-block">
+                            <h4>Platinum</h4>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
           <div id="event-list">
             <hr>  
-            <div class="search col-xs-12 p-a-0 m-b-1">
+            <div class="search col-md-12 m-b-1">
                
                   <div class="search-bar">
                     <span class="input-wrap input-search">
@@ -169,10 +216,10 @@
                 
                 <button class="day filter main-filter" data-filter="day">Day</button>
                 <button class="night filter main-filter" data-filter="night">Night</button>
-                <button class="night filter main-filter" data-filter="offthewall">Off The Wall</button>
+                <button class="main filter main-filter" data-filter="main">Main</button>
 
                  <div class="location-filters dropdown">
-                  <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current=" aria-haspopup="true" aria-expanded="false">
+                  <button class="filter dropdown-toggle" type="button" id="dropdownLocation" data-toggle="dropdown" data-current="" aria-haspopup="true" aria-expanded="false">
                     Location: <span class="current-placeholder">All</span>
                   </button>
                   <div class="dropdown-menu">
@@ -183,124 +230,125 @@
                     <span class="filter location-filter dropdown-item" data-location="offCampus">Off Campus</span>              </div>
                 </div>
 
-                <!-- <div class="catagory-filters dropdown">
+                <div class="catagory-filters dropdown">
                   <button class="filter dropdown-toggle" type="button" id="dropdownCatagory" data-toggle="dropdown" data-current="" aria-haspopup="true" aria-expanded="false">
                     Catagory: <span class="current-placeholder">All</span>
                   </button>
                   <div class="dropdown-menu">
                     <span class="filter catagory-filter dropdown-item" data-catagory="all">All</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="signUp">Sign Up</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="liveMusic">Live Music</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="alcoholFree">Alcohol Free</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="ticketed">Ticketed</span>
                     <span class="filter catagory-filter dropdown-item" data-catagory="clubnight">Club Night</span>
-                    <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span>
+                    <!-- <span class="filter catagory-filter dropdown-item" data-catagory="familyFriendly">Family Friendly</span> -->
+                    <span class="filter catagory-filter dropdown-item" data-catagory="free">Free</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="platPlatX">Platinum</span>
+                    <span class="filter catagory-filter dropdown-item" data-catagory="platX">Platinum Extra</span>
                  </div>
-                </div> -->             
+                </div>             
             </div>
 
-         
+          
             
             <!-- Placeholder for events listings template -->
             <div id="event-listings-card" class="list">           
 
               <div id="loader">
-
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
+                <div class="hidden-sm-down">
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="card card-loader">
+                      <div class="card-block">
+                        <div class="v-align-wrapper">
+                          <div class="v-align">
+                            Loading
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card card-loader">
-                    <div class="card-block">
-                      <div class="v-align-wrapper">
-                        <div class="v-align">
-                          Loading
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+             
               </div>
           
             </div>
           </div>
-          
-          
-
       </section>
 
      
@@ -485,7 +533,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=giag",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=w16",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

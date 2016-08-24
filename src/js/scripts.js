@@ -303,7 +303,7 @@
       $('.main-filter').click(function() {
         // Declare variables
         var mainFilterBtn = $(this);
-        var mainFilter = $(this).html().toLowerCase();
+        var mainFilter = $(this).html().toLowerCase().replace(/ /g,'');
         var locationPlaceholder= $('#dropdownLocation').children('.current-placeholder');
         var catagoryPlaceholder = $('#dropdownCatagory').children('.current-placeholder');
 
@@ -493,7 +493,7 @@
           var placeholder = $('.bg-placeholder');
           var card = $('.get-started-col > .card');
           card.mouseover(function(){
-            var cardType = $(this).parent('.get-started-col').attr("data-bg");
+            var cardType = $(this).parent('.get-started-col').attr('data-bg');
             placeholder.attr('class', ('bg-placeholder '+cardType) );
             placeholder.css('opacity', '1');
             
@@ -508,7 +508,6 @@
   // PolyFill Includes
    if (!String.prototype.includes) {
      String.prototype.includes = function() {
-         'use strict';
          return String.prototype.indexOf.apply(this, arguments) !== -1;
      };
    }

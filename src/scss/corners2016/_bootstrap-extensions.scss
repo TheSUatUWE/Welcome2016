@@ -64,15 +64,19 @@
 
 // tooltip 
 
-.ui-tooltip {
-	background-color:$u-grey!important;
+body .ui-tooltip, body .ui-widget-content {
+	background:$u-grey!important;
 	z-index:99999;
 	color:#fff;
 	border-radius:$border-radius;
 	padding:2px 5px;
 	pointer-events:none;
+	box-shadow:none;
+	border:none;
+	font-family: NewsGothicBT-Roman;
+	font-size:$font-size-sm;
 }
 
-.ui-helper-hidden-accessible {
+body .ui-helper-hidden-accessible {
 	display:none;
 }
