@@ -140,7 +140,13 @@
       <section id="events">
      <div class="bg-pattern-left-top"></div>
        <div class="container pos-rel">
-          <h1 class="super-header">Events</h1>
+          <a href="/events">
+            <button class="grey left-arrow">
+            Back to regular events
+            </button>
+          </a>      
+
+          <h1 class="super-header">Freshers</h1>
           <p>Throughout September we have range of 200<sup>+</sup> events to welcome you to life at UWE Bristol.</p>
           <div class="row">
     
@@ -533,7 +539,7 @@
               var placeHolderCard = $("#event-listings-card");
               // Fetch all Blog Posts data from server in JSON
 
-              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=w16",function(data,status,xhr){
+              $.get("https://www.thestudentsunion.co.uk/svc/feeds/events/21646?subtree=true&from=2016-09-01&to=2016-09-25&imagesize=large&types=freshers",function(data,status,xhr){
                 
                 $.each(data,function(index,element){                
                   // Generate the HTML for each post

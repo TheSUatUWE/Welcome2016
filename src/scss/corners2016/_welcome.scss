@@ -696,6 +696,72 @@ body.welcome-page.event-page {
 
 /* End: Event Page */
 
+/* Start: Freshers Events Page */
+
+body.welcome-page.event-page {
+
+
+
+	section#events {
+
+		padding-top:150px;
+		input#search {
+		    width: 300px;
+		}
+		
+		#event-list {
+			margin-top: 2em;
+		}
+
+
+		// Filter colors
+		.search {
+			#dropdownLocation {
+				&:hover, &.active {
+					background:$u-orange;
+					color:$u-grey;
+				}
+			}
+			#dropdownCatagory {
+				&:hover, &.active {
+					background: $u-green;
+					color:$u-grey;
+				}
+			}
+		}
+		.card.featured-event {
+		    height: 200px;
+		    text-align: center;
+
+		    & > .v-align-wrapper {
+		    	padding:20px;
+		    }
+		}		
+	}
+
+	section#giag {
+		position: relative;
+		height: 200px;
+	}
+
+	@include media-breakpoint-down(md) {		
+		section#events {
+			.featured-event .card h4 {
+			    margin: 0;
+			    font-size: 1.2em;
+			}
+			& .search .search-bar {
+				margin: 10px 0px;
+				float: left;
+				display: block;
+				width: 100%;
+			}	
+		}	
+	}
+}
+
+/* End: Freshers Events Page */
+
 /* Start: Blog Page */
 body.welcome-page.blog-page {
 

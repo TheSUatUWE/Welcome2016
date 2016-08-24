@@ -8676,6 +8676,49 @@ body.welcome-page.event-page section#giag {
 }
 
 /* End: Event Page */
+/* Start: Freshers Events Page */
+body.welcome-page.event-page section#events {
+  padding-top: 150px;
+}
+body.welcome-page.event-page section#events input#search {
+  width: 300px;
+}
+body.welcome-page.event-page section#events #event-list {
+  margin-top: 2em;
+}
+body.welcome-page.event-page section#events .search #dropdownLocation:hover, body.welcome-page.event-page section#events .search #dropdownLocation.active {
+  background: #f58d17;
+  color: #40373f;
+}
+body.welcome-page.event-page section#events .search #dropdownCatagory:hover, body.welcome-page.event-page section#events .search #dropdownCatagory.active {
+  background: #009a5b;
+  color: #40373f;
+}
+body.welcome-page.event-page section#events .card.featured-event {
+  height: 200px;
+  text-align: center;
+}
+body.welcome-page.event-page section#events .card.featured-event > .v-align-wrapper {
+  padding: 20px;
+}
+body.welcome-page.event-page section#giag {
+  position: relative;
+  height: 200px;
+}
+@media (max-width: 991px) {
+  body.welcome-page.event-page section#events .featured-event .card h4 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  body.welcome-page.event-page section#events .search .search-bar {
+    margin: 10px 0px;
+    float: left;
+    display: block;
+    width: 100%;
+  }
+}
+
+/* End: Freshers Events Page */
 /* Start: Blog Page */
 body.welcome-page.blog-page section#blog-list .search-wrapper {
   padding-top: 0;
@@ -9794,6 +9837,7 @@ body .ui-helper-hidden-accessible {
 * 
 */
 .item-col {
+  display: none;
   position: relative;
 }
 .item-col .content-card-small {

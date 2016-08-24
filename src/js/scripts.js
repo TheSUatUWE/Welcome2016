@@ -234,8 +234,10 @@
     // Show event listings and hider loader on window load
     function eventReveal() {
         $('#loader').fadeOut('slow');
-        $('#event-listings-card').delay(2000).fadeIn('slow');
+        $('.item-col').fadeIn('slow');
         $('#news-listings').fadeIn('slow');
+
+        eventResize();
     }
 
     // Add icons to events
@@ -472,8 +474,7 @@
     window.onload = function() {
       eventReveal();
       initTooltip();
-      eventResize();
-      
+        
     };
 
     // Fire List Functions once AJAX completed
