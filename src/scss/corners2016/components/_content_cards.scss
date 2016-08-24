@@ -532,32 +532,33 @@
 	}	
 }
 
+
+
 .card-loader {
 	opacity:0.5;
-	height:320px;
+	min-height:320px;
 	
-	background: linear-gradient(180deg, #ffffff, #b2b2b2);
-	background-size: 400% 400%;
+	animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 33%, #eeeeee 80%);
+    background-size: 500px 104px;
+    height: 96px;
+    position: relative;
 
-	-webkit-animation: AnimationName 3s ease infinite;
-	-moz-animation: AnimationName 3s ease infinite;
-	animation: AnimationName 3s ease infinite;
+    @keyframes placeHolderShimmer{
+	    0%{
+	        background-position: -468px 0
+	    }
+	    100%{
+	        background-position: 468px 0
+	    }
+	}
 
-	@-webkit-keyframes AnimationName {
-	    0%{background-position:50% 0%}
-	    50%{background-position:50% 100%}
-	    100%{background-position:50% 0%}
-	}
-	@-moz-keyframes AnimationName {
-	    0%{background-position:50% 0%}
-	    50%{background-position:50% 100%}
-	    100%{background-position:50% 0%}
-	}
-	@keyframes AnimationName { 
-	    0%{background-position:50% 0%}
-	    50%{background-position:50% 100%}
-	    100%{background-position:50% 0%}
-	}
+
 
 	.card-block {
 		height:100%;

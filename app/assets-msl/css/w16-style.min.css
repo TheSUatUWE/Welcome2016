@@ -10304,33 +10304,38 @@ body .ui-helper-hidden-accessible {
 }
 .card-loader {
   opacity: 0.5;
-  height: 320px;
-  background: -webkit-linear-gradient(270deg, #ffffff, #b2b2b2);
-  background: linear-gradient(180deg, #ffffff, #b2b2b2);
-  background-size: 400% 400%;
-  -webkit-animation: AnimationName 3s ease infinite;
-  animation: AnimationName 3s ease infinite;
+  min-height: 320px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+          animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  background: #f6f7f8;
+  background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 33%, #eeeeee 80%);
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 33%, #eeeeee 80%);
+  background-size: 500px 104px;
+  height: 96px;
+  position: relative;
 }
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes placeHolderShimmer {
   0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
+    background-position: -468px 0;
   }
   100% {
-    background-position: 50% 0%;
+    background-position: 468px 0;
   }
 }
-@keyframes AnimationName {
+@keyframes placeHolderShimmer {
   0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
+    background-position: -468px 0;
   }
   100% {
-    background-position: 50% 0%;
+    background-position: 468px 0;
   }
 }
 .card-loader .card-block {
