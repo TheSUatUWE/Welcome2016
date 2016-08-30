@@ -84,8 +84,6 @@ body.welcome-page {
 		background-image: url('/assets/img/tri-pattern-right.png');
 		background-repeat: no-repeat;
 		background-position: bottom left;
-
-
 	}	
 	
 	
@@ -527,7 +525,7 @@ body.welcome-page {
 				padding-bottom:2em;
 			}
 			.row {
-				padding-top:0;
+				padding-top:100px;
 			}				
 			.featured-item {
 				margin-top: 50px;
@@ -622,7 +620,7 @@ body.welcome-page {
 	@media screen and (max-height: 992px) and (min-width: 992px) {
           	section#landing {
     		.row {
-    			padding-top:0;
+    			padding-top:100px;
     		}
     	}
 	}
@@ -698,11 +696,12 @@ body.welcome-page.event-page {
 
 /* Start: Freshers Events Page */
 
-body.welcome-page.event-page {
+body.welcome-page.nightlife-page {
 
 
 
 	section#events {
+		background:$u-grey;
 
 		padding-top:150px;
 		input#search {
@@ -755,6 +754,14 @@ body.welcome-page.event-page {
 				float: left;
 				display: block;
 				width: 100%;
+			}
+			.card.featured-event {
+			    height: 200px;
+			    text-align: center;
+
+			    & > .v-align-wrapper {
+			    	padding:20px;
+			    }
 			}	
 		}	
 	}

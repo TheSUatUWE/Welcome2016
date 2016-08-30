@@ -1,10 +1,10 @@
 {
-  "name": "Welcome 2016",
+  "name": "welcome2016",
   "title": "Welcome site for The Students' Union at UWE",
   "url": "welcome.thestudentsunion.co.uk",
   "author": "Luke Bailey",
   "copyright": "2016",
-  "version": "1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
