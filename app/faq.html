@@ -488,74 +488,20 @@
         </div>
       </section>    
     <script src="/assets/components/bootstrap.min.js"></script>
-                
+               
+               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+               <script>window.jQuery || document.write('<script src="\/assets\/components\/jquery.js"><\/script>');</script>
+               <script src="/assets/components/jquery-ui.min.js"></script>
+               <script src="/assets/components/tether.min.js"></script>
+               <script src="/assets/components/bootstrap.min.js"></script>
+               
+
+                     <script src="/assets/js/scripts.min.js"></script>
+                     <script src="/assets/js/jquery.waypoints.min.js"></script>
+                     <script src="/assets/js/sticky.min.js"></script> 
               
               <script src="/assets/js/moment.js"></script>
-              <script type="text/javascript">
-              //wait for page to load
-              $(document).ready(function(){
-              // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#news-template-card').html();
-              // Compile that into an handlebars template
-              var template_card = Handlebars.compile(raw_template_card);
-              // Retrieve the placeHolder where the Posts will be displayed
-              var placeHolderCard = $("#news-listings");
-              // Fetch all Blog Posts data from server in JSON
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
               
-              $.each(data,function(index,element){
-              // Generate the HTML for each post
-              var html = template_card(element);
-              // Render the posts into the page
-              placeHolderCard.append(html);
-              });
-              // Multiple Loops for test purposes
-              $.each(data,function(index,element){
-              // Generate the HTML for each post
-              var html = template_card(element);
-              // Render the posts into the page
-              placeHolderCard.append(html);
-              });
-              $.each(data,function(index,element){
-              // Generate the HTML for each post
-              var html = template_card(element);
-              // Render the posts into the page
-              placeHolderCard.append(html);
-              });
-              $.each(data,function(index,element){
-              // Generate the HTML for each post
-              var html = template_card(element);
-              // Render the posts into the page
-              placeHolderCard.append(html);
-              });
-              });
-              
-              //  format an ISO date using Moment.js (8.9kb min)
-              //  http://momentjs.com/
-              //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
-              //  Options see http://momentjs.com/docs/#/displaying/fromnow/
-              Handlebars.registerHelper('dateToNow', function(context, block) {
-              if (window.moment) {
-              var s = block.hash.suffix || false;
-              return moment(context).toNow(s);
-              }else{
-              return context;   //  moment plugin not available. return data as is.
-              };
-              });
-              //  format an ISO date using Moment.js
-              //  http://momentjs.com/
-              //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
-              //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
-              Handlebars.registerHelper('dateFormat', function(context, block) {
-              if (window.moment) {
-              var f = block.hash.format || "ddd D, YYYY";
-              return moment(context).format(f);
-              }else{
-              return context;   //  moment plugin not available. return data as is.
-              };
-              });
-              });
-              </script>
               
               <script src="/assets/js/scripts.min.js"></script>
               
