@@ -233,8 +233,11 @@
 
     // Show event listings and hider loader on window load
     function eventReveal() {
-        $('#loader').fadeOut('slow');
-        $('.item-col').fadeIn('slow');
+
+        $('.item-col').fadeIn(600, function(){
+          $('#loader').fadeOut('slow');
+        });
+      
         $('#news-listings').fadeIn('slow');
 
         eventResize();

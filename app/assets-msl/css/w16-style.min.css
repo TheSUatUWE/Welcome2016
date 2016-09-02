@@ -9844,7 +9844,6 @@ body .ui-helper-hidden-accessible {
 * 
 */
 .item-col {
-  display: none;
   position: relative;
 }
 .item-col .content-card-small {
@@ -10396,18 +10395,6 @@ select {
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
 }
-.platinum-card .platinum-overlay {
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  color: #fff;
-  z-index: 999;
-  border-radius: 0.20em;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.88);
-  -webkit-transition: all 0.25s ease;
-          transition: all 0.25s ease;
-}
 .platinum-card .card-block {
   padding: 0;
   color: #776675;
@@ -10449,9 +10436,6 @@ select {
 }
 .platinum-card:hover {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 50px 0px;
-}
-.platinum-card:hover .platinum-overlay {
-  opacity: 1;
 }
 
 #pricing-table {
