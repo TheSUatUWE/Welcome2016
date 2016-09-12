@@ -92,6 +92,26 @@ button {
 		}	
 	}
 
+	&.sky {
+		background:$u-sky;
+		color:$u-grey;
+
+		&.line {
+			border:3px solid $u-sky;
+			background:none;
+			color:$u-sky;
+
+			&:hover {
+				background:$u-sky;
+			}
+		}
+
+		&:hover {
+			background:$u-grey;
+			color:#fff;	
+		}	
+	}
+
 	&:hover {
 		background: $u-red;
 		&.right-arrow, &.down-arrow {
@@ -119,10 +139,43 @@ button {
 			background-repeat: no-repeat;
 			right: 4px;
 		    top: 4px;
+		}
 
 
+	}
+
+	&.right-arrow-grey {
+		width: auto;
+		padding-right: 60px;
+		text-align: left;
+		
+		&:after {
+			width: 30px;
+			height: 25px;
+			margin-left: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/right-arrow-grey.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			right: 4px;
+		    top: 4px;
+		}
+
+		&:hover:after {
+			width: 30px;
+			height: 25px;
+			margin-left: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/right-arrow.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			right: 4px;
+		    top: 4px;
 		}
 	}
+
 	&.left-arrow {
 		width: auto;
 		padding-right: 60px;

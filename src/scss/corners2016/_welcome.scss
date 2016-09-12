@@ -298,9 +298,6 @@ body.welcome-page {
 		background:#fff;
 		overflow: hidden!important;
 		
-		.sign-up-wrap {
-			height:170px;
-		}
 		& .container > .row > *[class*='col-'] {
 			height: 400px;
 		}
@@ -309,6 +306,8 @@ body.welcome-page {
 			background:$u-sky-d40;
 			color:#fff;
 			text-align: center;
+			z-index: 99;
+
 
 			&:before {
 				background: $u-sky-d40;

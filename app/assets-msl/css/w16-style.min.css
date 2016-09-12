@@ -7631,6 +7631,22 @@ button.sky-d50:hover {
   background: #40373f;
   color: #fff;
 }
+button.sky {
+  background: #a0d9e0;
+  color: #40373f;
+}
+button.sky.line {
+  border: 3px solid #a0d9e0;
+  background: none;
+  color: #a0d9e0;
+}
+button.sky.line:hover {
+  background: #a0d9e0;
+}
+button.sky:hover {
+  background: #40373f;
+  color: #fff;
+}
 button:hover {
   background: #e84253;
 }
@@ -7643,6 +7659,35 @@ button.right-arrow {
   text-align: left;
 }
 button.right-arrow:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/right-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
+button.right-arrow-grey {
+  width: auto;
+  padding-right: 60px;
+  text-align: left;
+}
+button.right-arrow-grey:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/right-arrow-grey.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
+button.right-arrow-grey:hover:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -8408,9 +8453,6 @@ body.welcome-page section#social-signup {
   background: #fff;
   overflow: hidden !important;
 }
-body.welcome-page section#social-signup .sign-up-wrap {
-  height: 170px;
-}
 body.welcome-page section#social-signup .container > .row > *[class*='col-'] {
   height: 400px;
 }
@@ -8418,6 +8460,7 @@ body.welcome-page section#social-signup .sign-up {
   background: #2c7e88;
   color: #fff;
   text-align: center;
+  z-index: 99;
 }
 body.welcome-page section#social-signup .sign-up:before {
   background: #2c7e88;
@@ -8904,6 +8947,7 @@ footer.footer {
   position: relative;
   color: #fff;
   height: 300px;
+  z-index: 9999;
 }
 footer.footer h5 {
   border-bottom: solid 1px #3a3239;
