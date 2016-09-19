@@ -1,7 +1,7 @@
 ####################
-# Corners2016 Docs #
+# Welcome2016 #
 ####################
-Corners2016 is a front-end theme that has been built for The Students' Union at UWE. It utilises open source components, from FireShell and Bootstrap 4, running on the Terminal/command-line for it's workflow.  See the FireShell docs below.
+Website built for The Students' Union at UWE. It utilises open source components, from FireShell and Bootstrap 4, running on the Terminal/command-line for it's workflow.  See the FireShell docs below.
 
 # FireShell
 
