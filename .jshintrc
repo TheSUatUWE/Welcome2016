@@ -22,6 +22,8 @@
   "globals" : {
     "jQuery": true,
     "Modernizr": true,
-     "$": false
+     "$": false,
+     "Headspace": true,
+     "List": true
   }
 }
