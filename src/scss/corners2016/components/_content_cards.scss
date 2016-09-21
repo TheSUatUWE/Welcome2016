@@ -52,13 +52,15 @@
 				& span {
 					font-size: 0.8em;
 				}
-				button  {
+
+				& .btn  {
 				    position: absolute;
 				    width: 100%;
 				    bottom: 0;
 				    left: 0;
 				    margin-bottom: -400px;
 				    border-radius:0 0 0.25em 0.25em;
+
 				}
 
 			}
@@ -97,7 +99,7 @@
 			.description {
 				display:block;
 
-				button {
+				.btn {
 					margin: 0 0 0 0;
 				}
 			}
@@ -317,7 +319,7 @@
 			padding:0!important;
 			margin:0!important;
 			
-			button {
+			.btn {
 				bottom:-100px;				
 				transition:bottom .25s ease!important;
 			}

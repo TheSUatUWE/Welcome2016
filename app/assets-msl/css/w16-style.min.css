@@ -7556,7 +7556,7 @@ a.svg-link::after {
 * Buttons
 * 
 */
-button {
+button, .btn {
   border: none;
   padding: 7px 12px;
   -webkit-transition: all .5s ease;
@@ -7564,11 +7564,11 @@ button {
   position: relative;
   border-radius: 0.25em;
 }
-button.grey {
+button-grey, .btn-grey {
   background: #40373f;
   color: #fff;
 }
-button.grey.down-arrow-grey:hover:after {
+button-grey.down-arrow-grey:hover:after, .btn-grey.down-arrow-grey:hover:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7580,22 +7580,22 @@ button.grey.down-arrow-grey:hover:after {
   right: 4px;
   top: 4px;
 }
-button.grey.line {
+button-grey-line, .btn-grey-line {
   border: 3px solid #40373f;
   background: none;
   color: #40373f;
 }
-button.grey.line:hover {
+button-grey-line:hover, .btn-grey-line:hover {
   background: #40373f;
   color: #fff;
 }
-button.grey.left-arrow {
+button-grey-left-arrow, .btn-grey-left-arrow {
   width: auto;
   padding-left: 60px !important;
   padding-right: 10px;
   text-align: left;
 }
-button.grey.left-arrow:after {
+button-grey-left-arrow:after, .btn-grey-left-arrow:after {
   width: 30px;
   height: 25px;
   margin-left: 0px;
@@ -7607,58 +7607,59 @@ button.grey.left-arrow:after {
   right: 4px;
   top: 4px;
 }
-button.red {
+button-red, .btn-red {
   background: #e84253;
   color: #fff;
 }
-button.red:hover {
+button-red:hover, .btn-red:hover {
   background: #40373f;
   color: #fff;
 }
-button.sky-d50 {
+button-sky-d50, .btn-sky-d50 {
   background: #205a61;
   color: #fff;
 }
-button.sky-d50.line {
+button-sky-d50-line, .btn-sky-d50-line {
   border: 3px solid #205a61;
   background: none;
   color: #205a61;
 }
-button.sky-d50.line:hover {
+button-sky-d50-line:hover, .btn-sky-d50-line:hover {
   background: #205a61;
 }
-button.sky-d50:hover {
+button-sky-d50:hover, .btn-sky-d50:hover {
   background: #40373f;
   color: #fff;
 }
-button.sky {
+button-sky, .btn-sky {
   background: #a0d9e0;
   color: #40373f;
 }
-button.sky.line {
+button-sky-line, .btn-sky-line {
   border: 3px solid #a0d9e0;
   background: none;
   color: #a0d9e0;
 }
-button.sky.line:hover {
+button-sky-line:hover, .btn-sky-line:hover {
   background: #a0d9e0;
 }
-button.sky:hover {
+button-sky:hover, .btn-sky:hover {
   background: #40373f;
   color: #fff;
 }
-button:hover {
+button:hover, .btn:hover {
+  color: #fff;
   background: #e84253;
 }
-button:focus {
+button:focus, .btn:focus {
   outline: none;
 }
-button.right-arrow {
+button-right-arrow, .btn-right-arrow {
   width: auto;
   padding-right: 60px;
   text-align: left;
 }
-button.right-arrow:after {
+button-right-arrow:after, .btn-right-arrow:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7670,12 +7671,12 @@ button.right-arrow:after {
   right: 4px;
   top: 4px;
 }
-button.right-arrow-grey {
+button-right-arrow-grey, .btn-right-arrow-grey {
   width: auto;
   padding-right: 60px;
   text-align: left;
 }
-button.right-arrow-grey:after {
+button-right-arrow-grey:after, .btn-right-arrow-grey:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7687,7 +7688,7 @@ button.right-arrow-grey:after {
   right: 4px;
   top: 4px;
 }
-button.right-arrow-grey:hover:after {
+button-right-arrow-grey:hover:after, .btn-right-arrow-grey:hover:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7699,12 +7700,12 @@ button.right-arrow-grey:hover:after {
   right: 4px;
   top: 4px;
 }
-button.left-arrow {
+button-left-arrow, .btn-left-arrow {
   width: auto;
-  padding-right: 60px;
+  padding-left: 60px;
   text-align: left;
 }
-button.left-arrow:after {
+button-left-arrow:after, .btn-left-arrow:after {
   width: 30px;
   height: 25px;
   margin-right: 40px;
@@ -7716,12 +7717,29 @@ button.left-arrow:after {
   left: 4px;
   top: 4px;
 }
-button.down-arrow {
+button-left-arrow-white, .btn-left-arrow-white {
+  width: auto;
+  padding-left: 60px;
+  text-align: left;
+}
+button-left-arrow-white:after, .btn-left-arrow-white:after {
+  width: 30px;
+  height: 25px;
+  margin-right: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/left-arrow-white.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 4px;
+  top: 4px;
+}
+button-down-arrow, .btn-down-arrow {
   width: auto;
   padding-right: 60px;
   text-align: left;
 }
-button.down-arrow:after {
+button-down-arrow:after, .btn-down-arrow:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7733,12 +7751,12 @@ button.down-arrow:after {
   right: 4px;
   top: 4px;
 }
-button.down-arrow-grey {
+button-down-arrow-grey, .btn-down-arrow-grey {
   width: auto;
   padding-right: 60px;
   text-align: left;
 }
-button.down-arrow-grey:after {
+button-down-arrow-grey:after, .btn-down-arrow-grey:after {
   width: 30px;
   height: 25px;
   margin-left: 40px;
@@ -7750,10 +7768,10 @@ button.down-arrow-grey:after {
   right: 4px;
   top: 4px;
 }
-button.down-arrow-grey:after:hover {
+button-down-arrow-grey:after:hover, .btn-down-arrow-grey:after:hover {
   background: url(../icons/down-arrow.svg);
 }
-button.close:hover {
+button-close:hover, .btn-close:hover {
   background: none;
   opacity: 1;
 }
@@ -8285,6 +8303,7 @@ body.welcome-page section#landing {
   min-height: 100vh;
   height: 100vh;
   position: relative;
+  color: #fff;
   overflow: hidden;
 }
 body.welcome-page section#landing span.intro-text {
@@ -8350,7 +8369,7 @@ body.welcome-page section#get-started .get-started-col[data-bg='UWE']:hover > .g
 }
 body.welcome-page section#get-started .card.get-started {
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
 body.welcome-page section#get-started .bg-placeholder {
@@ -9929,7 +9948,7 @@ body .ui-helper-hidden-accessible {
 .item-col .content-card-small .description span {
   font-size: 0.8em;
 }
-.item-col .content-card-small .description button {
+.item-col .content-card-small .description .btn {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -9957,7 +9976,7 @@ body .ui-helper-hidden-accessible {
 .item-col:hover .description {
   display: block;
 }
-.item-col:hover .description button {
+.item-col:hover .description .btn {
   margin: 0 0 0 0;
 }
 .item-col:hover .key {
@@ -10161,7 +10180,7 @@ body .ui-helper-hidden-accessible {
   padding: 0 !important;
   margin: 0 !important;
 }
-.item-col.compact-listing .description button {
+.item-col.compact-listing .description .btn {
   bottom: -100px;
   -webkit-transition: bottom 0.25s ease !important;
           transition: bottom 0.25s ease !important;

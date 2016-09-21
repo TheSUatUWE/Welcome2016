@@ -92,7 +92,7 @@ body.welcome-page {
 		min-height: 100vh;
 		height:100vh;
 		position: relative;
-		
+		color:#fff;
 		overflow:hidden;
 
 		span.intro-text {
@@ -173,7 +173,7 @@ body.welcome-page {
 
 		.card.get-started {
 		    height: 200px;
-		    background-color:rgba(255, 255, 255, 0.3);
+		    background-color:rgba(255, 255, 255, 0.8);
 		    text-align: center;
 		}
 

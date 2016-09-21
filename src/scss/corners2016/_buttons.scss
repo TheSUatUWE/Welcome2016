@@ -4,14 +4,14 @@
 * 
 */
 
-button {
+button, .btn {
 	border:none;
 	padding:7px 12px;
 	transition:all .5s ease;
 	position: relative;
 	border-radius: 0.25em;
 
-	&.grey {
+	&-grey {
 		background:$u-grey;
 		color:#fff;
 
@@ -28,7 +28,7 @@ button {
 		    top: 4px;
 		}
 
-		&.line {
+		&-line {
 			border:3px solid $u-grey;
 			background:none;
 			color:$u-grey;
@@ -39,7 +39,7 @@ button {
 			}
 		}
 
-		&.left-arrow {
+		&-left-arrow {
 			width: auto;
 			padding-left: 60px!important;
 			padding-right:10px;
@@ -62,7 +62,7 @@ button {
 		}	
 	}
 
-	&.red {
+	&-red {
 		background:$u-red;
 		color:#fff;
 
@@ -72,11 +72,11 @@ button {
 		}	
 	}
 
-	&.sky-d50 {
+	&-sky-d50 {
 		background:$u-sky-d50;
 		color:#fff;
 
-		&.line {
+		&-line {
 			border:3px solid $u-sky-d50;
 			background:none;
 			color:$u-sky-d50;
@@ -92,11 +92,11 @@ button {
 		}	
 	}
 
-	&.sky {
+	&-sky {
 		background:$u-sky;
 		color:$u-grey;
 
-		&.line {
+		&-line {
 			border:3px solid $u-sky;
 			background:none;
 			color:$u-sky;
@@ -113,8 +113,9 @@ button {
 	}
 
 	&:hover {
+		color:#fff;
 		background: $u-red;
-		&.right-arrow, &.down-arrow {
+		&-right-arrow, &-down-arrow {
 
 		}
 	}
@@ -123,7 +124,7 @@ button {
 		outline:none;
 	}
 
-	&.right-arrow {
+	&-right-arrow {
 		width: auto;
 		padding-right: 60px;
 		text-align: left;
@@ -144,7 +145,7 @@ button {
 
 	}
 
-	&.right-arrow-grey {
+	&-right-arrow-grey {
 		width: auto;
 		padding-right: 60px;
 		text-align: left;
@@ -176,9 +177,9 @@ button {
 		}
 	}
 
-	&.left-arrow {
+	&-left-arrow {
 		width: auto;
-		padding-right: 60px;
+		padding-left: 60px;
 		text-align: left;
 		
 		&:after {
@@ -197,7 +198,28 @@ button {
 		}
 	}
 
-	&.down-arrow {
+	&-left-arrow-white {
+		width: auto;
+		padding-left: 60px;
+		text-align: left;
+		
+		&:after {
+			width: 30px;
+			height: 25px;
+			margin-right: 40px;
+			position:absolute;
+			content: '';
+			background: url(../icons/left-arrow-white.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			left: 4px;
+		    top: 4px;
+
+
+		}
+	}
+
+	&-down-arrow {
 		width: auto;
 		padding-right: 60px;
 		text-align: left;
@@ -217,7 +239,7 @@ button {
 			
 	}
 
-	&.down-arrow-grey {
+	&-down-arrow-grey {
 		width: auto;
 		padding-right: 60px;
 		text-align: left;
@@ -242,10 +264,7 @@ button {
 	}
 
 
-
-
-
-	&.close {
+	&-close {
 		
 		&:hover {
 			background:none;
