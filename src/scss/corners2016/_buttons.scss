@@ -10,6 +10,21 @@ button, .btn {
 	transition:all .5s ease;
 	position: relative;
 	border-radius: 0.25em;
+	cursor:pointer!important;
+	z-index: 9999;
+
+	&:hover {
+		color:#fff;
+		background: $u-red;	
+		cursor:pointer!important;
+	}
+	&*:hover {
+		cursor:pointer!important;
+	}
+
+	&:focus {
+		outline:none;
+	}
 
 	&-grey {
 		background:$u-grey;
@@ -153,16 +168,7 @@ button, .btn {
 		}	
 	}
 
-	&:hover {
-		color:#fff;
-		background: $u-red;
-		
-		cursor:pointer;
-	}
-
-	&:focus {
-		outline:none;
-	}
+	
 
 	&-right-arrow {
 		width: auto;

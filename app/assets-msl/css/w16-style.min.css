@@ -7563,6 +7563,19 @@ button, .btn {
           transition: all .5s ease;
   position: relative;
   border-radius: 0.25em;
+  cursor: pointer !important;
+  z-index: 9999;
+}
+button:hover, .btn:hover {
+  color: #fff;
+  background: #e84253;
+  cursor: pointer !important;
+}
+button*:hover, .btn*:hover {
+  cursor: pointer !important;
+}
+button:focus, .btn:focus {
+  outline: none;
 }
 button-grey, .btn-grey {
   background: #40373f;
@@ -7677,14 +7690,6 @@ button-sky-line:hover, .btn-sky-line:hover {
 button-sky:hover, .btn-sky:hover {
   background: #40373f;
   color: #fff;
-}
-button:hover, .btn:hover {
-  color: #fff;
-  background: #e84253;
-  cursor: pointer;
-}
-button:focus, .btn:focus {
-  outline: none;
 }
 button-right-arrow, .btn-right-arrow {
   width: auto;
