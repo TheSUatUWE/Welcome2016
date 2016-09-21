@@ -7607,6 +7607,37 @@ button-grey-left-arrow:after, .btn-grey-left-arrow:after {
   right: 4px;
   top: 4px;
 }
+button-white, .btn-white {
+  background: #fff;
+  color: #40373f;
+}
+button-white-line, .btn-white-line {
+  border: 3px solid #fff;
+  background: none;
+  color: #fff;
+}
+button-white-line:hover, .btn-white-line:hover {
+  background: #fff !important;
+  color: #40373f !important;
+}
+button-white-left-arrow, .btn-white-left-arrow {
+  width: auto;
+  padding-left: 60px !important;
+  padding-right: 10px;
+  text-align: left;
+}
+button-white-left-arrow:after, .btn-white-left-arrow:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 0px;
+  position: absolute;
+  content: '';
+  background: url(../icons/left-arrow-white.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
 button-red, .btn-red {
   background: #e84253;
   color: #fff;
@@ -7650,6 +7681,7 @@ button-sky:hover, .btn-sky:hover {
 button:hover, .btn:hover {
   color: #fff;
   background: #e84253;
+  cursor: pointer;
 }
 button:focus, .btn:focus {
   outline: none;
@@ -7734,6 +7766,9 @@ button-left-arrow-white:after, .btn-left-arrow-white:after {
   left: 4px;
   top: 4px;
 }
+button-left-arrow-white:after:hover, .btn-left-arrow-white:after:hover {
+  background: url(../icons/left-arrow-white-grey.svg);
+}
 button-down-arrow, .btn-down-arrow {
   width: auto;
   padding-right: 60px;
@@ -7770,6 +7805,35 @@ button-down-arrow-grey:after, .btn-down-arrow-grey:after {
 }
 button-down-arrow-grey:after:hover, .btn-down-arrow-grey:after:hover {
   background: url(../icons/down-arrow.svg);
+}
+button-down-arrow-white, .btn-down-arrow-white {
+  width: auto;
+  padding-right: 60px;
+  text-align: left;
+}
+button-down-arrow-white:after, .btn-down-arrow-white:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/down-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
+}
+button-down-arrow-white:hover:after, .btn-down-arrow-white:hover:after {
+  width: 30px;
+  height: 25px;
+  margin-left: 40px;
+  position: absolute;
+  content: '';
+  background: url(../icons/down-arrow-grey.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 4px;
+  top: 4px;
 }
 button-close:hover, .btn-close:hover {
   background: none;
