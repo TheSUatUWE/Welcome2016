@@ -8771,8 +8771,8 @@ body.welcome-page.event-page section#events {
 body.welcome-page.event-page section#events input#search {
   width: 300px;
 }
-body.welcome-page.event-page section#events #event-list {
-  margin-top: 2em;
+body.welcome-page.event-page section#events #event-list .search {
+  padding: 0;
 }
 body.welcome-page.event-page section#events .search #dropdownLocation:hover, body.welcome-page.event-page section#events .search #dropdownLocation.active {
   background: #f58d17;
@@ -8781,13 +8781,6 @@ body.welcome-page.event-page section#events .search #dropdownLocation:hover, bod
 body.welcome-page.event-page section#events .search #dropdownCatagory:hover, body.welcome-page.event-page section#events .search #dropdownCatagory.active {
   background: #009a5b;
   color: #40373f;
-}
-body.welcome-page.event-page section#events .card.featured-event {
-  height: 200px;
-  text-align: center;
-}
-body.welcome-page.event-page section#events .card.featured-event > .v-align-wrapper {
-  padding: 20px;
 }
 body.welcome-page.event-page section#giag {
   position: relative;
@@ -9018,8 +9011,8 @@ section#events #event-listings-card, section#news-list #event-listings-card, .se
   color: #40373f;
 }
 .featured-event .card {
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.3);
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
 .featured-event .card h4 {

@@ -638,7 +638,9 @@ body.welcome-page.event-page {
 		}
 		
 		#event-list {
-			margin-top: 2em;
+			.search {
+				padding:0;
+			}
 		}
 
 
@@ -657,14 +659,7 @@ body.welcome-page.event-page {
 				}
 			}
 		}
-		.card.featured-event {
-		    height: 200px;
-		    text-align: center;
-
-		    & > .v-align-wrapper {
-		    	padding:20px;
-		    }
-		}		
+			
 	}
 
 	section#giag {
