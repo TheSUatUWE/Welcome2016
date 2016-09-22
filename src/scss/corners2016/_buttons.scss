@@ -11,17 +11,17 @@ button, .btn {
 	position: relative;
 	border-radius: 0.25em;
 	cursor:pointer!important;
-	z-index: 9999;
+	z-index: 999;
 
-	&:hover {
+	&:after {
+		transition:all .5s ease;
+	}
+
+	&:hover, &:active, &:focus {
 		color:#fff;
 		background: $u-red;	
-		cursor:pointer!important;
 	}
-	&*:hover {
-		cursor:pointer!important;
-	}
-
+	
 	&:focus {
 		outline:none;
 	}
@@ -90,6 +90,11 @@ button, .btn {
 			&:hover {
 				background:#fff!important;
 				color:$u-grey!important;
+			}
+
+			&:hover, &:active, &:focus {
+				background:#fff!important;
+				color:$u-grey!important;	
 			}
 
 			

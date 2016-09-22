@@ -7564,15 +7564,15 @@ button, .btn {
   position: relative;
   border-radius: 0.25em;
   cursor: pointer !important;
-  z-index: 9999;
+  z-index: 999;
 }
-button:hover, .btn:hover {
+button:after, .btn:after {
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+}
+button:hover, button:active, button:focus, .btn:hover, .btn:active, .btn:focus {
   color: #fff;
   background: #e84253;
-  cursor: pointer !important;
-}
-button*:hover, .btn*:hover {
-  cursor: pointer !important;
 }
 button:focus, .btn:focus {
   outline: none;
@@ -7630,6 +7630,10 @@ button-white-line, .btn-white-line {
   color: #fff;
 }
 button-white-line:hover, .btn-white-line:hover {
+  background: #fff !important;
+  color: #40373f !important;
+}
+button-white-line:hover, button-white-line:active, button-white-line:focus, .btn-white-line:hover, .btn-white-line:active, .btn-white-line:focus {
   background: #fff !important;
   color: #40373f !important;
 }
@@ -8082,9 +8086,9 @@ body.content-page .header-banner h1 {
   nav.nav > .mobile-menu-circle.toggled {
     opacity: 1;
     top: -300px;
-    right: -300px;
-    width: 1700px;
-    height: 1501px;
+    right: -500px;
+    width: 2000px;
+    height: 2000px;
   }
   nav.nav .mobile-menu-toggle {
     display: block;
@@ -8689,9 +8693,6 @@ body.welcome-page section#uwe-get-ready {
   }
   body.welcome-page section#landing .landing-welcome {
     padding-bottom: 2em;
-  }
-  body.welcome-page section#landing .row {
-    padding-top: 100px;
   }
   body.welcome-page section#landing .featured-item {
     margin-top: 50px;
