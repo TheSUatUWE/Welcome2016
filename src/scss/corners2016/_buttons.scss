@@ -18,7 +18,7 @@ button, .btn {
 	}
 
 	&:hover, &:active, &:focus {
-		color:#fff;
+		color:inherit;
 		background: $u-red;	
 	}
 	

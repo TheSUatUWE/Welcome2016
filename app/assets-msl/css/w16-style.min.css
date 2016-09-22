@@ -7571,7 +7571,7 @@ button:after, .btn:after {
           transition: all .5s ease;
 }
 button:hover, button:active, button:focus, .btn:hover, .btn:active, .btn:focus {
-  color: #fff;
+  color: inherit;
   background: #e84253;
 }
 button:focus, .btn:focus {
