@@ -1,236 +1,188 @@
 <!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome 2016: Platinum</title>
   
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome 2016: Platinum</title>
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <!-- Begin Facebook tags -->
-    <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
-    <meta property="og:url" content="https:" />
-    <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
-    <meta property="og:image" content="https:/assets/img/welcome-ogp.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="1742104569380690">
-    <!-- End Facebook tags -->
-
-    <!-- Begin Twitter tags -->
-    <meta name="twitter:title" content="Welcome 2016: The Students' Union at UWE" />
-    <meta name="twitter:url" content="Welcome 2016: The Students' Union at UWE" />
-    <meta name="twitter:card" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
-    <meta name="twitter:image" content="https:/assets/img/welcome-ogp.jpg" />
-    <!-- End Twitter tags -->
-
-
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <link href="/assets/css/style.min.css" rel="stylesheet">
-
-    <script src="assets/components/modernizr.js"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
-    <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
-
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
-
-    <script src="/assets/js/handlebars-v4.0.5.js"></script>
-    <script id="news-template-card" type="text/x-handlebars-template">
-      <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
-        <div class="key">
-          <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
-          <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-          <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
-        </div>
-        <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
-        <div class="types">{{#each Types}}{{this}} {{/each}}</div>
-          <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
-<!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
- -->            <div class="card-img-gradient"></div>
-          </div>
-          <div class="card-block">
-            <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
-            <h4 class="card-title">{{Title}}</h4>
-            <div class="location">{{Location}}</div>                            
-          </div>
-            
-          <div class="description">
-            <span><p>{{{Leader}}}</p></span>
-           
-           <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Read more</button></a>
-           
-          </div>
-        </div>                  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Begin Facebook tags -->
+  <meta property="og:title" content="Welcome 2016: The Students' Union at UWE" />
+  <meta property="og:url" content="https:" />
+  <meta property="og:description" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+  <meta property="og:image" content="https:/assets/img/welcome-ogp.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="fb:app_id" content="1742104569380690">
+  <!-- End Facebook tags -->
+  <!-- Begin Twitter tags -->
+  <meta name="twitter:title" content="Welcome 2016: The Students' Union at UWE" />
+  <meta name="twitter:url" content="Welcome 2016: The Students' Union at UWE" />
+  <meta name="twitter:card" content="Welcome is a programme of events that showcases all that life at UWE Bristol has to offer. It is jam-packed with opportunities to meet new people and make new friends. Our events and activities are for everyone: whether you are fresh out of school, coming to us as a mature student, or returning as a second or third year." />
+  <meta name="twitter:image" content="https:/assets/img/welcome-ogp.jpg" />
+  <!-- End Twitter tags -->
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+  <link href="/assets/css/style.min.css" rel="stylesheet">
+  <script src="assets/components/modernizr.js"></script>
+  <link rel="stylesheet" src="/assets/components/jquery-ui.structure.min.css"></script>
+  <link rel="stylesheet" src="/assets/components/jquery-ui.theme.min.css"></script>
+  <link rel="stylesheet" src="/assets/components/jquery-ui.min.css"></script>
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
+  <script src="/assets/js/handlebars-v4.0.5.js"></script>
+  <script id="news-template-card" type="text/x-handlebars-template">
+  <div class="col-xl-4 col-lg-6 col-md-6 item-col"  onclick="">
+    <div class="key">
+      <div class="tod shadow-1" data-toggle="tooltip" data-placement="left" title=""></div>
+      <div class="cat2 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
+      <div class="cat3 shadow-1" data-toggle="tooltip" data-placement="top" title=""></div>
+    </div>
+    <div class="card content-card-small shadow-1 {{#each Types}}{{this}} {{/each}}" data-types=" {{#each Types}}{{this}} {{/each}}">
+      <div class="types">{{#each Types}}{{this}} {{/each}}</div>
+      <div class="card-img-top" style="background:url('{{ImageUrl}}');background-position: top center;background-size: cover;">
+        <!--             <div class="countdown">{{dateToNow StartDate suffix=true}} to go</div>
+        -->            <div class="card-img-gradient"></div>
       </div>
-    </script>
-
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/assets/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/assets/favicon/manifest.json">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#e84253">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-  </head>
-  <body class="welcome-page platinum-page">
-
-    <div id="page-wrapper">
-
-      <header class="header" role="banner">
-        <div class="logo">
-          <a href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">  
-              .tri{fill:#e84253;}
-              .text{fill:#FFFFFF;}
+      <div class="card-block">
+        <div class="start-date hidden">{{ dateFormat StartDate format="D" }}</div>
+        <h4 class="card-title">{{Title}}</h4>
+        <div class="location">{{Location}}</div>
+      </div>
+      
+      <div class="description">
+        <span><p>{{{Leader}}}</p></span>
+        
+        <a href="{{Url}}" target="_blank"><button class="grey right-arrow">Read more</button></a>
+        
+      </div>
+    </div>
+  </div>
+  </script>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/favicon/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/assets/favicon/manifest.json">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#e84253">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body class="welcome-page platinum-page">
+  <div id="page-wrapper">
+    <header class="header" role="banner">
+      <div class="logo">
+        <a href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 741 505.6"><style type="text/css">
+            .tri{fill:#e84253;}
+            .text{fill:#FFFFFF;}
             </style><polygon class="tri" points="119.3 505.6 0 0 741 102.6 "/>
-            <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
-          </a>
-        </div>
-        <nav class="nav navbar-fixed-top shadow-1" role="navigation">
-        <div class="mobile-menu-bg"></div>
-
-        <div class="mobile-menu-toggle">
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-          <span class="toggle-bar"></span>
-        </div>
-
-        <div class="mobile-menu-circle shadow-5"></div>
-
-           <ul class="nav nav-inline">
-            <li class="nav-item">
-              <a class="nav-link" href="/platinum">Platinum</a>
-            </li><!-- 
-             --><li class="nav-item">
-              <a class="nav-link" href="/blog">Blog</a>
-            </li><!-- 
-             --><li class="nav-item">
-              <a class="nav-link" href="/faq">FAQ</a>
-            </li><!-- 
-             --><li class="nav-item nav-item-highlight sky">
-              <a class="nav-link fc-white" href="/events">Events</a>
-            </li>
-          </ul>
-          
-        </nav>
-
-
-      </header>
-      
-      <main class="main" role="main">
-     
-    <section id="platinum">
-    <div class="bg-pattern-left-top"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="super-header">Platinum Passes</h1>
-            <p>The Platinum passes get you queue jump to all included events as well as discounts in the bar and shop. The best part is you can save money all year round.</p>
-
+              <g class="text-wrap"><path class="text" d="M74.9 131.4h34.9V142H98v62.7H86.7V142H74.9V131.4z"/><path class="text" d="M126.9 131.4v29.9h11.3v-29.9h11.3v73.3h-11.3v-32.8h-11.3v32.8h-11.2v-73.3H126.9z"/><path class="text" d="M157.6 131.4h29.5V142h-18.2v19.2H182v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M223.5 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L223.5 184.5z"/><path class="text" d="M251.4 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M304.2 131.4v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H304.2z"/><path class="text" d="M335.3 131.4h16.1c12.6 0 18.3 6.5 18.3 20.2v32.7c0 14-5.2 20.5-17.8 20.5h-16.6V131.4zM352.2 194c4.3 0 5.9-2.7 5.9-7.7v-35.3c0-6-2.8-8.7-9-8.7h-2.6V194H352.2z"/><path class="text" d="M376.8 131.4h29.5V142h-18.2v19.2h13.1v10.6h-13.1v21.9h18.2v11h-29.5V131.4z"/><path class="text" d="M413.7 131.4h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V131.4z"/><path class="text" d="M455.2 131.4h34.9V142h-11.8v62.7h-11.3V142h-11.7V131.4z"/><path class="text" d="M502.9 184.5c0.4 7.4 2.7 10.9 7.5 10.9 4.2 0 7-2.8 7-7.1 0-6.1-4.2-9.9-10.2-15.9 -8.2-8.2-14-14.2-14-23.9 0-10.6 8-18.4 17.6-18.4 9.3 0 16.1 6.8 16.9 18.2l-11 1.6c-0.4-6.3-2.1-9.1-6.2-9.1 -3.5 0-6 2.6-6 6.8 0 6.6 4.9 11.1 11.3 17.3 7.8 7.6 12.7 13.1 12.7 23.3 0 10.8-7.5 18.3-17.6 18.3 -11 0-18.2-7.4-18.7-20.3L502.9 184.5z"/><path class="text" d="M533.2 130.6H544v11.5l-5.8 13h-5l3.7-13h-3.7V130.6z"/><path class="text" d="M124.2 308.5h6.7l5.5 33.2h-5.3l-1-7.2h-5.2l-1.1 7.2h-5L124.2 308.5zM129.4 329.8l-1.7-13.9h-0.3l-1.8 13.9H129.4z"/><path class="text" d="M136.9 308.5h15.8v4.8h-5.4v28.4h-5.1v-28.4h-5.3V308.5z"/><path class="text" d="M173.2 308.5v25.7c0 2 1.2 3.2 2.7 3.2 1.6 0 2.6-1.1 2.6-3.2v-25.7h5.2v24.8c0 5.9-2.9 9.1-7.9 9.1 -5.1 0-7.9-3.2-7.9-9.2v-24.7H173.2z"/><path class="text" d="M192.2 308.5l2.3 19.7c0.2 1.6 0.3 3.3 0.3 5.2 0 0.2 0 0.4 0 0.7 0.2-3.4 0.3-5.6 0.4-6.5l2.5-19h4.4l2.7 19.7c0.2 1.6 0.3 3.6 0.3 5.9 0.1-2.8 0.2-4.9 0.4-6.5l2.1-19h4.8l-5.2 33.2h-4.3l-2.8-19.3c-0.2-1.3-0.3-3.3-0.3-5.9 -0.2 3.6-0.3 5.8-0.4 6.5l-2.7 18.6h-4.3l-5.2-33.2H192.2z"/><path class="text" d="M216.6 308.5h13.4v4.8h-8.2v8.7h5.9v4.8h-5.9v9.9h8.2v5h-13.4V308.5z"/><path class="text" d="M113.3 220.3v56.8c0 4.5 2.6 7 6 7 3.4 0 5.7-2.5 5.7-7v-56.8h11.5v54.9c0 13-6.3 20.1-17.3 20.1 -11.2 0-17.5-7-17.5-20.4v-54.5H113.3z"/><path class="text" d="M145.3 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/><path class="text" d="M190.6 220.3h11.5v73.3h-11.5V220.3z"/><path class="text" d="M228.5 218.8c10.3 0 17 7 17 18.8v37.6c0 13-6.4 20.1-17.5 20.1 -11.2 0-17.3-7-17.3-20.4v-37.6C210.7 225.8 217.3 218.8 228.5 218.8zM233.9 236.5c0-5.1-2-7.6-5.8-7.6 -3.8 0-5.8 2.5-5.8 7.6v40.9c0 5.1 2 7.7 5.8 7.7 3.8 0 5.8-2.6 5.8-7.7V236.5z"/><path class="text" d="M253.6 220.3h10.2l14.3 43.8c0.2 0.6 1 3.2 2.2 7.8 -0.9-5.2-1.2-8.6-1.2-9.9v-41.8h10.6v73.3h-10.6l-13.8-40.5c-0.6-1.9-1.6-4.5-2.4-8 0.8 5.2 1.2 8.6 1.2 10.2v38.3h-10.5V220.3z"/></g></svg>
+            </a>
           </div>
-   
+          <nav class="nav navbar-fixed-top shadow-1" role="navigation">
+            <div class="mobile-menu-bg"></div>
+            <div class="mobile-menu-toggle">
+              <span class="toggle-bar"></span>
+              <span class="toggle-bar"></span>
+              <span class="toggle-bar"></span>
+            </div>
+            <div class="mobile-menu-circle shadow-5"></div>
+            <ul class="nav nav-inline">
+              <li class="nav-item">
+                <a class="nav-link" href="/platinum">Platinum</a>
+              </li><!--
+              --><li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+              </li><!--
+              --><li class="nav-item">
+                <a class="nav-link" href="/faq">FAQ</a>
+              </li><!--
+              --><li class="nav-item nav-item-highlight sky">
+                <a class="nav-link fc-white" href="/events">Events</a>
+              </li>
+            </ul>
+            
+          </nav>
+        </header>
+        
+        <main class="main" role="main">
+        
+        <section id="platinum">
+          <div class="bg-pattern-left-top"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="super-header">Platinum Passes</h1>
+                <p>Platinum Extra has sold out, but don’t worry, we have a brand new deal for you.</p>
+
+                <p>We are now more than half-way through Freshers’, Discounted Platinum Pass.</p>
+              </div>
+              
+              
+              <a href="https://www.thestudentsunion.co.uk/tickets/product/10046210/">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="card text-xs-center platinum-card">
+                    <div class="card-header">
+                      <h2 class="card-title super-header">Platinum</h2>
+                    </div>
+                    <div class="card-block">
+                      
+                      <ul>
+                        <li>
+                        Freshers events<br><small>Free Entry - Queue Jump<br>All 16 ticketed Freshers events with the PX symbol.</small></li>
+                        <li>Term 1 Platinum Event<br><small>Free Entry - Queue Jump</small></li>
+                        <li>Term 2 Platinum Event<br><small>Free Entry - Queue Jump</small></li>
+                        <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
+                        <li>£5 off Hoodie</li>
+                        <li>10% off Food and Hot Drinks</li>
+                        <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
+                          Jersey Lily and The White Lion
+                        </small></li>
+                        <li>Pryzm<br><small>Free entry every Thursday</small></li>
+                        <li>SWX Bristol<br><small>£1 off entry Friday and Saturday</small></li>
+                        <li>Discounted Summer Ball 2017 Ticket</li>
+                        <li>Drinks deals all year round </li>
+                      </ul>
+                    </div>
+                    <div class="card-footer text-muted">
+                      <h3>£59</h3>
+                      <small>Over £200 of savings</small>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              
+              
+            </div>
+          </div>
           
-          <a href="https://www.thestudentsunion.co.uk/tickets/product/10046210/">
-                      <div class="col-md-5">
-                        <div class="card text-xs-center platinum-card">
-
-                          <div class="card-header">
-                            <h2 class="card-title super-header">Platinum</h2>
-                          </div>
-                          <div class="card-block">
-                            
-                              <ul>
-                                <li>Platinum events<br><small>Free Entry - Queue Jump</small><br><small>Where’s Wally v Pokémon, Ramshackle laser show, Phresh Prince, Shipwrecked, Big Freshers’ Giveaway, Far Fetched and Freshers Closing Festival</small></li>
-                                <li>Term 1 Platinum Event<br><small>Discounted first release - Queue Jump</small></li>
-                                <li>Term 2 Platinum Event<br><small>Discounted first release - Queue Jump</small></li>
-                                <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
-                                <li>£5 off Hoodie</li>
-                                <li>10% off Food and Hot Drinks</li>
-                                <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
-            Jersey Lily and The White Lion</small></li>
-                                <li>Pryzm<br><small>Free entry every Thursday</small></li>
-                                <li>SWX Bristol<br><small>£1 off entry Friday and Saturday</small></li>
-                                <li>Discounted Summer Ball 2017 Ticket</li>
-                                <li>Drinks deals all year round </li>
-                              </ul>
-                          </div>
-                          <div class="card-footer text-muted">
-                            <h3>£79</h3>
-                            <small>Over £200 of savings</small>
-                          </div>
-                        </div>
-                      </div>
-          </a>
-          <a href="https://www.thestudentsunion.co.uk/tickets/product/10046220">
-                      <div class="col-md-7">
-                        <div class="card text-xs-center platinum-card">
-
-                          <div class="card-header">
-                            <h2 class="card-title super-header">Platinum Extra</h2>
-                          </div>
-                          <div class="card-block">
-                              <ul>
-                                <li>
-                                Freshers events<br><small>Free Entry - Queue Jump<br>All 16 ticketed Freshers events with the PX symbol.</small></li>
-                                <li>Term 1 Platinum Event<br><small>Free Entry - Queue Jump</small></li>
-                                <li>Term 2 Platinum Event<br><small>Free Entry - Queue Jump</small></li>
-                                <li>Annual 'Lock In' Pass<br><small>Free Entry - Queue Jump</small></li>
-                                <li>£5 off Hoodie</li>
-                                <li>10% off Food and Hot Drinks</li>
-                                <li>10% off in Wickwar venues<br><small>Cotham Porter Stores, Gloucester Road Ale House,
-            Jersey Lily and The White Lion
-            </small></li>
-                                <li>Pryzm<br><small>Free entry every Thursday</small></li>
-                                <li>SWX Bristol<br><small>£1 off entry Friday and Saturday</small></li>
-                                <li>Discounted Summer Ball 2017 Ticket</li>
-                                <li>Drinks deals all year round </li>
-                              </ul>
-                          </div>
-                          <div class="card-footer text-muted">
-                            <h3>£99</h3>
-                            <small>£250 of savings</small>
-                          </div>
-                        </div>
-                      </div>
-          </a>
-          
-        </div>
-      </div>
-          
-
-    </section>
-
-     
-      
-      <section id="social-signup">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 sign-up">
-              <div class="v-align-wrapper">
-                <div class="v-align">
-                  <div class="sign-up-wrap text-lg-left">
-                    <h4>Be the first to know</h4>
+        </section>
+        
+        
+        <section id="social-signup">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 sign-up">
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="sign-up-wrap text-lg-left">
+                      <h4>Be the first to know</h4>
                       <form
-                          id="subscribe-form"
-                          action="//thestudentsunion.us13.list-manage.com/subscribe/post-json?u=07e48af145119d0dbbee8eb8b&amp;id=9c7e76d5d2"
-                          method="get">
+                        id="subscribe-form"
+                        action="//thestudentsunion.us13.list-manage.com/subscribe/post-json?u=07e48af145119d0dbbee8eb8b&amp;id=9c7e76d5d2"
+                        method="get">
                         <span class="input-wrap">
                           <input class="input-field" type="email" value="" name="EMAIL" id="email" />
                           <label class="input-label" for="email">
@@ -243,271 +195,239 @@
                           </div>
                         </span>
                       </form>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="col-lg-6 social">
+              <div class="col-lg-6 social">
                 <div class="v-align-wrapper">
                   <div class="v-align">
                     <div class="social-wrap">
                       <h4 class="m-b-2">Join in with the conversation</h4>
                       <a href="https://www.facebook.com/groups/1658092681114201/" class="svg-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="facebook-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">   
+                        <svg xmlns="http://www.w3.org/2000/svg" id="facebook-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">
                           .st0{fill:#40373F;}
-                        </style><path class="st0" d="M-414 256h-30c-5.5 0-10 4.5-10 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10v-30C-404 260.5-408.5 256-414 256zM-415 273h-3c-2.1 0-3 0.5-3 2v3h6l-1 6h-5v20h-7v-20h-3v-6h3v-3c0-4.7 1.6-8 7-8 2.9 0 6 1 6 1V273z"/></svg>
-                      </a>
-
-                      <div class="spacer m-l-2"></div>
-                      
-                      <a href="https://twitter.com/thesuatuwe" class="svg-link" target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" id="twitter-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">  
-                        .st0{fill:#40373F;}
-                      </style><path class="st0" d="M-403.9 266.4c-1.8 0.8-3.8 1.4-5.9 1.6 2.1-1.3 3.8-3.3 4.5-5.7 -2 1.2-4.2 2-6.5 2.5 -1.9-2-4.5-3.2-7.5-3.2 -5.7 0-10.3 4.6-10.3 10.3 0 0.8 0.1 1.6 0.3 2.3 -8.6-0.4-16.2-4.5-21.3-10.7 -0.9 1.5-1.4 3.3-1.4 5.2 0 3.6 1.8 6.7 4.6 8.6 -1.7-0.1-3.3-0.5-4.7-1.3v0.1c0 5 3.5 9.1 8.2 10.1 -0.9 0.2-1.8 0.4-2.7 0.4 -0.7 0-1.3-0.1-1.9-0.2 1.3 4.1 5.1 7.1 9.6 7.1 -3.5 2.8-8 4.4-12.8 4.4 -0.8 0-1.6 0-2.5-0.1 4.5 2.9 10 4.6 15.8 4.6 18.9 0 29.3-15.7 29.3-29.3 0-0.4 0-0.9 0-1.3C-407.1 270.3-405.3 268.5-403.9 266.4z"/></svg>
-                      </a>
-
-                      <div class="spacer m-l-2"></div>
-
-                      <a class="svg-link" href="https://www.instagram.com/thesuatuwe/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" id="insta-logo" class="social-icon" viewBox="0 0 50 50"><style type="text/css">  .st0{fill:#40373f;}</style><path class="st0" d="M25 10c-8.3 0-15 6.7-15 15 0 8.3 6.7 15 15 15 8.3 0 15-6.7 15-15C40 16.7 33.3 10 25 10zM25 35c-5.5 0-10-4.5-10-10 0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10C35 30.5 30.5 35 25 35z"/><path class="st0" d="M40 0H10C4.5 0 0 4.5 0 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10V10C50 4.5 45.5 0 40 0zM44 39.8C44 42.1 42.1 44 39.8 44H10.2C7.9 44 6 42.1 6 39.8V17h4C12.9 11.7 18.5 8 25 8c6.5 0 12.1 3.7 15 9H44V39.8zM45 10.5c0 0.8-0.7 1.5-1.5 1.5h-3c-0.8 0-1.5-0.7-1.5-1.5v-3C39 6.7 39.7 6 40.5 6h3C44.3 6 45 6.7 45 7.5V10.5z"/></svg></a>
-
-                      <div class="spacer m-l-2"></div>
-                      
-                      <a href="" class="svg-link" data-toggle="modal" data-target="#snapchatModal">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="snapchat-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">  
-                          .st0{fill:#40373F;}
-                        </style><path class="st0" d="M-428.8 304.5c-0.1 0-0.3 0-0.4 0l0 0c-0.1 0-0.2 0-0.2 0 -3 0-4.9-1.3-6.7-2.6 -1.3-0.9-2.5-1.7-3.9-2 -0.7-0.1-1.4-0.2-2-0.2 -1.2 0-2.1 0.2-2.8 0.3 -0.4 0.1-0.8 0.2-1.1 0.2s-0.6-0.1-0.7-0.5c-0.1-0.4-0.2-0.8-0.3-1.2 -0.2-1-0.4-1.6-0.8-1.6 -4.7-0.7-6-1.7-6.3-2.4 0-0.1-0.1-0.2-0.1-0.3 0-0.3 0.2-0.5 0.4-0.6 7.2-1.2 10.5-8.6 10.6-8.9l0 0c0.4-0.9 0.5-1.7 0.3-2.3 -0.5-1.2-2.1-1.7-3.2-2 -0.3-0.1-0.5-0.2-0.7-0.2 -2.1-0.8-2.3-1.7-2.2-2.2 0.1-0.8 1.1-1.3 2-1.3 0.2 0 0.4 0 0.6 0.1 1 0.4 1.8 0.7 2.6 0.7 1 0 1.5-0.4 1.5-0.5 0-0.5-0.1-1-0.1-1.5 -0.2-3.4-0.5-7.7 0.6-10.1 3.2-7.3 10.1-7.8 12.1-7.8 0.1 0 0.9 0 0.9 0h0.1c2 0 8.9 0.6 12.2 7.8 1.1 2.4 0.8 6.7 0.6 10.1v0.1c0 0.5-0.1 0.9-0.1 1.4 0.1 0.1 0.5 0.5 1.4 0.5l0 0c0.7 0 1.5-0.3 2.4-0.7 0.3-0.1 0.6-0.1 0.8-0.1 0.3 0 0.6 0.1 0.9 0.2l0 0c0.7 0.3 1.2 0.8 1.2 1.3s-0.4 1.3-2.2 2c-0.2 0.1-0.4 0.2-0.7 0.2 -1.1 0.3-2.7 0.9-3.2 2 -0.3 0.6-0.2 1.4 0.3 2.3l0 0c0.1 0.3 3.4 7.7 10.6 8.9 0.3 0 0.5 0.3 0.4 0.6 0 0.1 0 0.2-0.1 0.3 -0.3 0.7-1.6 1.7-6.3 2.4 -0.4 0.1-0.5 0.6-0.8 1.6 -0.1 0.4-0.2 0.8-0.3 1.2 -0.1 0.3-0.3 0.5-0.7 0.5h-0.1c-0.2 0-0.6 0-1.1-0.1 -0.8-0.2-1.7-0.3-2.8-0.3 -0.7 0-1.3 0.1-2 0.2 -1.4 0.2-2.6 1.1-3.9 2C-423.9 303.2-425.8 304.5-428.8 304.5z"/></svg>
-                      </a>
-
-                      <!-- Snapchat Modal -->
-                      <div class="modal fade" id="snapchatModal" tabindex="-1" role="dialog" aria-labelledby="snapchatModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                              <h4 class="modal-title  text-xs-center" id="snapchatModalLabel">Add us on Snapchat</h4>
+                          </style><path class="st0" d="M-414 256h-30c-5.5 0-10 4.5-10 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10v-30C-404 260.5-408.5 256-414 256zM-415 273h-3c-2.1 0-3 0.5-3 2v3h6l-1 6h-5v20h-7v-20h-3v-6h3v-3c0-4.7 1.6-8 7-8 2.9 0 6 1 6 1V273z"/></svg>
+                        </a>
+                        <div class="spacer m-l-2"></div>
+                        
+                        <a href="https://twitter.com/thesuatuwe" class="svg-link" target="_blank">
+                          <svg xmlns="http://www.w3.org/2000/svg" id="twitter-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">
+                            .st0{fill:#40373F;}
+                            </style><path class="st0" d="M-403.9 266.4c-1.8 0.8-3.8 1.4-5.9 1.6 2.1-1.3 3.8-3.3 4.5-5.7 -2 1.2-4.2 2-6.5 2.5 -1.9-2-4.5-3.2-7.5-3.2 -5.7 0-10.3 4.6-10.3 10.3 0 0.8 0.1 1.6 0.3 2.3 -8.6-0.4-16.2-4.5-21.3-10.7 -0.9 1.5-1.4 3.3-1.4 5.2 0 3.6 1.8 6.7 4.6 8.6 -1.7-0.1-3.3-0.5-4.7-1.3v0.1c0 5 3.5 9.1 8.2 10.1 -0.9 0.2-1.8 0.4-2.7 0.4 -0.7 0-1.3-0.1-1.9-0.2 1.3 4.1 5.1 7.1 9.6 7.1 -3.5 2.8-8 4.4-12.8 4.4 -0.8 0-1.6 0-2.5-0.1 4.5 2.9 10 4.6 15.8 4.6 18.9 0 29.3-15.7 29.3-29.3 0-0.4 0-0.9 0-1.3C-407.1 270.3-405.3 268.5-403.9 266.4z"/></svg>
+                          </a>
+                          <div class="spacer m-l-2"></div>
+                          <a class="svg-link" href="https://www.instagram.com/thesuatuwe/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" id="insta-logo" class="social-icon" viewBox="0 0 50 50"><style type="text/css">  .st0{fill:#40373f;}</style><path class="st0" d="M25 10c-8.3 0-15 6.7-15 15 0 8.3 6.7 15 15 15 8.3 0 15-6.7 15-15C40 16.7 33.3 10 25 10zM25 35c-5.5 0-10-4.5-10-10 0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10C35 30.5 30.5 35 25 35z"/><path class="st0" d="M40 0H10C4.5 0 0 4.5 0 10v30c0 5.5 4.5 10 10 10h30c5.5 0 10-4.5 10-10V10C50 4.5 45.5 0 40 0zM44 39.8C44 42.1 42.1 44 39.8 44H10.2C7.9 44 6 42.1 6 39.8V17h4C12.9 11.7 18.5 8 25 8c6.5 0 12.1 3.7 15 9H44V39.8zM45 10.5c0 0.8-0.7 1.5-1.5 1.5h-3c-0.8 0-1.5-0.7-1.5-1.5v-3C39 6.7 39.7 6 40.5 6h3C44.3 6 45 6.7 45 7.5V10.5z"/></svg></a>
+                          <div class="spacer m-l-2"></div>
+                          
+                          <a href="" class="svg-link" data-toggle="modal" data-target="#snapchatModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="snapchat-logo" class="social-icon" viewBox="-454 256 50 50"><style type="text/css">
+                              .st0{fill:#40373F;}
+                              </style><path class="st0" d="M-428.8 304.5c-0.1 0-0.3 0-0.4 0l0 0c-0.1 0-0.2 0-0.2 0 -3 0-4.9-1.3-6.7-2.6 -1.3-0.9-2.5-1.7-3.9-2 -0.7-0.1-1.4-0.2-2-0.2 -1.2 0-2.1 0.2-2.8 0.3 -0.4 0.1-0.8 0.2-1.1 0.2s-0.6-0.1-0.7-0.5c-0.1-0.4-0.2-0.8-0.3-1.2 -0.2-1-0.4-1.6-0.8-1.6 -4.7-0.7-6-1.7-6.3-2.4 0-0.1-0.1-0.2-0.1-0.3 0-0.3 0.2-0.5 0.4-0.6 7.2-1.2 10.5-8.6 10.6-8.9l0 0c0.4-0.9 0.5-1.7 0.3-2.3 -0.5-1.2-2.1-1.7-3.2-2 -0.3-0.1-0.5-0.2-0.7-0.2 -2.1-0.8-2.3-1.7-2.2-2.2 0.1-0.8 1.1-1.3 2-1.3 0.2 0 0.4 0 0.6 0.1 1 0.4 1.8 0.7 2.6 0.7 1 0 1.5-0.4 1.5-0.5 0-0.5-0.1-1-0.1-1.5 -0.2-3.4-0.5-7.7 0.6-10.1 3.2-7.3 10.1-7.8 12.1-7.8 0.1 0 0.9 0 0.9 0h0.1c2 0 8.9 0.6 12.2 7.8 1.1 2.4 0.8 6.7 0.6 10.1v0.1c0 0.5-0.1 0.9-0.1 1.4 0.1 0.1 0.5 0.5 1.4 0.5l0 0c0.7 0 1.5-0.3 2.4-0.7 0.3-0.1 0.6-0.1 0.8-0.1 0.3 0 0.6 0.1 0.9 0.2l0 0c0.7 0.3 1.2 0.8 1.2 1.3s-0.4 1.3-2.2 2c-0.2 0.1-0.4 0.2-0.7 0.2 -1.1 0.3-2.7 0.9-3.2 2 -0.3 0.6-0.2 1.4 0.3 2.3l0 0c0.1 0.3 3.4 7.7 10.6 8.9 0.3 0 0.5 0.3 0.4 0.6 0 0.1 0 0.2-0.1 0.3 -0.3 0.7-1.6 1.7-6.3 2.4 -0.4 0.1-0.5 0.6-0.8 1.6 -0.1 0.4-0.2 0.8-0.3 1.2 -0.1 0.3-0.3 0.5-0.7 0.5h-0.1c-0.2 0-0.6 0-1.1-0.1 -0.8-0.2-1.7-0.3-2.8-0.3 -0.7 0-1.3 0.1-2 0.2 -1.4 0.2-2.6 1.1-3.9 2C-423.9 303.2-425.8 304.5-428.8 304.5z"/></svg>
+                            </a>
+                            <!-- Snapchat Modal -->
+                            <div class="modal fade" id="snapchatModal" tabindex="-1" role="dialog" aria-labelledby="snapchatModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title  text-xs-center" id="snapchatModalLabel">Add us on Snapchat</h4>
+                                  </div>
+                                  <div class="modal-body text-xs-center">
+                                    <img id="snapchat-code" src="/assets/img/snapcode.png" alt="Snapchat Code"><br>
+                                    <p>Scan our snapcode or add our username:</p>
+                                    <h4>TheSUatUWE</h4>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="modal-body text-xs-center">
-                              <img id="snapchat-code" src="/assets/img/snapcode.png" alt="Snapchat Code"><br>
-                              <p>Scan our snapcode or add our username:</p>
-                              <h4>TheSUatUWE</h4>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
+                            <div class="spacer m-l-2"></div>
+                            <a class="svg-link" href="https://www.youtube.com/channel/UCBD3lqX2qYFxkG1PBC1ddOA" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" id="yt-logo" class="social-icon" viewBox="0 0 26 26"><style>.st0{fill:#40373f;}</style><path class="st0" d="M6.3 0h1.5L8.8 3.9h0.1l0.9-3.9h1.5L9.6 5.7v4H8.1v-3.8L6.3 0z" /><path class="st0" d="M11.3 4.2c0-0.6 0.2-1 0.5-1.3 0.4-0.3 0.8-0.5 1.4-0.5 0.6 0 1 0.2 1.3 0.5C14.9 3.2 15.1 3.7 15.1 4.2v3.7c0 0.6-0.2 1.1-0.5 1.4 -0.3 0.3-0.8 0.5-1.4 0.5 -0.6 0-1-0.2-1.4-0.5 -0.3-0.4-0.5-0.8-0.5-1.4V4.2zM12.6 8c0 0.2 0 0.3 0.1 0.5 0.1 0.1 0.2 0.2 0.4 0.2 0.2 0 0.3-0.1 0.4-0.2 0.1-0.1 0.2-0.3 0.2-0.4V4.1c0-0.2-0.1-0.3-0.2-0.4 -0.1-0.1-0.2-0.1-0.4-0.1 -0.2 0-0.3 0.1-0.4 0.1 -0.1 0.1-0.2 0.2-0.2 0.4V8z" /><path class="st0" d="M20 2.6v7.1h-1.3V8.9c-0.2 0.3-0.5 0.5-0.8 0.7 -0.3 0.2-0.5 0.2-0.8 0.2 -0.3 0-0.5-0.1-0.7-0.3s-0.2-0.5-0.2-1v-6h1.3v5.5c0 0.2 0 0.3 0.1 0.4 0.1 0.1 0.1 0.1 0.3 0.1 0.1 0 0.2 0 0.4-0.1 0.2-0.1 0.3-0.2 0.4-0.4V2.6H20z"/><path class="st0" d="M20.2 17.3c-0.2 0-0.3 0-0.3 0.1 0 0.1-0.1 0.2-0.1 0.6v0.6h0.9v-0.6c0-0.3-0.1-0.5-0.1-0.6C20.4 17.3 20.3 17.3 20.2 17.3z" /><path class="st0" d="M15.1 17.3c-0.1 0-0.1 0.1-0.2 0.1v4.3c0.1 0.1 0.2 0.1 0.2 0.2 0.1 0 0.2 0.1 0.3 0.1 0.2 0 0.2-0.1 0.2-0.1 0-0.1 0.1-0.2 0.1-0.4v-3.7c0-0.2 0-0.4-0.1-0.5C15.5 17.3 15.3 17.2 15.1 17.3z" /><path class="st0 red" d="M23.8 14.4c0-1.7-1.4-3.1-3.2-3.1 -2.5-0.1-5-0.1-7.6-0.1 -2.6 0-5.1 0-7.6 0.1 -1.7 0-3.2 1.4-3.2 3.1 -0.1 1.4-0.2 2.7-0.1 4.1 0 1.4 0 2.7 0.1 4.1 0 1.7 1.4 3.1 3.2 3.1 2.5 0.1 5 0.1 7.6 0.1 2.6 0 5.1 0 7.6-0.1 1.7 0 3.2-1.4 3.2-3.1 0.1-1.4 0.2-2.7 0.1-4.1C23.9 17.1 23.9 15.8 23.8 14.4zM7 23.2c0 0.1-0.1 0.2-0.1 0.2H5.3c-0.1 0-0.1-0.1-0.1-0.1v-8.1H3.8c-0.1 0-0.1-0.1-0.1-0.1v-1.4c0-0.1 0.1-0.1 0.2-0.1h4.6c0.1 0 0.2 0.1 0.2 0.2v1.4c0 0.1-0.1 0.2-0.1 0.2H7V23.2zM12.3 23.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V22.8c-0.2 0.2-0.4 0.3-0.5 0.4 -0.3 0.2-0.6 0.2-0.8 0.2 -0.4 0-0.6-0.1-0.8-0.4 -0.2-0.2-0.3-0.6-0.3-1v-6c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v5.5c0 0.2 0 0.3 0.1 0.3 0 0 0 0.1 0.1 0.1 0 0 0.1 0 0.3-0.1 0.1-0.1 0.2-0.2 0.3-0.3v-5.4c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2V23.2zM17.4 21.7c0 0.5-0.1 1-0.3 1.3 -0.2 0.3-0.6 0.5-1 0.5 -0.3 0-0.5-0.1-0.8-0.2 -0.1-0.1-0.2-0.1-0.3-0.2v0.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V13.5c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v2.7c0.1-0.1 0.2-0.2 0.3-0.3 0.2-0.1 0.5-0.2 0.7-0.2 0.5 0 0.8 0.2 1.1 0.5 0.2 0.3 0.4 0.8 0.4 1.4V21.7zM22.3 19.8c0 0.1-0.1 0.2-0.1 0.2h-2.4v1.2c0 0.4 0.1 0.6 0.1 0.7 0 0.1 0.1 0.1 0.3 0.1 0.2 0 0.3 0 0.3-0.1 0 0 0.1-0.2 0.1-0.7v-0.5c0-0.1 0.1-0.1 0.2-0.1h1.4c0.1 0 0.2 0.1 0.2 0.2v0.5c0 0.8-0.2 1.4-0.5 1.8 -0.4 0.4-0.9 0.6-1.6 0.6 -0.6 0-1.1-0.2-1.5-0.6 -0.4-0.4-0.5-1-0.5-1.7v-3.2c0-0.7 0.2-1.2 0.6-1.6 0.4-0.4 0.9-0.6 1.6-0.6 0.6 0 1.2 0.2 1.5 0.6 0.4 0.4 0.5 0.9 0.5 1.7V19.8z" /></svg>
+                            </a>
+                            
                           </div>
                         </div>
                       </div>
-
-
-
-                      <div class="spacer m-l-2"></div>
-
-                      <a class="svg-link" href="https://www.youtube.com/channel/UCBD3lqX2qYFxkG1PBC1ddOA" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="yt-logo" class="social-icon" viewBox="0 0 26 26"><style>.st0{fill:#40373f;}</style><path class="st0" d="M6.3 0h1.5L8.8 3.9h0.1l0.9-3.9h1.5L9.6 5.7v4H8.1v-3.8L6.3 0z" /><path class="st0" d="M11.3 4.2c0-0.6 0.2-1 0.5-1.3 0.4-0.3 0.8-0.5 1.4-0.5 0.6 0 1 0.2 1.3 0.5C14.9 3.2 15.1 3.7 15.1 4.2v3.7c0 0.6-0.2 1.1-0.5 1.4 -0.3 0.3-0.8 0.5-1.4 0.5 -0.6 0-1-0.2-1.4-0.5 -0.3-0.4-0.5-0.8-0.5-1.4V4.2zM12.6 8c0 0.2 0 0.3 0.1 0.5 0.1 0.1 0.2 0.2 0.4 0.2 0.2 0 0.3-0.1 0.4-0.2 0.1-0.1 0.2-0.3 0.2-0.4V4.1c0-0.2-0.1-0.3-0.2-0.4 -0.1-0.1-0.2-0.1-0.4-0.1 -0.2 0-0.3 0.1-0.4 0.1 -0.1 0.1-0.2 0.2-0.2 0.4V8z" /><path class="st0" d="M20 2.6v7.1h-1.3V8.9c-0.2 0.3-0.5 0.5-0.8 0.7 -0.3 0.2-0.5 0.2-0.8 0.2 -0.3 0-0.5-0.1-0.7-0.3s-0.2-0.5-0.2-1v-6h1.3v5.5c0 0.2 0 0.3 0.1 0.4 0.1 0.1 0.1 0.1 0.3 0.1 0.1 0 0.2 0 0.4-0.1 0.2-0.1 0.3-0.2 0.4-0.4V2.6H20z"/><path class="st0" d="M20.2 17.3c-0.2 0-0.3 0-0.3 0.1 0 0.1-0.1 0.2-0.1 0.6v0.6h0.9v-0.6c0-0.3-0.1-0.5-0.1-0.6C20.4 17.3 20.3 17.3 20.2 17.3z" /><path class="st0" d="M15.1 17.3c-0.1 0-0.1 0.1-0.2 0.1v4.3c0.1 0.1 0.2 0.1 0.2 0.2 0.1 0 0.2 0.1 0.3 0.1 0.2 0 0.2-0.1 0.2-0.1 0-0.1 0.1-0.2 0.1-0.4v-3.7c0-0.2 0-0.4-0.1-0.5C15.5 17.3 15.3 17.2 15.1 17.3z" /><path class="st0 red" d="M23.8 14.4c0-1.7-1.4-3.1-3.2-3.1 -2.5-0.1-5-0.1-7.6-0.1 -2.6 0-5.1 0-7.6 0.1 -1.7 0-3.2 1.4-3.2 3.1 -0.1 1.4-0.2 2.7-0.1 4.1 0 1.4 0 2.7 0.1 4.1 0 1.7 1.4 3.1 3.2 3.1 2.5 0.1 5 0.1 7.6 0.1 2.6 0 5.1 0 7.6-0.1 1.7 0 3.2-1.4 3.2-3.1 0.1-1.4 0.2-2.7 0.1-4.1C23.9 17.1 23.9 15.8 23.8 14.4zM7 23.2c0 0.1-0.1 0.2-0.1 0.2H5.3c-0.1 0-0.1-0.1-0.1-0.1v-8.1H3.8c-0.1 0-0.1-0.1-0.1-0.1v-1.4c0-0.1 0.1-0.1 0.2-0.1h4.6c0.1 0 0.2 0.1 0.2 0.2v1.4c0 0.1-0.1 0.2-0.1 0.2H7V23.2zM12.3 23.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V22.8c-0.2 0.2-0.4 0.3-0.5 0.4 -0.3 0.2-0.6 0.2-0.8 0.2 -0.4 0-0.6-0.1-0.8-0.4 -0.2-0.2-0.3-0.6-0.3-1v-6c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v5.5c0 0.2 0 0.3 0.1 0.3 0 0 0 0.1 0.1 0.1 0 0 0.1 0 0.3-0.1 0.1-0.1 0.2-0.2 0.3-0.3v-5.4c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2V23.2zM17.4 21.7c0 0.5-0.1 1-0.3 1.3 -0.2 0.3-0.6 0.5-1 0.5 -0.3 0-0.5-0.1-0.8-0.2 -0.1-0.1-0.2-0.1-0.3-0.2v0.2c0 0.1-0.1 0.2-0.1 0.2h-1.3c-0.1 0-0.1-0.1-0.1-0.1V13.5c0-0.1 0.1-0.1 0.2-0.1h1.3c0.1 0 0.2 0.1 0.2 0.2v2.7c0.1-0.1 0.2-0.2 0.3-0.3 0.2-0.1 0.5-0.2 0.7-0.2 0.5 0 0.8 0.2 1.1 0.5 0.2 0.3 0.4 0.8 0.4 1.4V21.7zM22.3 19.8c0 0.1-0.1 0.2-0.1 0.2h-2.4v1.2c0 0.4 0.1 0.6 0.1 0.7 0 0.1 0.1 0.1 0.3 0.1 0.2 0 0.3 0 0.3-0.1 0 0 0.1-0.2 0.1-0.7v-0.5c0-0.1 0.1-0.1 0.2-0.1h1.4c0.1 0 0.2 0.1 0.2 0.2v0.5c0 0.8-0.2 1.4-0.5 1.8 -0.4 0.4-0.9 0.6-1.6 0.6 -0.6 0-1.1-0.2-1.5-0.6 -0.4-0.4-0.5-1-0.5-1.7v-3.2c0-0.7 0.2-1.2 0.6-1.6 0.4-0.4 0.9-0.6 1.6-0.6 0.6 0 1.2 0.2 1.5 0.6 0.4 0.4 0.5 0.9 0.5 1.7V19.8z" /></svg>
-
-                      </a>
-                      
                     </div>
                   </div>
-                </div>                
-            </div>
-          </div>
-        </div>
-      </section>            
-      </main>
-      <footer class="footer" role="contentinfo">
-      <object type="image/svg+xml" data="/assets/img/footer-angle.svg" class="footer-angle"></object>
-      <div class="v-align-wrapper">
-        <div class="v-align">
-          <div class="container">
-            <object type="image/svg+xml" data="/assets/img/logo.svg" id="footer-logo"></object>  <div class="row">
-              <div class="col-lg-3 col-md-4 contact-info footer-information">
-                <h5>Contact</h5>
-                  <table class="address">
-                    <tr>
-                      <td><object type="image/svg+xml" data="/assets/icons/phone_filled_white.svg" class="footer-contact-icon"></object></td>
-                      <td><a href="tel:01173282577">+44 (0)117 32 82577</a></td>
-                    </tr>
-                    <tr>
-                      <td><object type="image/svg+xml" data="/assets/icons/email_filled_white.svg" class="footer-contact-icon"></object></td>
-                      <td><a href="mailto:thestudentsunion@uwe.ac.uk">thestudentsunion@uwe.ac.uk</a></td>
-                    </tr>
-                    <tr>
-                      <td><object type="image/svg+xml" data="/assets/icons/location_filled_white.svg" class="footer-contact-icon"></object></td>
-                      <td>The Students' Union at UWE,<br>
-                    Union 1, Frenchay Campus,<br>
-                    Coldharbour Lane,<br>
-                    Bristol, BS16 1QY</td>
-                    </tr>
-                  </table>     
-
+                </div>
+              </section>
+              </main>
+              <footer class="footer" role="contentinfo">
+                <object type="image/svg+xml" data="/assets/img/footer-angle.svg" class="footer-angle"></object>
+                <div class="v-align-wrapper">
+                  <div class="v-align">
+                    <div class="container">
+                      <object type="image/svg+xml" data="/assets/img/logo.svg" id="footer-logo"></object>  <div class="row">
+                        <div class="col-lg-3 col-md-4 contact-info footer-information">
+                          <h5>Contact</h5>
+                          <table class="address">
+                            <tr>
+                              <td><object type="image/svg+xml" data="/assets/icons/phone_filled_white.svg" class="footer-contact-icon"></object></td>
+                              <td><a href="tel:01173282577">+44 (0)117 32 82577</a></td>
+                            </tr>
+                            <tr>
+                              <td><object type="image/svg+xml" data="/assets/icons/email_filled_white.svg" class="footer-contact-icon"></object></td>
+                              <td><a href="mailto:thestudentsunion@uwe.ac.uk">thestudentsunion@uwe.ac.uk</a></td>
+                            </tr>
+                            <tr>
+                              <td><object type="image/svg+xml" data="/assets/icons/location_filled_white.svg" class="footer-contact-icon"></object></td>
+                              <td>The Students' Union at UWE,<br>
+                                Union 1, Frenchay Campus,<br>
+                                Coldharbour Lane,<br>
+                              Bristol, BS16 1QY</td>
+                            </tr>
+                          </table>
+                          
+                        </div>
+                        <div class="col-lg-3 col-md-4 footer-information">
+                          <h5>Information</h5>
+                          <a href="http://www.thestudentsunion.co.uk/contactus/">Contact Us</a><br>
+                          <a href="http://www.thestudentsunion.co.uk/tac/">Terms & Conditions</a><br>
+                          <a href="http://www.thestudentsunion.co.uk/privacy/">Privacy</a><br>
+                          <a href="http://www.thestudentsunion.co.uk/cookies/">Cookies</a><br>
+                          <a href="http://www.thestudentsunion.co.uk/data/">Your Data</a><br>
+                          <a href="http://www.thestudentsunion.co.uk/union/about/work-for-us/">Careers</a><br>
+                          
+                        </div>
+                        <div class="col-md-3 footer-information">
+                        </div>
+                        <div class="col-md-3 footer-information">
+                        </div>
+                        </div><!-- row -->
+                        <hr>
+                        <div class="row sub-footer">
+                          <div class="col-md-3 col-xs-6"><a href="https://beta.companieshouse.gov.uk/company/07675253/">Company No. 07675253</a></div>
+                          <div class="col-md-3 col-xs-6"><a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1143067&SubsidiaryNumber=0">Charity No. 1143067</a></div>
+                          <div class="col-md-3 col-md-offset-3  col-xs-12 text-md-right"><span class="copyright">© Copyright <script>document.write(new Date().getFullYear())</script> The Students' Union at UWE</span></div>
+                          </div><!-- row -->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </footer>
+                </div>
                 
-              </div>
-              <div class="col-lg-3 col-md-4 footer-information">
-                <h5>Information</h5>
-                  <a href="http://www.thestudentsunion.co.uk/contactus/">Contact Us</a><br>
-                  <a href="http://www.thestudentsunion.co.uk/tac/">Terms & Conditions</a><br>
-                  <a href="http://www.thestudentsunion.co.uk/privacy/">Privacy</a><br>
-                  <a href="http://www.thestudentsunion.co.uk/cookies/">Cookies</a><br>
-                  <a href="http://www.thestudentsunion.co.uk/data/">Your Data</a><br>
-                  <a href="http://www.thestudentsunion.co.uk/union/about/work-for-us/">Careers</a><br>
-                           
-              </div>
-              <div class="col-md-3 footer-information">
-              </div>
-              <div class="col-md-3 footer-information">   
-              </div>
-            </div><!-- row -->
-            <hr>
-            <div class="row sub-footer">
-              <div class="col-md-3 col-xs-6"><a href="https://beta.companieshouse.gov.uk/company/07675253/">Company No. 07675253</a></div>
-              <div class="col-md-3 col-xs-6"><a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1143067&SubsidiaryNumber=0">Charity No. 1143067</a></div>
-
-               <div class="col-md-3 col-md-offset-3  col-xs-12 text-md-right"><span class="copyright">© Copyright <script>document.write(new Date().getFullYear())</script> The Students' Union at UWE</span></div>
-            </div><!-- row -->
-          </div>
-        </div>
-      </div>
-
-        
-
-        
-
-      </footer>
-    </div>
-  
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/components/jquery.js"><\/script>');</script>
-    <script src="/assets/components/jquery-ui.min.js"></script>
-    <script src="/assets/components/tether.min.js"></script>
-    <script src="/assets/components/bootstrap.min.js"></script>
-     
-      <script src="/assets/js/moment.js"></script>
-       <script type="text/javascript">
-            //wait for page to load
-            $(document).ready(function(){
-              // Extract the text from the template .html() is the jquery helper method for that
-              var raw_template_card = $('#news-template-card').html();
-              // Compile that into an handlebars template
-              var template_card = Handlebars.compile(raw_template_card);
-              // Retrieve the placeHolder where the Posts will be displayed 
-              var placeHolderCard = $("#news-listings");
-              // Fetch all Blog Posts data from server in JSON
-
-              $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                <script>window.jQuery || document.write('<script src="/assets/components/jquery.js"><\/script>');</script>
+                <script src="/assets/components/jquery-ui.min.js"></script>
+                <script src="/assets/components/tether.min.js"></script>
+                <script src="/assets/components/bootstrap.min.js"></script>
                 
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
+                <script src="/assets/js/moment.js"></script>
+                <script type="text/javascript">
+                //wait for page to load
+                $(document).ready(function(){
+                // Extract the text from the template .html() is the jquery helper method for that
+                var raw_template_card = $('#news-template-card').html();
+                // Compile that into an handlebars template
+                var template_card = Handlebars.compile(raw_template_card);
+                // Retrieve the placeHolder where the Posts will be displayed
+                var placeHolderCard = $("#news-listings");
+                // Fetch all Blog Posts data from server in JSON
+                $.get("http://www.thestudentsunion.co.uk/svc/feeds/news/21646?imagesize=large",function(data,status,xhr){
+                
+                $.each(data,function(index,element){
+                // Generate the HTML for each post
+                var html = template_card(element);
+                // Render the posts into the page
+                placeHolderCard.append(html);
                 });
                 // Multiple Loops for test purposes
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
+                $.each(data,function(index,element){
+                // Generate the HTML for each post
+                var html = template_card(element);
+                // Render the posts into the page
+                placeHolderCard.append(html);
                 });
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
+                $.each(data,function(index,element){
+                // Generate the HTML for each post
+                var html = template_card(element);
+                // Render the posts into the page
+                placeHolderCard.append(html);
                 });
-                $.each(data,function(index,element){                
-                  // Generate the HTML for each post
-                  var html = template_card(element);
-                  // Render the posts into the page
-                  placeHolderCard.append(html);
+                $.each(data,function(index,element){
+                // Generate the HTML for each post
+                var html = template_card(element);
+                // Render the posts into the page
+                placeHolderCard.append(html);
                 });
-              });
-
-       
-
-                  //  format an ISO date using Moment.js (8.9kb min)
-                  //  http://momentjs.com/
-                  //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
-                  //  Options see http://momentjs.com/docs/#/displaying/fromnow/
-
-              Handlebars.registerHelper('dateToNow', function(context, block) {
+                });
+                
+                //  format an ISO date using Moment.js (8.9kb min)
+                //  http://momentjs.com/
+                //  usage: {{dateFromNow js_date suffix=true}} removes "ago" suffix
+                //  Options see http://momentjs.com/docs/#/displaying/fromnow/
+                Handlebars.registerHelper('dateToNow', function(context, block) {
                 if (window.moment) {
-                  var s = block.hash.suffix || false;
-                      return moment(context).toNow(s);
+                var s = block.hash.suffix || false;
+                return moment(context).toNow(s);
                 }else{
-                  return context;   //  moment plugin not available. return data as is.
+                return context;   //  moment plugin not available. return data as is.
                 };
-              });
-
-              //  format an ISO date using Moment.js
-              //  http://momentjs.com/
-              //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
-              //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
-              Handlebars.registerHelper('dateFormat', function(context, block) {
+                });
+                //  format an ISO date using Moment.js
+                //  http://momentjs.com/
+                //  moment syntax example: moment(Date("2011-07-18T15:50:52")).format("MMMM YYYY")
+                //  usage: {{dateFormat creation_date format="MMMM YYYY"}}
+                Handlebars.registerHelper('dateFormat', function(context, block) {
                 if (window.moment) {
-                  var f = block.hash.format || "ddd D, YYYY";
-                  return moment(context).format(f);
+                var f = block.hash.format || "ddd D, YYYY";
+                return moment(context).format(f);
                 }else{
-                  return context;   //  moment plugin not available. return data as is.
+                return context;   //  moment plugin not available. return data as is.
                 };
-              });
-            });
-          </script>
-
-          
-
-          <script src="/assets/js/scripts.min.js"></script>
-
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-1605164-8', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
-    <script src="/assets/js/classie.js"></script>
-    <script>
-      (function() {
-        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-        if (!String.prototype.trim) {
-          (function() {
-            // Make sure we trim BOM and NBSP
-            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-            String.prototype.trim = function() {
-              return this.replace(rtrim, '');
-            };
-          })();
-        }
-
-        [].slice.call( document.querySelectorAll( '.input-wrap .input-field' ) ).forEach( function( inputEl ) {
-          // in case the input is already filled..
-          if( inputEl.value.trim() !== '' ) {
-            classie.add( inputEl.parentNode, 'input--filled' );
-          }
-
-          // events:
-          inputEl.addEventListener( 'focus', onInputFocus );
-          inputEl.addEventListener( 'blur', onInputBlur );
-        } );
-
-        function onInputFocus( ev ) {
-          classie.add( ev.target.parentNode, 'input-filled' );
-        }
-
-        function onInputBlur( ev ) {
-          if( ev.target.value.trim() === '' ) {
-            classie.remove( ev.target.parentNode, 'input-filled' );
-          }
-        }
-      })();
-    </script>
-  </body>
-</html>
+                });
+                });
+                </script>
+                
+                <script src="/assets/js/scripts.min.js"></script>
+                <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-1605164-8', 'auto');
+                ga('send', 'pageview');
+                </script>
+                <script src="/assets/js/classie.js"></script>
+                <script>
+                (function() {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                (function() {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function() {
+                return this.replace(rtrim, '');
+                };
+                })();
+                }
+                [].slice.call( document.querySelectorAll( '.input-wrap .input-field' ) ).forEach( function( inputEl ) {
+                // in case the input is already filled..
+                if( inputEl.value.trim() !== '' ) {
+                classie.add( inputEl.parentNode, 'input--filled' );
+                }
+                // events:
+                inputEl.addEventListener( 'focus', onInputFocus );
+                inputEl.addEventListener( 'blur', onInputBlur );
+                } );
+                function onInputFocus( ev ) {
+                classie.add( ev.target.parentNode, 'input-filled' );
+                }
+                function onInputBlur( ev ) {
+                if( ev.target.value.trim() === '' ) {
+                classie.remove( ev.target.parentNode, 'input-filled' );
+                }
+                }
+                })();
+                </script>
+              </body>
+            </html>
