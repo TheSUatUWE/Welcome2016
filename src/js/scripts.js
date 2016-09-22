@@ -115,7 +115,19 @@
         
     });
 
+    // Mobile Menu Toggle
+    $(document).ready(function() {
+      $('.mobile-menu-toggle').click(function(e) {
+          
+          e.preventDefault();
+          $('ul.nav.nav-inline').toggleClass('mobile-active');
+          $('nav.nav, .mobile-menu-circle').toggleClass('toggled');
+          $(this).toggleClass('toggled');
+          $('.logo').toggleClass('mobileMenuActive'); 
+          $('body, html, #page-wrapper').toggleClass('mobileMenuActive');
 
+      });
+    });
 
   	// Menu Toggle
   	$(document).ready(function() {
@@ -142,19 +154,7 @@
       });
   	});
 
-    // Mobile Menu Toggle
-    $(document).ready(function() {
-      $('.mobile-menu-toggle').click(function(e) {
-          e.preventDefault();
-          $('ul.nav.nav-inline').toggleClass('mobile-active');
-          $('nav.nav, .mobile-menu-circle').toggleClass('toggled');
-          $(this).toggleClass('toggled');
-          $('.logo').toggleClass('mobileMenuActive');
-        
-          $('body, html, #page-wrapper').toggleClass('mobileMenuActive');
 
-      });
-    });
 
     // Mobile Menu Scroll on Dropdown open
     $( document ).ready(function() {
@@ -518,41 +518,6 @@
    $(document).ready(function () {
        $('.fadeIn-onLoad').delay(1000).fadeIn(1000);
    });
-
-
-   // Logo 
-    // $( document ).ready(function() {
-    //       window.onload = function() {
-    //         setTimeout(function(){
-    //           $('.logo').removeClass('loading');
-    //         },1500);
-    //   };
-    // });
-  // Floating Filters 
-  // $( document ).ready(function() {
-  //   var search =  $('.search');
-  //   var searchFloated =  $('.search.float');
-  //   var nav = $('nav.nav');
-  //   var distance = $('.search').offset().top,
-  //       $window = $(window);
-
-  //   $window.scroll(function() {
-  //       if ( $window.scrollTop() >= distance ) {
-  //           search.addClass('float');        
-  //       } else {
-  //         search.removeClass('float');
-  //       }
-  //   });
-
-  //   $window.scroll(function() {      
-  //       if ( $('nav.nav').hasclass('headspace--hidden') ) {
-  //         search.css('top', '100px');
-  //       } else { 
-  //         search.css('top', '0px');
-  //       }       
-  //   });
-
-  // });
 
 
  });
