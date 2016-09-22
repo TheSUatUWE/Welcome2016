@@ -231,13 +231,11 @@
         });
     }
 
-    // Show event listings and hider loader on window load
-    function eventReveal() {
+    // Show event listings and hide loader on window load
+    function eventReveal(callback) {
 
-        $('.item-col').fadeIn(600, function(){
-          $('#loader').fadeOut('slow');
-        });
-      
+        $('.item-col').fadeIn(600);
+        $('#loader').fadeOut(600);
         $('#news-listings').fadeIn('slow');
 
         eventResize();
